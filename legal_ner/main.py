@@ -24,14 +24,14 @@ if __name__ == "__main__":
     parser.add_argument(
         "--ds_train_path",
         help="Path of train dataset file",
-        default="data/NER_TRAIN/NER_TRAIN_ALL.json",
+        default="/content/NLP-NER-Project/legal_ner/NER_TRAIN/NER_TRAIN_JUDGEMENT.json",
         required=False,
         type=str,
     )
     parser.add_argument(
         "--ds_valid_path",
         help="Path of validation dataset file",
-        default="data/NER_DEV/NER_DEV_ALL.json",
+        default="/content/NLP-NER-Project/legal_ner/NER_DEV/NER_DEV_JUDGEMENT.json",
         required=False,
         type=str,
     )
