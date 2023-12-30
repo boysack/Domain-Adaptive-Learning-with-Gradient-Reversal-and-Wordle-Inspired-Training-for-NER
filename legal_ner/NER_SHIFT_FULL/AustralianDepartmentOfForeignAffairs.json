@@ -1,0 +1,1042 @@
+[
+    {
+        "id": "2FA0B45CA064AF09334944B6D68B5987",
+        "annotations": [
+            {
+                "result": [
+                    {
+                        "value": {
+                            "start": 0,
+                            "end": 35,
+                            "text": "The Members of the Security Council",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "2FA0B45CA064AF09334944B6D68B5987-0-0-35-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 19,
+                            "end": 35,
+                            "text": "Security Council",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "2FA0B45CA064AF09334944B6D68B5987-0-19-35-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 70,
+                            "end": 75,
+                            "text": "Iraqi",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "2FA0B45CA064AF09334944B6D68B5987-0-70-75-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 70,
+                            "end": 96,
+                            "text": "Iraqi President Fuad Masum",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "2FA0B45CA064AF09334944B6D68B5987-0-70-96-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 76,
+                            "end": 90,
+                            "text": "President Fuad",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "2FA0B45CA064AF09334944B6D68B5987-0-76-90-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 292,
+                            "end": 312,
+                            "text": "the Iraqi population",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "2FA0B45CA064AF09334944B6D68B5987-1-150-170-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 296,
+                            "end": 301,
+                            "text": "Iraqi",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "2FA0B45CA064AF09334944B6D68B5987-1-154-159-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 160,
+                            "end": 190,
+                            "text": "a new Prime Minister-designate",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "2FA0B45CA064AF09334944B6D68B5987-1-18-48-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 382,
+                            "end": 393,
+                            "text": "the country",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "2FA0B45CA064AF09334944B6D68B5987-1-240-251-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 236,
+                            "end": 259,
+                            "text": "an inclusive Government",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "2FA0B45CA064AF09334944B6D68B5987-1-94-117-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 417,
+                            "end": 452,
+                            "text": "The Members of the Security Council",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "2FA0B45CA064AF09334944B6D68B5987-2-0-35-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 436,
+                            "end": 452,
+                            "text": "Security Council",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "2FA0B45CA064AF09334944B6D68B5987-2-19-35-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 458,
+                            "end": 503,
+                            "text": "the Prime Minister-designate, Haider al-Abadi",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "2FA0B45CA064AF09334944B6D68B5987-2-41-86-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 488,
+                            "end": 503,
+                            "text": "Haider al-Abadi",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "2FA0B45CA064AF09334944B6D68B5987-2-71-86-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 613,
+                            "end": 648,
+                            "text": "The Members of the Security Council",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "2FA0B45CA064AF09334944B6D68B5987-3-0-35-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 758,
+                            "end": 774,
+                            "text": "the Constitution",
+                            "labels": [
+                                "DocumentReference"
+                            ]
+                        },
+                        "id": "2FA0B45CA064AF09334944B6D68B5987-3-145-161-DocumentReference",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 632,
+                            "end": 648,
+                            "text": "Security Council",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "2FA0B45CA064AF09334944B6D68B5987-3-19-35-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 654,
+                            "end": 675,
+                            "text": "all political parties",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "2FA0B45CA064AF09334944B6D68B5987-3-41-62-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 680,
+                            "end": 696,
+                            "text": "their supporters",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "2FA0B45CA064AF09334944B6D68B5987-3-67-83-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 777,
+                            "end": 812,
+                            "text": "The Members of the Security Council",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "2FA0B45CA064AF09334944B6D68B5987-4-0-35-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 889,
+                            "end": 904,
+                            "text": "the Iraq people",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "2FA0B45CA064AF09334944B6D68B5987-4-112-127-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 893,
+                            "end": 897,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "2FA0B45CA064AF09334944B6D68B5987-4-116-120-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 958,
+                            "end": 965,
+                            "text": "st ISIL",
+                            "labels": [
+                                "Vehicle"
+                            ]
+                        },
+                        "id": "2FA0B45CA064AF09334944B6D68B5987-4-181-188-Vehicle",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 961,
+                            "end": 965,
+                            "text": "ISIL",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "2FA0B45CA064AF09334944B6D68B5987-4-184-188-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 796,
+                            "end": 812,
+                            "text": "Security Council",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "2FA0B45CA064AF09334944B6D68B5987-4-19-35-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 841,
+                            "end": 845,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "2FA0B45CA064AF09334944B6D68B5987-4-64-68-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 841,
+                            "end": 845,
+                            "text": "Iraq",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "2FA0B45CA064AF09334944B6D68B5987-4-64-68-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "text": "The Members of the Security Council are encouraged by the decision of Iraqi President Fuad Masum to nominate a new Prime Minister-designate.  The nomination of a new Prime Minister-designate is an important step toward the formation of an inclusive Government that represents all segments of the Iraqi population and that contributes to finding a viable and sustainable solution to the country\u2019s current challenges.  The Members of the Security Council urge the Prime Minister-designate, Haider al-Abadi, to work swiftly to form such a Government as quickly as possible and within the constitutional time-frame.\n\nThe Members of the Security Council urge all political parties and their supporters to remain calm and respect the political process governed by the Constitution.\n\nThe Members of the Security Council reiterate their support for Iraq\u2019s democratic process and their support for the Iraq people in their fight against terrorism, in particular against ISIL."
+        },
+        "meta": {
+            "source": "http://dfat.gov.au/international-relations/international-organisations/un/unsc-2013-2014/national-statements/Pages/security-council-press-statement-iraq-3.aspx"
+        }
+    },
+    {
+        "id": "58A3656BDCA7B89C38CE5A1985834740",
+        "annotations": [
+            {
+                "result": [
+                    {
+                        "value": {
+                            "start": 10,
+                            "end": 16,
+                            "text": "Syrian",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "58A3656BDCA7B89C38CE5A1985834740-0-10-16-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 33,
+                            "end": 58,
+                            "text": "the Australian Government",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "58A3656BDCA7B89C38CE5A1985834740-0-33-58-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 37,
+                            "end": 47,
+                            "text": "Australian",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "58A3656BDCA7B89C38CE5A1985834740-0-37-47-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 83,
+                            "end": 95,
+                            "text": "$135 million",
+                            "labels": [
+                                "Money"
+                            ]
+                        },
+                        "id": "58A3656BDCA7B89C38CE5A1985834740-0-83-95-Money",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 143,
+                            "end": 168,
+                            "text": "DFAT\u2019s Middle East Branch",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "58A3656BDCA7B89C38CE5A1985834740-1-18-43-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 150,
+                            "end": 161,
+                            "text": "Middle East",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "58A3656BDCA7B89C38CE5A1985834740-1-25-36-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 159,
+                            "end": 168,
+                            "text": "st Branch",
+                            "labels": [
+                                "Vehicle"
+                            ]
+                        },
+                        "id": "58A3656BDCA7B89C38CE5A1985834740-1-34-43-Vehicle",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 170,
+                            "end": 173,
+                            "text": "ODE",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "58A3656BDCA7B89C38CE5A1985834740-1-45-48-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 336,
+                            "end": 345,
+                            "text": "Australia",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "58A3656BDCA7B89C38CE5A1985834740-2-88-97-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 336,
+                            "end": 345,
+                            "text": "Australia",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "58A3656BDCA7B89C38CE5A1985834740-2-88-97-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 416,
+                            "end": 425,
+                            "text": "Australia",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "58A3656BDCA7B89C38CE5A1985834740-3-48-57-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 416,
+                            "end": 425,
+                            "text": "Australia",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "58A3656BDCA7B89C38CE5A1985834740-3-48-57-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "text": "Since the Syrian conflict began, the Australian Government has responded with over $135 million for humanitarian assistance. At the request of DFAT\u2019s Middle East Branch, ODE has completed an evaluation examining the effectiveness of this response. This evaluation considers both the efficacy of material assistance provided and that of Australia\u2019s diplomatic efforts. It also identifies some important ways in which Australia\u2019s response to this, and other, protracted crises might be further strengthened."
+        },
+        "meta": {
+            "source": "http://dfat.gov.au/aid/how-we-measure-performance/ode/odepublications/Pages/evaluation-of-australias-response-syria-crisis.aspx"
+        }
+    },
+    {
+        "id": "D863D678C3A4BD8EDFCE2B7D27881974",
+        "annotations": [
+            {
+                "result": [
+                    {
+                        "value": {
+                            "start": 0,
+                            "end": 43,
+                            "text": "The area of Mosul district, Ninewa province",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "D863D678C3A4BD8EDFCE2B7D27881974-0-0-43-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 116,
+                            "end": 129,
+                            "text": "Criminal Code",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "D863D678C3A4BD8EDFCE2B7D27881974-0-116-129-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 12,
+                            "end": 17,
+                            "text": "Mosul",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "D863D678C3A4BD8EDFCE2B7D27881974-0-12-17-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 47,
+                            "end": 51,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "D863D678C3A4BD8EDFCE2B7D27881974-0-47-51-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 95,
+                            "end": 129,
+                            "text": "section 119.3 of the Criminal Code",
+                            "labels": [
+                                "DocumentReference"
+                            ]
+                        },
+                        "id": "D863D678C3A4BD8EDFCE2B7D27881974-0-95-129-DocumentReference",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 170,
+                            "end": 180,
+                            "text": "Australian",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "D863D678C3A4BD8EDFCE2B7D27881974-1-39-49-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 209,
+                            "end": 214,
+                            "text": "Mosul",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "D863D678C3A4BD8EDFCE2B7D27881974-1-78-83-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 209,
+                            "end": 223,
+                            "text": "Mosul district",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "D863D678C3A4BD8EDFCE2B7D27881974-1-78-92-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 265,
+                            "end": 270,
+                            "text": "Mosul",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "D863D678C3A4BD8EDFCE2B7D27881974-2-10-15-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 265,
+                            "end": 279,
+                            "text": "Mosul district",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "D863D678C3A4BD8EDFCE2B7D27881974-2-10-24-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 361,
+                            "end": 374,
+                            "text": "December 2014",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "D863D678C3A4BD8EDFCE2B7D27881974-2-106-119-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 331,
+                            "end": 348,
+                            "text": "Al-Raqqa province",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "D863D678C3A4BD8EDFCE2B7D27881974-2-76-93-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 334,
+                            "end": 339,
+                            "text": "Raqqa",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "D863D678C3A4BD8EDFCE2B7D27881974-2-79-84-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 352,
+                            "end": 357,
+                            "text": "Syria",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "D863D678C3A4BD8EDFCE2B7D27881974-2-97-102-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 376,
+                            "end": 393,
+                            "text": "The city of Mosul",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "D863D678C3A4BD8EDFCE2B7D27881974-3-0-17-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 376,
+                            "end": 384,
+                            "text": "The city",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "D863D678C3A4BD8EDFCE2B7D27881974-3-0-8-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 388,
+                            "end": 393,
+                            "text": "Mosul",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "D863D678C3A4BD8EDFCE2B7D27881974-3-12-17-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 401,
+                            "end": 413,
+                            "text": "largest city",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "D863D678C3A4BD8EDFCE2B7D27881974-3-25-37-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 428,
+                            "end": 433,
+                            "text": "Daesh",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "D863D678C3A4BD8EDFCE2B7D27881974-3-52-57-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 437,
+                            "end": 441,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "D863D678C3A4BD8EDFCE2B7D27881974-3-61-65-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "text": "The area of Mosul district, Ninewa province in Iraq, has been declared a designated area under section 119.3 of the Criminal Code. This means it will be an offence under Australian law to enter, or remain in, Mosul district without a legitimate purpose.\n\nDeclaring Mosul district under the criminal code follows the declaration of Al-Raqqa province in Syria in December 2014. The city of Mosul is the largest city controlled by Daesh in Iraq."
+        },
+        "meta": {
+            "source": "http://dfat.gov.au/news/news/Pages/declaration-of-mosul-district-ninewa-province-iraq.aspx"
+        }
+    },
+    {
+        "id": "DEC7A9B44536B3E01C85E64BAF2E07A6",
+        "annotations": [
+            {
+                "result": [
+                    {
+                        "value": {
+                            "start": 0,
+                            "end": 29,
+                            "text": "Foreign Minister Julie Bishop",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "DEC7A9B44536B3E01C85E64BAF2E07A6-0-0-29-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 110,
+                            "end": 118,
+                            "text": "Canberra",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "DEC7A9B44536B3E01C85E64BAF2E07A6-0-110-118-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 122,
+                            "end": 133,
+                            "text": "12 February",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "DEC7A9B44536B3E01C85E64BAF2E07A6-0-122-133-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 17,
+                            "end": 29,
+                            "text": "Julie Bishop",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "DEC7A9B44536B3E01C85E64BAF2E07A6-0-17-29-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 237,
+                            "end": 242,
+                            "text": "Daesh",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "DEC7A9B44536B3E01C85E64BAF2E07A6-0-237-242-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 258,
+                            "end": 262,
+                            "text": "ISIL",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "DEC7A9B44536B3E01C85E64BAF2E07A6-0-258-262-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 43,
+                            "end": 78,
+                            "text": "Minister of Foreign Affairs of Iraq",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "DEC7A9B44536B3E01C85E64BAF2E07A6-0-43-78-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 55,
+                            "end": 70,
+                            "text": "Foreign Affairs",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "DEC7A9B44536B3E01C85E64BAF2E07A6-0-55-70-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 74,
+                            "end": 78,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "DEC7A9B44536B3E01C85E64BAF2E07A6-0-74-78-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 80,
+                            "end": 105,
+                            "text": "HE Dr Ibrahim Al-Ja\u2019afari",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "DEC7A9B44536B3E01C85E64BAF2E07A6-0-80-105-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 83,
+                            "end": 105,
+                            "text": "Dr Ibrahim Al-Ja\u2019afari",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "DEC7A9B44536B3E01C85E64BAF2E07A6-0-83-105-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "text": "Foreign Minister Julie Bishop met with the Minister of Foreign Affairs of Iraq, HE Dr Ibrahim Al-Ja\u2019afari, in Canberra on 12 February to discuss bilateral relations and reaffirm our shared commitment to combating the terrorist threat of Daesh (also known as ISIL)."
+        },
+        "meta": {
+            "source": "http://dfat.gov.au/news/news/Pages/australia-and-iraq-confirm-shared-commitment-to-combating-daesh.aspx"
+        }
+    }
+]

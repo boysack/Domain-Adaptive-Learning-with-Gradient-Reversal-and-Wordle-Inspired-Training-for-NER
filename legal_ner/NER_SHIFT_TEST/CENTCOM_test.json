@@ -1,0 +1,4123 @@
+[
+    {
+        "id": "E9035FF1D0DA74A11674C82688C05C51",
+        "annotations": [
+            {
+                "result": [
+                    {
+                        "value": {
+                            "start": 0,
+                            "end": 31,
+                            "text": "U.S. Air Forces Central Command",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-0-0-31-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 0,
+                            "end": 4,
+                            "text": "U.S.",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-0-0-4-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 170,
+                            "end": 181,
+                            "text": "journalists",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-0-170-181-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 195,
+                            "end": 202,
+                            "text": "10 a.m.",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-0-195-202-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 5,
+                            "end": 31,
+                            "text": "Air Forces Central Command",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-0-5-31-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 64,
+                            "end": 76,
+                            "text": "September 17",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-0-64-76-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 77,
+                            "end": 89,
+                            "text": "Dayr az Zawr",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-0-77-89-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 77,
+                            "end": 96,
+                            "text": "Dayr az Zawr, Syria",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-0-77-96-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 91,
+                            "end": 96,
+                            "text": "Syria",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-0-91-96-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 203,
+                            "end": 216,
+                            "text": "Nov. 29, 2016",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-1-0-13-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 212,
+                            "end": 216,
+                            "text": "2016",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-1-9-13-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 697,
+                            "end": 707,
+                            "text": "15 minutes",
+                            "labels": [
+                                "Quantity"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-10-29-39-Quantity",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 697,
+                            "end": 707,
+                            "text": "15 minutes",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-10-29-39-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 870,
+                            "end": 884,
+                            "text": "Pentagon Press",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-12-0-14-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 983,
+                            "end": 987,
+                            "text": "Navy",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-12-113-117-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 983,
+                            "end": 993,
+                            "text": "Navy Capt.",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-12-113-123-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 916,
+                            "end": 939,
+                            "text": "the Press Briefing Room",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-12-46-69-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 923,
+                            "end": 934,
+                            "text": "ss Briefing",
+                            "labels": [
+                                "Vehicle"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-12-53-64-Vehicle",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 994,
+                            "end": 1004,
+                            "text": "Jeff Davis",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-13-0-10-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1025,
+                            "end": 1033,
+                            "text": "the room",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-13-31-39-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1037,
+                            "end": 1049,
+                            "text": "the Pentagon",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-13-43-55-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1041,
+                            "end": 1049,
+                            "text": "Pentagon",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-13-47-55-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1068,
+                            "end": 1079,
+                            "text": "journalists",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-14-17-28-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1088,
+                            "end": 1100,
+                            "text": "the Pentagon",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-14-37-49-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1092,
+                            "end": 1100,
+                            "text": "Pentagon",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-14-41-49-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 238,
+                            "end": 243,
+                            "text": "Brig.",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-2-17-22-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 249,
+                            "end": 266,
+                            "text": "Richard 'Tex' Coe",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-4-0-17-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 362,
+                            "end": 380,
+                            "text": "the Pentagon Press",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-5-15-33-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 366,
+                            "end": 380,
+                            "text": "Pentagon Press",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-5-19-33-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 384,
+                            "end": 427,
+                            "text": "the investigating officer will follow Brig.",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-5-37-80-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 428,
+                            "end": 436,
+                            "text": "Gen. Coe",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-6-0-8-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 471,
+                            "end": 490,
+                            "text": "Col. John J. Thomas",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-6-43-62-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 476,
+                            "end": 490,
+                            "text": "John J. Thomas",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-6-48-62-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 433,
+                            "end": 438,
+                            "text": "Coe\u2019s",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-6-5-10-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 492,
+                            "end": 507,
+                            "text": "Central Command",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-6-64-79-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 492,
+                            "end": 517,
+                            "text": "Central Command spokesman",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-6-64-89-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 565,
+                            "end": 575,
+                            "text": "45 minutes",
+                            "labels": [
+                                "Quantity"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-7-30-40-Quantity",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 565,
+                            "end": 575,
+                            "text": "45 minutes",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-7-30-40-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 615,
+                            "end": 627,
+                            "text": "888-847-6592",
+                            "labels": [
+                                "CommsIdentifier"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-8-38-50-CommsIdentifier",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 650,
+                            "end": 666,
+                            "text": "Passcode 3080897",
+                            "labels": [
+                                "DocumentReference"
+                            ]
+                        },
+                        "id": "E9035FF1D0DA74A11674C82688C05C51-9-21-37-DocumentReference",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "text": "U.S. Air Forces Central Command will release the results of the September 17 Dayr az Zawr, Syria airstrike investigation on a live, on-the-record conference call open to journalists, starting at 10 a.m. Nov. 29, 2016. \n \nDuring the call, Brig. Gen. Richard \"Tex\" Coe, the lead investigating officer, will present the findings and recommendations. Questions from the Pentagon Press to the investigating officer will follow Brig. Gen. Coe\u2019s extended opening statement, and Col. John J. Thomas, Central Command spokesman will moderate.\n \nThe call is scheduled to last 45 minutes. Those able to participate should dial 888-847-6592. When prompted, enter Passcode 3080897. It is recommended to dial in 15 minutes prior to the call. Each individual calling in will be asked to identify themselves and media affiliation into a recording before being automatically connected.\n \nPentagon Press will gather around the call in the Press Briefing Room and be called on to ask their questions by Navy Capt. Jeff Davis who will also be in the room at the Pentagon. Time permitting, journalists outside the Pentagon will also be able to ask questions."
+        },
+        "meta": {
+            "source": "http://www.centcom.mil/MEDIA/PRESS-RELEASES/Press-Release-View/Article/1014100/us-central-command-media-advisory-dayr-az-zawr-investigation-results/"
+        }
+    },
+    {
+        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484",
+        "annotations": [
+            {
+                "result": [
+                    {
+                        "value": {
+                            "start": 11,
+                            "end": 36,
+                            "text": "Coalition military forces",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-0-11-36-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 3,
+                            "end": 6,
+                            "text": "Jan",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-0-3-6-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 3,
+                            "end": 9,
+                            "text": "Jan. 9",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-0-3-9-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 47,
+                            "end": 49,
+                            "text": "26",
+                            "labels": [
+                                "Quantity"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-0-47-49-Quantity",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 63,
+                            "end": 70,
+                            "text": "st ISIL",
+                            "labels": [
+                                "Vehicle"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-0-63-70-Vehicle",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 66,
+                            "end": 81,
+                            "text": "ISIL terrorists",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-0-66-81-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 85,
+                            "end": 90,
+                            "text": "Syria",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-0-85-90-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 95,
+                            "end": 99,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-0-95-99-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1049,
+                            "end": 1054,
+                            "text": "seven",
+                            "labels": [
+                                "Quantity"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-10-112-117-Quantity",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1055,
+                            "end": 1059,
+                            "text": "ISIL",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-10-118-122-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1055,
+                            "end": 1074,
+                            "text": "ISIL-held buildings",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-10-118-137-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 949,
+                            "end": 954,
+                            "text": "seven",
+                            "labels": [
+                                "Quantity"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-10-12-17-Quantity",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1076,
+                            "end": 1080,
+                            "text": "four",
+                            "labels": [
+                                "Quantity"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-10-139-143-Quantity",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1081,
+                            "end": 1087,
+                            "text": "VBIEDs",
+                            "labels": [
+                                "Weapon"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-10-144-150-Weapon",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1089,
+                            "end": 1105,
+                            "text": "a VBIED facility",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-10-152-168-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1107,
+                            "end": 1110,
+                            "text": "two",
+                            "labels": [
+                                "Quantity"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-10-170-173-Quantity",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1111,
+                            "end": 1125,
+                            "text": "weapons caches",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-10-174-188-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1127,
+                            "end": 1132,
+                            "text": "three",
+                            "labels": [
+                                "Quantity"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-10-190-195-Quantity",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1133,
+                            "end": 1150,
+                            "text": "tactical vehicles",
+                            "labels": [
+                                "MilitaryPlatform"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-10-196-213-MilitaryPlatform",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1152,
+                            "end": 1169,
+                            "text": "a tunnel entrance",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-10-215-232-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1175,
+                            "end": 1183,
+                            "text": "a mortar",
+                            "labels": [
+                                "Weapon"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-10-238-246-Weapon",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1193,
+                            "end": 1195,
+                            "text": "18",
+                            "labels": [
+                                "Quantity"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-10-256-258-Quantity",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1226,
+                            "end": 1229,
+                            "text": "two",
+                            "labels": [
+                                "Quantity"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-10-289-292-Quantity",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1230,
+                            "end": 1242,
+                            "text": "mortar teams",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-10-293-305-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1247,
+                            "end": 1268,
+                            "text": "an ISIL tactical unit",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-10-310-331-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1250,
+                            "end": 1254,
+                            "text": "ISIL",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-10-313-317-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 971,
+                            "end": 975,
+                            "text": "four",
+                            "labels": [
+                                "Quantity"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-10-34-38-Quantity",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 976,
+                            "end": 980,
+                            "text": "ISIL",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-10-39-43-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 976,
+                            "end": 995,
+                            "text": "ISIL tactical units",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-10-39-58-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 942,
+                            "end": 947,
+                            "text": "Mosul",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-10-5-10-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 942,
+                            "end": 947,
+                            "text": "Mosul",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-10-5-10-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1007,
+                            "end": 1026,
+                            "text": "a fighting position",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-10-70-89-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1028,
+                            "end": 1047,
+                            "text": "a heavy machine gun",
+                            "labels": [
+                                "Weapon"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-10-91-110-Weapon",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1287,
+                            "end": 1292,
+                            "text": "three",
+                            "labels": [
+                                "Quantity"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-11-15-20-Quantity",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1293,
+                            "end": 1300,
+                            "text": "strikes",
+                            "labels": [
+                                "Weapon"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-11-21-28-Weapon",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1311,
+                            "end": 1332,
+                            "text": "an ISIL-held building",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-11-39-60-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1314,
+                            "end": 1318,
+                            "text": "ISIL",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-11-42-46-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1277,
+                            "end": 1285,
+                            "text": "Tal Afar",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-11-5-13-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1337,
+                            "end": 1341,
+                            "text": "four",
+                            "labels": [
+                                "Quantity"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-11-65-69-Quantity",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1342,
+                            "end": 1345,
+                            "text": "UAV",
+                            "labels": [
+                                "MilitaryPlatform"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-11-70-73-MilitaryPlatform",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1342,
+                            "end": 1345,
+                            "text": "UAV",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-11-70-73-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1342,
+                            "end": 1369,
+                            "text": "UAV construction facilities",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-11-70-97-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1445,
+                            "end": 1449,
+                            "text": "base",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-13-25-29-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1424,
+                            "end": 1432,
+                            "text": "aircraft",
+                            "labels": [
+                                "MilitaryPlatform"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-13-4-12-MilitaryPlatform",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 344,
+                            "end": 366,
+                            "text": "the government of Iraq",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-2-104-126-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 362,
+                            "end": 366,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-2-122-126-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 373,
+                            "end": 427,
+                            "text": "attack, bomber, fighter, and remotely piloted aircraft",
+                            "labels": [
+                                "MilitaryPlatform"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-2-133-187-MilitaryPlatform",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 256,
+                            "end": 260,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-2-16-20-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 439,
+                            "end": 455,
+                            "text": "rocket artillery",
+                            "labels": [
+                                "Weapon"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-2-199-215-Weapon",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 262,
+                            "end": 287,
+                            "text": "Coalition military forces",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-2-22-47-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 461,
+                            "end": 468,
+                            "text": "st ISIL",
+                            "labels": [
+                                "Vehicle"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-2-221-228-Vehicle",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 464,
+                            "end": 468,
+                            "text": "ISIL",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-2-224-228-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 298,
+                            "end": 300,
+                            "text": "11",
+                            "labels": [
+                                "Quantity"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-2-58-60-Quantity",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 2936,
+                            "end": 2953,
+                            "text": "Coalition nations",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-22-0-17-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 2936,
+                            "end": 2945,
+                            "text": "Coalition",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-22-0-9-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 3037,
+                            "end": 3043,
+                            "text": "France",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-22-101-107-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 3037,
+                            "end": 3043,
+                            "text": "France",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-22-101-107-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 3045,
+                            "end": 3051,
+                            "text": "Jordan",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-22-109-115-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 3045,
+                            "end": 3051,
+                            "text": "Jordan",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-22-109-115-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 3053,
+                            "end": 3068,
+                            "text": "the Netherlands",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-22-117-132-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 3053,
+                            "end": 3068,
+                            "text": "the Netherlands",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-22-117-132-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 3057,
+                            "end": 3068,
+                            "text": "Netherlands",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-22-121-132-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 3070,
+                            "end": 3082,
+                            "text": "Saudi Arabia",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-22-134-146-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 3070,
+                            "end": 3082,
+                            "text": "Saudi Arabia",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-22-134-146-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 3084,
+                            "end": 3090,
+                            "text": "Turkey",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-22-148-154-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 3084,
+                            "end": 3090,
+                            "text": "Turkey",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-22-148-154-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 3092,
+                            "end": 3112,
+                            "text": "United Arab Emirates",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-22-156-176-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 3092,
+                            "end": 3112,
+                            "text": "United Arab Emirates",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-22-156-176-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 3114,
+                            "end": 3132,
+                            "text": "the United Kingdom",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-22-178-196-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 3118,
+                            "end": 3132,
+                            "text": "United Kingdom",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-22-182-196-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 3138,
+                            "end": 3155,
+                            "text": "the United States",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-22-202-219-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 3142,
+                            "end": 3155,
+                            "text": "United States",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-22-206-219-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 2986,
+                            "end": 2991,
+                            "text": "Syria",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-22-50-55-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 3000,
+                            "end": 3009,
+                            "text": "Australia",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-22-64-73-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 3000,
+                            "end": 3009,
+                            "text": "Australia",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-22-64-73-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 3011,
+                            "end": 3018,
+                            "text": "Bahrain",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-22-75-82-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 3011,
+                            "end": 3018,
+                            "text": "Bahrain",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-22-75-82-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 3020,
+                            "end": 3026,
+                            "text": "Canada",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-22-84-90-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 3020,
+                            "end": 3026,
+                            "text": "Canada",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-22-84-90-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 3028,
+                            "end": 3035,
+                            "text": "Denmark",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-22-92-99-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 3028,
+                            "end": 3035,
+                            "text": "Denmark",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-22-92-99-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 594,
+                            "end": 601,
+                            "text": "a VBIED",
+                            "labels": [
+                                "Weapon"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-4-108-115-Weapon",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 615,
+                            "end": 619,
+                            "text": "four",
+                            "labels": [
+                                "Quantity"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-4-129-133-Quantity",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 502,
+                            "end": 504,
+                            "text": "12",
+                            "labels": [
+                                "Quantity"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-4-16-18-Quantity",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 521,
+                            "end": 524,
+                            "text": "six",
+                            "labels": [
+                                "Quantity"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-4-35-38-Quantity",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 525,
+                            "end": 529,
+                            "text": "ISIL",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-4-39-43-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 525,
+                            "end": 544,
+                            "text": "ISIL tactical units",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-4-39-58-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 491,
+                            "end": 500,
+                            "text": "Ar Raqqah",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-4-5-14-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 559,
+                            "end": 562,
+                            "text": "IED",
+                            "labels": [
+                                "Weapon"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-4-73-76-Weapon",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 564,
+                            "end": 569,
+                            "text": "seven",
+                            "labels": [
+                                "Quantity"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-4-78-83-Quantity",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 570,
+                            "end": 588,
+                            "text": "fighting positions",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-4-84-102-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 672,
+                            "end": 679,
+                            "text": "a VBIED",
+                            "labels": [
+                                "Weapon"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-5-35-42-Weapon",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 684,
+                            "end": 708,
+                            "text": "an ISIL tactical vehicle",
+                            "labels": [
+                                "MilitaryPlatform"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-5-47-71-MilitaryPlatform",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 642,
+                            "end": 649,
+                            "text": "Ayn Isa",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-5-5-12-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 642,
+                            "end": 645,
+                            "text": "Ayn",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-5-5-8-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 687,
+                            "end": 691,
+                            "text": "ISIL",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-5-50-54-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 646,
+                            "end": 649,
+                            "text": "Isa",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-5-9-12-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 717,
+                            "end": 729,
+                            "text": "Dayr Az Zayr",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-6-5-17-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 807,
+                            "end": 810,
+                            "text": "two",
+                            "labels": [
+                                "Quantity"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-7-35-38-Quantity",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 811,
+                            "end": 815,
+                            "text": "ISIL",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-7-39-43-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 811,
+                            "end": 830,
+                            "text": "ISIL weapons caches",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-7-39-58-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 777,
+                            "end": 784,
+                            "text": "Palmyra",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-7-5-12-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 832,
+                            "end": 836,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-8-0-4-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 857,
+                            "end": 860,
+                            "text": "one",
+                            "labels": [
+                                "Quantity"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-9-18-21-Quantity",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 861,
+                            "end": 867,
+                            "text": "strike",
+                            "labels": [
+                                "Weapon"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-9-22-28-Weapon",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 876,
+                            "end": 897,
+                            "text": "an ISIL tactical unit",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-9-37-58-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 879,
+                            "end": 883,
+                            "text": "ISIL",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-9-40-44-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 844,
+                            "end": 855,
+                            "text": "Al Huwayjah",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-9-5-16-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 844,
+                            "end": 855,
+                            "text": "Al Huwayjah",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-9-5-16-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 912,
+                            "end": 933,
+                            "text": "an ISIL-held building",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-9-73-94-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 915,
+                            "end": 919,
+                            "text": "ISIL",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F5B5E86320A4E95E92A7EA2FB8E8B484-9-76-80-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "text": "On Jan. 9, Coalition military forces conducted 26 strikes against ISIL terrorists in Syria and Iraq. In Syria, Coalition military forces conducted 15 strikes using attack, bomber, fighter and remotely piloted aircraft against ISIL targets. Additionally in Iraq, Coalition military forces conducted 11 strikes coordinated with and in support of the government of Iraq using attack, bomber, fighter, and remotely piloted aircraft as well as rocket artillery against ISIL targets.\nSyria\n. Near Ar Raqqah, 12 strikes engaged six ISIL tactical units; destroyed an IED, seven fighting positions, and a VBIED; and damaged four supply routes.\n. Near Ayn Isa, one strike destroyed a VBIED and an ISIL tactical vehicle.\n. Near Dayr Az Zayr, one strike destroyed an oil pump jack.\n. Near Palmyra, one strike destroyed two ISIL weapons caches.\nIraq\n. Near Al Huwayjah, one strike engaged an ISIL tactical unit and destroyed an ISIL-held building.\n. Near Mosul, seven strikes engaged four ISIL tactical units; destroyed a fighting position, a heavy machine gun, seven ISIL-held buildings, four VBIEDs, a VBIED facility, two weapons caches, three tactical vehicles, a tunnel entrance, and a mortar; damaged 18 supply routes; and suppressed two mortar teams and an ISIL tactical unit.\n. Near Tal Afar, three strikes destroyed an ISIL-held building and four UAV construction facilities.\nStrike assessments are based on initial reports. All aircraft returned to base safely.\nA strike, as defined in the CJTF releases, means one or more kinetic events that occur in roughly the same geographic location to produce a single, sometimes cumulative effect for that location.\nSo having a single aircraft deliver a single weapon against a lone ISIL vehicle is one strike, but so is multiple aircraft delivering dozens of weapons against a group of buildings and vehicles and weapon systems in a compound, for example, having the cumulative effect of making that facility (or facilities) harder or impossible to use.\nAccordingly, CJTF-OIR does not report the number or type of aircraft employed in a strike, the number of munitions dropped in each strike, or the number of individual munition impact points against a target. The information used to compile the daily strike releases is based on 'Z' or Greenwich Mean Time.\nGround-based artillery fired in counter-fire or in fire support to maneuver roles are not classified as a strike as defined by CJTF-OIR.\nThe strikes were conducted as part of Operation Inherent Resolve, the operation to eliminate the ISIL terrorist group and the threat they pose to Iraq, Syria, and the wider international community.\nThe destruction of ISIL targets in Syria and Iraq further limits the group's ability to project terror and conduct operations. Coalition nations which have conducted strikes in Iraq include Australia, Belgium, Canada, Denmark, France, Jordan, the Netherlands, the United Kingdom, and the United States. Coalition nations which have conducted strikes in Syria include Australia, Bahrain, Canada, Denmark, France, Jordan, the Netherlands, Saudi Arabia, Turkey, United Arab Emirates, the United Kingdom, and the United States.\n"
+        },
+        "meta": {
+            "source": "http://www.centcom.mil/MEDIA/PRESS-RELEASES/Press-Release-View/Article/1045703/january-10-military-airstrikes-continue-against-isil-terrorists-in-syria-and-ir/"
+        }
+    },
+    {
+        "id": "F7893F2F4E38C8E00C7D22E22E100428",
+        "annotations": [
+            {
+                "result": [
+                    {
+                        "value": {
+                            "start": 0,
+                            "end": 24,
+                            "text": "U.S. Army General Joseph",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F7893F2F4E38C8E00C7D22E22E100428-0-0-24-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 0,
+                            "end": 30,
+                            "text": "U.S. Army General Joseph Votel",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "F7893F2F4E38C8E00C7D22E22E100428-0-0-30-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 148,
+                            "end": 155,
+                            "text": "CENTCOM",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F7893F2F4E38C8E00C7D22E22E100428-0-148-155-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 18,
+                            "end": 30,
+                            "text": "Joseph Votel",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "F7893F2F4E38C8E00C7D22E22E100428-0-18-30-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 43,
+                            "end": 63,
+                            "text": "U.S. Central Command",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F7893F2F4E38C8E00C7D22E22E100428-0-43-63-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 43,
+                            "end": 63,
+                            "text": "U.S. Central Command",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "F7893F2F4E38C8E00C7D22E22E100428-0-43-63-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 82,
+                            "end": 115,
+                            "text": "U.S. Air Force civilian employees",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F7893F2F4E38C8E00C7D22E22E100428-0-82-115-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 87,
+                            "end": 96,
+                            "text": "Air Force",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F7893F2F4E38C8E00C7D22E22E100428-0-87-96-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 211,
+                            "end": 216,
+                            "text": "Votel",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "F7893F2F4E38C8E00C7D22E22E100428-1-0-5-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 227,
+                            "end": 247,
+                            "text": "U.S. Central Command",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F7893F2F4E38C8E00C7D22E22E100428-1-16-36-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 331,
+                            "end": 337,
+                            "text": "allies",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F7893F2F4E38C8E00C7D22E22E100428-2-32-38-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 421,
+                            "end": 426,
+                            "text": "Votel",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "F7893F2F4E38C8E00C7D22E22E100428-5-0-5-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 619,
+                            "end": 621,
+                            "text": "He",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "F7893F2F4E38C8E00C7D22E22E100428-6-0-2-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 913,
+                            "end": 924,
+                            "text": "the command",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F7893F2F4E38C8E00C7D22E22E100428-6-294-305-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 927,
+                            "end": 938,
+                            "text": "The command",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F7893F2F4E38C8E00C7D22E22E100428-7-0-11-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1035,
+                            "end": 1057,
+                            "text": "the civilian workforce",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F7893F2F4E38C8E00C7D22E22E100428-7-108-130-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 972,
+                            "end": 981,
+                            "text": "next year",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "F7893F2F4E38C8E00C7D22E22E100428-7-45-54-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "text": "U.S. Army General Joseph Votel, commander, U.S. Central Command recently met with U.S. Air Force civilian employees and provided an overview of the CENTCOM vision, the current mission, and strategic approach.\n \nVotel explained U.S. Central Command\u2019s top priorities:\n\n- Ensure an effective posture.\n\n- Strengthen relationships with allies.\n\n- Deter and counter state aggression.\n\n- Disrupt and counter violent extremism.\n\nVotel expressed his desire that the command attracts and retains the very best people to support these critical priorities and that they are fully enabled to develop and contribute to the mission.\n\nHe further stressed the need to develop our future leaders through timely feedback from supervisors, mentorship programs, and opportunities and resources for growth, while noting the importance of timely and appropriate recognition for superior performance throughout an employee\u2019s tenure with the command.\n\nThe command intends to hold three town halls next year with varying agendas to convey useful information to the civilian workforce and to take questions and recommendations."
+        },
+        "meta": {
+            "source": "http://www.centcom.mil/MEDIA/NEWS-ARTICLES/News-Article-View/Article/1014920/uscentcom-commander-meets-with-civilian-employees/"
+        }
+    },
+    {
+        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29",
+        "annotations": [
+            {
+                "result": [
+                    {
+                        "value": {
+                            "start": 0,
+                            "end": 22,
+                            "text": "The Defense Department",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-0-0-22-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 38,
+                            "end": 65,
+                            "text": "the American service member",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-0-38-65-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 4,
+                            "end": 22,
+                            "text": "Defense Department",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-0-4-22-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 42,
+                            "end": 50,
+                            "text": "American",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-0-42-50-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 84,
+                            "end": 89,
+                            "text": "Syria",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-0-84-89-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 93,
+                            "end": 109,
+                            "text": "Thanksgiving Day",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-0-93-109-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 218,
+                            "end": 233,
+                            "text": "Scott C. Dayton",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-1-105-120-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 235,
+                            "end": 237,
+                            "text": "42",
+                            "labels": [
+                                "Quantity"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-1-122-124-Quantity",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 242,
+                            "end": 262,
+                            "text": "Woodbridge, Virginia",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-1-129-149-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 254,
+                            "end": 262,
+                            "text": "Virginia",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-1-141-149-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 269,
+                            "end": 276,
+                            "text": "Nov. 24",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-1-156-163-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 280,
+                            "end": 294,
+                            "text": "northern Syria",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-1-167-181-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 289,
+                            "end": 294,
+                            "text": "Syria",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-1-176-181-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 322,
+                            "end": 349,
+                            "text": "improvised explosive device",
+                            "labels": [
+                                "Weapon"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-1-209-236-Weapon",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 372,
+                            "end": 375,
+                            "text": "DoD",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-1-259-262-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 396,
+                            "end": 405,
+                            "text": "yesterday",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-1-283-292-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 142,
+                            "end": 190,
+                            "text": "Targeted Operations Against ISIL Terrorists Navy",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-1-29-77-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 170,
+                            "end": 185,
+                            "text": "ISIL Terrorists",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-1-57-72-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 186,
+                            "end": 233,
+                            "text": "Navy Senior Chief Petty Officer Scott C. Dayton",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-1-73-120-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 408,
+                            "end": 414,
+                            "text": "Dayton",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-2-0-6-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 408,
+                            "end": 414,
+                            "text": "Dayton",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-2-0-6-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 542,
+                            "end": 556,
+                            "text": "Virginia Beach",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-2-134-148-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 542,
+                            "end": 566,
+                            "text": "Virginia Beach, Virginia",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-2-134-158-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 558,
+                            "end": 566,
+                            "text": "Virginia",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-2-150-158-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 435,
+                            "end": 461,
+                            "text": "Operation Inherent Resolve",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-2-27-53-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 479,
+                            "end": 522,
+                            "text": "Explosive Ordnance Disposal Mobile Unit Two",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-2-71-114-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 608,
+                            "end": 615,
+                            "text": "Defense",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-3-21-28-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 608,
+                            "end": 636,
+                            "text": "Defense Secretary Ash Carter",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-3-21-49-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 590,
+                            "end": 606,
+                            "text": "Thanksgiving Day",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-3-3-19-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 626,
+                            "end": 636,
+                            "text": "Ash Carter",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-3-39-49-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 664,
+                            "end": 709,
+                            "text": "Dayton\u2019s family, friends and other loved ones",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-3-77-122-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 664,
+                            "end": 672,
+                            "text": "Dayton\u2019s",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-3-77-85-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 671,
+                            "end": 679,
+                            "text": "s family",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-3-84-92-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 713,
+                            "end": 714,
+                            "text": "I",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-4-1-2-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 828,
+                            "end": 833,
+                            "text": "Syria",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-4-116-121-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 871,
+                            "end": 875,
+                            "text": "ISIL",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-4-159-163-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 878,
+                            "end": 884,
+                            "text": "Carter",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-4-166-172-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 893,
+                            "end": 912,
+                            "text": "a Nov. 24 statement",
+                            "labels": [
+                                "DocumentReference"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-4-181-200-DocumentReference",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 895,
+                            "end": 902,
+                            "text": "Nov. 24",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-4-183-190-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 749,
+                            "end": 770,
+                            "text": "this Thanksgiving Day",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-4-37-58-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 776,
+                            "end": 808,
+                            "text": "one of our brave service members",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-4-64-96-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 955,
+                            "end": 983,
+                            "text": "our men and women in uniform",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-5-41-69-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1025,
+                            "end": 1038,
+                            "text": "The secretary",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-6-0-13-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1145,
+                            "end": 1162,
+                            "text": "this Thanksgiving",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-6-120-137-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1163,
+                            "end": 1164,
+                            "text": "I",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-6-138-139-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1165,
+                            "end": 1169,
+                            "text": "hope",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-6-140-144-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1184,
+                            "end": 1186,
+                            "text": "me",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-6-159-161-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1079,
+                            "end": 1087,
+                            "text": "s family",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-6-54-62-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1278,
+                            "end": 1284,
+                            "text": "Dayton",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-7-0-6-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1309,
+                            "end": 1333,
+                            "text": "the vicinity of Ayn Issa",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-7-31-55-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1325,
+                            "end": 1328,
+                            "text": "Ayn",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-7-47-50-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1337,
+                            "end": 1351,
+                            "text": "northern Syria",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-7-59-73-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1346,
+                            "end": 1351,
+                            "text": "Syria",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-7-68-73-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1368,
+                            "end": 1393,
+                            "text": "Combined Joint Task Force",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-7-90-115-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1377,
+                            "end": 1422,
+                            "text": "Joint Task Force - Operation Inherent Resolve",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-7-99-144-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1542,
+                            "end": 1546,
+                            "text": "Army",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-8-104-108-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1542,
+                            "end": 1575,
+                            "text": "Army Lt. Gen. Stephen J. Townsend",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-8-104-137-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1544,
+                            "end": 1549,
+                            "text": "my Lt",
+                            "labels": [
+                                "Vehicle"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-8-106-111-Vehicle",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1556,
+                            "end": 1575,
+                            "text": "Stephen J. Townsend",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-8-118-137-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1450,
+                            "end": 1472,
+                            "text": "counter-ISIL coalition",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-8-12-34-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1590,
+                            "end": 1644,
+                            "text": "Combined Joint Task Force - Operation Inherent Resolve",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-8-152-206-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1599,
+                            "end": 1644,
+                            "text": "Joint Task Force - Operation Inherent Resolve",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-8-161-206-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1458,
+                            "end": 1462,
+                            "text": "ISIL",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-8-20-24-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1498,
+                            "end": 1507,
+                            "text": "this hero",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-8-60-69-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1508,
+                            "end": 1516,
+                            "text": "s family",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-8-70-78-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1780,
+                            "end": 1792,
+                            "text": "our homeland",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-9-113-125-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1798,
+                            "end": 1802,
+                            "text": "ISIL",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-9-131-135-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1671,
+                            "end": 1688,
+                            "text": "this Thanksgiving",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-9-4-21-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1724,
+                            "end": 1739,
+                            "text": "service members",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F7AC57DBBAD0284C8C0DE6566B9B5C29-9-57-72-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "text": "The Defense Department has identified the American service member who was killed in Syria on Thanksgiving Day.\n\n Operation Inherent Resolve - Targeted Operations Against ISIL Terrorists\nNavy Senior Chief Petty Officer Scott C. Dayton, 42, of Woodbridge, Virginia, died Nov. 24 in northern Syria, of wounds sustained in an improvised explosive device blast, according to a DoD news release issued yesterday.\n\nDayton, who was supporting Operation Inherent Resolve, was assigned to Explosive Ordnance Disposal Mobile Unit Two, which is based in Virginia Beach, Virginia, the release said.\n\nOn Thanksgiving Day, Defense Secretary Ash Carter offered his condolences to Dayton\u2019s family, friends and other loved ones.\n\n\u201cI am deeply saddened by the news on this Thanksgiving Day that one of our brave service members has been killed in Syria while protecting us from the evil of ISIL,\u201d Carter said in a Nov. 24 statement. \u201cIt is a painful reminder of the dangers our men and women in uniform face around the world to keep us safe.\u201d\n\nThe secretary added, \u201cPlease keep this service member's family, friends and teammates in your thoughts and prayers, and this Thanksgiving I hope you will join me in expressing thanks to all of our dedicated troops who selflessly protect us every day.\u201d\n\nDayton was mortally wounded in the vicinity of Ayn Issa in northern Syria, according to a Combined Joint Task Force - Operation Inherent Resolve news release.\n\n\u201cThe entire counter-ISIL coalition sends our condolences to this hero's family, friends and teammates,\u201d Army Lt. Gen. Stephen J. Townsend, commander of Combined Joint Task Force - Operation Inherent Resolve, said in the release. \u201cOn this Thanksgiving, please be thankful that there are service members willing to take up the fight to protect our homeland from ISIL's hateful and brutal ideology.\u201d"
+        },
+        "meta": {
+            "source": "http://www.centcom.mil/MEDIA/NEWS-ARTICLES/News-Article-View/Article/1013231/dod-identifies-fallen-us-service-member-in-syria/"
+        }
+    },
+    {
+        "id": "FEB7BC61C9765C9859F46B9B634F039F",
+        "annotations": [
+            {
+                "result": [
+                    {
+                        "value": {
+                            "start": 0,
+                            "end": 31,
+                            "text": "Air Force F-16 Fighting Falcons",
+                            "labels": [
+                                "MilitaryPlatform"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-0-0-31-MilitaryPlatform",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 0,
+                            "end": 9,
+                            "text": "Air Force",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-0-0-9-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 122,
+                            "end": 162,
+                            "text": "the Islamic State of Iraq and the Levant",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-0-122-162-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 126,
+                            "end": 162,
+                            "text": "Islamic State of Iraq and the Levant",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-0-126-162-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 37,
+                            "end": 67,
+                            "text": "the Vermont Air National Guard",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-0-37-67-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 41,
+                            "end": 67,
+                            "text": "Vermont Air National Guard",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-0-41-67-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 76,
+                            "end": 80,
+                            "text": "here",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-0-76-80-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 81,
+                            "end": 94,
+                            "text": "Dec. 10, 2016",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-0-81-94-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 90,
+                            "end": 94,
+                            "text": "2016",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-0-90-94-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 312,
+                            "end": 352,
+                            "text": "the 134th Expeditionary Fighter Squadron",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-1-103-143-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 316,
+                            "end": 352,
+                            "text": "134th Expeditionary Fighter Squadron",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-1-107-143-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 222,
+                            "end": 234,
+                            "text": "the aircraft",
+                            "labels": [
+                                "MilitaryPlatform"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-1-13-25-MilitaryPlatform",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 390,
+                            "end": 397,
+                            "text": "st ISIL",
+                            "labels": [
+                                "Vehicle"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-1-181-188-Vehicle",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 393,
+                            "end": 397,
+                            "text": "ISIL",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-1-184-188-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 409,
+                            "end": 442,
+                            "text": "the 407th Air Expeditionary Group",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-1-200-233-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 413,
+                            "end": 442,
+                            "text": "407th Air Expeditionary Group",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-1-204-233-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 240,
+                            "end": 243,
+                            "text": "300",
+                            "labels": [
+                                "Quantity"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-1-31-34-Quantity",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 240,
+                            "end": 247,
+                            "text": "300 ANG",
+                            "labels": [
+                                "Money"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-1-31-38-Money",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 240,
+                            "end": 254,
+                            "text": "300 ANG Airmen",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-1-31-45-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 244,
+                            "end": 254,
+                            "text": "ANG Airmen",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-1-35-45-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 270,
+                            "end": 292,
+                            "text": "the 158th Fighter Wing",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-1-61-83-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 274,
+                            "end": 292,
+                            "text": "158th Fighter Wing",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-1-65-83-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 447,
+                            "end": 449,
+                            "text": "We",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-2-1-3-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 529,
+                            "end": 564,
+                            "text": "this expeditionary fighter squadron",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-2-83-118-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 573,
+                            "end": 592,
+                            "text": "Col. David C. Lyons",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-3-0-19-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 594,
+                            "end": 613,
+                            "text": "407th AEG commander",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-3-21-40-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 600,
+                            "end": 603,
+                            "text": "AEG",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-3-27-30-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 578,
+                            "end": 592,
+                            "text": "David C. Lyons",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-3-5-19-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 724,
+                            "end": 728,
+                            "text": "ISIL",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-4-109-113-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 752,
+                            "end": 765,
+                            "text": "ground forces",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-4-137-150-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 769,
+                            "end": 773,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-4-154-158-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 631,
+                            "end": 655,
+                            "text": "these total force Airmen",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-4-16-40-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 778,
+                            "end": 783,
+                            "text": "Syria",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-4-163-168-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 840,
+                            "end": 852,
+                            "text": "The squadron",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-5-0-12-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 868,
+                            "end": 877,
+                            "text": "Coalition",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-5-28-37-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 868,
+                            "end": 886,
+                            "text": "Coalition partners",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-5-28-46-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 908,
+                            "end": 911,
+                            "text": "OIR",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-5-68-71-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 915,
+                            "end": 936,
+                            "text": "the deployed location",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-5-75-96-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1042,
+                            "end": 1046,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-6-104-108-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1051,
+                            "end": 1056,
+                            "text": "Syria",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-6-113-118-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1059,
+                            "end": 1063,
+                            "text": "ISIL",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-6-121-125-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 953,
+                            "end": 955,
+                            "text": "60",
+                            "labels": [
+                                "Quantity"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-6-15-17-Quantity",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1094,
+                            "end": 1121,
+                            "text": "the international community",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-6-156-183-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 956,
+                            "end": 990,
+                            "text": "regional and international nations",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-6-18-52-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1127,
+                            "end": 1144,
+                            "text": "the Men and Women",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-6-189-206-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1152,
+                            "end": 1161,
+                            "text": "407th AEG",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-6-214-223-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1181,
+                            "end": 1209,
+                            "text": "Joint and Coalition partners",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-6-243-271-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1191,
+                            "end": 1200,
+                            "text": "Coalition",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-6-253-262-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1250,
+                            "end": 1256,
+                            "text": "Da\u2019esh",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-6-312-318-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1259,
+                            "end": 1264,
+                            "text": "Lyons",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-6-321-326-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1023,
+                            "end": 1027,
+                            "text": "ISIL",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-6-85-89-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1028,
+                            "end": 1034,
+                            "text": "s camp",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "FEB7BC61C9765C9859F46B9B634F039F-6-90-96-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "text": "Air Force F-16 Fighting Falcons from the Vermont Air National Guard arrived here Dec. 10, 2016, to join the fight against the Islamic State of Iraq and the Levant in support of Operation Inherent Resolve.    \nAccompanying the aircraft were 300 ANG Airmen, deployed from the 158th Fighter Wing, who will comprise the 134th Expeditionary Fighter Squadron, which will fly strike missions against ISIL as part of the 407th Air Expeditionary Group.   \u201cWe are excited to generate, execute, and sustain decisive combat airpower through this expeditionary fighter squadron,\u201d said. Col. David C. Lyons, 407th AEG commander. \u201cThe capability these total force Airmen provide through the use of precision airstrikes will aid in denying ISIL safe haven and provide ground forces in Iraq and Syria the opportunity to conduct localized counter attacks.\u201d  The squadron will accompany Coalition partners flying in support of OIR at the deployed location. To date, about 60 regional and international nations have joined together to counter ISIL\u2019s campaign in Iraq and Syria  \u201cISIL continues to pose a threat to the international community, but the Men and Women of the 407th AEG, together with our Joint and Coalition partners, are working hard to defeat and destroy Da\u2019esh,\u201d Lyons said. \n"
+        },
+        "meta": {
+            "source": "http://www.centcom.mil/MEDIA/NEWS-ARTICLES/News-Article-View/Article/1027998/vermont-ang-joins-fight-against-isil/"
+        }
+    }
+]

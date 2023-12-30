@@ -1,0 +1,2597 @@
+[
+    {
+        "id": "C02FDFE461425ED8B64B982D05BD2D62",
+        "annotations": [
+            {
+                "result": [
+                    {
+                        "value": {
+                            "start": 31,
+                            "end": 67,
+                            "text": "U.S., German, and Canadian companies",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C02FDFE461425ED8B64B982D05BD2D62-0-31-67-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 37,
+                            "end": 43,
+                            "text": "German",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "C02FDFE461425ED8B64B982D05BD2D62-0-37-43-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 49,
+                            "end": 57,
+                            "text": "Canadian",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "C02FDFE461425ED8B64B982D05BD2D62-0-49-57-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 76,
+                            "end": 93,
+                            "text": "Syrian Government",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "C02FDFE461425ED8B64B982D05BD2D62-0-76-93-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 76,
+                            "end": 93,
+                            "text": "Syrian Government",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C02FDFE461425ED8B64B982D05BD2D62-0-76-93-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 119,
+                            "end": 136,
+                            "text": "Syrian Government",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "C02FDFE461425ED8B64B982D05BD2D62-1-15-32-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 119,
+                            "end": 136,
+                            "text": "Syrian Government",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C02FDFE461425ED8B64B982D05BD2D62-1-15-32-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 195,
+                            "end": 215,
+                            "text": "the State Department",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C02FDFE461425ED8B64B982D05BD2D62-2-16-36-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 199,
+                            "end": 215,
+                            "text": "State Department",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C02FDFE461425ED8B64B982D05BD2D62-2-20-36-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 370,
+                            "end": 391,
+                            "text": "Executive Order 13582",
+                            "labels": [
+                                "DocumentReference"
+                            ]
+                        },
+                        "id": "C02FDFE461425ED8B64B982D05BD2D62-3-117-138-DocumentReference",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 415,
+                            "end": 445,
+                            "text": "the Department of the Treasury",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C02FDFE461425ED8B64B982D05BD2D62-3-162-192-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 419,
+                            "end": 445,
+                            "text": "Department of the Treasury",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C02FDFE461425ED8B64B982D05BD2D62-3-166-192-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 261,
+                            "end": 275,
+                            "text": "U.S. companies",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C02FDFE461425ED8B64B982D05BD2D62-3-8-22-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 342,
+                            "end": 363,
+                            "text": "the Syrian government",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C02FDFE461425ED8B64B982D05BD2D62-3-89-110-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 346,
+                            "end": 363,
+                            "text": "Syrian government",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C02FDFE461425ED8B64B982D05BD2D62-3-93-110-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 447,
+                            "end": 449,
+                            "text": "We",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C02FDFE461425ED8B64B982D05BD2D62-4-0-2-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 548,
+                            "end": 580,
+                            "text": "Office of Foreign Assets Control",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C02FDFE461425ED8B64B982D05BD2D62-4-101-133-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 519,
+                            "end": 580,
+                            "text": "the Department of Treasury\u2019s Office of Foreign Assets Control",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C02FDFE461425ED8B64B982D05BD2D62-4-72-133-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 523,
+                            "end": 545,
+                            "text": "Department of Treasury",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C02FDFE461425ED8B64B982D05BD2D62-4-76-98-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 583,
+                            "end": 602,
+                            "text": "The U.S. government",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C02FDFE461425ED8B64B982D05BD2D62-5-0-19-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 666,
+                            "end": 669,
+                            "text": "Our",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C02FDFE461425ED8B64B982D05BD2D62-6-0-3-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 859,
+                            "end": 877,
+                            "text": "repressive regimes",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C02FDFE461425ED8B64B982D05BD2D62-6-193-211-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 894,
+                            "end": 906,
+                            "text": "their people",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C02FDFE461425ED8B64B982D05BD2D62-6-228-240-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 702,
+                            "end": 719,
+                            "text": "ordinary citizens",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C02FDFE461425ED8B64B982D05BD2D62-6-36-53-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "text": "QUESTION: There are reports of U.S., German, and Canadian companies hosting Syrian Government websites. Does hosting a Syrian Government website constitute a sanctions violation? What action has the State Department taken to investigate these reports?\n\nANSWER: U.S. companies are prohibited from providing web-hosting or any other service to the Syrian government under Executive Order 13582 without a license from the Department of the Treasury. We refer questions about pending or ongoing licensure investigations to the Department of Treasury\u2019s Office of Foreign Assets Control.\n\nThe U.S. government takes all reports of potential sanctions violations seriously. Our policies are designed to assist ordinary citizens who are exercising their fundamental freedoms of expression, assembly and association, while preventing exports of goods and services that repressive regimes can use against their people."
+        },
+        "meta": {
+            "source": "https://www.state.gov/r/pa/prs/ps/2011/11/177628.htm"
+        }
+    },
+    {
+        "id": "CFEF9B4E83786F435E8483A03DB20D8E",
+        "annotations": [
+            {
+                "result": [
+                    {
+                        "value": {
+                            "start": 0,
+                            "end": 5,
+                            "text": "Today",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-0-0-5-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 11,
+                            "end": 24,
+                            "text": "United States",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-0-11-24-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 111,
+                            "end": 115,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-0-111-115-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 111,
+                            "end": 115,
+                            "text": "Iraq",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-0-111-115-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 132,
+                            "end": 142,
+                            "text": "$1 billion",
+                            "labels": [
+                                "Money"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-0-132-142-Money",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 29,
+                            "end": 33,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-0-29-33-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 29,
+                            "end": 33,
+                            "text": "Iraq",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-0-29-33-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 7,
+                            "end": 24,
+                            "text": "the United States",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-0-7-24-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 302,
+                            "end": 310,
+                            "text": "May 2016",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-1-100-108-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 340,
+                            "end": 344,
+                            "text": "U.S.",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-1-138-142-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 367,
+                            "end": 371,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-1-165-169-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 367,
+                            "end": 371,
+                            "text": "Iraq",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-1-165-169-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 428,
+                            "end": 436,
+                            "text": "st Daesh",
+                            "labels": [
+                                "Vehicle"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-1-226-234-Vehicle",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 431,
+                            "end": 436,
+                            "text": "Daesh",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-1-229-234-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 247,
+                            "end": 262,
+                            "text": "President Obama",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-1-45-60-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 247,
+                            "end": 262,
+                            "text": "President Obama",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-1-45-60-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 275,
+                            "end": 281,
+                            "text": "the G7",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-1-73-79-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 282,
+                            "end": 291,
+                            "text": "Ise-Shima",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-1-80-89-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 292,
+                            "end": 298,
+                            "text": "Summit",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-1-90-96-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 499,
+                            "end": 503,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-2-61-65-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 499,
+                            "end": 503,
+                            "text": "Iraq",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-2-61-65-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 720,
+                            "end": 724,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-3-36-40-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 720,
+                            "end": 724,
+                            "text": "Iraq",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-3-36-40-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 737,
+                            "end": 751,
+                            "text": "other partners",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-3-53-67-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 763,
+                            "end": 794,
+                            "text": "the International Monetary Fund",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-3-79-110-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 767,
+                            "end": 794,
+                            "text": "International Monetary Fund",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-3-83-110-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 892,
+                            "end": 896,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-4-55-59-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 892,
+                            "end": 896,
+                            "text": "Iraq",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-4-55-59-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1076,
+                            "end": 1080,
+                            "text": "U.S.",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-5-120-124-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1076,
+                            "end": 1105,
+                            "text": "U.S. sovereign loan guarantee",
+                            "labels": [
+                                "Money"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-5-120-149-Money",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1037,
+                            "end": 1041,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-5-81-85-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1037,
+                            "end": 1041,
+                            "text": "Iraq",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-5-81-85-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1366,
+                            "end": 1383,
+                            "text": "the United States",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-6-258-275-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1370,
+                            "end": 1383,
+                            "text": "United States",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-6-262-275-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1153,
+                            "end": 1157,
+                            "text": "U.S.",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-6-45-49-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1181,
+                            "end": 1199,
+                            "text": "the people of Iraq",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-6-73-91-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1195,
+                            "end": 1199,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-6-87-91-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1505,
+                            "end": 1515,
+                            "text": "all Iraqis",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-7-106-116-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1517,
+                            "end": 1519,
+                            "text": "it",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-7-118-120-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1546,
+                            "end": 1589,
+                            "text": "its partners in the international community",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-7-147-190-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1402,
+                            "end": 1406,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-7-3-7-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1402,
+                            "end": 1406,
+                            "text": "Iraq",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CFEF9B4E83786F435E8483A03DB20D8E-7-3-7-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "text": "Today, the United States and Iraq signed a loan guarantee agreement that, once entered into force, will enable Iraq to access up to $1 billion in low-cost financing from international capital markets.\n\nThe loan guarantee is intended to deliver on President Obama\u2019s pledge at the G7 Ise-Shima Summit in May 2016 and underscores the enduring U.S. commitment to support Iraq, particularly at this critical moment in the fight against Daesh. In addition to facilitating access to essential financing as Iraq addresses multiple humanitarian crises, the guarantee agreement bolsters important economic and institutional reforms aimed at consolidating a foundation for stability and growth. This loan guarantee also reinforces Iraq\u2019s work with other partners, including the International Monetary Fund, to implement its economic reform agenda. This agreement is an important step in the process for Iraq to obtain greater access to international capital markets. After specific legal requirements and policy considerations have been concluded, Iraq will be able to benefit from this U.S. sovereign loan guarantee.\n\nToday\u2019s signing ceremony underscores ongoing U.S. efforts to help all of the people of Iraq create an environment that supports sustainable and inclusive economic growth, encourages investment and creates jobs, and supports expanding economic relations with the United States and the world. As Iraq continues to make progress in implementing this reform agenda, which promises a better future for all Iraqis, it can count on support from its partners in the international community."
+        },
+        "meta": {
+            "source": "https://www.state.gov/r/pa/prs/ps/2017/01/266544.htm"
+        }
+    },
+    {
+        "id": "E1526BBD89FAB8E7914B3CF5867666CC",
+        "annotations": [
+            {
+                "result": [
+                    {
+                        "value": {
+                            "start": 103,
+                            "end": 108,
+                            "text": "Ahmed",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-0-103-108-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 109,
+                            "end": 114,
+                            "text": "Kamil",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-0-109-114-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 122,
+                            "end": 170,
+                            "text": "Acting General Director of the Office of Museums",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-0-122-170-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 13,
+                            "end": 25,
+                            "text": "Iraqi Museum",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-0-13-25-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 153,
+                            "end": 170,
+                            "text": "Office of Museums",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-0-153-170-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 178,
+                            "end": 203,
+                            "text": "Iraqi Ministry of Culture",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-0-178-203-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 205,
+                            "end": 231,
+                            "text": "State Board of Antiquities",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-0-205-231-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 205,
+                            "end": 244,
+                            "text": "State Board of Antiquities and Heritage",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-0-205-244-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 236,
+                            "end": 251,
+                            "text": "Heritage (SBAH)",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-0-236-251-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 246,
+                            "end": 250,
+                            "text": "SBAH",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-0-246-250-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 29,
+                            "end": 36,
+                            "text": "Baghdad",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-0-29-36-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 330,
+                            "end": 345,
+                            "text": "the Ishtar Gate",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-0-330-345-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 368,
+                            "end": 380,
+                            "text": "ancient city",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-0-368-380-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 376,
+                            "end": 391,
+                            "text": "city of Babylon",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-0-376-391-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 38,
+                            "end": 72,
+                            "text": "the U.S. Embassy Charg\u00e9 d\u2019Affaires",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-0-38-72-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 384,
+                            "end": 391,
+                            "text": "Babylon",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-0-384-391-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 395,
+                            "end": 399,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-0-395-399-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 42,
+                            "end": 60,
+                            "text": "U.S. Embassy Charg",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-0-42-60-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 80,
+                            "end": 94,
+                            "text": "Jonathan Cohen",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-0-80-94-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 9,
+                            "end": 25,
+                            "text": "the Iraqi Museum",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-0-9-25-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 99,
+                            "end": 120,
+                            "text": "Dr. Ahmed Kamil Murad",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-0-99-120-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 401,
+                            "end": 417,
+                            "text": "The U.S. Embassy",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-1-0-16-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 504,
+                            "end": 536,
+                            "text": "a team of Iraqi preservationists",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-1-103-135-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 514,
+                            "end": 519,
+                            "text": "Iraqi",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-1-113-118-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 542,
+                            "end": 550,
+                            "text": "the SBAH",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-1-141-149-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 546,
+                            "end": 550,
+                            "text": "SBAH",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-1-145-149-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 418,
+                            "end": 435,
+                            "text": "grant of $530,000",
+                            "labels": [
+                                "Money"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-1-17-34-Money",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 573,
+                            "end": 603,
+                            "text": "international heritage experts",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-1-172-202-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 609,
+                            "end": 612,
+                            "text": "WMF",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-1-208-211-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 427,
+                            "end": 435,
+                            "text": "$530,000",
+                            "labels": [
+                                "Money"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-1-26-34-Money",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 439,
+                            "end": 463,
+                            "text": "the World Monuments Fund",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-1-38-62-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 405,
+                            "end": 417,
+                            "text": "U.S. Embassy",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-1-4-16-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 443,
+                            "end": 463,
+                            "text": "World Monuments Fund",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-1-42-62-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 465,
+                            "end": 468,
+                            "text": "WMF",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-1-64-67-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 726,
+                            "end": 730,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-2-112-116-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 676,
+                            "end": 693,
+                            "text": "the United States",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-2-62-79-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 680,
+                            "end": 693,
+                            "text": "United States",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-2-66-79-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 698,
+                            "end": 702,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-2-84-88-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 698,
+                            "end": 702,
+                            "text": "Iraq",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-2-84-88-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 894,
+                            "end": 898,
+                            "text": "2009",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-3-131-135-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 907,
+                            "end": 930,
+                            "text": "the Governments of Iraq",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-3-144-167-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 926,
+                            "end": 930,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-3-163-167-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 935,
+                            "end": 952,
+                            "text": "the United States",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-3-172-189-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 939,
+                            "end": 952,
+                            "text": "United States",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-3-176-189-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 957,
+                            "end": 960,
+                            "text": "WMF",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-3-194-197-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 972,
+                            "end": 977,
+                            "text": "Iraqi",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-3-209-214-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 785,
+                            "end": 800,
+                            "text": "the Ishtar Gate",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-3-22-37-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1020,
+                            "end": 1036,
+                            "text": "the ancient city",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-3-257-273-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1024,
+                            "end": 1036,
+                            "text": "ancient city",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-3-261-273-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1054,
+                            "end": 1061,
+                            "text": "Baghdad",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-3-291-298-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 843,
+                            "end": 872,
+                            "text": "the Future of Babylon project",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-3-80-109-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 857,
+                            "end": 864,
+                            "text": "Babylon",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-3-94-101-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1063,
+                            "end": 1073,
+                            "text": "Since 2009",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-4-0-10-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1075,
+                            "end": 1098,
+                            "text": "the Department of State",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-4-12-35-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1079,
+                            "end": 1098,
+                            "text": "Department of State",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-4-16-35-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1115,
+                            "end": 1135,
+                            "text": "more than $4 million",
+                            "labels": [
+                                "Money"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-4-52-72-Money",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1069,
+                            "end": 1073,
+                            "text": "2009",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-4-6-10-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1125,
+                            "end": 1135,
+                            "text": "$4 million",
+                            "labels": [
+                                "Money"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-4-62-72-Money",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1139,
+                            "end": 1160,
+                            "text": "the Future of Babylon",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-4-76-97-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1153,
+                            "end": 1160,
+                            "text": "Babylon",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-4-90-97-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1189,
+                            "end": 1197,
+                            "text": "the site",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-5-27-35-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1167,
+                            "end": 1171,
+                            "text": "U.S.",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-5-5-9-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1322,
+                            "end": 1337,
+                            "text": "The Ishtar Gate",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-6-0-15-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1443,
+                            "end": 1465,
+                            "text": "King Nebuchadnezzar II",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-6-121-143-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1351,
+                            "end": 1383,
+                            "text": "the entrance to the ancient city",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-6-29-61-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1367,
+                            "end": 1383,
+                            "text": "the ancient city",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-6-45-61-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1371,
+                            "end": 1383,
+                            "text": "ancient city",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-6-49-61-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1404,
+                            "end": 1411,
+                            "text": "575 B.C",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-6-82-89-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1718,
+                            "end": 1722,
+                            "text": "2017",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "E1526BBD89FAB8E7914B3CF5867666CC-8-36-40-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "text": "Today at the Iraqi Museum in Baghdad, the U.S. Embassy Charg\u00e9 d\u2019Affaires, a.i., Jonathan Cohen and Dr. Ahmed Kamil Murad, Acting General Director of the Office of Museums at the Iraqi Ministry of Culture, State Board of Antiquities and Heritage (SBAH) announced the funding of a project for the rehabilitation and preservation of the Ishtar Gate at the remains of the ancient city of Babylon in Iraq. The U.S. Embassy grant of $530,000 to the World Monuments Fund (WMF) will support conservation work by a team of Iraqi preservationists from the SBAH under the guidance of international heritage experts from WMF. The grant is part of the ongoing cultural partnership between the United States and Iraq in support of the U.S.-Iraq Strategic Framework Agreement.\n\nThe rehabilitation of the Ishtar Gate is the most recent cooperative venture of the Future of Babylon project \u2013 a partnership from 2009 between the Governments of Iraq and the United States and WMF to support Iraqi efforts to assess, document, and preserve the ancient city located south of Baghdad. Since 2009, the Department of State has contributed more than $4 million to the Future of Babylon. With U.S. support, much of the site has been assessed and documented, emergency stabilization work has been undertaken, and completed a site management plan .\n\nThe Ishtar Gate has stood at the entrance to the ancient city since approximately 575 B.C. when it was constructed under King Nebuchadnezzar II. The remaining parts of the structure are in dire need of conservation to stop further deterioration and to correct modern-era modifications that hasten damage to the monument and that are not historically accurate. Work is expected to be completed in 2017."
+        },
+        "meta": {
+            "source": "https://www.state.gov/r/pa/prs/ps/2015/12/250834.htm"
+        }
+    },
+    {
+        "id": "F669C19A4C3DB410BBEC57ECC5DC62B1",
+        "annotations": [
+            {
+                "result": [
+                    {
+                        "value": {
+                            "start": 0,
+                            "end": 40,
+                            "text": "Deputy Secretary of State Antony Blinken",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "F669C19A4C3DB410BBEC57ECC5DC62B1-0-0-40-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 122,
+                            "end": 142,
+                            "text": "government officials",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F669C19A4C3DB410BBEC57ECC5DC62B1-0-122-142-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 56,
+                            "end": 60,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F669C19A4C3DB410BBEC57ECC5DC62B1-0-56-60-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 159,
+                            "end": 170,
+                            "text": "November 22",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "F669C19A4C3DB410BBEC57ECC5DC62B1-1-14-25-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 172,
+                            "end": 196,
+                            "text": "Deputy Secretary Blinken",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "F669C19A4C3DB410BBEC57ECC5DC62B1-1-27-51-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 148,
+                            "end": 155,
+                            "text": "Baghdad",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F669C19A4C3DB410BBEC57ECC5DC62B1-1-3-10-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 212,
+                            "end": 251,
+                            "text": "national and provincial Iraqi officials",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F669C19A4C3DB410BBEC57ECC5DC62B1-1-67-106-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 236,
+                            "end": 241,
+                            "text": "Iraqi",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "F669C19A4C3DB410BBEC57ECC5DC62B1-1-91-96-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 304,
+                            "end": 306,
+                            "text": "He",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "F669C19A4C3DB410BBEC57ECC5DC62B1-2-0-2-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 417,
+                            "end": 444,
+                            "text": "Popular Mobilization Forces",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F669C19A4C3DB410BBEC57ECC5DC62B1-2-113-140-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 450,
+                            "end": 456,
+                            "text": "others",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F669C19A4C3DB410BBEC57ECC5DC62B1-2-146-152-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 471,
+                            "end": 484,
+                            "text": "the coalition",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F669C19A4C3DB410BBEC57ECC5DC62B1-2-167-180-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 475,
+                            "end": 489,
+                            "text": "coalition camp",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F669C19A4C3DB410BBEC57ECC5DC62B1-2-171-185-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 499,
+                            "end": 507,
+                            "text": "st Daesh",
+                            "labels": [
+                                "Vehicle"
+                            ]
+                        },
+                        "id": "F669C19A4C3DB410BBEC57ECC5DC62B1-2-195-203-Vehicle",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 502,
+                            "end": 507,
+                            "text": "Daesh",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F669C19A4C3DB410BBEC57ECC5DC62B1-2-198-203-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 327,
+                            "end": 357,
+                            "text": "senior U.S. military officials",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F669C19A4C3DB410BBEC57ECC5DC62B1-2-23-53-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 393,
+                            "end": 415,
+                            "text": "the Iraqi Armed Forces",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F669C19A4C3DB410BBEC57ECC5DC62B1-2-89-111-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 397,
+                            "end": 415,
+                            "text": "Iraqi Armed Forces",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F669C19A4C3DB410BBEC57ECC5DC62B1-2-93-111-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 510,
+                            "end": 534,
+                            "text": "Deputy Secretary Blinken",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "F669C19A4C3DB410BBEC57ECC5DC62B1-3-0-24-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 618,
+                            "end": 654,
+                            "text": "senior regional government officials",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F669C19A4C3DB410BBEC57ECC5DC62B1-3-108-144-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 716,
+                            "end": 721,
+                            "text": "Daesh",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F669C19A4C3DB410BBEC57ECC5DC62B1-3-206-211-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 795,
+                            "end": 799,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F669C19A4C3DB410BBEC57ECC5DC62B1-3-285-289-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 551,
+                            "end": 577,
+                            "text": "the Iraqi Kurdistan Region",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F669C19A4C3DB410BBEC57ECC5DC62B1-3-41-67-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 555,
+                            "end": 560,
+                            "text": "Iraqi",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "F669C19A4C3DB410BBEC57ECC5DC62B1-3-45-50-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 561,
+                            "end": 577,
+                            "text": "Kurdistan Region",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "F669C19A4C3DB410BBEC57ECC5DC62B1-3-51-67-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 581,
+                            "end": 592,
+                            "text": "November 23",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "F669C19A4C3DB410BBEC57ECC5DC62B1-3-71-82-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 600,
+                            "end": 602,
+                            "text": "he",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "F669C19A4C3DB410BBEC57ECC5DC62B1-3-90-92-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 820,
+                            "end": 840,
+                            "text": "the Deputy Secretary",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "F669C19A4C3DB410BBEC57ECC5DC62B1-4-18-38-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 853,
+                            "end": 862,
+                            "text": "@ABlinken",
+                            "labels": [
+                                "CommsIdentifier"
+                            ]
+                        },
+                        "id": "F669C19A4C3DB410BBEC57ECC5DC62B1-4-51-60-CommsIdentifier",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 854,
+                            "end": 862,
+                            "text": "ABlinken",
+                            "labels": [
+                                "CommsIdentifier"
+                            ]
+                        },
+                        "id": "F669C19A4C3DB410BBEC57ECC5DC62B1-4-52-60-CommsIdentifier",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 875,
+                            "end": 891,
+                            "text": "State Department",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F669C19A4C3DB410BBEC57ECC5DC62B1-4-73-89-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 875,
+                            "end": 900,
+                            "text": "State Department\u2019s Flickr",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "F669C19A4C3DB410BBEC57ECC5DC62B1-4-73-98-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "text": "Deputy Secretary of State Antony Blinken will travel to Iraq to discuss key political, economic, and security issues with government officials.\n\nIn Baghdad on November 22, Deputy Secretary Blinken will meet with national and provincial Iraqi officials to discuss a range of economic and security issues. He will also meet with senior U.S. military officials to discuss our ongoing support for the Iraqi Armed Forces, Popular Mobilization Forces, and others in support of the coalition campaign against Daesh.\n\nDeputy Secretary Blinken will then visit the Iraqi Kurdistan Region on November 23, where he will meet with senior regional government officials to continue discussions on our efforts to degrade and defeat Daesh as well as our response to the urgent humanitarian and refugee crises in Iraq.\n\nBe sure to follow the Deputy Secretary on Twitter (@ABlinken) and on the State Department\u2019s Flickr and Instagram for more updates throughout his trip."
+        },
+        "meta": {
+            "source": "https://www.state.gov/r/pa/prs/ps/2015/11/249880.htm"
+        }
+    },
+    {
+        "id": "FAB032C0995F606F54B1DD3EA8D61930",
+        "annotations": [
+            {
+                "result": [
+                    {
+                        "value": {
+                            "start": 10,
+                            "end": 25,
+                            "text": "Secretary Kerry",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "FAB032C0995F606F54B1DD3EA8D61930-0-10-25-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 20,
+                            "end": 25,
+                            "text": "Kerry",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "FAB032C0995F606F54B1DD3EA8D61930-0-20-25-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 40,
+                            "end": 49,
+                            "text": "ss Aleppo",
+                            "labels": [
+                                "Vehicle"
+                            ]
+                        },
+                        "id": "FAB032C0995F606F54B1DD3EA8D61930-0-40-49-Vehicle",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 43,
+                            "end": 49,
+                            "text": "Aleppo",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "FAB032C0995F606F54B1DD3EA8D61930-0-43-49-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 79,
+                            "end": 94,
+                            "text": "SECRETARY KERRY",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "FAB032C0995F606F54B1DD3EA8D61930-2-0-15-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 89,
+                            "end": 94,
+                            "text": "KERRY",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "FAB032C0995F606F54B1DD3EA8D61930-2-10-15-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 209,
+                            "end": 211,
+                            "text": "we",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "FAB032C0995F606F54B1DD3EA8D61930-2-130-132-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 233,
+                            "end": 244,
+                            "text": "the morning",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "FAB032C0995F606F54B1DD3EA8D61930-2-154-165-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 96,
+                            "end": 98,
+                            "text": "We",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "FAB032C0995F606F54B1DD3EA8D61930-2-17-19-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 258,
+                            "end": 260,
+                            "text": "we",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "FAB032C0995F606F54B1DD3EA8D61930-2-179-181-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 160,
+                            "end": 166,
+                            "text": "Aleppo",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "FAB032C0995F606F54B1DD3EA8D61930-2-81-87-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 171,
+                            "end": 173,
+                            "text": "we",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "FAB032C0995F606F54B1DD3EA8D61930-2-92-94-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 273,
+                            "end": 281,
+                            "text": "MR KIRBY",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "FAB032C0995F606F54B1DD3EA8D61930-3-0-8-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "text": "QUESTION: Secretary Kerry, did you discuss Aleppo? Were there any agreements?\n\nSECRETARY KERRY: We obviously talked about the extraordinarily dire situation in Aleppo and we exchanged some ideas about it, and we intend to connect in the morning to see where we are on it.\n\nMR KIRBY: Thanks, everybody. Thank you."
+        },
+        "meta": {
+            "source": "https://www.state.gov/secretary/remarks/2016/12/264967.htm"
+        }
+    }
+]

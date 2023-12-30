@@ -1,0 +1,1572 @@
+[
+    {
+        "id": "26E0189E3D774CB2B8F078A082E5088C",
+        "annotations": [
+            {
+                "result": [
+                    {
+                        "value": {
+                            "start": 0,
+                            "end": 18,
+                            "text": "The European Union",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-0-0-18-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 130,
+                            "end": 139,
+                            "text": "September",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-0-130-139-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 4,
+                            "end": 18,
+                            "text": "European Union",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-0-4-18-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 86,
+                            "end": 91,
+                            "text": "Syria",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-0-86-91-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 223,
+                            "end": 244,
+                            "text": "the eve of a New Year",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-1-82-103-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 227,
+                            "end": 230,
+                            "text": "eve",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-1-86-89-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 333,
+                            "end": 348,
+                            "text": "all the parties",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-2-75-90-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 387,
+                            "end": 398,
+                            "text": "air strikes",
+                            "labels": [
+                                "Weapon"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-3-21-32-Weapon",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 415,
+                            "end": 426,
+                            "text": "Wadi Barada",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-3-49-60-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 650,
+                            "end": 656,
+                            "text": "Syrian",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-4-198-204-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 669,
+                            "end": 671,
+                            "text": "UN",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-4-217-219-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 710,
+                            "end": 733,
+                            "text": "the UN Security Council",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-4-258-281-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 714,
+                            "end": 733,
+                            "text": "UN Security Council",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-4-262-281-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 751,
+                            "end": 753,
+                            "text": "we",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-4-299-301-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 805,
+                            "end": 832,
+                            "text": "other international players",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-4-353-380-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 867,
+                            "end": 873,
+                            "text": "Astana",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-4-415-421-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 964,
+                            "end": 970,
+                            "text": "Syrian",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-4-512-518-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 980,
+                            "end": 986,
+                            "text": "Geneva",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-4-528-534-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 980,
+                            "end": 986,
+                            "text": "Geneva",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-4-528-534-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 993,
+                            "end": 995,
+                            "text": "UN",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-4-541-543-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1018,
+                            "end": 1019,
+                            "text": "I",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-4-566-567-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1032,
+                            "end": 1037,
+                            "text": "today",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-4-580-585-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1041,
+                            "end": 1048,
+                            "text": "Turkish",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-4-589-596-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1041,
+                            "end": 1082,
+                            "text": "Turkish Foreign Minister Mevl\u00fct \u00c7avu\u015fo\u011flu",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-4-589-630-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1066,
+                            "end": 1082,
+                            "text": "Mevl\u00fct \u00c7avu\u015fo\u011flu",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-4-614-630-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1090,
+                            "end": 1129,
+                            "text": "the UN Special Envoy Staffan de Mistura",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-4-638-677-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1094,
+                            "end": 1129,
+                            "text": "UN Special Envoy Staffan de Mistura",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-4-642-677-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1158,
+                            "end": 1163,
+                            "text": "Syria",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-4-706-711-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1158,
+                            "end": 1167,
+                            "text": "Syria.The",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-4-706-715-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1164,
+                            "end": 1182,
+                            "text": "The European Union",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-4-712-730-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1168,
+                            "end": 1182,
+                            "text": "European Union",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-4-716-730-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1211,
+                            "end": 1231,
+                            "text": "the regional parties",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-4-759-779-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1233,
+                            "end": 1235,
+                            "text": "We",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-5-0-2-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1346,
+                            "end": 1351,
+                            "text": "Syria",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-5-113-118-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1249,
+                            "end": 1257,
+                            "text": "Brussels",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-5-16-24-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1462,
+                            "end": 1468,
+                            "text": "Geneva",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-5-229-235-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1462,
+                            "end": 1468,
+                            "text": "Geneva",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-5-229-235-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1472,
+                            "end": 1480,
+                            "text": "February",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-5-239-247-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1494,
+                            "end": 1500,
+                            "text": "the EU",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-5-261-267-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1261,
+                            "end": 1272,
+                            "text": "mid January",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-5-28-39-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1533,
+                            "end": 1541,
+                            "text": "Brussels",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-5-300-308-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1556,
+                            "end": 1565,
+                            "text": "last year",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-5-323-332-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1568,
+                            "end": 1574,
+                            "text": "London",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-5-335-341-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1589,
+                            "end": 1594,
+                            "text": "Syria",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-5-356-361-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1599,
+                            "end": 1605,
+                            "text": "spring",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-5-366-372-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1607,
+                            "end": 1613,
+                            "text": "The EU",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-6-0-6-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1725,
+                            "end": 1745,
+                            "text": "over 9 billion euros",
+                            "labels": [
+                                "Money"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-6-118-138-Money",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1680,
+                            "end": 1685,
+                            "text": "Syria",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-6-73-78-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1693,
+                            "end": 1719,
+                            "text": "the neighbouring countries",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-6-86-112-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1945,
+                            "end": 1950,
+                            "text": "Syria",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-7-112-117-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1964,
+                            "end": 1981,
+                            "text": "the Syrian people",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-7-131-148-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1968,
+                            "end": 1974,
+                            "text": "Syrian",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-7-135-141-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1993,
+                            "end": 2006,
+                            "text": "their country",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-7-160-173-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 2109,
+                            "end": 2114,
+                            "text": "Daesh",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-8-58-63-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 2118,
+                            "end": 2123,
+                            "text": "Syria",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "26E0189E3D774CB2B8F078A082E5088C-8-67-72-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "text": "The European Union has been among those calling for a new cessation of hostilities in Syria ever since the last one broke down in September. In this context, the announcement of an agreement for cessation of hostilities on the eve of a New Year is welcome. \nWhat matters first and foremost is that it can be implemented fully and by all the parties to the conflict. Reports of continued air strikes and fighting in Wadi Barada are a matter of concern. But if implemented fully, the cessation can open the way to unhindered and countrywide humanitarian access to those in need.And, most of all, if successful it can open the way to a renewal of intra-Syrian talks under UN auspices, within the framework set by the UN Security Council.In this respect, we would welcome any intermediate step facilitated by other international players, such as the announced meeting in Astana, if fully inclusive and aimed at preparing a fruitful and meaningful\u00a0 resumption of intra-Syrian talks in Geneva under UN auspices.To this aim, I have spoken today to Turkish Foreign Minister Mevl\u00fct \u00c7avu\u015fo\u011flu and to the UN Special Envoy Staffan de Mistura, to coordinate our work for Syria.The European Union is continuing its work with the regional parties. We will host in Brussels in mid January a round of bilateral talks to find common ground on the post conflict in Syria, and on reconciliation and reconstruction, in full coordination and support of the talks that will be held in Geneva in February.In addition, the EU will be hosting a conference in Brussels, follow-up to last year's London conference on Syria, in spring. The EU has and will continue to be the biggest humanitarian aid donor in Syria and in the neighbouring countries with over 9 billion euros committed since the start of the crisis.But our aim and role is not only humanitarian. It is most of all to contribute, in coordination with others, to a negotiated peace for a united and democratic Syria, and to help the Syrian people to rebuild their country once the political conditions are in place. This is also the only way to achieve a decisive defeat of Daesh in Syria.\u00a0\n"
+        },
+        "meta": {
+            "source": "https://eeas.europa.eu/headquarters/headquarters-homepage/18230/statement-high-representativevice-president-federica-mogherini-announcement-cessation_en"
+        }
+    },
+    {
+        "id": "8BF4B60AA80B0601BE12F0164E2E7001",
+        "annotations": [
+            {
+                "result": [
+                    {
+                        "value": {
+                            "start": 0,
+                            "end": 9,
+                            "text": "This week",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-0-0-9-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 130,
+                            "end": 135,
+                            "text": "Syria",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-0-130-135-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 137,
+                            "end": 175,
+                            "text": "High Representative Federica Mogherini",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-0-137-175-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 142,
+                            "end": 177,
+                            "text": "Representative Federica Mogherini\u2019s",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-0-142-177-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 232,
+                            "end": 243,
+                            "text": "the country",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-0-232-243-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 76,
+                            "end": 90,
+                            "text": "European Union",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-0-76-90-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 354,
+                            "end": 382,
+                            "text": "Ministers of Foreign Affairs",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-1-109-137-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 367,
+                            "end": 382,
+                            "text": "Foreign Affairs",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-1-122-137-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 386,
+                            "end": 390,
+                            "text": "Iran",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-1-141-145-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 386,
+                            "end": 390,
+                            "text": "Iran",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-1-141-145-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 392,
+                            "end": 404,
+                            "text": "Saudi Arabia",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-1-147-159-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 392,
+                            "end": 404,
+                            "text": "Saudi Arabia",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-1-147-159-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 410,
+                            "end": 430,
+                            "text": "United Arab Emirates",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-1-165-185-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 410,
+                            "end": 430,
+                            "text": "United Arab Emirates",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-1-165-185-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 432,
+                            "end": 437,
+                            "text": "Egypt",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-1-187-192-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 432,
+                            "end": 437,
+                            "text": "Egypt",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-1-187-192-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 439,
+                            "end": 445,
+                            "text": "Jordan",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-1-194-200-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 439,
+                            "end": 445,
+                            "text": "Jordan",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-1-194-200-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 450,
+                            "end": 457,
+                            "text": "Lebanon",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-1-205-212-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 450,
+                            "end": 457,
+                            "text": "Lebanon",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-1-205-212-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 487,
+                            "end": 493,
+                            "text": "Turkey",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-1-242-248-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 487,
+                            "end": 493,
+                            "text": "Turkey",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-1-242-248-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 498,
+                            "end": 503,
+                            "text": "Qatar",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-1-253-258-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 498,
+                            "end": 503,
+                            "text": "Qatar",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-1-253-258-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 300,
+                            "end": 326,
+                            "text": "senior officials of the EU",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-1-55-81-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 505,
+                            "end": 514,
+                            "text": "Mogherini",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-2-0-9-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 613,
+                            "end": 616,
+                            "text": "her",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-2-108-111-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 556,
+                            "end": 561,
+                            "text": "Syria",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-2-51-56-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 565,
+                            "end": 575,
+                            "text": "EU leaders",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-2-60-70-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 579,
+                            "end": 599,
+                            "text": "the end of last year",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-2-74-94-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 633,
+                            "end": 636,
+                            "text": "She",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-3-0-3-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 733,
+                            "end": 739,
+                            "text": "Turkey",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-3-100-106-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 741,
+                            "end": 748,
+                            "text": "Lebanon",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-3-108-115-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 750,
+                            "end": 755,
+                            "text": "Egypt",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-3-117-122-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 757,
+                            "end": 763,
+                            "text": "Jordan",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-3-124-130-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 765,
+                            "end": 770,
+                            "text": "Qatar",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-3-132-137-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 778,
+                            "end": 797,
+                            "text": "the end of the year",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-3-145-164-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 678,
+                            "end": 770,
+                            "text": "the Foreign Ministers of Iran, Saudi Arabia, Emirates, Turkey, Lebanon,\u00a0Egypt,\u00a0Jordan, Qatar",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-3-45-137-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 682,
+                            "end": 699,
+                            "text": "Foreign Ministers",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-3-49-66-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 703,
+                            "end": 707,
+                            "text": "Iran",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-3-70-74-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 709,
+                            "end": 721,
+                            "text": "Saudi Arabia",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-3-76-88-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1100,
+                            "end": 1131,
+                            "text": "the UN Special Envoy de Mistura",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-5-102-133-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1104,
+                            "end": 1131,
+                            "text": "UN Special Envoy de Mistura",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-5-106-133-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1135,
+                            "end": 1141,
+                            "text": "Geneva",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-5-137-143-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1135,
+                            "end": 1141,
+                            "text": "Geneva",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-5-137-143-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1145,
+                            "end": 1153,
+                            "text": "February",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-5-147-155-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1174,
+                            "end": 1182,
+                            "text": "Brussels",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-5-176-184-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1197,
+                            "end": 1202,
+                            "text": "Syria",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-5-199-204-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1207,
+                            "end": 1217,
+                            "text": "the region",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-5-209-219-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1242,
+                            "end": 1248,
+                            "text": "the EU",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-5-244-250-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1269,
+                            "end": 1275,
+                            "text": "The EU",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-5-271-277-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1346,
+                            "end": 1351,
+                            "text": "Syria",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-5-348-353-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1365,
+                            "end": 1414,
+                            "text": "the UN Security Council Resolutions 2254 and 2118",
+                            "labels": [
+                                "DocumentReference"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-5-367-416-DocumentReference",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1369,
+                            "end": 1388,
+                            "text": "UN Security Council",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-5-371-390-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1066,
+                            "end": 1072,
+                            "text": "Syrian",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "8BF4B60AA80B0601BE12F0164E2E7001-5-68-74-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "text": "This week sees the start of a second round of talks in the framework of the European Union's Regional Initiative on the future of Syria, High Representative Federica Mogherini\u2019s initiative to identify post-conflict arrangements for the country.\nA series of bilateral meetings will take place between senior officials of the EU and representatives of the Ministers of Foreign Affairs of Iran,\u00a0Saudi Arabia,\u00a0the\u00a0United Arab Emirates, Egypt, Jordan and Lebanon, and\u00a0in the coming days with Turkey and Qatar.\nMogherini proposed the initiative on the future of Syria to EU leaders at the end of last year, who invited her to build on it. She already held a first round of talks with the Foreign Ministers of Iran, Saudi Arabia, Emirates, Turkey, Lebanon,\u00a0Egypt,\u00a0Jordan, Qatar before the end of the year.\nBesides identifying common ground on post-conflict arrangements, the initiative is examining the scope for reconciliation and reconstruction once a credible political transition is firmly under way. It is being conducted in full coordination and support of the intra-Syrian talks that will be held by the UN Special Envoy de Mistura in Geneva in February,\u00a0and in view of the\u00a0Brussels Conference on Syria and the region\u00a0which will be hosted by the EU\u00a0later\u00a0in\u00a0the\u00a0spring.The EU is strongly committed to\u00a0contribute towards a political transition in Syria as agreed in the UN Security Council Resolutions 2254 and 2118.\n"
+        },
+        "meta": {
+            "source": "https://eeas.europa.eu/delegations/syria/18431/mogherini-pushes-ahead-regional-initiative-syria_en"
+        }
+    }
+]

@@ -1,0 +1,1068 @@
+[
+    {
+        "id": "DC40EB7B4BDB1254DAF8A430A8E5383B",
+        "annotations": [
+            {
+                "result": [
+                    {
+                        "value": {
+                            "start": 100,
+                            "end": 118,
+                            "text": "the Turkish border",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "DC40EB7B4BDB1254DAF8A430A8E5383B-0-100-118-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 104,
+                            "end": 111,
+                            "text": "Turkish",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "DC40EB7B4BDB1254DAF8A430A8E5383B-0-104-111-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 12,
+                            "end": 18,
+                            "text": "people",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "DC40EB7B4BDB1254DAF8A430A8E5383B-0-12-18-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 41,
+                            "end": 49,
+                            "text": "car bomb",
+                            "labels": [
+                                "Weapon"
+                            ]
+                        },
+                        "id": "DC40EB7B4BDB1254DAF8A430A8E5383B-0-41-49-Weapon",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 59,
+                            "end": 93,
+                            "text": "the rebel-held Syrian town of Azaz",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "DC40EB7B4BDB1254DAF8A430A8E5383B-0-59-93-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 74,
+                            "end": 80,
+                            "text": "Syrian",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "DC40EB7B4BDB1254DAF8A430A8E5383B-0-74-80-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 89,
+                            "end": 93,
+                            "text": "Azaz",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "DC40EB7B4BDB1254DAF8A430A8E5383B-0-89-93-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 9,
+                            "end": 11,
+                            "text": "43",
+                            "labels": [
+                                "Quantity"
+                            ]
+                        },
+                        "id": "DC40EB7B4BDB1254DAF8A430A8E5383B-0-9-11-Quantity",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 151,
+                            "end": 163,
+                            "text": "a courthouse",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "DC40EB7B4BDB1254DAF8A430A8E5383B-1-31-43-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 167,
+                            "end": 175,
+                            "text": "the town",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "DC40EB7B4BDB1254DAF8A430A8E5383B-1-47-55-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 182,
+                            "end": 185,
+                            "text": "7km",
+                            "labels": [
+                                "Quantity"
+                            ]
+                        },
+                        "id": "DC40EB7B4BDB1254DAF8A430A8E5383B-1-62-65-Quantity",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 187,
+                            "end": 197,
+                            "text": "four miles",
+                            "labels": [
+                                "Quantity"
+                            ]
+                        },
+                        "id": "DC40EB7B4BDB1254DAF8A430A8E5383B-1-67-77-Quantity",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 204,
+                            "end": 224,
+                            "text": "the Turkish frontier",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "DC40EB7B4BDB1254DAF8A430A8E5383B-1-84-104-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 208,
+                            "end": 215,
+                            "text": "Turkish",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "DC40EB7B4BDB1254DAF8A430A8E5383B-1-88-95-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "text": "At least 43 people have been killed in a car bomb blast in the rebel-held Syrian town of Azaz, near the Turkish border.\nThe explosion occurred outside a courthouse in the town, just 7km (four miles) from the Turkish frontier."
+        },
+        "meta": {
+            "source": "http://www.bbc.co.uk/news/world-middle-east-38541465"
+        }
+    },
+    {
+        "id": "DDC23537DF2DA27754B9327683DCA114",
+        "annotations": [
+            {
+                "result": [
+                    {
+                        "value": {
+                            "start": 0,
+                            "end": 12,
+                            "text": "Iraqi forces",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-0-0-12-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 0,
+                            "end": 5,
+                            "text": "Iraqi",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-0-0-5-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 104,
+                            "end": 109,
+                            "text": "Iraqi",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-0-104-109-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 104,
+                            "end": 126,
+                            "text": "Iraqi state television",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-0-104-126-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 41,
+                            "end": 57,
+                            "text": "Mosul University",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-0-41-57-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 41,
+                            "end": 57,
+                            "text": "Mosul University",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-0-41-57-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 79,
+                            "end": 102,
+                            "text": "so-called Islamic State",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-0-79-102-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 89,
+                            "end": 96,
+                            "text": "Islamic",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-0-89-96-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 133,
+                            "end": 148,
+                            "text": "Military forces",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-1-0-15-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 236,
+                            "end": 243,
+                            "text": "October",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-1-103-110-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 180,
+                            "end": 188,
+                            "text": "the city",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-1-47-55-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 206,
+                            "end": 208,
+                            "text": "IS",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-1-73-75-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 223,
+                            "end": 227,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-1-90-94-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1120,
+                            "end": 1128,
+                            "text": "The camp",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-10-0-8-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1142,
+                            "end": 1149,
+                            "text": "October",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-10-22-29-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1200,
+                            "end": 1202,
+                            "text": "IS",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-10-80-82-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1333,
+                            "end": 1338,
+                            "text": "Iraqi",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-11-101-106-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1333,
+                            "end": 1345,
+                            "text": "Iraqi forces",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-11-101-113-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1260,
+                            "end": 1269,
+                            "text": "the river",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-11-28-37-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1270,
+                            "end": 1273,
+                            "text": "may",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-11-38-41-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1282,
+                            "end": 1295,
+                            "text": "western Mosul",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-11-50-63-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1290,
+                            "end": 1295,
+                            "text": "Mosul",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-11-58-63-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1318,
+                            "end": 1320,
+                            "text": "IS",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-11-86-88-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 245,
+                            "end": 260,
+                            "text": "Iraqi officials",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-2-0-15-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 245,
+                            "end": 250,
+                            "text": "Iraqi",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-2-0-5-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 266,
+                            "end": 278,
+                            "text": "the IS group",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-2-21-33-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 270,
+                            "end": 272,
+                            "text": "IS",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-2-25-27-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 304,
+                            "end": 318,
+                            "text": "the university",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-2-59-73-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 304,
+                            "end": 326,
+                            "text": "the university complex",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-2-59-81-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 335,
+                            "end": 351,
+                            "text": "chemical weapons",
+                            "labels": [
+                                "Weapon"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-2-90-106-Weapon",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 353,
+                            "end": 407,
+                            "text": "The head of the country's counter-terrorism operations",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-3-0-54-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 422,
+                            "end": 430,
+                            "text": "the area",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-3-69-77-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 461,
+                            "end": 504,
+                            "text": "This great scientific and cultural building",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-4-3-46-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 522,
+                            "end": 532,
+                            "text": "the heroes",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-4-64-74-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 536,
+                            "end": 548,
+                            "text": "Lt Gen Talib",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-4-78-90-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 536,
+                            "end": 557,
+                            "text": "Lt Gen Talib Shaghati",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-4-78-99-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 549,
+                            "end": 557,
+                            "text": "Shaghati",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-4-91-99-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 585,
+                            "end": 599,
+                            "text": "the University",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-5-20-34-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 585,
+                            "end": 608,
+                            "text": "the University of Mosul",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-5-20-43-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 589,
+                            "end": 608,
+                            "text": "University of Mosul",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-5-24-43-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 672,
+                            "end": 684,
+                            "text": "Elite troops",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-6-0-12-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 697,
+                            "end": 709,
+                            "text": "the compound",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-6-25-37-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 713,
+                            "end": 719,
+                            "text": "Friday",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-6-41-47-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 765,
+                            "end": 789,
+                            "text": "Iraqi military officials",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-7-0-24-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 765,
+                            "end": 770,
+                            "text": "Iraqi",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-7-0-5-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 833,
+                            "end": 841,
+                            "text": "the city",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-7-68-76-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 833,
+                            "end": 856,
+                            "text": "the city's eastern half",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-7-68-91-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 858,
+                            "end": 862,
+                            "text": "They",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-8-0-4-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 876,
+                            "end": 893,
+                            "text": "three of the five",
+                            "labels": [
+                                "Quantity"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-8-18-35-Quantity",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 894,
+                            "end": 931,
+                            "text": "key bridges crossing the river Tigris",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-8-36-73-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 925,
+                            "end": 931,
+                            "text": "Tigris",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-8-67-73-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 947,
+                            "end": 952,
+                            "text": "Mosul",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-8-89-94-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 961,
+                            "end": 972,
+                            "text": "The bridges",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-9-0-11-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1063,
+                            "end": 1065,
+                            "text": "IS",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-9-102-104-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1091,
+                            "end": 1118,
+                            "text": "their positions in the east",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-9-130-157-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1097,
+                            "end": 1106,
+                            "text": "positions",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-9-136-145-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1110,
+                            "end": 1118,
+                            "text": "the east",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-9-149-157-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 990,
+                            "end": 999,
+                            "text": "coalition",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-9-29-38-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1000,
+                            "end": 1011,
+                            "text": "air strikes",
+                            "labels": [
+                                "Weapon"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-9-39-50-Weapon",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1015,
+                            "end": 1022,
+                            "text": "October",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "DDC23537DF2DA27754B9327683DCA114-9-54-61-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "text": "Iraqi forces have seized full control of Mosul University in their battle with so-called Islamic State, Iraqi state television said.\nMilitary forces have been attempting to retake the city - the last major IS stronghold in Iraq - since October.\nIraqi officials said the IS group had used laboratories in the university complex to make chemical weapons.\nThe head of the country's counter-terrorism operations said retaking the area was a significant victory.\n\"\"\"This great scientific and cultural building was liberated by the heroes,\"\" Lt Gen Talib Shaghati, said. \"\"The liberation of the University of Mosul means much, given its cultural, social and human symbolism.\"\"\"\nElite troops had entered the compound on Friday as part of a major push into new territory. \nIraqi military officials claim they now control a large majority of the city's eastern half.\nThey also control three of the five key bridges crossing the river Tigris, which divides Mosul in two.\nThe bridges were targeted by coalition air strikes in October with the aim of limiting the ability of IS to resupply or reinforce their positions in the east.\nThe campaign began in October, but got off to a slow start in the face of tough IS defence and counter-attacks.\nBut significant gains along the river may open up western Mosul, which is still under IS control, to Iraqi forces seeking to advance.\n"
+        },
+        "meta": {
+            "source": "http://www.bbc.co.uk/news/world-middle-east-38623671"
+        }
+    }
+]
