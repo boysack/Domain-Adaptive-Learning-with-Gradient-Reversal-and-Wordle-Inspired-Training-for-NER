@@ -29,9 +29,23 @@ if __name__ == "__main__":
         type=str,
     )
     parser.add_argument(
+        "--ds_train_path_defense",
+        help="Path of domain shift train dataset file",
+        default="/content/NLP-NER-Project/legal_ner/NER_SHIFT_TRAIN/UKGovernment_train.json",
+        required=False,
+        type=str,
+    )
+    parser.add_argument(
         "--ds_valid_path",
         help="Path of validation dataset file",
         default="/content/NLP-NER-Project/legal_ner/NER_DEV/NER_DEV_JUDGEMENT.json",
+        required=False,
+        type=str,
+    )
+    parser.add_argument(
+        "--ds_valid_path_defense",
+        help="Path of domain shift validation dataset file",
+        default="/content/NLP-NER-Project/legal_ner/NER_SHIFT_TEST/UKGovernment_test.json",
         required=False,
         type=str,
     )
@@ -82,7 +96,9 @@ if __name__ == "__main__":
 
     ## Parameters
     ds_train_path = args.ds_train_path  # e.g., 'data/NER_TRAIN/NER_TRAIN_ALL.json'
+    ds_train_path_defense = args.ds_train_path_defense 
     ds_valid_path = args.ds_valid_path  # e.g., 'data/NER_DEV/NER_DEV_ALL.json'
+    ds_valid_path_defense = args.ds_valid_path_defense  
     output_folder = args.output_folder  # e.g., 'results/'
     batch_size = args.batch             # e.g., 256 for luke-based, 1 for bert-based
     num_epochs = args.num_epochs        # e.g., 5
@@ -111,6 +127,29 @@ if __name__ == "__main__":
     labels_list += ["I-" + l for l in original_label_list]
     num_labels = len(labels_list) + 1
 
+    original_label_list_defense = [
+        "COMMSIDENTIFIER",
+        "DOCUMENTREFERENCE",
+        "FREQUENCY",
+        "LOCATION",
+        "MILITARYPLATFORM",
+        "MONEY",
+        "NATIONALITY",
+        "ORGANISATION",
+        "PERSON",
+        "QUANTITY",
+        "TEMPORAL",
+        "URL",
+        "VEHICLE",
+        "WEAPON"
+    ]
+    labels_list_defense = ["B-" + l for l in original_label_list_defense]
+    labels_list_defense += ["I-" + l for l in original_label_list_defense]
+    num_labels_defense = len(labels_list_defense) + 1
+
+
+
+    
     ## Compute metrics
     def compute_metrics(pred):
 
@@ -176,6 +215,14 @@ if __name__ == "__main__":
             ds_train_path, 
             model_path, 
             labels_list=labels_list, 
+            split="train", 
+            use_roberta=use_roberta
+        )
+
+        train_defense_ds = LegalNERTokenDataset(
+            ds_train_path_defense, 
+            model_path, 
+            labels_list=labels_list_defense, 
             split="train", 
             use_roberta=use_roberta
         )
@@ -251,6 +298,8 @@ Example of usage:
 python main.py \
     --ds_train_path data/NER_TRAIN/NER_TRAIN_ALL.json \
     --ds_valid_path data/NER_DEV/NER_DEV_ALL.json \
+    --ds_train_path_defense data/NER_TRAIN/NER_TRAIN_ALL.json \
+    --ds_valid_path_defense data/NER_DEV/NER_DEV_ALL.json \
     --output_folder results/ \
     --batch 256 \
     --num_epochs 5 \
