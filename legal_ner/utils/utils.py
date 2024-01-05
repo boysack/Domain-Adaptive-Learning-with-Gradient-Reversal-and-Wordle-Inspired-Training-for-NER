@@ -1,7 +1,8 @@
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
 import numpy as np
 from nervaluate import Evaluator
-from torch import save
+import torch
+from tqdm import tqdm
 
 
 
@@ -48,12 +49,14 @@ def match_labels(tokenized_input, annotations):
 def extract_embeddings(model, dataloader):
     model.eval()
     embeddings = []
+    print("Saving embeddings...")
     with torch.no_grad():
-        for batch in dataloader:
+        for batch in tqdm(dataloader):
             input_ids = batch['input_ids'].to(model.device)
             attention_mask = batch['attention_mask'].to(model.device)
-            outputs = model(input_ids, attention_mask=attention_mask)
-            embeddings.append(outputs.last_hidden_state.detach().cpu())
-    embeddings = torch.cat(embeddings)
-    save(embeddings, "embeddings.pt")
+            outputs = model(input_ids, attention_mask=attention_mask, output_hidden_states=True)
+            embeddings.append(outputs.hidden_states[0])
+    embeddings = torch.cat(embeddings, dim=1)
+    print(embeddings.shape)
+    torch.save(embeddings, "embeddings.pt")
     return embeddings

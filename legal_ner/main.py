@@ -238,7 +238,7 @@ if __name__ == "__main__":
 
         ## Define the model
         model = AutoModelForTokenClassification.from_pretrained(
-            model_path, 
+            "/content/checkpoint-47175", # model_path
             num_labels=num_labels, 
             ignore_mismatched_sizes=True
         )
@@ -289,9 +289,9 @@ if __name__ == "__main__":
         )
 
         ## Train the model and save it
-        trainer.train()
-        trainer.save_model(output_folder)
-        trainer.evaluate()
+        # trainer.train()
+        # trainer.save_model(output_folder)
+        # trainer.evaluate()
         dataloader = trainer.get_train_dataloader()
         embeddings = extract_embeddings(model, dataloader)
         
