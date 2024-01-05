@@ -1,4 +1,3 @@
-import models
 import utils
 import torch
 import torch.nn as nn
@@ -6,7 +5,11 @@ from torch.autograd import Function
 from torch.nn.init import normal_, constant_
 from collections import OrderedDict
 import logging
-from typing import Dict
+from typing import Dict, Optional
+from utils.logger import logger
+import os
+from datetime import datetime
+from pathlib import Path
 
 class AdaptiveModule(nn.Module):
 
@@ -180,6 +183,9 @@ class DomainAdaptationNER(nn.Module):
         self.domain_window_loss = utils.AverageMeter()
         self.classification_loss_source = utils.AverageMeter()
         self.classification_loss_target = utils.AverageMeter()
+    
+    def forward(self, source, target, is_train=True):
+        return self.model(source, target, is_train=is_train)
 
     def compute_loss(self, class_labels_source: 'torch.Tensor', class_labels_target: 'torch.Tensor', predictions: Dict[str, 'torch.Tensor']):
         classification_loss_source = self.criterion(predictions['preds_class_source'], class_labels_source) #cross entropy loss
@@ -213,12 +219,6 @@ class DomainAdaptationNER(nn.Module):
 
             domain_window_loss = self.criterion(pred_domain_window_all, domain_label_all)
             self.domain_window_loss.update(torch.mean(domain_window_loss) / (self.total_batch / self.batch_size), self.batch_size)
-    
-    def train():
-        pass #TODO: set model to train mode
-
-    def eval():
-        pass #TODO: set model to eval mode
 
     def compute_accuracy(self, logits: Dict[str, torch.Tensor], label: torch.Tensor):
         """Fuse the logits from different modalities and compute the classification accuracy.
@@ -271,7 +271,7 @@ class DomainAdaptationNER(nn.Module):
 
     def reset_acc(self):
         """Reset the classification accuracy."""
-        self.accuracy_source.reser()
+        self.accuracy_source.reset()
         self.accuracy_target.update()
 
 
@@ -309,3 +309,177 @@ class DomainAdaptationNER(nn.Module):
             loss += self.domain_window_loss.val
         
         loss.backward(retain_graph=retain_graph)
+    
+    def load_on_gpu(self, device: torch.device = torch.device("cuda")):
+        """Load all the models on the GPU(s) using DataParallel.
+
+        Parameters
+        ----------
+        device : torch.device, optional
+            the device to move the models on, by default torch.device('cuda')
+        """
+        for modality, model in self.task_models.items():
+            self.task_models[modality] = torch.nn.DataParallel(model).to(device)
+
+    def __restore_checkpoint(self, m: str, path: str):
+        """Restore a checkpoint from path.
+
+        Parameters
+        ----------
+        m : str
+            modality to load from
+        path : str
+            path to load from
+        """
+        logger.info("Restoring {} for modality {} from {}".format(self.name, m, path))
+
+        checkpoint = torch.load(path)
+
+        # Restore the state of the task
+        self.current_iter = checkpoint["iteration"]
+        self.best_iter = checkpoint["best_iter"]
+        self.best_iter_score = checkpoint["best_iter_score"]
+        self.last_iter_acc = checkpoint["acc_mean"]
+
+        # Restore the model parameters
+        self.task_models[m].load_state_dict(checkpoint["model_state_dict"], strict=True)
+        # Restore the optimizer parameters
+        self.optimizer[m].load_state_dict(checkpoint["optimizer_state_dict"])
+
+        try:
+            self.model_count = checkpoint["last_model_count_saved"]
+            self.model_count = self.model_count + 1 if self.model_count < 9 else 1
+        except KeyError:
+            # for compatibility with models saved before refactoring
+            self.model_count = 1
+
+        logger.info(
+            f"{m}-Model for {self.name} restored at iter {self.current_iter}\n"
+            f"Best accuracy on val: {self.best_iter_score:.2f} at iter {self.best_iter}\n"
+            f"Last accuracy on val: {self.last_iter_acc:.2f}\n"
+            f"Last loss: {checkpoint['loss_mean']:.2f}"
+        )
+
+    def load_model(self, path: str, idx: int):
+        """Load a specific model (idx-one) among the last 9 saved.
+
+        Load a specific model (idx-one) among the last 9 saved from a specific path,
+        might be overwritten in case the task requires it.
+
+        Parameters
+        ----------
+        path : str
+            directory to load models from
+        idx : int
+            index of the model to load
+        """
+        # List all the files in the path in chronological order (1st is most recent, last is less recent)
+        last_dir = Path(
+            list(
+                sorted(
+                    Path(path).iterdir(),
+                    key=lambda date: datetime.strptime(os.path.basename(os.path.normpath(date)), "%b%d_%H-%M-%S"),
+                )
+            )[-1]
+        )
+        last_models_dir = last_dir.iterdir()
+
+        for m in self.modalities:
+            # Get the correct model (modality, name, idx)
+            model = list(
+                filter(
+                    lambda x: m == x.name.split(".")[0].split("_")[-2]
+                    and self.name == x.name.split(".")[0].split("_")[-3]
+                    and str(idx) == x.name.split(".")[0].split("_")[-1],
+                    last_models_dir,
+                )
+            )[0].name
+            model_path = os.path.join(str(last_dir), model)
+
+            self.__restore_checkpoint(m, model_path)
+
+    def load_last_model(self, path: str):
+        """Load the last model from a specific path.
+
+        Parameters
+        ----------
+        path : str
+            directory to load models from
+        """
+        # List all the files in the path in chronological order (1st is most recent, last is less recent)
+        last_models_dir = list(
+            sorted(
+                Path(path).iterdir(),
+                key=lambda date: datetime.strptime(os.path.basename(os.path.normpath(date)), "%b%d_%H-%M-%S"),
+            )
+        )[-1]
+        saved_models = [x for x in reversed(sorted(Path(last_models_dir).iterdir(), key=os.path.getmtime))]
+
+        for m in self.modalities:
+            # Get the correct model (modality, name, idx)
+            model = list(
+                filter(
+                    lambda x: m == x.name.split(".")[0].split("_")[-2]
+                    and self.name == x.name.split(".")[0].split("_")[-3],
+                    saved_models,
+                )
+            )[0].name
+
+            model_path = os.path.join(last_models_dir, model)
+            self.__restore_checkpoint(m, model_path)
+
+    def save_model(self, current_iter: int, last_iter_acc: float, prefix: Optional[str] = None):
+        """Save the model.
+
+        Parameters
+        ----------
+        current_iter : int
+            current iteration in which the model is going to be saved
+        last_iter_acc : float
+            accuracy reached in the last iteration
+        prefix : Optional[str], optional
+            string to be put as a prefix to filename of the model to be saved, by default None
+        """
+        for m in self.modalities:
+            # build the filename of the model
+            if prefix is not None:
+                filename = prefix + "_" + self.name + "_" + m + "_" + str(self.model_count) + ".pth"
+            else:
+                filename = self.name + "_" + m + "_" + str(self.model_count) + ".pth"
+
+            if not os.path.exists(os.path.join(self.models_dir, self.args.experiment_dir)):
+                os.makedirs(os.path.join(self.models_dir, self.args.experiment_dir))
+
+            try:
+                torch.save(
+                    {
+                        "iteration": current_iter,
+                        "best_iter": self.best_iter,
+                        "best_iter_score": self.best_iter_score,
+                        "acc_mean": last_iter_acc,
+                        "loss_mean": self.classification_loss.acc,
+                        "model_state_dict": self.task_models[m].state_dict(),
+                        "optimizer_state_dict": self.optimizer[m].state_dict(),
+                        "last_model_count_saved": self.model_count,
+                    },
+                    os.path.join(self.models_dir, self.args.experiment_dir, filename),
+                )
+                self.model_count = self.model_count + 1 if self.model_count < 9 else 1
+
+            except Exception as e:
+                logger.error("An error occurred while saving the checkpoint: ")
+                logger.error(e)
+
+    def train(self, mode: bool = True):
+        """Activate the training in all models.
+
+        Activate the training in all models (when training, DropOut is active, BatchNorm updates itself)
+        (when not training, BatchNorm is freezed, DropOut disabled).
+
+        Parameters
+        ----------
+        mode : bool, optional
+            train mode, by default True
+        """
+        for model in self.task_models.values():
+            model.train(mode)

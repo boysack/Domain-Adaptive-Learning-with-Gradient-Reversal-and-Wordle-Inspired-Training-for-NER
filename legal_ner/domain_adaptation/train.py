@@ -4,9 +4,10 @@ import torch.nn as nn
 import torch.optim as optim
 import os
 import numpy as np
-from domain_adaptation_ner import Task
+from domain_adaptation_ner import DomainAdaptationNER
 import argparse
 import utils
+from utils.logger import logger
 
 # Initialize the parser
 parser = argparse.ArgumentParser(description="A simple command line argument parser")
@@ -18,20 +19,17 @@ parser.add_argument("-v", "--verbose", action="store_true", help="Increase outpu
 # Parse the arguments
 args = parser.parse_args()
 
-def main():
+def main(args):
     global training_iterations, modalities
 
     modalities = args.modality
 
-    # recover valid paths, domains, classes
-    # this will output the domain conversion (D1 -> 8, et cetera) and the label list
-    num_classes, valid_labels, source_domain, target_domain = utils.utils.get_domains_and_labels(args)
     # device where everything is run
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     # these dictionaries are for more multi-modal training/testing, each key is a modality used
     # the models are wrapped into the ActionRecognition task which manages all the training steps
-    classifier = tasks.DomamainAdaptationNER(args)
+    classifier = DomainAdaptationNER(args)
     classifier.load_on_gpu(device)
 
     if args.action == "train":
@@ -57,10 +55,10 @@ def main():
         validate(classifier, val_loader, device, classifier.current_iter, num_classes)
 
 
-def train(action_classifier, train_loader_source, train_loader_target, val_loader, device, num_classes):
+def train(classifier, train_loader_source, train_loader_target, val_loader, device, num_classes):
     """
     function to train the model on the test set
-    action_classifier: Task containing the model to be trained
+    classifier: Task containing the model to be trained
     train_loader: dataloader containing the training data
     val_loader: dataloader containing the validation data
     device: device on which you want to test
@@ -70,9 +68,9 @@ def train(action_classifier, train_loader_source, train_loader_target, val_loade
 
     data_loader_source = iter(train_loader_source)
     data_loader_target = iter(train_loader_source)
-    action_classifier.train(True)
-    action_classifier.zero_grad()
-    iteration = action_classifier.current_iter * (args.total_batch // args.batch_size)
+    classifier.train(True)
+    classifier.zero_grad()
+    iteration = classifier.current_iter * (args.total_batch // args.batch_size)
 
     # the batch size should be total_batch but batch accumulation is done with batch size = batch_size.
     # real_iter is the number of iterations if the batch size was really total_batch
@@ -81,7 +79,7 @@ def train(action_classifier, train_loader_source, train_loader_target, val_loade
         real_iter = (i + 1) / (args.total_batch // args.batch_size)
         if real_iter == args.train.lr_steps:
             # learning rate decay at iteration = lr_steps
-            action_classifier.reduce_learning_rate()
+            classifier.reduce_learning_rate()
         # gradient_accumulation_step is a bool used to understand if we accumulated at least total_batch
         # samples' gradient
         gradient_accumulation_step = real_iter.is_integer()
@@ -105,49 +103,45 @@ def train(action_classifier, train_loader_source, train_loader_target, val_loade
             data_loader_target= iter(train_loader_target)
             target_data, target_label = next(data_loader_target)
 
-        ''' Action recognition'''
         source_label = source_label.to(device)
         target_label=target_label.to(device)
+        
         data_source= {}
         data_target= {}
-
-        
-        # in case of multi-clip training one clip per time is processed
-        for m in modalities:
-            data_source = source_data.to(device)
-            data_target = target_data.to(device)
+    
+        data_source = source_data.to(device)
+        data_target = target_data.to(device)
 
 
         if data_source is None or data_target is None :
             raise UserWarning('train_classifier: Cannot be None type')
-        logits, features = action_classifier.forward(data_source, data_target)
+        logits, features = classifier.forward(data_source, data_target)
 
-        action_classifier.compute_loss(logits, source_label, features)
-        action_classifier.backward(retain_graph=False)
-        action_classifier.compute_accuracy(logits, source_label)
+        classifier.compute_loss(logits, source_label, features)
+        classifier.backward(retain_graph=False)
+        classifier.compute_accuracy(logits, source_label)
 
         # update weights and zero gradients if total_batch samples are passed
         if gradient_accumulation_step:
-            action_classifier.check_grad()
-            action_classifier.step()
-            action_classifier.zero_grad()
+            classifier.check_grad()
+            classifier.step()
+            classifier.zero_grad()
 
         # every eval_freq "real iteration" (iterations on total_batch) the validation is done, notice we validate and
         # save the last 9 models
         if gradient_accumulation_step and real_iter % args.train.eval_freq == 0:
-            val_metrics = validate(action_classifier, val_loader, device, int(real_iter), num_classes)
+            val_metrics = validate(classifier, val_loader, device, int(real_iter), num_classes)
 
-            if val_metrics['top1'] <= action_classifier.best_iter_score:
-                #TODO: logging
+            if val_metrics['top1'] <= classifier.best_iter_score:
                 logger.info("New best accuracy {:.2f}%"
-                            .format(action_classifier.best_iter_score))
+                            .format(classifier.best_iter_score))
             else:
                 logger.info("New best accuracy {:.2f}%".format(val_metrics['top1']))
-                action_classifier.best_iter = real_iter
-                action_classifier.best_iter_score = val_metrics['top1']
+                classifier.best_iter = real_iter
+                classifier.best_iter_score = val_metrics['top1']
 
-            action_classifier.save_model(real_iter, val_metrics['top1'], prefix=None)
-            action_classifier.train(True)
+            classifier.save_model(real_iter, val_metrics['top1'], prefix=None)
+            classifier.train(True)
 
 
 def validate(model, val_loader, device, it, num_classes):
@@ -170,15 +164,14 @@ def validate(model, val_loader, device, it, num_classes):
         for i_val, (data, label) in enumerate(val_loader):
             label = label.to(device)
 
-            for m in modalities:
-                batch = data.shape[0]
-                logits = torch.zeros((batch, num_classes)).to(device)
+            # batch = data.shape[0]
+            # logits = torch.zeros((batch, num_classes)).to(device)
 
             data = data.to(device)
 
             output, _ = model(data, is_train=False)
 
-            model.compute_accuracy(logits, label)
+            model.compute_accuracy(output, label)
 
             if (i_val + 1) % (len(val_loader) // 5) == 0:
                 logger.info("[{}/{}] top1= {:.3f}% top5 = {:.3f}%".format(i_val + 1, len(val_loader),
@@ -206,4 +199,4 @@ def validate(model, val_loader, device, it, num_classes):
 
 
 if __name__ == '__main__':
-    main()
+    main(args)
