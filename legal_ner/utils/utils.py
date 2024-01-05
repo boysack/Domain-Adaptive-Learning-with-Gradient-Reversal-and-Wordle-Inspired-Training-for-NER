@@ -1,6 +1,8 @@
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
 import numpy as np
 from nervaluate import Evaluator
+from torch import save
+
 
 
 ############################################################
@@ -42,3 +44,16 @@ def match_labels(tokenized_input, annotations):
                     previous_tokens = token_ix
                     
     return aligned_labels
+
+def extract_embeddings(model, dataloader):
+    model.eval()
+    embeddings = []
+    with torch.no_grad():
+        for batch in dataloader:
+            input_ids = batch['input_ids'].to(model.device)
+            attention_mask = batch['attention_mask'].to(model.device)
+            outputs = model(input_ids, attention_mask=attention_mask)
+            embeddings.append(outputs.last_hidden_state.detach().cpu())
+    embeddings = torch.cat(embeddings)
+    save(embeddings, "embeddings.pt")
+    return embeddings

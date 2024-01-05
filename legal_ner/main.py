@@ -8,6 +8,7 @@ from transformers import AutoModelForTokenClassification
 from transformers import Trainer, DefaultDataCollator, TrainingArguments
 
 from utils.dataset import LegalNERTokenDataset
+from utils.utils import extract_embeddings
 
 import spacy
 nlp = spacy.load("en_core_web_sm")
@@ -290,6 +291,9 @@ if __name__ == "__main__":
         trainer.train()
         trainer.save_model(output_folder)
         trainer.evaluate()
+        dataloader = trainer.get_train_dataloader()
+        embeddings = extract_embeddings(model, dataloader)
+        
 
 
 
