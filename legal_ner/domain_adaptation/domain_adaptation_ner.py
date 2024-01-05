@@ -1,4 +1,3 @@
-import utils
 import torch
 import torch.nn as nn
 from torch.autograd import Function
@@ -7,6 +6,7 @@ from collections import OrderedDict
 import logging
 from typing import Dict, Optional
 from utils.logger import logger
+from utils import metrics
 import os
 from datetime import datetime
 from pathlib import Path
@@ -176,13 +176,13 @@ class DomainAdaptationNER(nn.Module):
                                             weight_decay=args.weight_decay,
                                             momentum=args.sgd_momentum)
         
-        self.accuracy_source = utils.Accuracy(topk=(1,), classes=args.num_classes_source)
-        self.accuracy_target = utils.Accuracy(topk=(1,), classes=args.num_classes_target)
+        self.accuracy_source = metrics.Accuracy(topk=(1,), classes=args.num_classes_source)
+        self.accuracy_target = metrics.Accuracy(topk=(1,), classes=args.num_classes_target)
 
-        self.domain_token_loss = utils.AverageMeter()
-        self.domain_window_loss = utils.AverageMeter()
-        self.classification_loss_source = utils.AverageMeter()
-        self.classification_loss_target = utils.AverageMeter()
+        self.domain_token_loss = metrics.AverageMeter()
+        self.domain_window_loss = metrics.AverageMeter()
+        self.classification_loss_source = metrics.AverageMeter()
+        self.classification_loss_target = metrics.AverageMeter()
     
     def forward(self, source, target, is_train=True):
         return self.model(source, target, is_train=is_train)
