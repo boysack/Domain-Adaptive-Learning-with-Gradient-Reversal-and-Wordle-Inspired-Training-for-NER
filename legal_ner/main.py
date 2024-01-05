@@ -254,6 +254,7 @@ if __name__ == "__main__":
 
         ## Training Arguments
         training_args = TrainingArguments(
+            resume_from_checkpoint="/content/checkpoint-47175",
             output_dir=new_output_folder,
             num_train_epochs=num_epochs,
             learning_rate=lr,
