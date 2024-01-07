@@ -23,6 +23,12 @@ if __name__ == "__main__":
 
     parser = ArgumentParser(description="Training of LUKE model")
     parser.add_argument(
+        "--extract_embedding",
+        help="if you want to perform embeddings extraction",
+        required=False,
+        type=str,
+    )
+    parser.add_argument(
         "--ds_train_path",
         help="Path of train dataset file",
         default="/content/NLP-NER-Project/legal_ner/NER_TRAIN/NER_TRAIN_JUDGEMENT.json",
@@ -96,6 +102,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     ## Parameters
+    extract_embedding = args.extract_embedding
     ds_train_path = args.ds_train_path  # e.g., 'data/NER_TRAIN/NER_TRAIN_ALL.json'
     ds_train_path_defense = args.ds_train_path_defense 
     ds_valid_path = args.ds_valid_path  # e.g., 'data/NER_DEV/NER_DEV_ALL.json'
@@ -289,11 +296,14 @@ if __name__ == "__main__":
         )
 
         ## Train the model and save it
-        # trainer.train()
-        # trainer.save_model(output_folder)
-        # trainer.evaluate()
-        dataloader = trainer.get_train_dataloader()
-        embeddings = extract_embeddings(model, dataloader)
+        if extract_embedding:
+            dataloader = trainer.get_train_dataloader()
+            embeddings = extract_embeddings(model, dataloader)
+        else:
+            trainer.train()
+            trainer.save_model(output_folder)
+            trainer.evaluate()
+        
         
 
 
