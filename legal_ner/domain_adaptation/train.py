@@ -13,16 +13,34 @@ from utils.logger import logger
 parser = argparse.ArgumentParser(description="A simple command line argument parser")
 
 # Add the arguments
-parser.add_argument("input", help="Input to the script")
-parser.add_argument("-v", "--verbose", action="store_true", help="Increase output verbosity")
+parser.add_argument("in_features_dim", help="The dimension of the feature vector/embedding in input", type=int)
+parser.add_argument("num_classes_target", help="Number of classes of the target", type=int)
+parser.add_argument("num_classes_source", help="Number of classes of the source", type=int)
+parser.add_argument("action", help="Train or validate", type=str)
+parser.add_argument("resume_from", help="Checkpoint path if needed", default=None, type=str)
+parser.add_argument("num_iter", help="Number of iterations for training", default=None, type=int)
+parser.add_argument("total_batch", type=int)
+parser.add_argument("batch_size", type=int)
+parser.add_argument("lr_step", help="At which iteration to decrease learning rate", type=int)
+parser.add_argument("log_dir", help="Where to store file for log and results", type=str)
+parser.add_argument("lr", help="Learning rate of the task", type=float)
+parser.add_argument("weight_decay", help="Weight decay for regularisation", type=float)
+parser.add_argument("weight_decay", help="Weight decay for regularisation", type=float)
+parser.add_argument("sgd_momentum", help="Momentum of the sgd optimiser", type=float)
+parser.add_argument("experiment_dir", help="Directory where to store model if needed", type=str)
+parser.add_argument("remove_window_domain_classifier", help="Removes the window domain classifier", action='Storetrue', default=False)
+parser.add_argument("remove_token_domain_classifier", help="Removes the token domain classifier", action='Storetrue', default=False)
+parser.add_argument("dropout", help="Dropout of fully connected layers", type=float)
+parser.add_argument("window_size", help="Length of the context window", type=str)
+parser.add_argument("beta_window", help="GRL parameter for window", type=float)
+parser.add_argument("beta_token", help="GRL parameter for token", type=float)
+
 
 # Parse the arguments
 args = parser.parse_args()
 
 def main(args):
     global training_iterations, modalities
-
-    modalities = args.modality
 
     # device where everything is run
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -39,7 +57,7 @@ def main(args):
         # define number of iterations I'll do with the actual batch: we do not reason with epochs but with iterations
         # i.e. number of batches passed
         # notice, here it is multiplied by tot_batch/batch_size since gradient accumulation technique is adopted
-        training_iterations = args.train.num_iter * (args.total_batch // args.batch_size)
+        training_iterations = args.num_iter * (args.total_batch // args.batch_size)
         # all dataloaders are generated here
 
         #TODO: datasets for source and target
@@ -77,7 +95,7 @@ def train(classifier, train_loader_source, train_loader_target, val_loader, devi
     for i in range(iteration, training_iterations):
         # iteration w.r.t. the paper (w.r.t the bs to simulate).... i is the iteration with the actual bs( < tot_bs)
         real_iter = (i + 1) / (args.total_batch // args.batch_size)
-        if real_iter == args.train.lr_steps:
+        if real_iter == args.lr_steps:
             # learning rate decay at iteration = lr_steps
             classifier.reduce_learning_rate()
         # gradient_accumulation_step is a bool used to understand if we accumulated at least total_batch
@@ -129,7 +147,7 @@ def train(classifier, train_loader_source, train_loader_target, val_loader, devi
 
         # every eval_freq "real iteration" (iterations on total_batch) the validation is done, notice we validate and
         # save the last 9 models
-        if gradient_accumulation_step and real_iter % args.train.eval_freq == 0:
+        if gradient_accumulation_step and real_iter % args.eval_freq == 0:
             val_metrics = validate(classifier, val_loader, device, int(real_iter), num_classes)
 
             if val_metrics['top1'] <= classifier.best_iter_score:
@@ -191,9 +209,8 @@ def validate(model, val_loader, device, it, num_classes):
     test_results = {'top1': model.accuracy.avg[1], 'top5': model.accuracy.avg[5],
                     'class_accuracies': np.array(class_accuracies)}
 
-    with open(os.path.join(args.log_dir, f'val_precision_{args.dataset.shift.split("-")[0]}-'
-                                         f'{args.dataset.shift.split("-")[-1]}.txt'), 'a+') as f:
-        f.write("[%d/%d]\tAcc@top1: %.2f%%\n" % (it, args.train.num_iter, test_results['top1']))
+    with open(os.path.join(args.log_dir, f'val_precision.txt'), 'a+') as f:
+        f.write("[%d/%d]\tAcc@top1: %.2f%%\n" % (it, args.num_iter, test_results['top1']))
 
     return test_results
 

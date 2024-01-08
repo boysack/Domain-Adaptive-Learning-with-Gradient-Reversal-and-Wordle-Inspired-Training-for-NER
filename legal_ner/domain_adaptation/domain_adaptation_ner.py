@@ -22,33 +22,39 @@ class AdaptiveModule(nn.Module):
         'Predictions',
     )
 
-    def __init__(self, in_features_dim, model_config, num_classes_target, num_classes_source=None):
+    def __init__(self, in_features_dim, model_config, num_classes_source=None, num_classes_target=None):
         
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
         self.model_config = model_config
+
         super(AdaptiveModule, self).__init__()
        
         self.fc_task_specific_layer = self.TaskModule(in_features_dim=in_features_dim, out_features_dim=in_features_dim, dropout=model_config.dropout)
         
         if 'token_domain_classifier' in self.model_config.blocks:
-            self.token_domain_classifier = self.DomainClassifier(in_features_dim, model_config.beta0)
+            self.token_domain_classifier = self.DomainClassifier(in_features_dim, model_config.beta_token)
         
         if 'window_domain_classifier' in self.model_config.blocks:
             self.fc_window_features = self.FullyConnectedLayer(model_config.window_size * in_features_dim, in_features_dim)
-            self.window_domain_classifier = self.DomainClassifier(in_features_dim, model_config.beta1)
+            self.window_domain_classifier = self.DomainClassifier(in_features_dim, model_config.beta_window)
+
+        if 'game_module' in self.model_config.blocks:
+            self.game_module_source = self.GameModule(in_features_dim, model_config.context_length, num_classes_source)
+            self.game_module_target = self.GameModule(in_features_dim, model_config.context_length, num_classes_target)
 
         self.fc_classifier_source = nn.Linear(in_features_dim, num_classes_source)
         self.fc_classifier_target = nn.Linear(in_features_dim, num_classes_target)
         std = 0.001
         
-        normal_(self.fc_classifier_target.weight, 0, std)
-        constant_(self.fc_classifier_target.bias, 0)
+        if num_classes_target is not None:
+            normal_(self.fc_classifier_target.weight, 0, std)
+            constant_(self.fc_classifier_target.bias, 0)
 
         if num_classes_source is not None:
             normal_(self.fc_classifier_source.weight, 0, std)
             constant_(self.fc_classifier_source.bias, 0)
 
-    def forward(self, source, target, is_train=True):
+    def forward(self, source, target, class_labels_source=None, class_labels_target=None):
         feats_source = self.fc_task_specific_layer(source)
         feats_target = self.fc_task_specific_layer(target)
 
@@ -56,20 +62,30 @@ class AdaptiveModule(nn.Module):
             preds_domain_token_source = self.token_domain_classifier(feats_source)
             preds_domain_token_target = self.token_domain_classifier(feats_target)
         
-        if 'window_domain_classifier' in self.model_config.blocks:
-            
+        if 'window_domain_classifier' in self.model_config.blocks or 'game_module' in self.model_config.blocks:
+
+            feats_window_source = torch.vstack((torch.hstack((feats_source[i+start,:] if i+start<len(feats_source) else torch.zeros_like(feats_source) for i in range(self.model_config.window_size))) for start in range(len(feats_source))))
+            feats_window_target = torch.vstack((torch.hstack((feats_target[i+start,:] if i+start<len(feats_source) else torch.zeros_like(feats_source) for i in range(self.model_config.window_size))) for start in range(len(feats_target))))
+
             feats_window_source = self.fc_window_features(feats_source)
             feats_window_target = self.fc_window_features(feats_target)
 
-            preds_domain_window_source = self.window_domain_classifier(feats_window_source)
-            preds_domain_window_target = self.window_domain_classifier(feats_window_target)
+            if 'window_domain_classifier' in self.model_config.blocks:
+
+                preds_domain_window_source = self.window_domain_classifier(feats_window_source)
+                preds_domain_window_target = self.window_domain_classifier(feats_window_target)
+            
+            if 'game_module' in self.model_config.blocks:
+                last_attempt_source = self.game_module_source.play(feats_window_source, class_labels_source)
+                last_attempt_target = self.game_module_target.play(feats_window_target, class_labels_target)
 
         preds_class_source = self.fc_classifier_source(feats_source)
         preds_class_target = self.fc_classifier_target(feats_target)
 
         return {'preds_class_source': preds_class_source, 'preds_class_target': preds_class_target,\
                 'preds_domain_token_source': preds_domain_token_source, 'preds_domain_token_target': preds_domain_token_target,\
-                'preds_domain_window_source': preds_domain_window_source, 'preds_domain_window_target': preds_domain_window_target}
+                'preds_domain_window_source': preds_domain_window_source, 'preds_domain_window_target': preds_domain_window_target,\
+                'wordle_source': last_attempt_source, 'wordle_target': last_attempt_target}
 
     class TaskModule(nn.Module):
         def __init__(self, n_fcl, in_features_dim, out_features_dim, dropout=0.5):
@@ -158,12 +174,48 @@ class AdaptiveModule(nn.Module):
             x = self.domain_classifier(x)
             return x
 
+    class GameModule(nn.Module):
+
+        def __init__(self, in_features_dim, context_length, n_classes, dropout=0.5, n_attempts=6) -> None:
+            
+            self.context_length = context_length
+            self.n_classes = n_classes
+            self.fc_layer = AdaptiveModule.FullyConnectedLayer(in_features_dim, context_length*n_classes, dropout)
+            self.softmax = torch.nn.Softmax(dim=2)
+            self.n_attempts = n_attempts
+        
+        def play(self, feats, gt):
+            
+            hint = torch.zeros_like(gt)
+            last_attempt = torch.zeros_like(gt)
+
+            for _ in range(self.n_attempts):
+                logits = self.forward(feats, hint, last_attempt)
+                last_attempt = torch.argmax(logits, dim=1)
+                hint = torch.tensor([1 if x not in gt else 2 if 2 in gt and 2 != gt[i] else 3 for i, x in enumerate(last_attempt)])
+            
+            return last_attempt
+        
+        def forward(self, feats, hint, last_attempt):
+            feats = torch.cat((feats, hint, last_attempt), dim=0)
+            feats = self.fc_layer(feats)
+            feats = feats.view((-1,self.context_length, self.n_classes))
+            logits = self.softmax(feats)
+            return logits
+
 
 class DomainAdaptationNER(nn.Module):
 
     def __init__(self, args) -> None:
         
         self.args = args
+
+        args.blocks = []
+
+        if not args.remove_window_domain_classifier:
+            args.blocks.append('window_domain_classifier')
+        if not args.remove_token_domain_classifier:
+            args.blocks.append('token_domain_classifier')
 
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
         self.model = AdaptiveModule(args.in_features_dim, args, args.num_classes_target, args.num_classes_source).to(self.device).train()
@@ -194,7 +246,7 @@ class DomainAdaptationNER(nn.Module):
         self.classification_loss_source.update(torch.mean(classification_loss_source) / (self.total_batch / self.batch_size), self.batch_size)
         self.classification_loss_target.update(torch.mean(classification_loss_target) / (self.total_batch / self.batch_size), self.batch_size)
         
-        if 'token_domain_classifier' in self.model_args.blocks:
+        if 'token_domain_classifier' in self.blocks:
             preds_domain_token_source = predictions['preds_domain_token_source']
             domain_label_source=torch.zeros(preds_domain_token_source.shape[0], dtype=torch.int64)    
             
@@ -206,8 +258,8 @@ class DomainAdaptationNER(nn.Module):
 
             domain_token_loss = self.criterion(pred_domain_token_all, domain_label_all)
             self.domain_token_loss.update(torch.mean(domain_token_loss) / (self.total_batch / self.batch_size), self.batch_size)
-        
-        if 'window_domain_classifier' in self.model_args.blocks:
+
+        if 'window_domain_classifier' in self.blocks:
             preds_domain_window_source = predictions['preds_domain_window_source']
             domain_label_source=torch.zeros(preds_domain_window_source.shape[0], dtype=torch.int64)    
             
@@ -219,6 +271,12 @@ class DomainAdaptationNER(nn.Module):
 
             domain_window_loss = self.criterion(pred_domain_window_all, domain_label_all)
             self.domain_window_loss.update(torch.mean(domain_window_loss) / (self.total_batch / self.batch_size), self.batch_size)
+        
+        if 'game_module' in self.blocks:
+            wordle_source = predictions['wordle_source']
+            wordle_target = predictions['wordle_target']
+
+
 
     def compute_accuracy(self, logits: Dict[str, torch.Tensor], label: torch.Tensor):
         """Fuse the logits from different modalities and compute the classification accuracy.
@@ -245,10 +303,10 @@ class DomainAdaptationNER(nn.Module):
         This method must be called after each optimization step.
         """
         
-        if 'token_domain_classifier' in self.model_args.blocks:
+        if 'token_domain_classifier' in self.blocks:
             self.domain_token_loss.reset()
         
-        if 'window_domain_classifier' in self.model_args.blocks:
+        if 'window_domain_classifier' in self.blocks:
             self.domain_window_loss.reset()
 
         self.classification_loss_source.reset()
@@ -302,10 +360,10 @@ class DomainAdaptationNER(nn.Module):
         loss += self.classification_loss_source.val
         loss += self.classification_loss_target.val
         
-        if 'token_domain_classifier' in self.model_args.blocks:
+        if 'token_domain_classifier' in self.blocks:
             loss += self.domain_token_loss.val
         
-        if 'window_domain_classifier' in self.model_args.blocks:
+        if 'window_domain_classifier' in self.blocks:
             loss += self.domain_window_loss.val
         
         loss.backward(retain_graph=retain_graph)
@@ -440,35 +498,34 @@ class DomainAdaptationNER(nn.Module):
         prefix : Optional[str], optional
             string to be put as a prefix to filename of the model to be saved, by default None
         """
-        for m in self.modalities:
-            # build the filename of the model
-            if prefix is not None:
-                filename = prefix + "_" + self.name + "_" + m + "_" + str(self.model_count) + ".pth"
-            else:
-                filename = self.name + "_" + m + "_" + str(self.model_count) + ".pth"
+        # build the filename of the model
+        if prefix is not None:
+            filename = prefix + "_" + self.name + "_" + str(self.model_count) + ".pth"
+        else:
+            filename = self.name + "_" + str(self.model_count) + ".pth"
 
-            if not os.path.exists(os.path.join(self.models_dir, self.args.experiment_dir)):
-                os.makedirs(os.path.join(self.models_dir, self.args.experiment_dir))
+        if not os.path.exists(os.path.join(self.models_dir, self.args.experiment_dir)):
+            os.makedirs(os.path.join(self.models_dir, self.args.experiment_dir))
 
-            try:
-                torch.save(
-                    {
-                        "iteration": current_iter,
-                        "best_iter": self.best_iter,
-                        "best_iter_score": self.best_iter_score,
-                        "acc_mean": last_iter_acc,
-                        "loss_mean": self.classification_loss.acc,
-                        "model_state_dict": self.task_models[m].state_dict(),
-                        "optimizer_state_dict": self.optimizer[m].state_dict(),
-                        "last_model_count_saved": self.model_count,
-                    },
-                    os.path.join(self.models_dir, self.args.experiment_dir, filename),
-                )
-                self.model_count = self.model_count + 1 if self.model_count < 9 else 1
+        try:
+            torch.save(
+                {
+                    "iteration": current_iter,
+                    "best_iter": self.best_iter,
+                    "best_iter_score": self.best_iter_score,
+                    "acc_mean": last_iter_acc,
+                    "loss_mean": self.classification_loss.acc,
+                    "model_state_dict": self.task_models[m].state_dict(),
+                    "optimizer_state_dict": self.optimizer[m].state_dict(),
+                    "last_model_count_saved": self.model_count,
+                },
+                os.path.join(self.models_dir, self.args.experiment_dir, filename),
+            )
+            self.model_count = self.model_count + 1 if self.model_count < 9 else 1
 
-            except Exception as e:
-                logger.error("An error occurred while saving the checkpoint: ")
-                logger.error(e)
+        except Exception as e:
+            logger.error("An error occurred while saving the checkpoint: ")
+            logger.error(e)
 
     def train(self, mode: bool = True):
         """Activate the training in all models.
