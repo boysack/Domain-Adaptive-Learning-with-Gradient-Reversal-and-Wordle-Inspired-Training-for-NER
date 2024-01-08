@@ -243,6 +243,15 @@ if __name__ == "__main__":
             use_roberta=use_roberta
         )
 
+        val_defense_ds = LegalNERTokenDataset(
+            ds_valid_path_defense, 
+            model_path, 
+            labels_list=labels_list_defense, 
+            split="val", 
+            use_roberta=use_roberta
+        )
+
+
         ## Define the model
         model = AutoModelForTokenClassification.from_pretrained(
             "/content/checkpoint-47175", # model_path
@@ -295,10 +304,23 @@ if __name__ == "__main__":
             data_collator=data_collator,
         )
 
+        trainer2 = Trainer(
+            model=model,
+            args=training_args,
+            train_dataset=train_defense_ds,
+            eval_dataset=val_defense_ds,
+            compute_metrics=compute_metrics,
+            data_collator=data_collator
+        )
+
         ## Train the model and save it
         if extract_embedding:
             dataloader = trainer.get_train_dataloader()
-            embeddings = extract_embeddings(model, dataloader)
+            embeddings = extract_embeddings(model, dataloader, "embeddings_legal1.pt", "labels_legal1.pt")
+            dataloader = trainer2.get_train_dataloader()
+            embeddings2 = extract_embeddings(model, dataloader, "embeddings_def_train.pt", "labels_def_train.pt")
+            dataloader = trainer2.get_eval_dataloader()
+            embeddings3 = extract_embeddings(model, dataloader, "embeddings_def_val.pt", "labels_def_val.pt")
         else:
             trainer.train()
             trainer.save_model(output_folder)

@@ -46,7 +46,7 @@ def match_labels(tokenized_input, annotations):
                     
     return aligned_labels
 
-def extract_embeddings(model, dataloader):
+def extract_embeddings(model, dataloader, save_path, save_path_labels):
     model.eval()
     embeddings = []
     labels = []
@@ -61,6 +61,6 @@ def extract_embeddings(model, dataloader):
             labels.append(ls)
     embeddings = torch.cat(embeddings, dim=1)
     print(embeddings.shape)
-    torch.save(embeddings, "embeddings.pt")
-    torch.save(labels, "labels.pt")
+    torch.save(embeddings, save_path)
+    torch.save(labels, save_path_labels)
     return embeddings
