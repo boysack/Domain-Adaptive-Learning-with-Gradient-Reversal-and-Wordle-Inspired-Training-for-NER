@@ -267,6 +267,8 @@ class DomainAdaptationNER(nn.Module):
             wordle_source = predictions['wordle_source']
             wordle_target = predictions['wordle_target']
 
+            #TODO: compute game module loss
+
     def reduce_learning_rate(self):
         """Perform a learning rate step."""
         new_lr = self.optimizer.param_groups[-1]["lr"] / 10
@@ -297,7 +299,6 @@ class DomainAdaptationNER(nn.Module):
         label : torch.Tensor
             ground truth
         """
-        # fused_logits = reduce(lambda x, y: x + y, logits.values())
 
         self.accuracy_source.update(output['preds_class_source'], label)
         self.accuracy_target.update(output['preds_class_target'], label)
