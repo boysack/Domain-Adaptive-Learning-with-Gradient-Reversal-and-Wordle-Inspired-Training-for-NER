@@ -13,15 +13,6 @@ from pathlib import Path
 
 class AdaptiveModule(nn.Module):
 
-    VALID_ENDPOINTS = (
-        'Backbone',
-        'Spatial module',
-        'Temporal module',
-        'Gy',
-        'Logits',
-        'Predictions',
-    )
-
     def __init__(self, in_features_dim, model_config, num_classes_source=None, num_classes_target=None):
         
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')

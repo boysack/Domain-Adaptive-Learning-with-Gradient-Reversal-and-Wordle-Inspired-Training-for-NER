@@ -16,24 +16,23 @@ parser = argparse.ArgumentParser(description="A simple command line argument par
 parser.add_argument("in_features_dim", help="The dimension of the feature vector/embedding in input", type=int)
 parser.add_argument("num_classes_target", help="Number of classes of the target", type=int)
 parser.add_argument("num_classes_source", help="Number of classes of the source", type=int)
-parser.add_argument("action", help="Train or validate", type=str)
+parser.add_argument("action", help="Train or validate", type=str, default="train")
 parser.add_argument("resume_from", help="Checkpoint path if needed", default=None, type=str)
-parser.add_argument("num_iter", help="Number of iterations for training", default=None, type=int)
-parser.add_argument("total_batch", type=int)
-parser.add_argument("batch_size", type=int)
-parser.add_argument("lr_step", help="At which iteration to decrease learning rate", type=int)
-parser.add_argument("log_dir", help="Where to store file for log and results", type=str)
-parser.add_argument("lr", help="Learning rate of the task", type=float)
-parser.add_argument("weight_decay", help="Weight decay for regularisation", type=float)
-parser.add_argument("weight_decay", help="Weight decay for regularisation", type=float)
-parser.add_argument("sgd_momentum", help="Momentum of the sgd optimiser", type=float)
-parser.add_argument("experiment_dir", help="Directory where to store model if needed", type=str)
+parser.add_argument("num_iter", help="Number of iterations for training", default=5000, type=int)
+parser.add_argument("total_batch", type=int, default=128)
+parser.add_argument("batch_size", type=int, default=32)
+parser.add_argument("lr_step", help="At which iteration to decrease learning rate", type=int, default=3000)
+parser.add_argument("log_dir", help="Where to store file for log and results", type=str, default="./logs")
+parser.add_argument("lr", help="Learning rate of the task", type=float, default=0.01)
+parser.add_argument("weight_decay", help="Weight decay for regularisation", type=float, default=1e-7)
+parser.add_argument("sgd_momentum", help="Momentum of the sgd optimiser", type=float, default=0.9)
+parser.add_argument("experiment_dir", help="Directory where to store model if needed", type=str, default="./experiments")
 parser.add_argument("remove_window_domain_classifier", help="Removes the window domain classifier", action='Storetrue', default=False)
 parser.add_argument("remove_token_domain_classifier", help="Removes the token domain classifier", action='Storetrue', default=False)
-parser.add_argument("dropout", help="Dropout of fully connected layers", type=float)
-parser.add_argument("window_size", help="Length of the context window", type=str)
-parser.add_argument("beta_window", help="GRL parameter for window", type=float)
-parser.add_argument("beta_token", help="GRL parameter for token", type=float)
+parser.add_argument("dropout", help="Dropout of fully connected layers", type=float, default=0.5)
+parser.add_argument("window_size", help="Length of the context window", type=str, default=5)
+parser.add_argument("beta_window", help="GRL parameter for window", type=float, default=0.75)
+parser.add_argument("beta_token", help="GRL parameter for token", type=float, default=0.75)
 
 
 # Parse the arguments
@@ -133,7 +132,7 @@ def train(classifier, train_loader_source, train_loader_target, val_loader, devi
 
         if data_source is None or data_target is None :
             raise UserWarning('train_classifier: Cannot be None type')
-        logits, features = classifier.forward(data_source, data_target)
+        features = classifier.forward(data_source, data_target)
 
         classifier.compute_loss(logits, source_label, features)
         classifier.backward(retain_graph=False)
@@ -162,7 +161,7 @@ def train(classifier, train_loader_source, train_loader_target, val_loader, devi
             classifier.train(True)
 
 
-def validate(model, val_loader, device, it, num_classes):
+def validate(model, val_loader, device, it):
     """
     function to validate the model on the test set
     model: Task containing the model to be tested
@@ -175,7 +174,6 @@ def validate(model, val_loader, device, it, num_classes):
 
     model.reset_acc()
     model.train(False)
-    logits = {}
 
     # Iterate over the models
     with torch.no_grad():
