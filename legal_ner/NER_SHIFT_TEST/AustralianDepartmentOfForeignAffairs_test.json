@@ -1,0 +1,171 @@
+[
+    {
+        "id": "DEC7A9B44536B3E01C85E64BAF2E07A6",
+        "annotations": [
+            {
+                "result": [
+                    {
+                        "value": {
+                            "start": 0,
+                            "end": 29,
+                            "text": "Foreign Minister Julie Bishop",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "DEC7A9B44536B3E01C85E64BAF2E07A6-0-0-29-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 110,
+                            "end": 118,
+                            "text": "Canberra",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "DEC7A9B44536B3E01C85E64BAF2E07A6-0-110-118-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 122,
+                            "end": 133,
+                            "text": "12 February",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "DEC7A9B44536B3E01C85E64BAF2E07A6-0-122-133-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 17,
+                            "end": 29,
+                            "text": "Julie Bishop",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "DEC7A9B44536B3E01C85E64BAF2E07A6-0-17-29-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 237,
+                            "end": 242,
+                            "text": "Daesh",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "DEC7A9B44536B3E01C85E64BAF2E07A6-0-237-242-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 258,
+                            "end": 262,
+                            "text": "ISIL",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "DEC7A9B44536B3E01C85E64BAF2E07A6-0-258-262-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 43,
+                            "end": 78,
+                            "text": "Minister of Foreign Affairs of Iraq",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "DEC7A9B44536B3E01C85E64BAF2E07A6-0-43-78-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 55,
+                            "end": 70,
+                            "text": "Foreign Affairs",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "DEC7A9B44536B3E01C85E64BAF2E07A6-0-55-70-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 74,
+                            "end": 78,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "DEC7A9B44536B3E01C85E64BAF2E07A6-0-74-78-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 80,
+                            "end": 105,
+                            "text": "HE Dr Ibrahim Al-Ja\u2019afari",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "DEC7A9B44536B3E01C85E64BAF2E07A6-0-80-105-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 83,
+                            "end": 105,
+                            "text": "Dr Ibrahim Al-Ja\u2019afari",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "DEC7A9B44536B3E01C85E64BAF2E07A6-0-83-105-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "text": "Foreign Minister Julie Bishop met with the Minister of Foreign Affairs of Iraq, HE Dr Ibrahim Al-Ja\u2019afari, in Canberra on 12 February to discuss bilateral relations and reaffirm our shared commitment to combating the terrorist threat of Daesh (also known as ISIL)."
+        },
+        "meta": {
+            "source": "http://dfat.gov.au/news/news/Pages/australia-and-iraq-confirm-shared-commitment-to-combating-daesh.aspx"
+        }
+    }
+]

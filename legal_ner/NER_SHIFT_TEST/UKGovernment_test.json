@@ -1,0 +1,3536 @@
+[
+    {
+        "id": "C3BB2D0EE548765402C961463415E4CA",
+        "annotations": [
+            {
+                "result": [
+                    {
+                        "value": {
+                            "start": 0,
+                            "end": 14,
+                            "text": "Philip Hammond",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "C3BB2D0EE548765402C961463415E4CA-0-0-14-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 24,
+                            "end": 28,
+                            "text": "UNSC",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C3BB2D0EE548765402C961463415E4CA-0-24-28-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 58,
+                            "end": 64,
+                            "text": "Syrian",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "C3BB2D0EE548765402C961463415E4CA-0-58-64-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 76,
+                            "end": 108,
+                            "text": "Foreign Secretary Philip Hammond",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "C3BB2D0EE548765402C961463415E4CA-1-0-32-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 241,
+                            "end": 246,
+                            "text": "Syria",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "C3BB2D0EE548765402C961463415E4CA-1-165-170-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 94,
+                            "end": 108,
+                            "text": "Philip Hammond",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "C3BB2D0EE548765402C961463415E4CA-1-18-32-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 302,
+                            "end": 318,
+                            "text": "the Assad regime",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C3BB2D0EE548765402C961463415E4CA-1-226-242-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 306,
+                            "end": 311,
+                            "text": "Assad",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "C3BB2D0EE548765402C961463415E4CA-1-230-235-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 335,
+                            "end": 352,
+                            "text": "Syrian government",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C3BB2D0EE548765402C961463415E4CA-1-259-276-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 144,
+                            "end": 179,
+                            "text": "UN Security Council Resolution 2254",
+                            "labels": [
+                                "DocumentReference"
+                            ]
+                        },
+                        "id": "C3BB2D0EE548765402C961463415E4CA-1-68-103-DocumentReference",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 144,
+                            "end": 163,
+                            "text": "UN Security Council",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C3BB2D0EE548765402C961463415E4CA-1-68-87-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 355,
+                            "end": 365,
+                            "text": "Mr Hammond",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "C3BB2D0EE548765402C961463415E4CA-2-0-10-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 373,
+                            "end": 378,
+                            "text": "Syria",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "C3BB2D0EE548765402C961463415E4CA-2-18-23-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 455,
+                            "end": 482,
+                            "text": "The international community",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C3BB2D0EE548765402C961463415E4CA-3-0-27-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 590,
+                            "end": 608,
+                            "text": "the Syrian parties",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C3BB2D0EE548765402C961463415E4CA-3-135-153-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 594,
+                            "end": 600,
+                            "text": "Syrian",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "C3BB2D0EE548765402C961463415E4CA-3-139-145-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 660,
+                            "end": 675,
+                            "text": "regime of Assad",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C3BB2D0EE548765402C961463415E4CA-3-205-220-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 670,
+                            "end": 675,
+                            "text": "Assad",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "C3BB2D0EE548765402C961463415E4CA-3-215-220-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 544,
+                            "end": 549,
+                            "text": "Syria",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "C3BB2D0EE548765402C961463415E4CA-3-89-94-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 699,
+                            "end": 701,
+                            "text": "us",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C3BB2D0EE548765402C961463415E4CA-4-22-24-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 843,
+                            "end": 849,
+                            "text": "Syrian",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "C3BB2D0EE548765402C961463415E4CA-5-104-110-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "text": "Philip Hammond welcomes UNSC support for new talks to end Syrian conflict.\n\nForeign Secretary Philip Hammond welcomed the unanimous adoption of UN Security Council Resolution 2254 as an important step towards bringing the warring parties in Syria to the negotiating table and to a transition away from the Assad regime to an inclusive Syrian government.\n\nMr Hammond said:\n\nSyria has for too long been the world\u2019s biggest humanitarian and security crisis. The international community has now come together to work to end the bloody civil war in Syria and has paved the way for talks amongst the Syrian parties that will see a transition away from the murderous regime of Assad. This resolution gives us a timetable and a clear way forward. Of course there are many challenges ahead but the world has taken a great step forward to resolving the Syrian crisis."
+        },
+        "meta": {
+            "source": "https://www.gov.uk/government/news/foreign-secretary-welcomes-progress-towards-ending-the-conflict-in-syria"
+        }
+    },
+    {
+        "id": "C66A9E77E1142C3F0909657DDDD475A5",
+        "annotations": [
+            {
+                "result": [
+                    {
+                        "value": {
+                            "start": 0,
+                            "end": 14,
+                            "text": "Tobias Ellwood",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "C66A9E77E1142C3F0909657DDDD475A5-0-0-14-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 106,
+                            "end": 128,
+                            "text": "the Government of Iraq",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C66A9E77E1142C3F0909657DDDD475A5-0-106-128-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 124,
+                            "end": 128,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "C66A9E77E1142C3F0909657DDDD475A5-0-124-128-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 147,
+                            "end": 154,
+                            "text": "st ISIL",
+                            "labels": [
+                                "Vehicle"
+                            ]
+                        },
+                        "id": "C66A9E77E1142C3F0909657DDDD475A5-0-147-154-Vehicle",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 150,
+                            "end": 154,
+                            "text": "ISIL",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C66A9E77E1142C3F0909657DDDD475A5-0-150-154-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 156,
+                            "end": 172,
+                            "text": "Minister Ellwood",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "C66A9E77E1142C3F0909657DDDD475A5-0-156-172-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 16,
+                            "end": 44,
+                            "text": "Minister for the Middle East",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "C66A9E77E1142C3F0909657DDDD475A5-0-16-44-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 165,
+                            "end": 172,
+                            "text": "Ellwood",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "C66A9E77E1142C3F0909657DDDD475A5-0-165-172-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 207,
+                            "end": 213,
+                            "text": "Sinjar",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "C66A9E77E1142C3F0909657DDDD475A5-0-207-213-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 278,
+                            "end": 302,
+                            "text": "the terrorist group ISIL",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C66A9E77E1142C3F0909657DDDD475A5-0-278-302-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 298,
+                            "end": 302,
+                            "text": "ISIL",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C66A9E77E1142C3F0909657DDDD475A5-0-298-302-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 33,
+                            "end": 44,
+                            "text": "Middle East",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "C66A9E77E1142C3F0909657DDDD475A5-0-33-44-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 72,
+                            "end": 78,
+                            "text": "Sinjar",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "C66A9E77E1142C3F0909657DDDD475A5-0-72-78-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 304,
+                            "end": 305,
+                            "text": "I",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "C66A9E77E1142C3F0909657DDDD475A5-1-0-1-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 314,
+                            "end": 321,
+                            "text": "Kurdish",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "C66A9E77E1142C3F0909657DDDD475A5-1-10-17-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 314,
+                            "end": 341,
+                            "text": "Kurdish and Yezidi fighters",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C66A9E77E1142C3F0909657DDDD475A5-1-10-37-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 396,
+                            "end": 404,
+                            "text": "the town",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "C66A9E77E1142C3F0909657DDDD475A5-1-92-100-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 410,
+                            "end": 414,
+                            "text": "ISIL",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C66A9E77E1142C3F0909657DDDD475A5-2-4-8-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 458,
+                            "end": 462,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "C66A9E77E1142C3F0909657DDDD475A5-2-52-56-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 464,
+                            "end": 468,
+                            "text": "They",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C66A9E77E1142C3F0909657DDDD475A5-3-0-4-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 493,
+                            "end": 503,
+                            "text": "30 percent",
+                            "labels": [
+                                "Quantity"
+                            ]
+                        },
+                        "id": "C66A9E77E1142C3F0909657DDDD475A5-3-29-39-Quantity",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 507,
+                            "end": 520,
+                            "text": "the territory",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "C66A9E77E1142C3F0909657DDDD475A5-3-43-56-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 521,
+                            "end": 525,
+                            "text": "they",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C66A9E77E1142C3F0909657DDDD475A5-3-57-61-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 544,
+                            "end": 557,
+                            "text": "The Coalition",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C66A9E77E1142C3F0909657DDDD475A5-4-0-13-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 579,
+                            "end": 583,
+                            "text": "ISIL",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C66A9E77E1142C3F0909657DDDD475A5-4-35-39-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 599,
+                            "end": 605,
+                            "text": "Sinjar",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "C66A9E77E1142C3F0909657DDDD475A5-5-0-6-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 750,
+                            "end": 754,
+                            "text": "ISIL",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C66A9E77E1142C3F0909657DDDD475A5-5-151-155-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 622,
+                            "end": 637,
+                            "text": "Royal Air Force",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C66A9E77E1142C3F0909657DDDD475A5-5-23-38-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 642,
+                            "end": 664,
+                            "text": "other Coalition forces",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C66A9E77E1142C3F0909657DDDD475A5-5-43-65-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 648,
+                            "end": 657,
+                            "text": "Coalition",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C66A9E77E1142C3F0909657DDDD475A5-5-49-58-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 696,
+                            "end": 727,
+                            "text": "local, legitimate ground forces",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C66A9E77E1142C3F0909657DDDD475A5-5-97-128-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 791,
+                            "end": 797,
+                            "text": "The UK",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C66A9E77E1142C3F0909657DDDD475A5-6-0-6-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 898,
+                            "end": 905,
+                            "text": "st ISIL",
+                            "labels": [
+                                "Vehicle"
+                            ]
+                        },
+                        "id": "C66A9E77E1142C3F0909657DDDD475A5-6-107-114-Vehicle",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 901,
+                            "end": 905,
+                            "text": "ISIL",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C66A9E77E1142C3F0909657DDDD475A5-6-110-114-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 795,
+                            "end": 797,
+                            "text": "UK",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "C66A9E77E1142C3F0909657DDDD475A5-6-4-6-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 834,
+                            "end": 856,
+                            "text": "the Government of Iraq",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C66A9E77E1142C3F0909657DDDD475A5-6-43-65-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 852,
+                            "end": 856,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "C66A9E77E1142C3F0909657DDDD475A5-6-61-65-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 861,
+                            "end": 877,
+                            "text": "the Iraqi people",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "C66A9E77E1142C3F0909657DDDD475A5-6-70-86-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 865,
+                            "end": 870,
+                            "text": "Iraqi",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "C66A9E77E1142C3F0909657DDDD475A5-6-74-79-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "text": "Tobias Ellwood, Minister for the Middle East welcomes the liberation of Sinjar and reiterates support for the Government of Iraq in the fight against ISIL\n\nMinister Ellwood said:\n\nThis is a significant day; Sinjar has been liberated after its violent and unwanted occupation by the terrorist group ISIL. I commend Kurdish and Yezidi fighters for their determined and sustained efforts to reclaim the town. For ISIL, this means yet another military defeat in Iraq. They have now lost more than 30 percent of the territory they once held there.\n\nThe Coalition\u2019s strategy to defeat ISIL is succeeding. Sinjar is free because Royal Air Force and other Coalition forces provided vital air support for local, legitimate ground forces, focused on defeating ISIL and minimising civilian casualties. The UK remains steadfast in its support of the Government of Iraq and the Iraqi people in their fight against ISIL."
+        },
+        "meta": {
+            "source": "https://www.gov.uk/government/news/liberation-of-sinjar-from-isil-terrorists"
+        }
+    },
+    {
+        "id": "CBD73D24324D3C3A3A76AC430E05A069",
+        "annotations": [
+            {
+                "result": [
+                    {
+                        "value": {
+                            "start": 0,
+                            "end": 17,
+                            "text": "Foreign Secretary",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "CBD73D24324D3C3A3A76AC430E05A069-0-0-17-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 31,
+                            "end": 36,
+                            "text": "Syria",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "CBD73D24324D3C3A3A76AC430E05A069-0-31-36-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 31,
+                            "end": 36,
+                            "text": "Syria",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CBD73D24324D3C3A3A76AC430E05A069-0-31-36-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 87,
+                            "end": 108,
+                            "text": "Assad\u2019s brutal regime",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CBD73D24324D3C3A3A76AC430E05A069-0-87-108-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 87,
+                            "end": 92,
+                            "text": "Assad",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "CBD73D24324D3C3A3A76AC430E05A069-0-87-92-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 111,
+                            "end": 125,
+                            "text": "Philip Hammond",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "CBD73D24324D3C3A3A76AC430E05A069-1-0-14-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 228,
+                            "end": 233,
+                            "text": "Syria",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "CBD73D24324D3C3A3A76AC430E05A069-1-117-122-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 132,
+                            "end": 138,
+                            "text": "The UK",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CBD73D24324D3C3A3A76AC430E05A069-1-21-27-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 136,
+                            "end": 138,
+                            "text": "UK",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "CBD73D24324D3C3A3A76AC430E05A069-1-25-27-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 172,
+                            "end": 185,
+                            "text": "member states",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CBD73D24324D3C3A3A76AC430E05A069-1-61-74-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 196,
+                            "end": 198,
+                            "text": "13",
+                            "labels": [
+                                "Quantity"
+                            ]
+                        },
+                        "id": "CBD73D24324D3C3A3A76AC430E05A069-1-85-87-Quantity",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 203,
+                            "end": 205,
+                            "text": "EU",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CBD73D24324D3C3A3A76AC430E05A069-1-92-94-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 235,
+                            "end": 237,
+                            "text": "We",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CBD73D24324D3C3A3A76AC430E05A069-2-0-2-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 336,
+                            "end": 345,
+                            "text": "companies",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CBD73D24324D3C3A3A76AC430E05A069-2-101-110-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 368,
+                            "end": 384,
+                            "text": "shabiha militias",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CBD73D24324D3C3A3A76AC430E05A069-2-133-149-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 252,
+                            "end": 287,
+                            "text": "developers, proliferators and users",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CBD73D24324D3C3A3A76AC430E05A069-2-17-52-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 291,
+                            "end": 307,
+                            "text": "chemical weapons",
+                            "labels": [
+                                "Weapon"
+                            ]
+                        },
+                        "id": "CBD73D24324D3C3A3A76AC430E05A069-2-56-72-Weapon",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 320,
+                            "end": 331,
+                            "text": "businessmen",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CBD73D24324D3C3A3A76AC430E05A069-2-85-96-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 386,
+                            "end": 388,
+                            "text": "We",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CBD73D24324D3C3A3A76AC430E05A069-3-0-2-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 511,
+                            "end": 515,
+                            "text": "ISIL",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CBD73D24324D3C3A3A76AC430E05A069-3-125-129-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 529,
+                            "end": 539,
+                            "text": "the regime",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CBD73D24324D3C3A3A76AC430E05A069-3-143-153-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 467,
+                            "end": 481,
+                            "text": "George Haswani",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "CBD73D24324D3C3A3A76AC430E05A069-3-81-95-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 588,
+                            "end": 593,
+                            "text": "Assad",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "CBD73D24324D3C3A3A76AC430E05A069-4-47-52-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 605,
+                            "end": 609,
+                            "text": "ISIL",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CBD73D24324D3C3A3A76AC430E05A069-4-64-68-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 629,
+                            "end": 631,
+                            "text": "he",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "CBD73D24324D3C3A3A76AC430E05A069-4-88-90-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 686,
+                            "end": 688,
+                            "text": "EU",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CBD73D24324D3C3A3A76AC430E05A069-5-26-28-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 722,
+                            "end": 727,
+                            "text": "Assad",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "CBD73D24324D3C3A3A76AC430E05A069-5-62-67-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 747,
+                            "end": 749,
+                            "text": "We",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CBD73D24324D3C3A3A76AC430E05A069-6-0-2-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 785,
+                            "end": 795,
+                            "text": "the regime",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "CBD73D24324D3C3A3A76AC430E05A069-6-38-48-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "text": "Foreign Secretary welcomes new Syria sanctions listings that apply further pressure on Assad\u2019s brutal regime.\n\nPhilip Hammond said: The UK has worked tirelessly with other member states to secure 13 new EU sanctions listings on Syria. We are targeting developers, proliferators and users of chemical weapons, along with businessmen and companies supporting the brutal shabiha militias. We have also agreed to target individuals supplying oil to the regime, including George Haswani, a middleman buying oil from ISIL on behalf of the regime. This listing gives yet another indication that Assad\u2019s \u201cwar\u201d on ISIL is a sham and that he supports them financially.\n\nThese sanctions show that EU is united in its condemnation of Assad\u2019s brutal policies. We will continue applying pressure to the regime until it reassesses its position, ends the violence and engages in meaningful negotiations with the moderate opposition."
+        },
+        "meta": {
+            "source": "https://www.gov.uk/government/news/uk-welcomes-new-eu-syria-sanctions-listings"
+        }
+    },
+    {
+        "id": "D23AD6D80730BEF27D23CDD2287AC200",
+        "annotations": [
+            {
+                "result": [
+                    {
+                        "value": {
+                            "start": 0,
+                            "end": 43,
+                            "text": "Minister for the Middle East Tobias Ellwood",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "D23AD6D80730BEF27D23CDD2287AC200-0-0-43-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 100,
+                            "end": 108,
+                            "text": "the city",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "D23AD6D80730BEF27D23CDD2287AC200-0-100-108-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 100,
+                            "end": 117,
+                            "text": "the city of Mosul",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "D23AD6D80730BEF27D23CDD2287AC200-0-100-117-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 112,
+                            "end": 117,
+                            "text": "Mosul",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "D23AD6D80730BEF27D23CDD2287AC200-0-112-117-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 121,
+                            "end": 125,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "D23AD6D80730BEF27D23CDD2287AC200-0-121-125-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 17,
+                            "end": 28,
+                            "text": "Middle East",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "D23AD6D80730BEF27D23CDD2287AC200-0-17-28-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 26,
+                            "end": 35,
+                            "text": "st Tobias",
+                            "labels": [
+                                "Vehicle"
+                            ]
+                        },
+                        "id": "D23AD6D80730BEF27D23CDD2287AC200-0-26-35-Vehicle",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 29,
+                            "end": 43,
+                            "text": "Tobias Ellwood",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "D23AD6D80730BEF27D23CDD2287AC200-0-29-43-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 69,
+                            "end": 86,
+                            "text": "the Iraqi mission",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "D23AD6D80730BEF27D23CDD2287AC200-0-69-86-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 73,
+                            "end": 78,
+                            "text": "Iraqi",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "D23AD6D80730BEF27D23CDD2287AC200-0-73-78-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 127,
+                            "end": 143,
+                            "text": "Minister Ellwood",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "D23AD6D80730BEF27D23CDD2287AC200-1-0-16-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 252,
+                            "end": 257,
+                            "text": "Daesh",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "D23AD6D80730BEF27D23CDD2287AC200-1-125-130-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 263,
+                            "end": 267,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "D23AD6D80730BEF27D23CDD2287AC200-1-136-140-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 163,
+                            "end": 168,
+                            "text": "Iraqi",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "D23AD6D80730BEF27D23CDD2287AC200-1-36-41-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 190,
+                            "end": 198,
+                            "text": "the city",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "D23AD6D80730BEF27D23CDD2287AC200-1-63-71-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 190,
+                            "end": 207,
+                            "text": "the city of Mosul",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "D23AD6D80730BEF27D23CDD2287AC200-1-63-80-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 202,
+                            "end": 207,
+                            "text": "Mosul",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "D23AD6D80730BEF27D23CDD2287AC200-1-75-80-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 136,
+                            "end": 143,
+                            "text": "Ellwood",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "D23AD6D80730BEF27D23CDD2287AC200-1-9-16-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 299,
+                            "end": 318,
+                            "text": "the people of Mosul",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "D23AD6D80730BEF27D23CDD2287AC200-2-30-49-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 313,
+                            "end": 318,
+                            "text": "Mosul",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "D23AD6D80730BEF27D23CDD2287AC200-2-44-49-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 275,
+                            "end": 282,
+                            "text": "2 years",
+                            "labels": [
+                                "Quantity"
+                            ]
+                        },
+                        "id": "D23AD6D80730BEF27D23CDD2287AC200-2-6-13-Quantity",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 275,
+                            "end": 282,
+                            "text": "2 years",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "D23AD6D80730BEF27D23CDD2287AC200-2-6-13-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 337,
+                            "end": 341,
+                            "text": "hope",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "D23AD6D80730BEF27D23CDD2287AC200-2-68-72-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 404,
+                            "end": 408,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "D23AD6D80730BEF27D23CDD2287AC200-3-41-45-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 404,
+                            "end": 426,
+                            "text": "Iraq\u2019s Security Forces",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "D23AD6D80730BEF27D23CDD2287AC200-3-41-63-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 450,
+                            "end": 454,
+                            "text": "they",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "D23AD6D80730BEF27D23CDD2287AC200-3-87-91-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 481,
+                            "end": 487,
+                            "text": "The UK",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "D23AD6D80730BEF27D23CDD2287AC200-4-0-6-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 500,
+                            "end": 520,
+                            "text": "the Global Coalition",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "D23AD6D80730BEF27D23CDD2287AC200-4-19-39-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 504,
+                            "end": 520,
+                            "text": "Global Coalition",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "D23AD6D80730BEF27D23CDD2287AC200-4-23-39-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 485,
+                            "end": 487,
+                            "text": "UK",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "D23AD6D80730BEF27D23CDD2287AC200-4-4-6-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 560,
+                            "end": 582,
+                            "text": "the government of Iraq",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "D23AD6D80730BEF27D23CDD2287AC200-4-79-101-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 578,
+                            "end": 582,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "D23AD6D80730BEF27D23CDD2287AC200-4-97-101-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "text": "Minister for the Middle East Tobias Ellwood comments on the start of the Iraqi mission to recapture the city of Mosul in Iraq.\nMinister Ellwood said:\nThe start of Iraqi operations to retake the city of Mosul marks another step forward towards clearing Daesh from Iraq. After 2 years of brutal rule, the people of Mosul can start to have hope for a better future.\nThis will be the greatest challenge that Iraq\u2019s Security Forces have yet encountered \u2013 they are up to that challenge. The UK, as part of the Global Coalition, is committed to continuing to provide the government of Iraq with military, humanitarian and stabilisation support.\n"
+        },
+        "meta": {
+            "source": "https://www.gov.uk/government/news/minister-ellwood-statement-on-mosul"
+        }
+    },
+    {
+        "id": "E967805EB658EB937216A53EE9733656",
+        "annotations": [
+            {
+                "result": [
+                    {
+                        "value": {
+                            "start": 13,
+                            "end": 16,
+                            "text": "FCO",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-0-13-16-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 13,
+                            "end": 40,
+                            "text": "FCO Minister Tobias Ellwood",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-0-13-40-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 26,
+                            "end": 40,
+                            "text": "Tobias Ellwood",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-0-26-40-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 63,
+                            "end": 68,
+                            "text": "Syria",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-0-63-68-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 63,
+                            "end": 68,
+                            "text": "Syria",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-0-63-68-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 115,
+                            "end": 144,
+                            "text": "The Minister for Central Asia",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-1-0-29-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 132,
+                            "end": 144,
+                            "text": "Central Asia",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-1-17-29-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 146,
+                            "end": 160,
+                            "text": "Tobias Ellwood",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-1-31-45-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 170,
+                            "end": 176,
+                            "text": "Turkey",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-1-55-61-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 180,
+                            "end": 187,
+                            "text": "4 April",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-1-65-72-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 182,
+                            "end": 187,
+                            "text": "April",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-1-67-72-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 192,
+                            "end": 202,
+                            "text": "Uzbekistan",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-1-77-87-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 208,
+                            "end": 222,
+                            "text": "5-6 April 2016",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-1-93-107-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 235,
+                            "end": 251,
+                            "text": "Minister Ellwood",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-2-10-26-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 360,
+                            "end": 368,
+                            "text": "refugees",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-2-135-143-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 244,
+                            "end": 251,
+                            "text": "Ellwood",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-2-19-26-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 228,
+                            "end": 234,
+                            "text": "Turkey",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-2-3-9-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 261,
+                            "end": 290,
+                            "text": "the Syrian National Coalition",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-2-36-65-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 265,
+                            "end": 290,
+                            "text": "Syrian National Coalition",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-2-40-65-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 309,
+                            "end": 337,
+                            "text": "Turkish and UK organisations",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-2-84-112-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 309,
+                            "end": 316,
+                            "text": "Turkish",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-2-84-91-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 321,
+                            "end": 323,
+                            "text": "UK",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-2-96-98-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 437,
+                            "end": 447,
+                            "text": "Uzbekistan",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-3-22-32-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 451,
+                            "end": 476,
+                            "text": "Minister for Central Asia",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-3-36-61-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 464,
+                            "end": 476,
+                            "text": "Central Asia",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-3-49-61-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 478,
+                            "end": 488,
+                            "text": "Mr Ellwood",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-3-63-73-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 493,
+                            "end": 535,
+                            "text": "a number of Ministers and senior officials",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-3-78-120-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 639,
+                            "end": 651,
+                            "text": "The Minister",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-4-0-12-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 757,
+                            "end": 765,
+                            "text": "students",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-4-118-126-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 769,
+                            "end": 805,
+                            "text": "Westminster International University",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-4-130-166-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 809,
+                            "end": 817,
+                            "text": "Tashkent",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-4-170-178-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 676,
+                            "end": 683,
+                            "text": "British",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-4-37-44-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 676,
+                            "end": 694,
+                            "text": "British businesses",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-4-37-55-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 706,
+                            "end": 714,
+                            "text": "Tashkent",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-4-67-75-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 716,
+                            "end": 752,
+                            "text": "Uzbek alumni of British universities",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-4-77-113-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 732,
+                            "end": 739,
+                            "text": "British",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-4-93-100-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 841,
+                            "end": 853,
+                            "text": "the Minister",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-5-21-33-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 861,
+                            "end": 867,
+                            "text": "Turkey",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-5-41-47-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 861,
+                            "end": 867,
+                            "text": "Turkey",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-5-41-47-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 915,
+                            "end": 921,
+                            "text": "Syrian",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-5-95-101-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 932,
+                            "end": 933,
+                            "text": "I",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-6-0-1-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 965,
+                            "end": 978,
+                            "text": "organisations",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-6-33-46-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1013,
+                            "end": 1017,
+                            "text": "they",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-6-81-85-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1143,
+                            "end": 1149,
+                            "text": "the UK",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-7-120-126-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1147,
+                            "end": 1149,
+                            "text": "UK",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-7-124-126-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1154,
+                            "end": 1164,
+                            "text": "Uzbekistan",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-7-131-141-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1154,
+                            "end": 1164,
+                            "text": "Uzbekistan",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-7-131-141-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1050,
+                            "end": 1060,
+                            "text": "Uzbekistan",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-7-27-37-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1032,
+                            "end": 1034,
+                            "text": "my",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "E967805EB658EB937216A53EE9733656-7-9-11-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "text": "The visit by FCO Minister Tobias Ellwood focused on support to Syria as well as regional security and prosperity.\n\nThe Minister for Central Asia, Tobias Ellwood, visited Turkey on 4 April and Uzbekistan from 5-6 April 2016.\n\nIn Turkey Minister Ellwood met with the Syrian National Coalition, as well as local Turkish and UK organisations focused on supporting refugees, and preventing sexual violence in conflict.\n\nIn his first visit to Uzbekistan as Minister for Central Asia, Mr Ellwood met a number of Ministers and senior officials and discussed a range of issues including political and security, human rights, trade and investment.\n\nThe Minister also held meetings with British businesses working in Tashkent, Uzbek alumni of British universities and students of Westminster International University in Tashkent.\n\nFollowing the visit, the Minister said:\n\nTurkey is a key player in the region dealing with the Syrian conflict. I was pleased to meet a range of organisations to learn about the important work they do.\n\nThis was my first visit to Uzbekistan and an important opportunity to deepen and strengthen bilateral relations between the UK and Uzbekistan on a number of issues important to us both."
+        },
+        "meta": {
+            "source": "https://www.gov.uk/government/news/minister-for-central-asia-visits-turkey-and-uzbekistan"
+        }
+    },
+    {
+        "id": "ED9C03D12FCA518C78DD6C3909CA5E42",
+        "annotations": [
+            {
+                "result": [
+                    {
+                        "value": {
+                            "start": 0,
+                            "end": 14,
+                            "text": "Tobias Ellwood",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-0-0-14-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 116,
+                            "end": 138,
+                            "text": "terrorist organisation",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-0-116-138-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 21,
+                            "end": 28,
+                            "text": "ns ISIL",
+                            "labels": [
+                                "Vehicle"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-0-21-28-Vehicle",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 24,
+                            "end": 28,
+                            "text": "ISIL",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-0-24-28-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 44,
+                            "end": 62,
+                            "text": "residents of Mosul",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-0-44-62-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 57,
+                            "end": 62,
+                            "text": "Mosul",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-0-57-62-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 82,
+                            "end": 84,
+                            "text": "UK",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-0-82-84-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 82,
+                            "end": 84,
+                            "text": "UK",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-0-82-84-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 256,
+                            "end": 264,
+                            "text": "the city",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-1-115-123-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 256,
+                            "end": 273,
+                            "text": "the city of Mosul",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-1-115-132-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 268,
+                            "end": 273,
+                            "text": "Mosul",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-1-127-132-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 277,
+                            "end": 285,
+                            "text": "Northern",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-1-136-144-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 277,
+                            "end": 290,
+                            "text": "Northern Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-1-136-149-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 286,
+                            "end": 290,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-1-145-149-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 157,
+                            "end": 166,
+                            "text": "12 months",
+                            "labels": [
+                                "Quantity"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-1-16-25-Quantity",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 157,
+                            "end": 166,
+                            "text": "12 months",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-1-16-25-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 304,
+                            "end": 308,
+                            "text": "ISIL",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-1-163-167-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 304,
+                            "end": 319,
+                            "text": "ISIL terrorists",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-1-163-178-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 380,
+                            "end": 399,
+                            "text": "the people of Mosul",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-1-239-258-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 394,
+                            "end": 399,
+                            "text": "Mosul",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-1-253-258-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 185,
+                            "end": 190,
+                            "text": "Mosul",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-1-44-49-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 194,
+                            "end": 198,
+                            "text": "ISIL",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-1-53-57-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 194,
+                            "end": 209,
+                            "text": "ISIL terrorists",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-1-53-68-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 211,
+                            "end": 225,
+                            "text": "Tobias Ellwood",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-1-70-84-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 240,
+                            "end": 249,
+                            "text": "12 months",
+                            "labels": [
+                                "Quantity"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-1-99-108-Quantity",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 240,
+                            "end": 249,
+                            "text": "12 months",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-1-99-108-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 402,
+                            "end": 403,
+                            "text": "I",
+                            "labels": [
+                                "Person"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-2-0-1-Person",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 535,
+                            "end": 537,
+                            "text": "10",
+                            "labels": [
+                                "Quantity"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-2-133-135-Quantity",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 568,
+                            "end": 583,
+                            "text": "suicide bombers",
+                            "labels": [
+                                "Weapon"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-2-166-181-Weapon",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 444,
+                            "end": 462,
+                            "text": "hundreds of people",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-2-42-60-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 586,
+                            "end": 592,
+                            "text": "The UK",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-3-0-6-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 736,
+                            "end": 741,
+                            "text": "Iraqi",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-3-150-155-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 736,
+                            "end": 757,
+                            "text": "Iraqi security forces",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-3-150-171-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 604,
+                            "end": 620,
+                            "text": "Global Coalition",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-3-18-34-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 766,
+                            "end": 769,
+                            "text": "25%",
+                            "labels": [
+                                "Quantity"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-3-180-183-Quantity",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 766,
+                            "end": 788,
+                            "text": "25% of Iraqi territory",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-3-180-202-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 773,
+                            "end": 778,
+                            "text": "Iraqi",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-3-187-192-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 773,
+                            "end": 788,
+                            "text": "Iraqi territory",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-3-187-202-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 800,
+                            "end": 806,
+                            "text": "Tikrit",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-3-214-220-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 625,
+                            "end": 647,
+                            "text": "the Government of Iraq",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-3-39-61-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 590,
+                            "end": 592,
+                            "text": "UK",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-3-4-6-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 643,
+                            "end": 647,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-3-57-61-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 594,
+                            "end": 620,
+                            "text": "the wider Global Coalition",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-3-8-34-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 675,
+                            "end": 691,
+                            "text": "these terrorists",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-3-89-105-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 808,
+                            "end": 810,
+                            "text": "We",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-4-0-2-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 924,
+                            "end": 931,
+                            "text": "Yazidis",
+                            "labels": [
+                                "Nationality"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-4-116-123-Nationality",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 935,
+                            "end": 947,
+                            "text": "Mount Sinjar",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-4-127-139-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 941,
+                            "end": 947,
+                            "text": "Sinjar",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-4-133-139-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 960,
+                            "end": 964,
+                            "text": "ISIL",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-4-152-156-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 972,
+                            "end": 978,
+                            "text": "Kobane",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-4-164-170-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 857,
+                            "end": 870,
+                            "text": "Northern Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-4-49-62-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 866,
+                            "end": 870,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-4-58-62-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 881,
+                            "end": 888,
+                            "text": "Rabiyah",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-4-73-80-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 893,
+                            "end": 898,
+                            "text": "Zumar",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-4-85-90-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1104,
+                            "end": 1107,
+                            "text": "265",
+                            "labels": [
+                                "Quantity"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-5-123-126-Quantity",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1125,
+                            "end": 1129,
+                            "text": "ISIL",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-5-144-148-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1125,
+                            "end": 1137,
+                            "text": "ISIL targets",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-5-144-156-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1174,
+                            "end": 1177,
+                            "text": "125",
+                            "labels": [
+                                "Quantity"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-5-193-196-Quantity",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1178,
+                            "end": 1186,
+                            "text": "soldiers",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-5-197-205-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1225,
+                            "end": 1239,
+                            "text": "the Iraqi Army",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-5-244-258-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1229,
+                            "end": 1239,
+                            "text": "Iraqi Army",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-5-248-258-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1296,
+                            "end": 1308,
+                            "text": "local people",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-5-315-327-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1018,
+                            "end": 1040,
+                            "text": "the Coalition military",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-5-37-59-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1022,
+                            "end": 1031,
+                            "text": "Coalition",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-5-41-50-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1053,
+                            "end": 1059,
+                            "text": "the UK",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-5-72-78-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1057,
+                            "end": 1059,
+                            "text": "UK",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-5-76-78-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1075,
+                            "end": 1078,
+                            "text": "870",
+                            "labels": [
+                                "Quantity"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-5-94-97-Quantity",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1311,
+                            "end": 1320,
+                            "text": "Last week",
+                            "labels": [
+                                "Temporal"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-6-0-9-Temporal",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1322,
+                            "end": 1324,
+                            "text": "we",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-6-11-13-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1447,
+                            "end": 1460,
+                            "text": "\u00a359.5 million",
+                            "labels": [
+                                "Money"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-6-136-149-Money",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1473,
+                            "end": 1479,
+                            "text": "people",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-6-162-168-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1484,
+                            "end": 1491,
+                            "text": "ss Iraq",
+                            "labels": [
+                                "Vehicle"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-6-173-180-Vehicle",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1487,
+                            "end": 1491,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-6-176-180-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1526,
+                            "end": 1530,
+                            "text": "ISIL",
+                            "labels": [
+                                "Organisation"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-6-215-219-Organisation",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1391,
+                            "end": 1395,
+                            "text": "Iraq",
+                            "labels": [
+                                "Location"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-6-80-84-Location",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    },
+                    {
+                        "value": {
+                            "start": 1399,
+                            "end": 1410,
+                            "text": "\u00a320 million",
+                            "labels": [
+                                "Money"
+                            ]
+                        },
+                        "id": "ED9C03D12FCA518C78DD6C3909CA5E42-6-88-99-Money",
+                        "from_name": "label",
+                        "to_name": "text",
+                        "type": "labels"
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "text": "Tobias Ellwood condemns ISIL\u2019s treatment of residents of Mosul and reiterates the UK\u2019s commitment to defeating this terrorist organisation.\n\nSpeaking nearly 12 months after the fall of Mosul to ISIL terrorists, Tobias Ellwood said:\n\nNearly 12 months since the city of Mosul in Northern Iraq was taken by ISIL terrorists, we have heard once again about the horrendous treatment of the people of Mosul.\n\nI am appalled by reports of the murder of hundreds of people, the ill treatment of women and the recruitment of children as young as 10 as soldiers, executioners and suicide bombers.\n\nThe UK, the wider Global Coalition and the Government of Iraq are committed to defeating these terrorists and have already supported the re-taking by Iraqi security forces of over 25% of Iraqi territory, including Tikrit. We have supported the liberation of key towns in Northern Iraq including Rabiyah and Zumar, broken the siege of the Yazidis on Mount Sinjar, and pushed ISIL out of Kobane.\n\nAs the second largest contributor to the Coalition military activities, the UK has flown over 870 missions, conducted over 265 bombing raids on ISIL targets, and is now providing an additional 125 soldiers to assist in Counter-IED training for the Iraqi Army helping them to clear territory safely and return it to local people.\n\nLast week, we also announced that we would increase our humanitarian support to Iraq by \u00a320 million, bringing our total contribution to \u00a359.5 million, supporting people across Iraq who have been forced to flee from ISIL\u2019s brutality."
+        },
+        "meta": {
+            "source": "https://www.gov.uk/government/news/minister-for-the-middle-east-tobias-ellwood-comments-on-the-situation-in-mosul-iraq"
+        }
+    }
+]
