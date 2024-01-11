@@ -267,22 +267,6 @@ class DomainAdaptationNER(nn.Module):
             wordle_source = predictions['wordle_source']
             wordle_target = predictions['wordle_target']
 
-
-
-    def compute_accuracy(self, logits: Dict[str, torch.Tensor], label: torch.Tensor):
-        """Fuse the logits from different modalities and compute the classification accuracy.
-
-        Parameters
-        ----------
-        logits : Dict[str, torch.Tensor]
-            logits of the different modalities
-        label : torch.Tensor
-            ground truth
-        """
-        # fused_logits = reduce(lambda x, y: x + y, logits.values())
-
-        self.accuracy.update(logits, label)
-
     def reduce_learning_rate(self):
         """Perform a learning rate step."""
         new_lr = self.optimizer.param_groups[-1]["lr"] / 10
@@ -303,20 +287,20 @@ class DomainAdaptationNER(nn.Module):
         self.classification_loss_source.reset()
         self.classification_loss_target.reset()
     
-    def compute_accuracy(self, logits: Dict[str, torch.Tensor], label: torch.Tensor):
-        """Fuse the logits from different modalities and compute the classification accuracy.
+    def compute_accuracy(self, output: Dict[str, torch.Tensor], label: torch.Tensor):
+        """Compute the classification accuracy for source and target.
 
         Parameters
         ----------
-        logits : Dict[str, torch.Tensor]
-            logits of the different modalities
+        output : Dict[str, torch.Tensor]
+            output of the model
         label : torch.Tensor
             ground truth
         """
         # fused_logits = reduce(lambda x, y: x + y, logits.values())
 
-        self.accuracy_source.update(logits['preds_class_source'], label)
-        self.accuracy_target.update(logits['preds_class_target'], label)
+        self.accuracy_source.update(output['preds_class_source'], label)
+        self.accuracy_target.update(output['preds_class_target'], label)
 
     def reset_acc(self):
         """Reset the classification accuracy."""
