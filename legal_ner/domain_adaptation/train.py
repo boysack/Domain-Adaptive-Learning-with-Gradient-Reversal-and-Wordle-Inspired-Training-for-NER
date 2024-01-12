@@ -43,7 +43,7 @@ def main(args):
 
         #TODO: dataloaders for source and target
         train_loader_source = DataLoader(train_source)
-        train_loader_target = DataLoader(train_loader_target)
+        train_loader_target = DataLoader(train_target)
         val_loader = DataLoader(val_target)
         train(classifier, train_loader_source, train_loader_target, val_loader, device)
 

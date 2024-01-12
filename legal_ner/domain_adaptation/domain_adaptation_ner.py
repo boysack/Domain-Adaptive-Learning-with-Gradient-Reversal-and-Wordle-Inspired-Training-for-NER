@@ -55,6 +55,11 @@ class AdaptiveModule(nn.Module):
             preds_domain_token_target = self.token_domain_classifier(feats_target)
         
         if 'window_domain_classifier' in self.model_config.blocks or 'game_module' in self.model_config.blocks:
+            
+            #TODO: check dimensions, probably does not work
+
+            window_class_labels_source = torch.vstack((torch.hstack((class_labels_source[i+start,:] if i+start<len(class_labels_source) else torch.zeros_like(class_labels_source) for i in range(self.model_config.window_size))) for start in range(len(class_labels_source))))
+            window_class_labels_target = torch.vstack((torch.hstack((class_labels_target[i+start,:] if i+start<len(class_labels_target) else torch.zeros_like(class_labels_target) for i in range(self.model_config.window_size))) for start in range(len(class_labels_target))))
 
             feats_window_source = torch.vstack((torch.hstack((feats_source[i+start,:] if i+start<len(feats_source) else torch.zeros_like(feats_source) for i in range(self.model_config.window_size))) for start in range(len(feats_source))))
             feats_window_target = torch.vstack((torch.hstack((feats_target[i+start,:] if i+start<len(feats_source) else torch.zeros_like(feats_source) for i in range(self.model_config.window_size))) for start in range(len(feats_target))))
@@ -68,8 +73,8 @@ class AdaptiveModule(nn.Module):
                 preds_domain_window_target = self.window_domain_classifier(feats_window_target)
             
             if 'game_module' in self.model_config.blocks:
-                last_attempt_source = self.game_module_source.play(feats_window_source, class_labels_source)
-                last_attempt_target = self.game_module_target.play(feats_window_target, class_labels_target)
+                last_attempt_source = self.game_module_source.play(feats_window_source, window_class_labels_source)
+                last_attempt_target = self.game_module_target.play(feats_window_target, window_class_labels_target)
 
         preds_class_source = self.fc_classifier_source(feats_source)
         preds_class_target = self.fc_classifier_target(feats_target)
@@ -77,7 +82,8 @@ class AdaptiveModule(nn.Module):
         return {'preds_class_source': preds_class_source, 'preds_class_target': preds_class_target,\
                 'preds_domain_token_source': preds_domain_token_source, 'preds_domain_token_target': preds_domain_token_target,\
                 'preds_domain_window_source': preds_domain_window_source, 'preds_domain_window_target': preds_domain_window_target,\
-                'wordle_source': last_attempt_source, 'wordle_target': last_attempt_target}
+                'wordle_source': last_attempt_source, 'wordle_target': last_attempt_target, \
+                'window_class_labels_source': window_class_labels_source, 'window_class_labels_target': window_class_labels_target}
 
     class TaskModule(nn.Module):
         def __init__(self, n_fcl, in_features_dim, out_features_dim, dropout=0.5):
@@ -177,18 +183,32 @@ class AdaptiveModule(nn.Module):
             self.n_attempts = n_attempts
         
         def play(self, feats, gt):
+
+            """
+            Attempts the wordle game for n_attempts times,
+            returns the last guess
+            """
             
             hint = torch.zeros_like(gt)
             last_attempt = torch.zeros_like(gt)
 
             for _ in range(self.n_attempts):
                 logits = self.forward(feats, hint, last_attempt)
-                last_attempt = torch.argmax(logits, dim=1)
+                last_attempt = torch.argmax(logits, dim=2)
                 hint = torch.tensor([1 if x not in gt else 2 if 2 in gt and 2 != gt[i] else 3 for i, x in enumerate(last_attempt)])
             
-            return last_attempt
+            return logits
         
         def forward(self, feats, hint, last_attempt):
+
+            """
+            How the game works:
+            - feats: features of the window
+            - hint: 0 if the entity is not in the window, 1 if the entity is in the window but not in the right position, 2 if the entity is in the window and in the right position
+            - last_attempt: last attempt of the player
+            A fully connected layer is used to predict the next attempt, that is the joint distribution of the entities and the position
+            The dimension of feats is (number of windows in the batch, context_length, entity classes)
+            """
             feats = torch.cat((feats, hint, last_attempt), dim=0)
             feats = self.fc_layer(feats)
             feats = feats.view((-1,self.context_length, self.n_classes))
@@ -227,6 +247,12 @@ class DomainAdaptationNER(nn.Module):
         self.domain_window_loss = metrics.AverageMeter()
         self.classification_loss_source = metrics.AverageMeter()
         self.classification_loss_target = metrics.AverageMeter()
+
+        self.wordle_source_position_loss = metrics.AverageMeter()
+        self.wordle_target_position_loss = metrics.AverageMeter()
+
+        self.wordle_source_window_loss = metrics.AverageMeter()
+        self.wordle_target_window_loss = metrics.AverageMeter()
     
     def forward(self, source, target, is_train=True):
         return self.model(source, target, is_train=is_train)
@@ -265,9 +291,42 @@ class DomainAdaptationNER(nn.Module):
             self.domain_window_loss.update(torch.mean(domain_window_loss) / (self.total_batch / self.batch_size), self.batch_size)
         
         if 'game_module' in self.blocks:
-            wordle_source = predictions['wordle_source']
+            wordle_source = predictions['wordle_source'] # Dimension: (windows_in_batch, context_length, num_classes)
             wordle_target = predictions['wordle_target']
 
+            window_class_labels_source = predictions['window_class_labels_source'] # Dimension: (windows_in_batch, context_length)
+            window_class_labels_target = predictions['window_class_labels_target']
+
+            # Now we need something like (windows_in_batch*context_length, num_classes)
+            # We do this by one-hot encoding the labels
+            window_class_labels_source_one_hot = torch.nn.functional.one_hot(window_class_labels_source, num_classes=self.num_classes_source).view(-1, self.num_classes_source)
+            window_class_labels_target_one_hot = torch.nn.functional.one_hot(window_class_labels_target, num_classes=self.num_classes_target).view(-1, self.num_classes_target)
+
+            wordle_source_position = wordle_source.view(-1, self.num_classes_source)
+            wordle_target_position = wordle_target.view(-1, self.num_classes_target)
+
+            wordle_source_position_loss = self.criterion(wordle_source_position, window_class_labels_source_one_hot)
+            wordle_target_position_loss = self.criterion(wordle_target_position, window_class_labels_target_one_hot)
+
+            wordle_source_position_loss = torch.mean(wordle_source_position_loss) / (self.total_batch / self.batch_size)
+            wordle_target_position_loss = torch.mean(wordle_target_position_loss) / (self.total_batch / self.batch_size)
+
+            self.wordle_source_position_loss.update(wordle_source_position_loss, self.batch_size)
+            self.wordle_target_position_loss.update(wordle_target_position_loss, self.batch_size)
+
+            # Now we need to compute the loss which does not take into account the position of the entity
+
+            wordle_source_window = torch.ones((wordle_source.shape[0], wordle_source.shape[2]))-torch.prod(torch.ones_like(wordle_source)-wordle_source, dim=1) # Dimension: (windows_in_batch, num_classes)
+            wordle_target_window = torch.ones((wordle_target.shape[0], wordle_target.shape[2]))-torch.prod(torch.ones_like(wordle_target)-wordle_target, dim=1)
+
+            wordle_source_window_loss = self.criterion(wordle_source_window, window_class_labels_source_one_hot)
+            wordle_target_window_loss = self.criterion(wordle_target_window, window_class_labels_target_one_hot)
+
+            wordle_source_window_loss = torch.mean(wordle_source_window_loss) / (self.total_batch / self.batch_size)
+            wordle_target_window_loss = torch.mean(wordle_target_window_loss) / (self.total_batch / self.batch_size)
+
+            self.wordle_source_window_loss.update(wordle_source_window_loss, self.batch_size)
+            self.wordle_target_window_loss.update(wordle_target_window_loss, self.batch_size)
             #TODO: compute game module loss
 
     def reduce_learning_rate(self):
@@ -281,6 +340,8 @@ class DomainAdaptationNER(nn.Module):
         This method must be called after each optimization step.
         """
         
+        #TODO: reset game module loss
+
         if 'token_domain_classifier' in self.blocks:
             self.domain_token_loss.reset()
         
