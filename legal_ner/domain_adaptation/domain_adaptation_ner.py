@@ -15,13 +15,13 @@ from pathlib import Path
 class AdaptiveModule(nn.Module):
 
     def __init__(self, in_features_dim, model_config, num_classes_source=None, num_classes_target=None):
-        
-        self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-        self.model_config = model_config
 
         super(AdaptiveModule, self).__init__()
+
+        self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+        self.model_config = model_config
        
-        self.fc_task_specific_layer = self.TaskModule(in_features_dim=in_features_dim, out_features_dim=in_features_dim, dropout=model_config.dropout)
+        self.fc_task_specific_layer = self.TaskModule(model_config.num_fcl, in_features_dim=in_features_dim, out_features_dim=in_features_dim, dropout=model_config.dropout)
         
         if 'token_domain_classifier' in self.model_config.blocks:
             self.token_domain_classifier = self.DomainClassifier(in_features_dim, model_config.beta_token)
@@ -91,19 +91,22 @@ class AdaptiveModule(nn.Module):
             super(AdaptiveModule.TaskModule, self).__init__()
             
             fc_layers = []
-            fc_layers.append(AdaptiveModule.FullyConnectedLayer(in_features_dim, out_features_dim, dropout))
-
-            for i in range(n_fcl-1):
-                fc_layers.append(AdaptiveModule.FullyConnectedLayer(out_features_dim, out_features_dim, dropout))
-            
-            self.fc_layers = nn.Sequential(fc_layers)
-            
-            self.bias = self.fc_layers.bias
-            self.weight = self.fc_layers.weight
-
             std = 0.001
-            normal_(self.weight, 0, std)
-            constant_(self.bias, 0)
+
+
+            for i in range(n_fcl):
+                
+                if i == 0:
+                    fcl = AdaptiveModule.FullyConnectedLayer(in_features_dim, out_features_dim, dropout)
+
+                else:
+                    fcl = AdaptiveModule.FullyConnectedLayer(out_features_dim, out_features_dim, dropout)
+                normal_(fcl.weight, 0, std)
+                constant_(fcl.bias, 0)
+
+                fc_layers.append(fcl)
+            
+            self.fc_layers = nn.Sequential(*fc_layers)
         
         def forward(self, x):
             return self.fc_layers(x)
@@ -219,6 +222,8 @@ class AdaptiveModule(nn.Module):
 class DomainAdaptationNER(nn.Module):
 
     def __init__(self, args) -> None:
+
+        super(DomainAdaptationNER, self).__init__()
         
         self.args = args
 
@@ -230,7 +235,9 @@ class DomainAdaptationNER(nn.Module):
             args.blocks.append('token_domain_classifier')
 
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-        self.model = AdaptiveModule(args.in_features_dim, args, args.num_classes_target, args.num_classes_source).to(self.device).train()
+
+        self.model = AdaptiveModule(args.in_features_dim, args, args.num_classes_target, args.num_classes_source)
+        self.model.to(self.device)
 
         self.criterion = torch.nn.CrossEntropyLoss(weight=None, size_average=None, ignore_index=-100,
                                                     reduce=None, reduction='none')
@@ -327,7 +334,6 @@ class DomainAdaptationNER(nn.Module):
 
             self.wordle_source_window_loss.update(wordle_source_window_loss, self.batch_size)
             self.wordle_target_window_loss.update(wordle_target_window_loss, self.batch_size)
-            #TODO: compute game module loss
 
     def reduce_learning_rate(self):
         """Perform a learning rate step."""
@@ -414,8 +420,8 @@ class DomainAdaptationNER(nn.Module):
         device : torch.device, optional
             the device to move the models on, by default torch.device('cuda')
         """
-        for modality, model in self.task_models.items():
-            self.task_models[modality] = torch.nn.DataParallel(model).to(device)
+
+        self.model = torch.nn.DataParallel(self.model).to(device)
 
     def __restore_checkpoint(self, m: str, path: str):
         """Restore a checkpoint from path.
@@ -438,9 +444,9 @@ class DomainAdaptationNER(nn.Module):
         self.last_iter_acc = checkpoint["acc_mean"]
 
         # Restore the model parameters
-        self.task_models[m].load_state_dict(checkpoint["model_state_dict"], strict=True)
+        self.model.load_state_dict(checkpoint["model_state_dict"], strict=True)
         # Restore the optimizer parameters
-        self.optimizer[m].load_state_dict(checkpoint["optimizer_state_dict"])
+        self.optimizer.load_state_dict(checkpoint["optimizer_state_dict"])
 
         try:
             self.model_count = checkpoint["last_model_count_saved"]
@@ -553,8 +559,8 @@ class DomainAdaptationNER(nn.Module):
                     "best_iter_score": self.best_iter_score,
                     "acc_mean": last_iter_acc,
                     "loss_mean": self.classification_loss.acc,
-                    "model_state_dict": self.task_models[m].state_dict(),
-                    "optimizer_state_dict": self.optimizer[m].state_dict(),
+                    "model_state_dict": self.model.state_dict(),
+                    "optimizer_state_dict": self.optimizer.state_dict(),
                     "last_model_count_saved": self.model_count,
                 },
                 os.path.join(self.models_dir, self.args.experiment_dir, filename),
@@ -576,5 +582,4 @@ class DomainAdaptationNER(nn.Module):
         mode : bool, optional
             train mode, by default True
         """
-        for model in self.task_models.values():
-            model.train(mode)
+        self.model.train(mode)

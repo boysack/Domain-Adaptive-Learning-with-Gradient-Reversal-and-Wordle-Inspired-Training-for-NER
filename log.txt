@@ -1,0 +1,198 @@
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 5, in <module>
+    from domain_adaptation_ner import DomainAdaptationNER
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 9, in <module>
+    from utils import metrics
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\utils\metrics.py", line 1, in <module>
+    from collections import Mapping
+ImportError: cannot import name 'Mapping' from 'collections' (C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\collections\__init__.py)
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 5, in <module>
+    from domain_adaptation_ner import DomainAdaptationNER
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 9, in <module>
+    from utils import metrics
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\utils\metrics.py", line 1, in <module>
+    from abc import Mapping
+ImportError: cannot import name 'Mapping' from 'abc' (C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\abc.py)
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 198, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 22, in main
+    classifier = DomainAdaptationNER(args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 233, in __init__
+    self.model = AdaptiveModule(args.in_features_dim, args, args.num_classes_target, args.num_classes_source).to(self.device).train()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 24, in __init__
+    self.fc_task_specific_layer = self.TaskModule(in_features_dim=in_features_dim, out_features_dim=in_features_dim, dropout=model_config.dropout)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: AdaptiveModule.TaskModule.__init__() missing 1 required positional argument: 'n_fcl'
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 198, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 22, in main
+    classifier = DomainAdaptationNER(args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 233, in __init__
+    self.model = AdaptiveModule(args.in_features_dim, args, args.num_classes_target, args.num_classes_source).to(self.device).train()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 24, in __init__
+    self.fc_task_specific_layer = self.TaskModule(model_config.num_fcl, in_features_dim=in_features_dim, out_features_dim=in_features_dim, dropout=model_config.dropout)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 99, in __init__
+    self.fc_layers = nn.Sequential(fc_layers)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\container.py", line 106, in __init__
+    self.add_module(str(idx), module)
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 607, in add_module
+    raise TypeError(f"{torch.typename(module)} is not a Module subclass")
+TypeError: list is not a Module subclass
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 198, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 22, in main
+    classifier = DomainAdaptationNER(args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 233, in __init__
+    self.model = AdaptiveModule(args.in_features_dim, args, args.num_classes_target, args.num_classes_source).to(self.device).train()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 24, in __init__
+    self.fc_task_specific_layer = self.TaskModule(model_config.num_fcl, in_features_dim=in_features_dim, out_features_dim=in_features_dim, dropout=model_config.dropout)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 101, in __init__
+    self.bias = self.fc_layers.bias
+                ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1688, in __getattr__
+    raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
+AttributeError: 'Sequential' object has no attribute 'bias'
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 198, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 22, in main
+    classifier = DomainAdaptationNER(args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 236, in __init__
+    self.model = AdaptiveModule(args.in_features_dim, args, args.num_classes_target, args.num_classes_source).to(self.device).train()
+    ^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1716, in __setattr__
+    raise AttributeError(
+AttributeError: cannot assign module before Module.__init__() call
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 198, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 22, in main
+    classifier = DomainAdaptationNER(args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 236, in __init__
+    self.model = AdaptiveModule(args.in_features_dim, args, args.num_classes_target, args.num_classes_source).to(self.device).train()
+    ^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1716, in __setattr__
+    raise AttributeError(
+AttributeError: cannot assign module before Module.__init__() call
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 198, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 22, in main
+    classifier = DomainAdaptationNER(args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 236, in __init__
+    self.model = AdaptiveModule(args.in_features_dim, args, args.num_classes_target, args.num_classes_source)
+    ^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1716, in __setattr__
+    raise AttributeError(
+AttributeError: cannot assign module before Module.__init__() call
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 198, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 22, in main
+    classifier = DomainAdaptationNER(args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 237, in __init__
+    self.model = AdaptiveModule(args.in_features_dim, args, args.num_classes_target, args.num_classes_source)
+    ^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1716, in __setattr__
+    raise AttributeError(
+AttributeError: cannot assign module before Module.__init__() call
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 198, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 22, in main
+    classifier = DomainAdaptationNER(args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 237, in __init__
+    self.model = AdaptiveModule(args.in_features_dim, args, args.num_classes_target, args.num_classes_source)
+    ^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1716, in __setattr__
+    raise AttributeError(
+AttributeError: cannot assign module before Module.__init__() call
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 198, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 22, in main
+    classifier = DomainAdaptationNER(args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 237, in __init__
+    self.model = AdaptiveModule(args.in_features_dim, args, args.num_classes_target, args.num_classes_source)
+    ^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1716, in __setattr__
+    raise AttributeError(
+AttributeError: cannot assign module before Module.__init__() call
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 198, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 23, in main
+    classifier.load_on_gpu(device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 423, in load_on_gpu
+    for modality, model in self.task_models.items():
+                           ^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1688, in __getattr__
+    raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
+AttributeError: 'DomainAdaptationNER' object has no attribute 'task_models'. Did you mean: 'save_model'?
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 198, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 32, in main
+    training_iterations = args.num_iter * (args.total_batch // args.batch_size)
+                          ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for *: 'NoneType' and 'int'
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 198, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 36, in main
+    train_source = EmbeddingDataset(args.path_source_embeddings, args.path_source_labels)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: EmbeddingDataset() takes no arguments
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 198, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 36, in main
+    train_source = EmbeddingDataset(args.path_source_embeddings, args.path_source_labels)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\embeddingsDataLoader.py", line 7, in __init__
+    self.embeddings = torch.load(embeddings_path)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\serialization.py", line 998, in load
+    with _open_file_like(f, 'rb') as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\serialization.py", line 445, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\serialization.py", line 426, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './source/embeddings.pt'

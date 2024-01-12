@@ -3,6 +3,7 @@ import coloredlogs
 from utils.args import args
 #import args
 import sys
+import os
 
 def setup_logger(name, logfile=None):
 
@@ -25,4 +26,9 @@ def handle_exception(exc_type, exc_value, exc_traceback):
 
 
 sys.excepthook = handle_exception
-logger = setup_logger("LOG", args.logfile)
+try:
+    logger = setup_logger("LOG", args.logfile)
+except:
+    log_file = os.path.join(args.log_dir, 'log.txt')
+    args.logfile = log_file
+    logger = setup_logger("LOG", args.logfile)

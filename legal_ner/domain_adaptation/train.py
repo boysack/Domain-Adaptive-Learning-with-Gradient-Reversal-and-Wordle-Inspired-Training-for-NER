@@ -1,12 +1,8 @@
 import torch
 from torch.utils.data import DataLoader
-import torch.nn as nn
-import torch.optim as optim
 import os
 import numpy as np
 from domain_adaptation_ner import DomainAdaptationNER
-import argparse
-#from utils.args import args
 from utils.args import args
 import logger
 from embeddingsDataLoader import EmbeddingDataset
