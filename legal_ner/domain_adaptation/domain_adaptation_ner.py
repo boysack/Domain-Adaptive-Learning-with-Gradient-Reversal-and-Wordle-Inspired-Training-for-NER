@@ -5,11 +5,12 @@ from torch.nn.init import normal_, constant_
 from collections import OrderedDict
 import logging
 from typing import Dict, Optional
-from utils.logger import logger
+from utils import logger
 from utils import metrics
 import os
 from datetime import datetime
 from pathlib import Path
+
 
 class AdaptiveModule(nn.Module):
 
