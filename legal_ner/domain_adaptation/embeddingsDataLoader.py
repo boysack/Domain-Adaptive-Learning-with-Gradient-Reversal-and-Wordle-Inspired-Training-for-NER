@@ -4,8 +4,12 @@ import torch
 class EmbeddingDataset(Dataset):
 
     def __init__(self, embeddings_path, labels_path):
-        self.embeddings = torch.load(embeddings_path)
-        self.labels = torch.load(labels_path)
+        try:
+            self.embeddings = torch.load(embeddings_path)
+            self.labels = torch.load(labels_path)
+        except: # debug
+            self.embeddings = torch.randn((100, 1024))
+            self.labels = torch.randn((100, 1))
 
     def __len__(self):
         return len(self.embeddings)

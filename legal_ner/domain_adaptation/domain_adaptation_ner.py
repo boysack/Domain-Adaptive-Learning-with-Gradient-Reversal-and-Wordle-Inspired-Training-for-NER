@@ -57,12 +57,12 @@ class AdaptiveModule(nn.Module):
         if 'window_domain_classifier' in self.model_config.blocks or 'game_module' in self.model_config.blocks:
             
             #TODO: check dimensions, probably does not work
+            
+            window_class_labels_source = torch.vstack(tuple(torch.hstack(tuple(class_labels_source[i+start,:] if i+start<len(class_labels_source) else torch.zeros_like(class_labels_source) for i in range(self.model_config.window_size))) for start in range(len(class_labels_source))))
+            window_class_labels_target = torch.vstack(tuple(torch.hstack(tuple(class_labels_target[i+start,:] if i+start<len(class_labels_target) else torch.zeros_like(class_labels_target) for i in range(self.model_config.window_size))) for start in range(len(class_labels_target))))
 
-            window_class_labels_source = torch.vstack((torch.hstack((class_labels_source[i+start,:] if i+start<len(class_labels_source) else torch.zeros_like(class_labels_source) for i in range(self.model_config.window_size))) for start in range(len(class_labels_source))))
-            window_class_labels_target = torch.vstack((torch.hstack((class_labels_target[i+start,:] if i+start<len(class_labels_target) else torch.zeros_like(class_labels_target) for i in range(self.model_config.window_size))) for start in range(len(class_labels_target))))
-
-            feats_window_source = torch.vstack((torch.hstack((feats_source[i+start,:] if i+start<len(feats_source) else torch.zeros_like(feats_source) for i in range(self.model_config.window_size))) for start in range(len(feats_source))))
-            feats_window_target = torch.vstack((torch.hstack((feats_target[i+start,:] if i+start<len(feats_source) else torch.zeros_like(feats_source) for i in range(self.model_config.window_size))) for start in range(len(feats_target))))
+            feats_window_source = torch.vstack(tuple(torch.hstack(tuple(feats_source[i+start,:] if i+start<len(feats_source) else torch.zeros_like(feats_source) for i in range(self.model_config.window_size))) for start in range(len(feats_source))))
+            feats_window_target = torch.vstack(tuple(torch.hstack(tuple(feats_target[i+start,:] if i+start<len(feats_source) else torch.zeros_like(feats_source) for i in range(self.model_config.window_size))) for start in range(len(feats_target))))
 
             feats_window_source = self.fc_window_features(feats_source)
             feats_window_target = self.fc_window_features(feats_target)
@@ -227,6 +227,8 @@ class DomainAdaptationNER(nn.Module):
         
         self.args = args
 
+        self.current_iter = 0
+
         args.blocks = []
 
         if not args.remove_window_domain_classifier:
@@ -261,8 +263,8 @@ class DomainAdaptationNER(nn.Module):
         self.wordle_source_window_loss = metrics.AverageMeter()
         self.wordle_target_window_loss = metrics.AverageMeter()
     
-    def forward(self, source, target, is_train=True):
-        return self.model(source, target, is_train=is_train)
+    def forward(self, source, target, class_labels_source: 'torch.Tensor', class_labels_target: 'torch.Tensor'):
+        return self.model(source, target, class_labels_source, class_labels_target)
 
     def compute_loss(self, class_labels_source: 'torch.Tensor', class_labels_target: 'torch.Tensor', predictions: Dict[str, 'torch.Tensor']):
         classification_loss_source = self.criterion(predictions['preds_class_source'], class_labels_source) #cross entropy loss

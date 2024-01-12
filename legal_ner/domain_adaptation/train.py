@@ -61,6 +61,7 @@ def train(classifier, train_loader_source, train_loader_target, val_loader, devi
     device: device on which you want to test
     num_classes: int, number of classes in the classification problem
     """
+
     global training_iterations, modalities
 
     data_loader_source = iter(train_loader_source)
@@ -74,7 +75,7 @@ def train(classifier, train_loader_source, train_loader_target, val_loader, devi
     for i in range(iteration, training_iterations):
         # iteration w.r.t. the paper (w.r.t the bs to simulate).... i is the iteration with the actual bs( < tot_bs)
         real_iter = (i + 1) / (args.total_batch // args.batch_size)
-        if real_iter == args.lr_steps:
+        if real_iter == args.lr_step:
             # learning rate decay at iteration = lr_steps
             classifier.reduce_learning_rate()
         # gradient_accumulation_step is a bool used to understand if we accumulated at least total_batch
@@ -101,7 +102,7 @@ def train(classifier, train_loader_source, train_loader_target, val_loader, devi
             target_data, target_label = next(data_loader_target)
 
         source_label = source_label.to(device)
-        target_label=target_label.to(device)
+        target_label = target_label.to(device)
         
         data_source= {}
         data_target= {}
@@ -112,7 +113,7 @@ def train(classifier, train_loader_source, train_loader_target, val_loader, devi
 
         if data_source is None or data_target is None :
             raise UserWarning('train_classifier: Cannot be None type')
-        logits, features = classifier.forward(data_source, data_target)
+        output = classifier.forward(data_source, data_target, source_label, target_label)
 
         classifier.compute_loss(logits, source_label, features)
         classifier.backward(retain_graph=False)

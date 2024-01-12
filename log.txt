@@ -196,3 +196,211 @@ Traceback (most recent call last):
     super().__init__(open(name, mode))
                      ^^^^^^^^^^^^^^^^
 FileNotFoundError: [Errno 2] No such file or directory: './source/embeddings.pt'
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\embeddingsDataLoader.py", line 8, in __init__
+    self.embeddings = torch.load(embeddings_path)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\serialization.py", line 998, in load
+    with _open_file_like(f, 'rb') as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\serialization.py", line 445, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\serialization.py", line 426, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './source/embeddings.pt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 198, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 36, in main
+    train_source = EmbeddingDataset(args.path_source_embeddings, args.path_source_labels)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\embeddingsDataLoader.py", line 11, in __init__
+    self.embeddings = torch.random(100, 1024)
+                      ^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'module' object is not callable
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 198, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 70, in train
+    iteration = classifier.current_iter * (args.total_batch // args.batch_size)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1688, in __getattr__
+    raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
+AttributeError: 'DomainAdaptationNER' object has no attribute 'current_iter'
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 198, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 77, in train
+    if real_iter == args.lr_steps:
+                    ^^^^^^^^^^^^^
+AttributeError: 'Namespace' object has no attribute 'lr_steps'. Did you mean: 'lr_step'?
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 198, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 115, in train
+    logits, features = classifier.forward(data_source, data_target)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 267, in forward
+    return self.model(source, target, is_train=is_train)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\parallel\data_parallel.py", line 167, in forward
+    return self.module(*inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: AdaptiveModule.forward() got an unexpected keyword argument 'is_train'
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 198, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 115, in train
+    logits, features = classifier.forward(data_source, data_target)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 267, in forward
+    return self.model(source, target)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\parallel\data_parallel.py", line 167, in forward
+    return self.module(*inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 61, in forward
+    window_class_labels_source = torch.vstack((torch.hstack((class_labels_source[i+start,:] if i+start<len(class_labels_source) else torch.zeros_like(class_labels_source) for i in range(self.model_config.window_size))) for start in range(len(class_labels_source))))
+                                                                                                                                                                                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: object of type 'NoneType' has no len()
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 116, in train
+    output = classifier.forward(data_source, data_target, source_label, target_label)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 267, in forward
+    return self.model(source, target, class_labels_source, class_labels_target)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\parallel\data_parallel.py", line 167, in forward
+    return self.module(*inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 61, in forward
+    window_class_labels_source = torch.vstack((torch.hstack((class_labels_source[i+start,:] if i+start<len(class_labels_source) else torch.zeros_like(class_labels_source) for i in range(self.model_config.window_size))) for start in range(len(class_labels_source))))
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: vstack(): argument 'tensors' (position 1) must be tuple of Tensors, not generator
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 116, in train
+    output = classifier.forward(data_source, data_target, source_label, target_label)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 267, in forward
+    return self.model(source, target, class_labels_source, class_labels_target)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\parallel\data_parallel.py", line 167, in forward
+    return self.module(*inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 61, in forward
+    window_class_labels_source = torch.vstack(tuple(torch.hstack((class_labels_source[i+start,:] if i+start<len(class_labels_source) else torch.zeros_like(class_labels_source) for i in range(self.model_config.window_size))) for start in range(len(class_labels_source))))
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 61, in <genexpr>
+    window_class_labels_source = torch.vstack(tuple(torch.hstack((class_labels_source[i+start,:] if i+start<len(class_labels_source) else torch.zeros_like(class_labels_source) for i in range(self.model_config.window_size))) for start in range(len(class_labels_source))))
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: hstack(): argument 'tensors' (position 1) must be tuple of Tensors, not generator
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 116, in train
+    output = classifier.forward(data_source, data_target, source_label, target_label)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 267, in forward
+    return self.model(source, target, class_labels_source, class_labels_target)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\parallel\data_parallel.py", line 167, in forward
+    return self.module(*inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 61, in forward
+    window_class_labels_source = torch.vstack(tuple(torch.hstack(tuple(class_labels_source[i+start,:] if i+start<len(class_labels_source) else torch.zeros_like(class_labels_source) for i in range(self.model_config.window_size))) for start in range(len(class_labels_source))))
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 61, in <genexpr>
+    window_class_labels_source = torch.vstack(tuple(torch.hstack(tuple(class_labels_source[i+start,:] if i+start<len(class_labels_source) else torch.zeros_like(class_labels_source) for i in range(self.model_config.window_size))) for start in range(len(class_labels_source))))
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Tensors must have same number of dimensions: got 1 and 2
