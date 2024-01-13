@@ -4,7 +4,7 @@ import os
 import numpy as np
 from domain_adaptation_ner import DomainAdaptationNER
 from utils.args import args
-import logger
+from logger import logger
 from embeddingsDataLoader import EmbeddingDataset
 
 
@@ -38,8 +38,8 @@ def main(args):
         #TODO: dataloaders for source and target
         train_loader_source = DataLoader(train_source, batch_size=args.batch_size, shuffle=True)
         train_loader_target = DataLoader(train_target, batch_size=args.batch_size, shuffle=True)
-        val_loader_source = DataLoader(val_source, batch_size=args.batch_size)
-        val_loader_target = DataLoader(val_target, batch_size=args.batch_size)
+        val_loader_source = DataLoader(val_source, batch_size=1)
+        val_loader_target = DataLoader(val_target, batch_size=1)
 
         train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
 
@@ -49,8 +49,8 @@ def main(args):
             classifier.load_last_model(args.resume_from)
         #TODO: val dataloader for source and target
 
-        validate(classifier, val_loader_source, device, classifier.current_iter)
-        validate(classifier, val_loader_target, device, classifier.current_iter)
+        validate(classifier, val_loader_source, device, classifier.current_iter, 'source')
+        validate(classifier, val_loader_target, device, classifier.current_iter, 'target')
 
 
 def train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device):
@@ -118,7 +118,7 @@ def train(classifier, train_loader_source, train_loader_target, val_loader_sourc
 
         classifier.compute_loss(source_label, target_label, output)
         classifier.backward(retain_graph=False)
-        classifier.compute_accuracy(source_label, target_label, output)
+        classifier.compute_accuracy(output, source_label, target_label)
 
         # update weights and zero gradients if total_batch samples are passed
         if gradient_accumulation_step:
@@ -129,21 +129,22 @@ def train(classifier, train_loader_source, train_loader_target, val_loader_sourc
         # every eval_freq "real iteration" (iterations on total_batch) the validation is done, notice we validate and
         # save the last 9 models
         if gradient_accumulation_step and real_iter % args.eval_freq == 0:
-            val_metrics = validate(classifier, val_loader_target, device, int(real_iter))
+            val_metrics_source = validate(classifier, val_loader_source, device, int(real_iter), 'source')
+            val_metrics_target = validate(classifier, val_loader_target, device, int(real_iter), 'target')
 
-            if val_metrics['top1'] <= classifier.best_iter_score:
+            if val_metrics_source['top1'] + val_metrics_target['top1'] <= classifier.best_iter_score:
                 logger.info("New best accuracy {:.2f}%"
                             .format(classifier.best_iter_score))
             else:
-                logger.info("New best accuracy {:.2f}%".format(val_metrics['top1']))
+                logger.info("New best average accuracy: source={:.2f}%, target={:.2f}%".format(val_metrics_source['top1'], val_metrics_target['top1']))
                 classifier.best_iter = real_iter
-                classifier.best_iter_score = val_metrics['top1']
+                classifier.best_iter_score = val_metrics_source['top1'] + val_metrics_target['top1']
 
-            classifier.save_model(real_iter, val_metrics['top1'], prefix=None)
+            classifier.save_model(real_iter, val_metrics_source['top1'] + val_metrics_target['top1'], prefix=None)
             classifier.train(True)
 
 
-def validate(model, val_loader, device, it, class_labels_source, class_labels_target):
+def validate(model, val_loader, device, it, domain):
     """
     function to validate the model on the test set
     model: Task containing the model to be tested
@@ -162,35 +163,35 @@ def validate(model, val_loader, device, it, class_labels_source, class_labels_ta
         for i_val, (data, label) in enumerate(val_loader):
             label = label.to(device)
 
-            # batch = data.shape[0]
-            # logits = torch.zeros((batch, num_classes)).to(device)
-
             data = data.to(device)
 
-            output = model(data)
-
-            model.compute_accuracy(output, label)
+            if domain == 'source':
+                output = model(source=data, is_train=False)
+                model.compute_accuracy(output, class_labels_source=label)
+            elif domain == 'target':
+                output = model(target=data, is_train=False)
+                model.compute_accuracy(output, class_labels_target=label)
 
             if (i_val + 1) % (len(val_loader) // 5) == 0:
-                logger.info("[{}/{}] top1= {:.3f}% top5 = {:.3f}%".format(i_val + 1, len(val_loader),
-                                                                          model.accuracy.avg[1], model.accuracy.avg[5]))
+                logger.info(f"Domain {domain}")
+                logger.info("[{}/{}] {:.3f}%".format(domain, i_val + 1, len(val_loader),
+                                                                          model.accuracy[domain].avg[1]))
 
-        class_accuracies = [(x / y) * 100 for x, y in zip(model.accuracy.correct, model.accuracy.total)]
-        logger.info('Final accuracy: top1 = %.2f%%\ttop5 = %.2f%%' % (model.accuracy.avg[1],
-                                                                      model.accuracy.avg[5]))
+        class_accuracies = [(x / y) * 100 for x, y in zip(model.accuracy[domain].correct, model.accuracy[domain].total) if y!=0]
+        logger.info('Final accuracy: %.2f%%' % (model.accuracy[domain].avg[1],))
         for i_class, class_acc in enumerate(class_accuracies):
             logger.info('Class %d = [%d/%d] = %.2f%%' % (i_class,
-                                                         int(model.accuracy.correct[i_class]),
-                                                         int(model.accuracy.total[i_class]),
+                                                         int(model.accuracy[domain].correct[i_class]),
+                                                         int(model.accuracy[domain].total[i_class]),
                                                          class_acc))
 
     logger.info('Accuracy by averaging class accuracies (same weight for each class): {}%'
                 .format(np.array(class_accuracies).mean(axis=0)))
-    test_results = {'top1': model.accuracy.avg[1], 'top5': model.accuracy.avg[5],
+    test_results = {'top1': model.accuracy[domain].avg[1],
                     'class_accuracies': np.array(class_accuracies)}
 
-    with open(os.path.join(args.log_dir, f'val_precision.txt'), 'a+') as f:
-        f.write("[%d/%d]\tAcc@top1: %.2f%%\n" % (it, args.num_iter, test_results['top1']))
+    with open(os.path.join(args.log_dir, f'val_precision_{domain}.txt'), 'a+') as f:
+        f.write("[%d/%d]\tAcc@: %.2f%%\n" % (it, args.num_iter, test_results['top1']))
 
     return test_results
 

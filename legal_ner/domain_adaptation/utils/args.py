@@ -19,7 +19,7 @@ parser.add_argument("--log_dir", help="Where to store file for log and results",
 parser.add_argument("--lr", help="Learning rate of the task", type=float, default=0.01)
 parser.add_argument("--weight_decay", help="Weight decay for regularisation", type=float, default=1e-6)
 parser.add_argument("--sgd_momentum", help="Momentum of the sgd optimiser", type=float, default=1e-4)
-parser.add_argument("--experiment_dir", help="Directory where to store model if needed", type=str, default=None)
+parser.add_argument("--experiment_dir", help="Directory where to store model if needed", type=str, default='experiments')
 parser.add_argument("--remove_window_domain_classifier", help="Removes the window domain classifier", action='store_true', default=False)
 parser.add_argument("--remove_token_domain_classifier", help="Removes the token domain classifier", action='store_true', default=False)
 parser.add_argument("--remove_wordle_game_module", help="Removes the wordle game module", action='store_true', default=False)
@@ -35,6 +35,8 @@ parser.add_argument("--path_target_val_embeddings", default='./target/val/embedd
 parser.add_argument("--path_source_val_embeddings", default='./source/val/embeddings.pt', type=str)
 parser.add_argument("--path_target_val_labels", default='./target/val/labels.pt', type=str)
 parser.add_argument("--path_source_val_labels", default='./target/val/labels.pt', type=str)
+parser.add_argument("--name", default='domain_adaptation_NER', type=str)
+parser.add_argument("--models_dir", default='models', type=str)
 
 # Parse the arguments
 args = parser.parse_args()

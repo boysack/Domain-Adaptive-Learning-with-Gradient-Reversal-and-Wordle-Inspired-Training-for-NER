@@ -46,62 +46,39 @@ class AdaptiveModule(nn.Module):
             normal_(self.fc_classifier_source.weight, 0, std)
             constant_(self.fc_classifier_source.bias, 0)
 
+    from collections import defaultdict
+
     def forward(self, source=None, target=None, class_labels_source=None, class_labels_target=None, is_train=True):
-        
-        feats_source = self.fc_task_specific_layer(source)
-        feats_target = self.fc_task_specific_layer(target)
+        output = defaultdict(lambda: None)
 
-        if 'token_domain_classifier' in self.model_config.blocks and is_train:
-            preds_domain_token_source = self.token_domain_classifier(feats_source)
-            preds_domain_token_target = self.token_domain_classifier(feats_target)
-        
-        if 'window_domain_classifier' in self.model_config.blocks or 'game_module' in self.model_config.blocks and is_train:
-            
-            #TODO: check dimensions, probably does not work
-
-            try:
-                window_class_labels_source = torch.vstack(tuple(torch.hstack(tuple(class_labels_source[i+start] if i+start<len(class_labels_source) else torch.zeros((1,)) for i in range(self.model_config.window_size))) for start in range(len(class_labels_source))))
-            except:
-                raise Exception(f'Could not create window_class_labels_source, class_labels_source.shape: {class_labels_source.shape}, self.model_config.window_size: {self.model_config.window_size}')
-            window_class_labels_target = torch.vstack(tuple(torch.hstack(tuple(class_labels_target[i+start] if i+start<len(class_labels_target) else torch.zeros((1,)) for i in range(self.model_config.window_size))) for start in range(len(class_labels_target))))
-
-            feats_window_source = torch.vstack(tuple(torch.hstack(tuple(feats_source[i+start,:] if i+start<len(feats_source) else torch.zeros(feats_source.shape[1:]) for i in range(self.model_config.window_size))) for start in range(len(feats_source))))
-            feats_window_target = torch.vstack(tuple(torch.hstack(tuple(feats_target[i+start,:] if i+start<len(feats_target) else torch.zeros(feats_target.shape[1:]) for i in range(self.model_config.window_size))) for start in range(len(feats_target))))
-
-            feats_window_source = self.fc_window_features(feats_window_source)
-            feats_window_target = self.fc_window_features(feats_window_target)
-
-            if 'window_domain_classifier' in self.model_config.blocks:
-                preds_domain_window_source = self.window_domain_classifier(feats_window_source)
-                preds_domain_window_target = self.window_domain_classifier(feats_window_target)
+        for domain, feats, class_labels in [('source', source, class_labels_source), ('target', target, class_labels_target)]:
+            if feats is not None:
+                feats = self.fc_task_specific_layer(feats)
+                output[f'preds_class_{domain}'] = self.fc_classifier_source(feats)
             else:
-                preds_domain_window_source = None
-                preds_domain_window_target = None
-            
-            if 'game_module' in self.model_config.blocks:
-                last_attempt_source = self.game_module_source.play(feats_window_source, window_class_labels_source)
-                last_attempt_target = self.game_module_target.play(feats_window_target, window_class_labels_target)
-            else:
-                last_attempt_source = None
-                last_attempt_target = None
-        else:
-            preds_domain_token_source = None
-            preds_domain_token_target = None
-            preds_domain_window_source = None
-            preds_domain_window_target = None
-            last_attempt_source = None
-            last_attempt_target = None
-            window_class_labels_source = None
-            window_class_labels_target = None
+                continue
 
-        preds_class_source = self.fc_classifier_source(feats_source)
-        preds_class_target = self.fc_classifier_target(feats_target)
+            if 'token_domain_classifier' in self.model_config.blocks and is_train:
+                output[f'preds_domain_token_{domain}'] = self.token_domain_classifier(feats)
 
-        return {'preds_class_source': preds_class_source, 'preds_class_target': preds_class_target,\
-                'preds_domain_token_source': preds_domain_token_source, 'preds_domain_token_target': preds_domain_token_target,\
-                'preds_domain_window_source': preds_domain_window_source, 'preds_domain_window_target': preds_domain_window_target,\
-                'wordle_source': last_attempt_source, 'wordle_target': last_attempt_target, \
-                'window_class_labels_source': window_class_labels_source, 'window_class_labels_target': window_class_labels_target}
+            if ('window_domain_classifier' in self.model_config.blocks or 'game_module' in self.model_config.blocks) and is_train:
+                try:
+                    window_class_labels = torch.vstack(tuple(torch.hstack(tuple(class_labels[i+start] if i+start<len(class_labels) else torch.zeros((1,)) for i in range(self.model_config.window_size))) for start in range(len(class_labels))))
+                except:
+                    raise Exception(f'Could not create window_class_labels_{domain}, class_labels.shape: {class_labels.shape}, self.model_config.window_size: {self.model_config.window_size}')
+                
+                feats_window = torch.vstack(tuple(torch.hstack(tuple(feats[i+start,:] if i+start<len(feats) else torch.zeros(feats.shape[1:]) for i in range(self.model_config.window_size))) for start in range(len(feats))))
+                feats_window = self.fc_window_features(feats_window)
+
+                if 'window_domain_classifier' in self.model_config.blocks:
+                    output[f'preds_domain_window_{domain}'] = self.window_domain_classifier(feats_window)
+
+                if 'game_module' in self.model_config.blocks:
+                    output[f'wordle_{domain}'] = self.game_module_source.play(feats_window, window_class_labels)
+
+                output[f'window_class_labels_{domain}'] = window_class_labels
+
+        return output
 
     class TaskModule(nn.Module):
         def __init__(self, n_fcl, in_features_dim, out_features_dim, dropout=0.5):
@@ -254,6 +231,12 @@ class DomainAdaptationNER(nn.Module):
         
         self.args = args
 
+        self.name = self.args.name
+        self.models_dir = self.args.models_dir
+
+        self.best_iter_score = 0
+        self.model_count = 0
+
         self.total_batch = args.total_batch
         self.batch_size = args.batch_size
 
@@ -282,8 +265,9 @@ class DomainAdaptationNER(nn.Module):
                                             weight_decay=args.weight_decay,
                                             momentum=args.sgd_momentum)
         
-        self.accuracy_source = metrics.Accuracy(topk=(1,), classes=args.num_classes_source)
-        self.accuracy_target = metrics.Accuracy(topk=(1,), classes=args.num_classes_target)
+        self.accuracy = {}
+        self.accuracy['source'] = metrics.Accuracy(topk=(1,), classes=args.num_classes_source)
+        self.accuracy['target'] = metrics.Accuracy(topk=(1,), classes=args.num_classes_target)
 
         self.num_classes_source = args.num_classes_source
         self.num_classes_target = args.num_classes_target
@@ -299,16 +283,12 @@ class DomainAdaptationNER(nn.Module):
         self.wordle_source_window_loss = metrics.AverageMeter()
         self.wordle_target_window_loss = metrics.AverageMeter()
     
-    def forward(self, source, target, class_labels_source: 'torch.Tensor', class_labels_target: 'torch.Tensor', is_train=True):
+    def forward(self, source = None, target = None, class_labels_source: 'torch.Tensor' = None, class_labels_target: 'torch.Tensor' = None, is_train=True):
         return self.model(source, target, class_labels_source, class_labels_target, is_train=is_train)
 
     def compute_loss(self, class_labels_source: 'torch.Tensor', class_labels_target: 'torch.Tensor', predictions: Dict[str, 'torch.Tensor']):
         
-        try:
-            classification_loss_source = self.criterion(predictions['preds_class_source'], class_labels_source) #cross entropy loss
-        except:
-            raise Exception(f'Could not compute cls loss source, preds_class_source.shape {predictions['preds_class_source'].shape}, class_labels_source.shape {class_labels_source.shape}\n\
-                            class_labels_source: {class_labels_source}, preds_class_source: {predictions['preds_class_source']}')
+        classification_loss_source = self.criterion(predictions['preds_class_source'], class_labels_source) #cross entropy loss
         classification_loss_target = self.criterion(predictions['preds_class_target'], class_labels_target) #cross entropy loss
 
         self.classification_loss_source.update(torch.mean(classification_loss_source) / (self.total_batch / self.batch_size), self.batch_size)
@@ -415,7 +395,7 @@ class DomainAdaptationNER(nn.Module):
         self.classification_loss_source.reset()
         self.classification_loss_target.reset()
     
-    def compute_accuracy(self, class_labels_source: 'torch.Tensor', class_labels_target: 'torch.Tensor', output: Dict[str, 'torch.Tensor']):
+    def compute_accuracy(self, output: Dict[str, 'torch.Tensor'], class_labels_source: 'torch.Tensor' = None, class_labels_target: 'torch.Tensor' = None):
         """Compute the classification accuracy for source and target.
 
         Parameters
@@ -425,14 +405,15 @@ class DomainAdaptationNER(nn.Module):
         label : torch.Tensor
             ground truth
         """
-
-        self.accuracy_source.update(output['preds_class_source'], class_labels_source)
-        self.accuracy_target.update(output['preds_class_target'], class_labels_target)
+        if class_labels_source is not None:
+            self.accuracy['source'].update(output['preds_class_source'], class_labels_source)
+        if class_labels_target is not None:
+            self.accuracy['target'].update(output['preds_class_target'], class_labels_target)
 
     def reset_acc(self):
         """Reset the classification accuracy."""
-        self.accuracy_source.reset()
-        self.accuracy_target.reset()
+        self.accuracy['source'].reset()
+        self.accuracy['target'].reset()
 
 
     def step(self):

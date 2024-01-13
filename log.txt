@@ -1851,3 +1851,587 @@ Traceback (most recent call last):
     val_metrics = validate(classifier, val_loader_target, device, int(real_iter))
                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 TypeError: validate() missing 2 required positional arguments: 'class_labels_source' and 'class_labels_target'
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 132, in train
+    val_metrics = validate(classifier, val_loader_target, device, int(real_iter))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: validate() missing 2 required positional arguments: 'class_labels_source' and 'class_labels_target'
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 197, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 132, in train
+    val_metrics_source = validate(classifier, val_loader_source, device, int(real_iter), 'source')
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 168, in validate
+    output = model(data)
+             ^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: DomainAdaptationNER.forward() missing 3 required positional arguments: 'target', 'class_labels_source', and 'class_labels_target'
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 197, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 132, in train
+    val_metrics_source = validate(classifier, val_loader_source, device, int(real_iter), 'source')
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 168, in validate
+    output = model(data, is_train=False)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: DomainAdaptationNER.forward() missing 1 required positional argument: 'target'
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 69, in forward
+    window_class_labels_source = torch.vstack(tuple(torch.hstack(tuple(class_labels_source[i+start] if i+start<len(class_labels_source) else torch.zeros((1,)) for i in range(self.model_config.window_size))) for start in range(len(class_labels_source))))
+                                                                                                                                                                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: object of type 'NoneType' has no len()
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 197, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 132, in train
+    val_metrics_source = validate(classifier, val_loader_source, device, int(real_iter), 'source')
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 168, in validate
+    output = model(data, is_train=False)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 315, in forward
+    return self.model(source, target, class_labels_source, class_labels_target, is_train=is_train)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\parallel\data_parallel.py", line 167, in forward
+    return self.module(*inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 71, in forward
+    raise Exception(f'Could not create window_class_labels_source, class_labels_source.shape: {class_labels_source.shape}, self.model_config.window_size: {self.model_config.window_size}')
+                                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'shape'
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 197, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 132, in train
+    val_metrics_source = validate(classifier, val_loader_source, device, int(real_iter), 'source')
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 170, in validate
+    model.compute_accuracy(output, label)
+TypeError: DomainAdaptationNER.compute_accuracy() missing 1 required positional argument: 'output'
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 200, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 121, in train
+    classifier.compute_accuracy(source_label, target_label, output)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 442, in compute_accuracy
+    self.accuracy_source.update(output['preds_class_source'], class_labels_source)
+                                ~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+IndexError: too many indices for tensor of dimension 1
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 200, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 132, in train
+    val_metrics_source = validate(classifier, val_loader_source, device, int(real_iter), 'source')
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 175, in validate
+    if (i_val + 1) % (len(val_loader) // 5) == 0:
+       ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+ZeroDivisionError: integer modulo by zero
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 202, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 132, in train
+    val_metrics_source = validate(classifier, val_loader_source, device, int(real_iter), 'source')
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 175, in validate
+    raise Exception('validate: ', len(val_loader), val_loader)
+Exception: ('validate: ', 2, <torch.utils.data.dataloader.DataLoader object at 0x0000024E7A7FEF90>)
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 202, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 132, in train
+    val_metrics_source = validate(classifier, val_loader_source, device, int(real_iter), 'source')
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 175, in validate
+    raise Exception('validate: ', len(val_loader), val_loader)
+Exception: ('validate: ', 2, <torch.utils.data.dataloader.DataLoader object at 0x00000216E1A5F290>)
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 202, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 132, in train
+    val_metrics_source = validate(classifier, val_loader_source, device, int(real_iter), 'source')
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 175, in validate
+    raise Exception('validate: ', len(val_loader), list(val_loader))
+Exception: ('validate: ', 2, [[tensor([[ 0.9475, -1.7296,  0.2591,  ...,  0.0383,  0.1843,  0.0723],
+        [-1.0317,  0.2431,  1.5932,  ...,  0.4873,  0.8082,  0.8536],
+        [-0.9250,  0.8154,  1.1175,  ..., -0.0372,  0.1022,  1.7165],
+        ...,
+        [ 0.1376,  1.0396,  0.2762,  ...,  0.0484, -1.4890,  0.0503],
+        [-1.2360, -1.4693,  0.7790,  ...,  0.4416,  1.2728,  0.7574],
+        [-0.0771,  0.2603,  0.8329,  ..., -0.8066,  0.5555,  0.4044]]), tensor([6, 2, 3, 9, 6, 3, 7, 5, 9, 5, 7, 0, 1, 7, 1, 6, 9, 3, 8, 5, 4, 7, 4, 5,
+        1, 7, 7, 0, 3, 2, 9, 5, 9, 8, 9, 5, 8, 6, 8, 5, 4, 5, 6, 5, 1, 1, 6, 6,
+        7, 6, 7, 8, 4, 5, 9, 2, 6, 1, 0, 6, 4, 9, 9, 4])], [tensor([[ 0.0517,  0.2326,  0.2765,  ..., -0.6879,  1.5903, -0.5349],
+        [-0.0687,  0.6887,  0.5751,  ...,  0.5730, -0.2134,  0.7387],
+        [ 0.0898,  0.9488, -0.9893,  ...,  2.6544,  0.1051,  0.9977],
+        ...,
+        [-0.3627, -1.7257, -0.7504,  ..., -0.4031,  0.1165,  1.6991],
+        [-0.4811,  0.3985, -0.1375,  ...,  0.1702, -1.7334,  0.9902],
+        [ 0.1129, -0.2935, -0.6585,  ...,  0.1137, -1.1856, -1.2176]]), tensor([8, 4, 5, 1, 0, 0, 5, 7, 2, 6, 5, 1, 9, 4, 0, 9, 2, 5, 4, 7, 8, 8, 5, 4,
+        8, 0, 7, 9, 3, 4, 7, 3, 1, 7, 4, 7])]])
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 204, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    raise Exception('main: ', len(val_loader_source), list(val_loader_source))
+Exception: ('main: ', 2, [[tensor([[ 0.2876, -1.2669, -0.1812,  ...,  0.3090,  0.7461,  0.0295],
+        [ 0.1410, -0.6601,  1.4138,  ..., -0.2609, -1.0743, -0.1984],
+        [ 0.1934, -0.5466, -1.3109,  ..., -0.5055,  0.4515, -1.0860],
+        ...,
+        [-0.6021,  1.3752,  2.3372,  ..., -0.5693,  1.4974,  0.7036],
+        [-1.5223,  0.1713, -1.4561,  ...,  0.3001,  1.3919,  1.9560],
+        [ 1.5365,  0.0444, -0.1443,  ...,  1.3909,  0.2875, -1.8028]]), tensor([6, 1, 1, 0, 5, 3, 2, 3, 4, 9, 7, 1, 3, 2, 2, 2, 4, 6, 0, 5, 3, 2, 6, 0,
+        4, 7, 9, 5, 0, 7, 9, 0, 5, 7, 5, 0, 5, 4, 7, 9, 1, 6, 4, 1, 9, 3, 6, 8,
+        3, 5, 1, 2, 1, 9, 3, 8, 4, 8, 4, 5, 3, 0, 3, 9])], [tensor([[ 2.0513, -3.7333,  1.7132,  ...,  1.3510, -0.6620, -1.0355],
+        [-1.4512, -0.4775,  0.8882,  ...,  0.5670,  0.1676, -0.8997],
+        [-0.3078,  0.1120,  1.4954,  ..., -0.5562,  0.7042, -0.2750],
+        ...,
+        [ 0.8359, -0.8478, -0.8055,  ...,  0.6106, -0.7060,  2.0355],
+        [ 0.5356, -1.9237, -0.2721,  ..., -1.8466, -0.4201,  2.6695],
+        [-0.1472, -1.5225, -0.0752,  ..., -0.8519, -0.6704, -0.2812]]), tensor([0, 8, 2, 1, 1, 0, 1, 7, 6, 9, 7, 0, 2, 8, 4, 3, 5, 3, 8, 9, 0, 1, 1, 2,
+        5, 6, 9, 5, 2, 6, 4, 3, 6, 7, 7, 1])]])
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 204, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    raise Exception('main: ', len(val_loader_source), len(train_loader_source))
+Exception: ('main: ', 2, 2)
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 204, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    raise Exception('main: ', len(val_loader_source), len(train_loader_source))
+Exception: ('main: ', 2, 2)
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 204, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    raise Exception('main: ', len(val_loader_source), len(train_loader_source))
+Exception: ('main: ', 2, 2)
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 204, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    raise Exception('main: ', len(val_loader_source), len(train_loader_source))
+Exception: ('main: ', 2, 2)
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 204, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    raise Exception('main: ', len(val_loader_source), len(val_source), len(val_loader_target), len(val_target))
+Exception: ('main: ', 2, 100, 2, 100)
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 204, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    raise Exception('main: ', len(val_loader_source), len(train_loader_source))
+Exception: ('main: ', 2, 2)
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 202, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 132, in train
+    val_metrics_source = validate(classifier, val_loader_source, device, int(real_iter), 'source')
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 175, in validate
+    raise Exception('validate: ', len(val_loader), len(val_loader.dataset))
+Exception: ('validate: ', 2, 100)
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 202, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 132, in train
+    val_metrics_source = validate(classifier, val_loader_source, device, int(real_iter), 'source')
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 175, in validate
+    raise Exception('validate: ', len(val_loader), len(val_loader.dataset))
+Exception: ('validate: ', 100, 100)
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 200, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 132, in train
+    val_metrics_source = validate(classifier, val_loader_source, device, int(real_iter), 'source')
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 176, in validate
+    logger.info(f"Domain {domain}")
+    ^^^^^^^^^^^
+AttributeError: module 'logger' has no attribute 'info'
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 200, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 132, in train
+    val_metrics_source = validate(classifier, val_loader_source, device, int(real_iter), 'source')
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 178, in validate
+    model.accuracy.avg[1]))
+    ^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1688, in __getattr__
+    raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
+AttributeError: 'DomainAdaptationNER' object has no attribute 'accuracy'
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 200, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 132, in train
+    val_metrics_source = validate(classifier, val_loader_source, device, int(real_iter), 'source')
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 180, in validate
+    class_accuracies = [(x / y) * 100 for x, y in zip(model.accuracy[domain].correct, model.accuracy[domain].total)]
+                         ~~^~~
+ZeroDivisionError: float division by zero
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 200, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 132, in train
+    val_metrics_source = validate(classifier, val_loader_source, device, int(real_iter), 'source')
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 194, in validate
+    f.write("[%d/%d]\tAcc@: %.2f%%\n" % (it, args.num_iter, test_results['']))
+                                                            ~~~~~~~~~~~~^^^^
+KeyError: ''
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 200, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 133, in train
+    val_metrics_target = validate(classifier, val_loader_target, device, int(real_iter), 'target')
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 173, in validate
+    model.compute_accuracy(output, class_labels_target=label)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 445, in compute_accuracy
+    self.accuracy['target'].update(output['preds_class_target'], class_labels_target)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\utils\metrics.py", line 38, in update
+    res = self.accuracy(outputs, labels, perclass_acc=True, topk=[top_k])
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\utils\metrics.py", line 63, in accuracy
+    if len(output.shape)<2:
+           ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'shape'
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 200, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 133, in train
+    val_metrics_target = validate(classifier, val_loader_target, device, int(real_iter), 'target')
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 173, in validate
+    model.compute_accuracy(output, class_labels_target=label)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 409, in compute_accuracy
+    self.accuracy['target'].update(output['preds_class_target'], class_labels_target)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\utils\metrics.py", line 38, in update
+    res = self.accuracy(outputs, labels, perclass_acc=True, topk=[top_k])
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\utils\metrics.py", line 63, in accuracy
+    if len(output.shape)<2:
+           ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'shape'
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 201, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 133, in train
+    val_metrics_target = validate(classifier, val_loader_target, device, int(real_iter), 'target')
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 173, in validate
+    raise Exception(output)
+Exception: defaultdict(<function AdaptiveModule.forward.<locals>.<lambda> at 0x00000249D1527C40>, {'preds_class_source': tensor([[ 1.0583e-03,  2.0834e-04, -1.6436e-03, -1.4590e-04,  7.0329e-05,
+          1.1962e-04,  1.1080e-03,  6.9182e-04,  3.4447e-04, -2.1640e-05,
+         -4.5082e-04,  5.4345e-04,  1.4949e-04, -1.0092e-03,  9.4174e-04,
+          4.1857e-04,  1.8114e-04, -4.9949e-04, -1.1024e-03,  6.3657e-04]])})
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 201, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 133, in train
+    val_metrics_target = validate(classifier, val_loader_target, device, int(real_iter), 'target')
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 173, in validate
+    raise Exception(output)
+Exception: defaultdict(<function AdaptiveModule.forward.<locals>.<lambda> at 0x00000202FB5F7C40>, {'preds_class_source': tensor([[ 4.3207e-04,  2.8168e-04, -2.3189e-04, -3.5428e-04,  1.3662e-04,
+          5.1030e-04,  2.2305e-04,  6.6927e-04,  1.4137e-03, -8.9047e-05,
+         -9.1911e-04,  2.7728e-04, -7.6299e-05,  9.5270e-04,  5.3800e-04,
+          1.6288e-04,  2.7071e-04,  8.7696e-04, -8.8900e-04, -4.6063e-04]])})
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 200, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 133, in train
+    val_metrics_target = validate(classifier, val_loader_target, device, int(real_iter), 'target')
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 173, in validate
+    model.compute_accuracy(output, class_labels_target=label)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 405, in compute_accuracy
+    self.accuracy['target'].update(output['preds_class_target'], class_labels_target)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\utils\metrics.py", line 38, in update
+    res = self.accuracy(outputs, labels, perclass_acc=True, topk=[top_k])
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\utils\metrics.py", line 63, in accuracy
+    if len(output.shape)<2:
+           ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'shape'
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 200, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 135, in train
+    if val_metrics_source['top1'] + val_metrics_target['top1'] <= classifier.best_iter_score:
+                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1688, in __getattr__
+    raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
+AttributeError: 'DomainAdaptationNER' object has no attribute 'best_iter_score'
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 200, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 19, in main
+    classifier = DomainAdaptationNER(args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 234, in __init__
+    self.best_iter_score
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1688, in __getattr__
+    raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
+AttributeError: 'DomainAdaptationNER' object has no attribute 'best_iter_score'
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 200, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 139, in train
+    logger.info("New best average accuracy: source={:.2f}%, target={:.2f}%".format(val_metrics_source['top1'], val_loader_target['top1']))
+                                                                                                               ~~~~~~~~~~~~~~~~~^^^^^^^^
+TypeError: 'DataLoader' object is not subscriptable
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 200, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 143, in train
+    classifier.save_model(real_iter, val_metrics_source['top1'] + val_metrics_target['top1'], prefix=None)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 590, in save_model
+    filename = self.name + "_" + str(self.model_count) + ".pth"
+               ^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1688, in __getattr__
+    raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
+AttributeError: 'DomainAdaptationNER' object has no attribute 'name'
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 200, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 143, in train
+    classifier.save_model(real_iter, val_metrics_source['top1'] + val_metrics_target['top1'], prefix=None)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 592, in save_model
+    filename = self.name + "_" + str(self.model_count) + ".pth"
+               ^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1688, in __getattr__
+    raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
+AttributeError: 'DomainAdaptationNER' object has no attribute 'name'
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 200, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 143, in train
+    classifier.save_model(real_iter, val_metrics_source['top1'] + val_metrics_target['top1'], prefix=None)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 592, in save_model
+    filename = self.name + "_" + str(self.model_count) + ".pth"
+               ^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1688, in __getattr__
+    raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
+AttributeError: 'DomainAdaptationNER' object has no attribute 'name'
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 200, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 143, in train
+    classifier.save_model(real_iter, val_metrics_source['top1'] + val_metrics_target['top1'], prefix=None)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 592, in save_model
+    filename = self.name + "_" + str(self.model_count) + ".pth"
+                                     ^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1688, in __getattr__
+    raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
+AttributeError: 'DomainAdaptationNER' object has no attribute 'model_count'
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 200, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 143, in train
+    classifier.save_model(real_iter, val_metrics_source['top1'] + val_metrics_target['top1'], prefix=None)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 593, in save_model
+    filename = self.name + "_" + str(self.model_count) + ".pth"
+                                     ^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1688, in __getattr__
+    raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
+AttributeError: 'DomainAdaptationNER' object has no attribute 'model_count'
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 200, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 143, in train
+    classifier.save_model(real_iter, val_metrics_source['top1'] + val_metrics_target['top1'], prefix=None)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 594, in save_model
+    filename = self.name + "_" + str(self.model_count) + ".pth"
+                                     ^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1688, in __getattr__
+    raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
+AttributeError: 'DomainAdaptationNER' object has no attribute 'model_count'
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 200, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 143, in train
+    classifier.save_model(real_iter, val_metrics_source['top1'] + val_metrics_target['top1'], prefix=None)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 595, in save_model
+    if not os.path.exists(os.path.join(self.models_dir, self.args.experiment_dir)):
+                                       ^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1688, in __getattr__
+    raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
+AttributeError: 'DomainAdaptationNER' object has no attribute 'models_dir'
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 200, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 143, in train
+    classifier.save_model(real_iter, val_metrics_source['top1'] + val_metrics_target['top1'], prefix=None)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 596, in save_model
+    if not os.path.exists(os.path.join(self.models_dir, self.args.experiment_dir)):
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen ntpath>", line 149, in join
+  File "<frozen genericpath>", line 164, in _check_arg_types
+TypeError: join() argument must be str, bytes, or os.PathLike object, not 'NoneType'
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 200, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 143, in train
+    classifier.save_model(real_iter, val_metrics_source['top1'] + val_metrics_target['top1'], prefix=None)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 596, in save_model
+    raise Exception(f'{self.models_dir}, {self.args.experiment_dir}')
+Exception: ., None
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 200, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 143, in train
+    classifier.save_model(real_iter, val_metrics_source['top1'] + val_metrics_target['top1'], prefix=None)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 596, in save_model
+    raise Exception(f'{self.models_dir}, {self.args.experiment_dir}')
+Exception: ., .
