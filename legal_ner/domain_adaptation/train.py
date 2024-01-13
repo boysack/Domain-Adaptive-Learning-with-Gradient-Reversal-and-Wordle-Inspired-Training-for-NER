@@ -143,7 +143,7 @@ def train(classifier, train_loader_source, train_loader_target, val_loader_sourc
             classifier.train(True)
 
 
-def validate(model, val_loader, device, it):
+def validate(model, val_loader, device, it, class_labels_source, class_labels_target):
     """
     function to validate the model on the test set
     model: Task containing the model to be tested

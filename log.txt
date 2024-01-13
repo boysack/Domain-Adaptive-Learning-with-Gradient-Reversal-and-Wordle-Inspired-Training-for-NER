@@ -1841,3 +1841,13 @@ Traceback (most recent call last):
     return forward_call(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 TypeError: DomainAdaptationNER.forward() missing 3 required positional arguments: 'target', 'class_labels_source', and 'class_labels_target'
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 132, in train
+    val_metrics = validate(classifier, val_loader_target, device, int(real_iter))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: validate() missing 2 required positional arguments: 'class_labels_source' and 'class_labels_target'
