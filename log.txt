@@ -404,3 +404,1440 @@ Traceback (most recent call last):
     window_class_labels_source = torch.vstack(tuple(torch.hstack(tuple(class_labels_source[i+start,:] if i+start<len(class_labels_source) else torch.zeros_like(class_labels_source) for i in range(self.model_config.window_size))) for start in range(len(class_labels_source))))
                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 RuntimeError: Tensors must have same number of dimensions: got 1 and 2
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 116, in train
+    output = classifier.forward(data_source, data_target, source_label, target_label)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 267, in forward
+    return self.model(source, target, class_labels_source, class_labels_target)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\parallel\data_parallel.py", line 167, in forward
+    return self.module(*inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 61, in forward
+    window_class_labels_source = torch.vstack(tuple(torch.hstack(tuple(class_labels_source[i+start,:] if i+start<len(class_labels_source) else torch.zeros_like(class_labels_source) for i in range(self.model_config.window_size))) for start in range(len(class_labels_source))))
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 61, in <genexpr>
+    window_class_labels_source = torch.vstack(tuple(torch.hstack(tuple(class_labels_source[i+start,:] if i+start<len(class_labels_source) else torch.zeros_like(class_labels_source) for i in range(self.model_config.window_size))) for start in range(len(class_labels_source))))
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Tensors must have same number of dimensions: got 1 and 2
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 116, in train
+    output = classifier.forward(data_source, data_target, source_label, target_label)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 267, in forward
+    return self.model(source, target, class_labels_source, class_labels_target)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\parallel\data_parallel.py", line 167, in forward
+    return self.module(*inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 61, in forward
+    window_class_labels_source = torch.vstack(tuple(torch.hstack(tuple(class_labels_source[i+start,:] if i+start<len(class_labels_source) else torch.zeros((1,)+class_labels_source.shape[1:]) for i in range(self.model_config.window_size))) for start in range(len(class_labels_source))))
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 61, in <genexpr>
+    window_class_labels_source = torch.vstack(tuple(torch.hstack(tuple(class_labels_source[i+start,:] if i+start<len(class_labels_source) else torch.zeros((1,)+class_labels_source.shape[1:]) for i in range(self.model_config.window_size))) for start in range(len(class_labels_source))))
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Tensors must have same number of dimensions: got 1 and 2
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 116, in train
+    output = classifier.forward(data_source, data_target, source_label, target_label)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 267, in forward
+    return self.model(source, target, class_labels_source, class_labels_target)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\parallel\data_parallel.py", line 167, in forward
+    return self.module(*inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 64, in forward
+    feats_window_source = torch.vstack(tuple(torch.hstack(tuple(feats_source[i+start,:] if i+start<len(feats_source) else torch.zeros_like(feats_source) for i in range(self.model_config.window_size))) for start in range(len(feats_source))))
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 64, in <genexpr>
+    feats_window_source = torch.vstack(tuple(torch.hstack(tuple(feats_source[i+start,:] if i+start<len(feats_source) else torch.zeros_like(feats_source) for i in range(self.model_config.window_size))) for start in range(len(feats_source))))
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Tensors must have same number of dimensions: got 1 and 2
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 116, in train
+    output = classifier.forward(data_source, data_target, source_label, target_label)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 267, in forward
+    return self.model(source, target, class_labels_source, class_labels_target)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\parallel\data_parallel.py", line 167, in forward
+    return self.module(*inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 67, in forward
+    feats_window_source = self.fc_window_features(feats_source)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 132, in forward
+    x = self.fc(x)
+        ^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\linear.py", line 116, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (1x1024 and 5120x1024)
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 68, in forward
+    feats_window_source = self.fc_window_features(feats_source)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 136, in forward
+    x = self.fc(x)
+        ^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\linear.py", line 116, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (1x1024 and 5120x1024)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 116, in train
+    output = classifier.forward(data_source, data_target, source_label, target_label)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 271, in forward
+    return self.model(source, target, class_labels_source, class_labels_target)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\parallel\data_parallel.py", line 167, in forward
+    return self.module(*inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 70, in forward
+    raise Exception(f'Feats source is of dimension {feats_source.shape}')
+Exception: Feats source is of dimension torch.Size([1, 1024])
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 68, in forward
+    feats_window_source = self.fc_window_features(feats_source)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 136, in forward
+    x = self.fc(x)
+        ^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\linear.py", line 116, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (1x1024 and 5120x1024)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 116, in train
+    output = classifier.forward(data_source, data_target, source_label, target_label)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 271, in forward
+    return self.model(source, target, class_labels_source, class_labels_target)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\parallel\data_parallel.py", line 167, in forward
+    return self.module(*inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 70, in forward
+    raise Exception(f'Feats source is of dimension {feats_source.shape}, source is of shape {source.shape}')
+Exception: Feats source is of dimension torch.Size([1, 1024]), source is of shape torch.Size([1, 1024])
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 68, in forward
+    feats_window_source = self.fc_window_features(feats_source)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 136, in forward
+    x = self.fc(x)
+        ^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\linear.py", line 116, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (64x1024 and 5120x1024)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 116, in train
+    output = classifier.forward(data_source, data_target, source_label, target_label)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 271, in forward
+    return self.model(source, target, class_labels_source, class_labels_target)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\parallel\data_parallel.py", line 167, in forward
+    return self.module(*inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 70, in forward
+    raise Exception(f'Feats source is of dimension {feats_source.shape}, source is of shape {source.shape}')
+Exception: Feats source is of dimension torch.Size([64, 1024]), source is of shape torch.Size([64, 1024])
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 116, in train
+    output = classifier.forward(data_source, data_target, source_label, target_label)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 271, in forward
+    return self.model(source, target, class_labels_source, class_labels_target)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\parallel\data_parallel.py", line 167, in forward
+    return self.module(*inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 89, in forward
+    'wordle_source': last_attempt_source, 'wordle_target': last_attempt_target, \
+                     ^^^^^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'last_attempt_source' where it is not associated with a value
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 22, in main
+    classifier = DomainAdaptationNER(args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 248, in __init__
+    self.model = AdaptiveModule(args.in_features_dim, args, args.num_classes_target, args.num_classes_source)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 34, in __init__
+    self.game_module_source = self.GameModule(in_features_dim, model_config.context_length, num_classes_source)
+                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Namespace' object has no attribute 'context_length'
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 22, in main
+    classifier = DomainAdaptationNER(args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 248, in __init__
+    self.model = AdaptiveModule(args.in_features_dim, args, args.num_classes_target, args.num_classes_source)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 34, in __init__
+    self.game_module_source = self.GameModule(in_features_dim, model_config.window_size, num_classes_source)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 189, in __init__
+    self.fc_layer = AdaptiveModule.FullyConnectedLayer(in_features_dim, window_size*n_classes, dropout)
+    ^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1716, in __setattr__
+    raise AttributeError(
+AttributeError: cannot assign module before Module.__init__() call
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 116, in train
+    output = classifier.forward(data_source, data_target, source_label, target_label)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 276, in forward
+    return self.model(source, target, class_labels_source, class_labels_target)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\parallel\data_parallel.py", line 167, in forward
+    return self.module(*inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 78, in forward
+    last_attempt_source = self.game_module_source.play(feats_window_source, window_class_labels_source)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 206, in play
+    logits = self.forward(feats, hint, last_attempt)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 222, in forward
+    feats = torch.cat((feats, hint, last_attempt), dim=0)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Sizes of tensors must match except in dimension 0. Expected size 1024 but got size 5 for tensor number 1 in the list.
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 116, in train
+    output = classifier.forward(data_source, data_target, source_label, target_label)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 276, in forward
+    return self.model(source, target, class_labels_source, class_labels_target)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\parallel\data_parallel.py", line 167, in forward
+    return self.module(*inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 78, in forward
+    last_attempt_source = self.game_module_source.play(feats_window_source, window_class_labels_source)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 206, in play
+    logits = self.forward(feats, hint, last_attempt)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 223, in forward
+    feats = self.fc_layer(feats)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 137, in forward
+    x = self.fc(x)
+        ^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\linear.py", line 116, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (64x1034 and 1024x100)
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 116, in train
+    output = classifier.forward(data_source, data_target, source_label, target_label)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 276, in forward
+    return self.model(source, target, class_labels_source, class_labels_target)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\parallel\data_parallel.py", line 167, in forward
+    return self.module(*inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 78, in forward
+    last_attempt_source = self.game_module_source.play(feats_window_source, window_class_labels_source)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 206, in play
+    logits = self.forward(feats, hint, last_attempt)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 222, in forward
+    feats = torch.cat((feats, hint, last_attempt), dim=1)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Tensors must have same number of dimensions: got 2 and 1
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 116, in train
+    output = classifier.forward(data_source, data_target, source_label, target_label)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 276, in forward
+    return self.model(source, target, class_labels_source, class_labels_target)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\parallel\data_parallel.py", line 167, in forward
+    return self.module(*inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 78, in forward
+    last_attempt_source = self.game_module_source.play(feats_window_source, window_class_labels_source)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 206, in play
+    logits = self.forward(feats, hint, last_attempt)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 222, in forward
+    feats = torch.cat((feats, hint, last_attempt), dim=1)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Tensors must have same number of dimensions: got 2 and 1
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 223, in forward
+    feats = torch.cat((feats, hint, last_attempt), dim=1)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Tensors must have same number of dimensions: got 2 and 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 116, in train
+    output = classifier.forward(data_source, data_target, source_label, target_label)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 279, in forward
+    return self.model(source, target, class_labels_source, class_labels_target)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\parallel\data_parallel.py", line 167, in forward
+    return self.module(*inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 78, in forward
+    last_attempt_source = self.game_module_source.play(feats_window_source, window_class_labels_source)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 206, in play
+    logits = self.forward(feats, hint, last_attempt)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 225, in forward
+    raise Exception(f'Failed concatenating, shape of feats: {feats.shape}, shape of hint: {hint.shape}, shape of last_attempt: {last_attempt.shape}')
+Exception: Failed concatenating, shape of feats: torch.Size([64, 1024]), shape of hint: torch.Size([64]), shape of last_attempt: torch.Size([64, 5])
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 223, in forward
+    feats = torch.cat((feats, hint, last_attempt), dim=1)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Tensors must have same number of dimensions: got 2 and 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 116, in train
+    output = classifier.forward(data_source, data_target, source_label, target_label)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 280, in forward
+    return self.model(source, target, class_labels_source, class_labels_target)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\parallel\data_parallel.py", line 167, in forward
+    return self.module(*inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 78, in forward
+    last_attempt_source = self.game_module_source.play(feats_window_source, window_class_labels_source)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 206, in play
+    logits = self.forward(feats, hint, last_attempt)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 225, in forward
+    raise Exception(f'Failed concatenating, shape of feats: {feats.shape}, shape of hint: {hint.shape}, shape of last_attempt: {last_attempt.shape}\n\
+Exception: Failed concatenating, shape of feats: torch.Size([64, 1024]), shape of hint: torch.Size([64]), shape of last_attempt: torch.Size([64, 5])
+                                Last attempt was tensor([[11,  3, 14,  8,  5],
+        [ 9,  9,  4,  5,  4],
+        [16,  0,  6, 17, 16],
+        [16, 15,  6, 11, 17],
+        [ 4,  0,  1, 18, 13],
+        [ 8,  5, 19, 19,  5],
+        [ 4,  0, 16,  2,  8],
+        [17,  3,  0, 16,  5],
+        [ 1,  6, 15,  7,  3],
+        [11,  0, 11, 18, 19],
+        [ 9,  0, 17,  7,  1],
+        [ 7, 17,  1,  1,  5],
+        [16,  3,  0,  6, 18],
+        [ 9, 17,  8,  0,  0],
+        [ 7,  0, 11, 17,  3],
+        [ 3, 10, 18,  8, 10],
+        [ 4,  0, 18, 18,  0],
+        [14, 17,  2,  0, 14],
+        [16, 14,  6, 11, 11],
+        [11, 15,  0, 10, 14],
+        [ 3,  5,  5, 16, 15],
+        [10, 10,  7, 16,  2],
+        [ 9, 11, 15,  1,  8],
+        [ 3, 15,  0,  0, 18],
+        [11,  1,  0, 16,  5],
+        [ 6,  0, 16, 11,  2],
+        [ 6,  0,  4,  8, 18],
+        [ 1, 13,  7,  9,  1],
+        [10,  6, 11,  0, 11],
+        [11,  0, 18, 18,  2],
+        [11, 11, 16,  9, 16],
+        [ 2,  5, 16, 18,  8],
+        [17,  9, 15,  7, 15],
+        [19, 17,  6,  7, 13],
+        [ 3, 14, 16,  8,  8],
+        [ 3, 17, 16, 11, 13],
+        [18,  5, 16,  1,  2],
+        [11,  0,  5, 19,  4],
+        [ 7,  1,  1, 16, 15],
+        [17, 17,  2,  1,  5],
+        [17,  1,  9, 17, 14],
+        [11,  9, 10,  3, 15],
+        [ 0,  6, 16,  7,  0],
+        [ 7, 12, 16,  2, 17],
+        [15, 15, 16,  8,  2],
+        [ 2,  9,  3,  1, 15],
+        [18, 14,  3,  7, 18],
+        [ 3,  1, 19, 19, 14],
+        [16, 12,  0,  3,  5],
+        [15, 10,  0,  8,  9],
+        [16,  3, 14,  0, 18],
+        [ 9, 19, 11,  1, 12],
+        [18, 12,  1, 19,  9],
+        [15, 17,  0, 11,  6],
+        [ 7,  1,  1,  9,  3],
+        [16,  1,  1, 11, 19],
+        [10, 19, 16, 18, 13],
+        [12, 17, 11,  0,  1],
+        [ 3,  0,  0,  8, 18],
+        [ 7, 17,  0,  3,  3],
+        [10,  6, 13,  7, 11],
+        [17, 14,  9, 10, 10],
+        [ 2, 15, 16, 16,  3],
+        [15,  8,  6, 18,  1]])
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 116, in train
+    output = classifier.forward(data_source, data_target, source_label, target_label)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 280, in forward
+    return self.model(source, target, class_labels_source, class_labels_target)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\parallel\data_parallel.py", line 167, in forward
+    return self.module(*inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 78, in forward
+    last_attempt_source = self.game_module_source.play(feats_window_source, window_class_labels_source)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 208, in play
+    hint = torch.tensor([1 if x not in gt else 2 if 2 in gt and 2 != gt[i] else 3 for i, x in enumerate(last_attempt)])
+                                                                ^^^^^^^^^^
+RuntimeError: Boolean value of Tensor with more than one value is ambiguous
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 209, in play
+    hint = torch.tensor([1 if x not in gt else 2 if 2 in gt and 2 != gt[i] else 3 for i, x in enumerate(last_attempt)])
+                                                                ^^^^^^^^^^
+RuntimeError: Boolean value of Tensor with more than one value is ambiguous
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 116, in train
+    output = classifier.forward(data_source, data_target, source_label, target_label)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 283, in forward
+    return self.model(source, target, class_labels_source, class_labels_target)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\parallel\data_parallel.py", line 167, in forward
+    return self.module(*inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 78, in forward
+    last_attempt_source = self.game_module_source.play(feats_window_source, window_class_labels_source)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 211, in play
+    raise Exception(f'Could not make hint, gt shape: {gt.shape}, last_attempt shape: {last_attempt.shape}')
+Exception: Could not make hint, gt shape: torch.Size([64, 5]), last_attempt shape: torch.Size([64, 5])
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 118, in train
+    classifier.compute_loss(logits, source_label, features)
+                            ^^^^^^
+NameError: name 'logits' is not defined
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 118, in train
+    classifier.compute_loss(source_label, target_label, output)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 286, in compute_loss
+    classification_loss_source = self.criterion(predictions['preds_class_source'], class_labels_source) #cross entropy loss
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\loss.py", line 1179, in forward
+    return F.cross_entropy(input, target, weight=self.weight,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\functional.py", line 3086, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: 0D or 1D target tensor expected, multi-target not supported
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 288, in compute_loss
+    classification_loss_source = self.criterion(predictions['preds_class_source'], class_labels_source) #cross entropy loss
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\loss.py", line 1179, in forward
+    return F.cross_entropy(input, target, weight=self.weight,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\functional.py", line 3086, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: 0D or 1D target tensor expected, multi-target not supported
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 118, in train
+    classifier.compute_loss(source_label, target_label, output)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 290, in compute_loss
+    raise Exception(f'Could not compute cls loss source, preds_class_source.shape {predictions['preds_class_source'].shape}, class_labels_source.shape {class_labels_source.shape}')
+Exception: Could not compute cls loss source, preds_class_source.shape torch.Size([64, 20]), class_labels_source.shape torch.Size([64, 1])
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 116, in train
+    output = classifier.forward(data_source, data_target, source_label, target_label)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 283, in forward
+    return self.model(source, target, class_labels_source, class_labels_target)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\parallel\data_parallel.py", line 167, in forward
+    return self.module(*inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 61, in forward
+    window_class_labels_source = torch.vstack(tuple(torch.hstack(tuple(class_labels_source[i+start,:] if i+start<len(class_labels_source) else torch.zeros(class_labels_source.shape[1:]) for i in range(self.model_config.window_size))) for start in range(len(class_labels_source))))
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 61, in <genexpr>
+    window_class_labels_source = torch.vstack(tuple(torch.hstack(tuple(class_labels_source[i+start,:] if i+start<len(class_labels_source) else torch.zeros(class_labels_source.shape[1:]) for i in range(self.model_config.window_size))) for start in range(len(class_labels_source))))
+                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 61, in <genexpr>
+    window_class_labels_source = torch.vstack(tuple(torch.hstack(tuple(class_labels_source[i+start,:] if i+start<len(class_labels_source) else torch.zeros(class_labels_source.shape[1:]) for i in range(self.model_config.window_size))) for start in range(len(class_labels_source))))
+                                                                       ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+IndexError: too many indices for tensor of dimension 1
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 116, in train
+    output = classifier.forward(data_source, data_target, source_label, target_label)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 283, in forward
+    return self.model(source, target, class_labels_source, class_labels_target)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\parallel\data_parallel.py", line 167, in forward
+    return self.module(*inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 61, in forward
+    window_class_labels_source = torch.vstack(tuple(torch.hstack(tuple(class_labels_source[i+start,:] if i+start<len(class_labels_source) else torch.zeros_like(class_labels_source) for i in range(self.model_config.window_size))) for start in range(len(class_labels_source))))
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 61, in <genexpr>
+    window_class_labels_source = torch.vstack(tuple(torch.hstack(tuple(class_labels_source[i+start,:] if i+start<len(class_labels_source) else torch.zeros_like(class_labels_source) for i in range(self.model_config.window_size))) for start in range(len(class_labels_source))))
+                                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 61, in <genexpr>
+    window_class_labels_source = torch.vstack(tuple(torch.hstack(tuple(class_labels_source[i+start,:] if i+start<len(class_labels_source) else torch.zeros_like(class_labels_source) for i in range(self.model_config.window_size))) for start in range(len(class_labels_source))))
+                                                                       ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+IndexError: too many indices for tensor of dimension 1
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 116, in train
+    output = classifier.forward(data_source, data_target, source_label, target_label)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 283, in forward
+    return self.model(source, target, class_labels_source, class_labels_target)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\parallel\data_parallel.py", line 167, in forward
+    return self.module(*inputs, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 61, in forward
+    window_class_labels_source = torch.vstack(tuple(torch.hstack(tuple(class_labels_source[i+start] if i+start<len(class_labels_source) else torch.zeros_like(class_labels_source) for i in range(self.model_config.window_size))) for start in range(len(class_labels_source))))
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Sizes of tensors must match except in dimension 0. Expected size 5 but got size 68 for tensor number 60 in the list.
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 291, in compute_loss
+    classification_loss_source = self.criterion(predictions['preds_class_source'], class_labels_source) #cross entropy loss
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\loss.py", line 1179, in forward
+    return F.cross_entropy(input, target, weight=self.weight,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\functional.py", line 3086, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: expected scalar type Long but found Int
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 118, in train
+    classifier.compute_loss(source_label, target_label, output)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 293, in compute_loss
+    raise Exception(f'Could not compute cls loss source, preds_class_source.shape {predictions['preds_class_source'].shape}, class_labels_source.shape {class_labels_source.shape}')
+Exception: Could not compute cls loss source, preds_class_source.shape torch.Size([64, 20]), class_labels_source.shape torch.Size([64])
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 291, in compute_loss
+    classification_loss_source = self.criterion(predictions['preds_class_source'], class_labels_source) #cross entropy loss
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\loss.py", line 1179, in forward
+    return F.cross_entropy(input, target, weight=self.weight,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\functional.py", line 3086, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: expected scalar type Long but found Int
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 118, in train
+    classifier.compute_loss(source_label, target_label, output)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 293, in compute_loss
+    raise Exception(f'Could not compute cls loss source, preds_class_source.shape {predictions['preds_class_source'].shape}, class_labels_source.shape {class_labels_source.shape}\n\
+Exception: Could not compute cls loss source, preds_class_source.shape torch.Size([64, 20]), class_labels_source.shape torch.Size([64])
+                            class_labels_source: tensor([8, 7, 9, 5, 7, 8, 7, 8, 8, 5, 0, 0, 9, 0, 2, 0, 8, 7, 7, 5, 3, 3, 7, 1,
+        9, 5, 4, 9, 4, 7, 8, 7, 1, 8, 5, 5, 3, 8, 4, 8, 1, 4, 0, 3, 8, 5, 7, 0,
+        6, 6, 2, 4, 2, 4, 2, 5, 7, 3, 5, 8, 5, 6, 0, 8], dtype=torch.int32)
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 291, in compute_loss
+    classification_loss_source = self.criterion(predictions['preds_class_source'], class_labels_source) #cross entropy loss
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\loss.py", line 1179, in forward
+    return F.cross_entropy(input, target, weight=self.weight,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\functional.py", line 3086, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: expected scalar type Long but found Int
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 118, in train
+    classifier.compute_loss(source_label, target_label, output)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 293, in compute_loss
+    raise Exception(f'Could not compute cls loss source, preds_class_source.shape {predictions['preds_class_source'].shape}, class_labels_source.shape {class_labels_source.shape}\n\
+Exception: Could not compute cls loss source, preds_class_source.shape torch.Size([64, 20]), class_labels_source.shape torch.Size([64])
+                            class_labels_source: tensor([2, 3, 2, 2, 3, 9, 8, 7, 0, 5, 3, 3, 6, 6, 4, 5, 4, 0, 1, 5, 6, 5, 2, 5,
+        8, 5, 7, 7, 3, 1, 7, 1, 9, 0, 2, 7, 6, 2, 6, 9, 9, 2, 5, 2, 9, 1, 0, 5,
+        8, 6, 7, 0, 9, 8, 4, 5, 8, 6, 7, 8, 3, 1, 6, 1], dtype=torch.int32), preds_class_source: tensor([[ 3.1159e-03,  1.4315e-04, -1.4582e-03,  ...,  3.5648e-04,
+         -2.3566e-04,  1.0810e-03],
+        [-1.3030e-03, -9.3276e-04,  2.7435e-04,  ...,  8.2342e-04,
+         -6.1701e-04, -9.1383e-04],
+        [ 5.4296e-04, -5.3779e-04, -4.1641e-05,  ...,  1.5604e-03,
+         -1.8665e-03,  1.3302e-04],
+        ...,
+        [-8.4896e-04,  7.0090e-04,  7.3048e-04,  ...,  1.3737e-03,
+         -4.5480e-04, -8.9529e-04],
+        [ 6.3862e-04, -1.0103e-04,  8.1458e-04,  ..., -1.3713e-04,
+          8.5670e-04,  6.4269e-05],
+        [-2.6539e-05, -6.2712e-05, -2.7198e-04,  ...,  5.9239e-04,
+         -1.6567e-03, -7.7383e-04]], grad_fn=<AddmmBackward0>)
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 118, in train
+    classifier.compute_loss(source_label, target_label, output)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 297, in compute_loss
+    self.classification_loss_source.update(torch.mean(classification_loss_source) / (self.total_batch / self.batch_size), self.batch_size)
+                                                                                     ^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1688, in __getattr__
+    raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
+AttributeError: 'DomainAdaptationNER' object has no attribute 'total_batch'
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 118, in train
+    classifier.compute_loss(source_label, target_label, output)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 299, in compute_loss
+    self.classification_loss_source.update(torch.mean(classification_loss_source) / (self.total_batch / self.batch_size), self.batch_size)
+                                                                                                        ^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1688, in __getattr__
+    raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
+AttributeError: 'DomainAdaptationNER' object has no attribute 'batch_size'
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 118, in train
+    classifier.compute_loss(source_label, target_label, output)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 303, in compute_loss
+    if 'token_domain_classifier' in self.blocks:
+                                    ^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1688, in __getattr__
+    raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
+AttributeError: 'DomainAdaptationNER' object has no attribute 'blocks'
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 118, in train
+    classifier.compute_loss(source_label, target_label, output)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 312, in compute_loss
+    pred_domain_token_all=torch.cat((preds_domain_token_source, domain_label_source),0)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Tensors must have same number of dimensions: got 2 and 1
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 118, in train
+    classifier.compute_loss(source_label, target_label, output)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 325, in compute_loss
+    pred_domain_window_all=torch.cat((preds_domain_window_source, domain_label_source),0)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Tensors must have same number of dimensions: got 2 and 1
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 118, in train
+    classifier.compute_loss(source_label, target_label, output)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 339, in compute_loss
+    window_class_labels_source_one_hot = torch.nn.functional.one_hot(window_class_labels_source, num_classes=self.num_classes_source).view(-1, self.num_classes_source)
+                                                                                                             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1688, in __getattr__
+    raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
+AttributeError: 'DomainAdaptationNER' object has no attribute 'num_classes_source'
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 118, in train
+    classifier.compute_loss(source_label, target_label, output)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 342, in compute_loss
+    window_class_labels_source_one_hot = torch.nn.functional.one_hot(window_class_labels_source, num_classes=self.num_classes_source).view(-1, self.num_classes_source)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: one_hot is only applicable to index tensor.
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 118, in train
+    classifier.compute_loss(source_label, target_label, output)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 348, in compute_loss
+    wordle_source_position_loss = self.criterion(wordle_source_position, window_class_labels_source_one_hot)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\loss.py", line 1179, in forward
+    return F.cross_entropy(input, target, weight=self.weight,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\functional.py", line 3086, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Expected floating point type for target with class probabilities, got Long
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 118, in train
+    classifier.compute_loss(source_label, target_label, output)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 348, in compute_loss
+    wordle_source_position_loss = self.criterion(wordle_source_position, window_class_labels_source_one_hot)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\loss.py", line 1179, in forward
+    return F.cross_entropy(input, target, weight=self.weight,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\functional.py", line 3086, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Expected floating point type for target with class probabilities, got Long
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 118, in train
+    classifier.compute_loss(source_label, target_label, output)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 362, in compute_loss
+    wordle_source_window_loss = self.criterion(wordle_source_window, window_class_labels_source_one_hot)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\loss.py", line 1179, in forward
+    return F.cross_entropy(input, target, weight=self.weight,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\functional.py", line 3086, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Expected input batch_size (64) to match target batch_size (320).
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 196, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 41, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 115, in train
+    classifier.compute_loss(source_label, target_label, output)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 362, in compute_loss
+    wordle_source_window_loss = self.criterion(wordle_source_window, window_class_labels_source_one_hot)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\loss.py", line 1179, in forward
+    return F.cross_entropy(input, target, weight=self.weight,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\functional.py", line 3086, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Expected input batch_size (64) to match target batch_size (320).
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 196, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 41, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 115, in train
+    classifier.compute_loss(source_label, target_label, output)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 362, in compute_loss
+    wordle_source_window_loss = self.criterion(wordle_source_window, window_class_labels_source_one_hot)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\loss.py", line 1179, in forward
+    return F.cross_entropy(input, target, weight=self.weight,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\functional.py", line 3086, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Expected input batch_size (64) to match target batch_size (320).
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 363, in compute_loss
+    wordle_source_window_loss = self.criterion(wordle_source_window, window_class_labels_source_one_hot)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\loss.py", line 1179, in forward
+    return F.cross_entropy(input, target, weight=self.weight,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\functional.py", line 3086, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Expected input batch_size (64) to match target batch_size (320).
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 196, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 41, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 115, in train
+    classifier.compute_loss(source_label, target_label, output)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 366, in compute_loss
+    raise Exception(f'Pred shape: {wordle_source_window.shape}', f'Label shape: {window_class_labels_source_one_hot.shape}')
+Exception: ('Pred shape: torch.Size([64, 20])', 'Label shape: torch.Size([320, 20])')
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 196, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 41, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 121, in train
+    classifier.check_grad()
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1688, in __getattr__
+    raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
+AttributeError: 'DomainAdaptationNER' object has no attribute 'check_grad'
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 371, in compute_loss
+    raise Exception(f'Pred shape: {wordle_source_window.shape}', f'Label shape: {window_class_labels_source_one_hot.shape}')
+Exception: ('Pred shape: torch.Size([64, 20])', 'Label shape: torch.Size([64, 5, 20])')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 196, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 41, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 115, in train
+    classifier.compute_loss(source_label, target_label, output)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 373, in compute_loss
+    raise Exception(f'Pred shape: {wordle_source_window.shape}', f'Label shape: {window_class_labels_source_one_hot.shape}')
+Exception: ('Pred shape: torch.Size([64, 20])', 'Label shape: torch.Size([64, 5, 20])')
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 196, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 41, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 121, in train
+    classifier.check_grad()
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1688, in __getattr__
+    raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
+AttributeError: 'DomainAdaptationNER' object has no attribute 'check_grad'
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 196, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 41, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 122, in train
+    classifier.step()
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 428, in step
+    super().step()
+    ^^^^^^^^^^^^
+AttributeError: 'super' object has no attribute 'step'
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 196, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 41, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 122, in train
+    classifier.step()
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 435, in step
+    self.reset_acc()
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 425, in reset_acc
+    self.accuracy_target.update()
+TypeError: Accuracy.update() missing 2 required positional arguments: 'outputs' and 'labels'
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 196, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 41, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 122, in train
+    classifier.step()
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 435, in step
+    self.reset_acc()
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 425, in reset_acc
+    self.accuracy_target.reser()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Accuracy' object has no attribute 'reser'. Did you mean: 'reset'?
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 196, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 41, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 127, in train
+    if gradient_accumulation_step and real_iter % args.eval_freq == 0:
+                                                  ^^^^^^^^^^^^^^
+AttributeError: 'Namespace' object has no attribute 'eval_freq'
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 196, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 41, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 128, in train
+    val_metrics = validate(classifier, val_loader, device, int(real_iter))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 167, in validate
+    output, _ = model(data, is_train=False)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: DomainAdaptationNER.forward() got an unexpected keyword argument 'is_train'
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 35, in main
+    val_source = EmbeddingDataset(args.path_source_val_embeddings, args.path_source_val_labels)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Namespace' object has no attribute 'path_source_val_embeddings'. Did you mean: 'path_source_embeddings'?
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 199, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 132, in train
+    val_metrics = validate(classifier, val_loader_target, device, int(real_iter))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 170, in validate
+    output = model(data)
+             ^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: DomainAdaptationNER.forward() missing 3 required positional arguments: 'target', 'class_labels_source', and 'class_labels_target'

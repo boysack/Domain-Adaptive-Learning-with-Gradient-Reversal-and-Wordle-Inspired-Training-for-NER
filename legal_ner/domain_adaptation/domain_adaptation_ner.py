@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 from torch.autograd import Function
 from torch.nn.init import normal_, constant_
-from collections import OrderedDict
+from collections import OrderedDict, defaultdict
 import logging
 from typing import Dict, Optional
 from utils import logger
@@ -31,8 +31,8 @@ class AdaptiveModule(nn.Module):
             self.window_domain_classifier = self.DomainClassifier(in_features_dim, model_config.beta_window)
 
         if 'game_module' in self.model_config.blocks:
-            self.game_module_source = self.GameModule(in_features_dim, model_config.context_length, num_classes_source)
-            self.game_module_target = self.GameModule(in_features_dim, model_config.context_length, num_classes_target)
+            self.game_module_source = self.GameModule(in_features_dim, model_config.window_size, num_classes_source)
+            self.game_module_target = self.GameModule(in_features_dim, model_config.window_size, num_classes_target)
 
         self.fc_classifier_source = nn.Linear(in_features_dim, num_classes_source)
         self.fc_classifier_target = nn.Linear(in_features_dim, num_classes_target)
@@ -46,35 +46,53 @@ class AdaptiveModule(nn.Module):
             normal_(self.fc_classifier_source.weight, 0, std)
             constant_(self.fc_classifier_source.bias, 0)
 
-    def forward(self, source, target, class_labels_source=None, class_labels_target=None):
+    def forward(self, source=None, target=None, class_labels_source=None, class_labels_target=None, is_train=True):
+        
         feats_source = self.fc_task_specific_layer(source)
         feats_target = self.fc_task_specific_layer(target)
 
-        if 'token_domain_classifier' in self.model_config.blocks:
+        if 'token_domain_classifier' in self.model_config.blocks and is_train:
             preds_domain_token_source = self.token_domain_classifier(feats_source)
             preds_domain_token_target = self.token_domain_classifier(feats_target)
         
-        if 'window_domain_classifier' in self.model_config.blocks or 'game_module' in self.model_config.blocks:
+        if 'window_domain_classifier' in self.model_config.blocks or 'game_module' in self.model_config.blocks and is_train:
             
             #TODO: check dimensions, probably does not work
-            
-            window_class_labels_source = torch.vstack(tuple(torch.hstack(tuple(class_labels_source[i+start,:] if i+start<len(class_labels_source) else torch.zeros_like(class_labels_source) for i in range(self.model_config.window_size))) for start in range(len(class_labels_source))))
-            window_class_labels_target = torch.vstack(tuple(torch.hstack(tuple(class_labels_target[i+start,:] if i+start<len(class_labels_target) else torch.zeros_like(class_labels_target) for i in range(self.model_config.window_size))) for start in range(len(class_labels_target))))
 
-            feats_window_source = torch.vstack(tuple(torch.hstack(tuple(feats_source[i+start,:] if i+start<len(feats_source) else torch.zeros_like(feats_source) for i in range(self.model_config.window_size))) for start in range(len(feats_source))))
-            feats_window_target = torch.vstack(tuple(torch.hstack(tuple(feats_target[i+start,:] if i+start<len(feats_source) else torch.zeros_like(feats_source) for i in range(self.model_config.window_size))) for start in range(len(feats_target))))
+            try:
+                window_class_labels_source = torch.vstack(tuple(torch.hstack(tuple(class_labels_source[i+start] if i+start<len(class_labels_source) else torch.zeros((1,)) for i in range(self.model_config.window_size))) for start in range(len(class_labels_source))))
+            except:
+                raise Exception(f'Could not create window_class_labels_source, class_labels_source.shape: {class_labels_source.shape}, self.model_config.window_size: {self.model_config.window_size}')
+            window_class_labels_target = torch.vstack(tuple(torch.hstack(tuple(class_labels_target[i+start] if i+start<len(class_labels_target) else torch.zeros((1,)) for i in range(self.model_config.window_size))) for start in range(len(class_labels_target))))
 
-            feats_window_source = self.fc_window_features(feats_source)
-            feats_window_target = self.fc_window_features(feats_target)
+            feats_window_source = torch.vstack(tuple(torch.hstack(tuple(feats_source[i+start,:] if i+start<len(feats_source) else torch.zeros(feats_source.shape[1:]) for i in range(self.model_config.window_size))) for start in range(len(feats_source))))
+            feats_window_target = torch.vstack(tuple(torch.hstack(tuple(feats_target[i+start,:] if i+start<len(feats_target) else torch.zeros(feats_target.shape[1:]) for i in range(self.model_config.window_size))) for start in range(len(feats_target))))
+
+            feats_window_source = self.fc_window_features(feats_window_source)
+            feats_window_target = self.fc_window_features(feats_window_target)
 
             if 'window_domain_classifier' in self.model_config.blocks:
-
                 preds_domain_window_source = self.window_domain_classifier(feats_window_source)
                 preds_domain_window_target = self.window_domain_classifier(feats_window_target)
+            else:
+                preds_domain_window_source = None
+                preds_domain_window_target = None
             
             if 'game_module' in self.model_config.blocks:
                 last_attempt_source = self.game_module_source.play(feats_window_source, window_class_labels_source)
                 last_attempt_target = self.game_module_target.play(feats_window_target, window_class_labels_target)
+            else:
+                last_attempt_source = None
+                last_attempt_target = None
+        else:
+            preds_domain_token_source = None
+            preds_domain_token_target = None
+            preds_domain_window_source = None
+            preds_domain_window_target = None
+            last_attempt_source = None
+            last_attempt_target = None
+            window_class_labels_source = None
+            window_class_labels_target = None
 
         preds_class_source = self.fc_classifier_source(feats_source)
         preds_class_target = self.fc_classifier_target(feats_target)
@@ -177,11 +195,13 @@ class AdaptiveModule(nn.Module):
 
     class GameModule(nn.Module):
 
-        def __init__(self, in_features_dim, context_length, n_classes, dropout=0.5, n_attempts=6) -> None:
+        def __init__(self, in_features_dim, window_size, n_classes, dropout=0.5, n_attempts=6) -> None:
             
-            self.context_length = context_length
+            super(AdaptiveModule.GameModule, self).__init__()
+
+            self.window_size = window_size
             self.n_classes = n_classes
-            self.fc_layer = AdaptiveModule.FullyConnectedLayer(in_features_dim, context_length*n_classes, dropout)
+            self.fc_layer = AdaptiveModule.FullyConnectedLayer(in_features_dim+2*window_size, window_size*n_classes, dropout)
             self.softmax = torch.nn.Softmax(dim=2)
             self.n_attempts = n_attempts
         
@@ -198,7 +218,10 @@ class AdaptiveModule(nn.Module):
             for _ in range(self.n_attempts):
                 logits = self.forward(feats, hint, last_attempt)
                 last_attempt = torch.argmax(logits, dim=2)
-                hint = torch.tensor([1 if x not in gt else 2 if 2 in gt and 2 != gt[i] else 3 for i, x in enumerate(last_attempt)])
+                try:
+                    hint = last_attempt == gt
+                except:
+                    raise Exception(f'Could not make hint, gt shape: {gt.shape}, last_attempt shape: {last_attempt.shape}')
             
             return logits
         
@@ -210,11 +233,15 @@ class AdaptiveModule(nn.Module):
             - hint: 0 if the entity is not in the window, 1 if the entity is in the window but not in the right position, 2 if the entity is in the window and in the right position
             - last_attempt: last attempt of the player
             A fully connected layer is used to predict the next attempt, that is the joint distribution of the entities and the position
-            The dimension of feats is (number of windows in the batch, context_length, entity classes)
+            The dimension of feats is (number of windows in the batch, window_size, entity classes)
             """
-            feats = torch.cat((feats, hint, last_attempt), dim=0)
+            try:
+                feats = torch.cat((feats, hint, last_attempt), dim=1)
+            except:
+                raise Exception(f'Failed concatenating, shape of feats: {feats.shape}, shape of hint: {hint.shape}, shape of last_attempt: {last_attempt.shape}\n\
+                                Last attempt was {last_attempt}')
             feats = self.fc_layer(feats)
-            feats = feats.view((-1,self.context_length, self.n_classes))
+            feats = feats.view((-1,self.window_size, self.n_classes))
             logits = self.softmax(feats)
             return logits
 
@@ -227,6 +254,9 @@ class DomainAdaptationNER(nn.Module):
         
         self.args = args
 
+        self.total_batch = args.total_batch
+        self.batch_size = args.batch_size
+
         self.current_iter = 0
 
         args.blocks = []
@@ -235,7 +265,10 @@ class DomainAdaptationNER(nn.Module):
             args.blocks.append('window_domain_classifier')
         if not args.remove_token_domain_classifier:
             args.blocks.append('token_domain_classifier')
+        if not args.remove_wordle_game_module:
+            args.blocks.append('game_module')
 
+        self.blocks = args.blocks
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
         self.model = AdaptiveModule(args.in_features_dim, args, args.num_classes_target, args.num_classes_source)
@@ -252,6 +285,9 @@ class DomainAdaptationNER(nn.Module):
         self.accuracy_source = metrics.Accuracy(topk=(1,), classes=args.num_classes_source)
         self.accuracy_target = metrics.Accuracy(topk=(1,), classes=args.num_classes_target)
 
+        self.num_classes_source = args.num_classes_source
+        self.num_classes_target = args.num_classes_target
+
         self.domain_token_loss = metrics.AverageMeter()
         self.domain_window_loss = metrics.AverageMeter()
         self.classification_loss_source = metrics.AverageMeter()
@@ -263,11 +299,16 @@ class DomainAdaptationNER(nn.Module):
         self.wordle_source_window_loss = metrics.AverageMeter()
         self.wordle_target_window_loss = metrics.AverageMeter()
     
-    def forward(self, source, target, class_labels_source: 'torch.Tensor', class_labels_target: 'torch.Tensor'):
-        return self.model(source, target, class_labels_source, class_labels_target)
+    def forward(self, source, target, class_labels_source: 'torch.Tensor', class_labels_target: 'torch.Tensor', is_train=True):
+        return self.model(source, target, class_labels_source, class_labels_target, is_train=is_train)
 
     def compute_loss(self, class_labels_source: 'torch.Tensor', class_labels_target: 'torch.Tensor', predictions: Dict[str, 'torch.Tensor']):
-        classification_loss_source = self.criterion(predictions['preds_class_source'], class_labels_source) #cross entropy loss
+        
+        try:
+            classification_loss_source = self.criterion(predictions['preds_class_source'], class_labels_source) #cross entropy loss
+        except:
+            raise Exception(f'Could not compute cls loss source, preds_class_source.shape {predictions['preds_class_source'].shape}, class_labels_source.shape {class_labels_source.shape}\n\
+                            class_labels_source: {class_labels_source}, preds_class_source: {predictions['preds_class_source']}')
         classification_loss_target = self.criterion(predictions['preds_class_target'], class_labels_target) #cross entropy loss
 
         self.classification_loss_source.update(torch.mean(classification_loss_source) / (self.total_batch / self.batch_size), self.batch_size)
@@ -281,7 +322,7 @@ class DomainAdaptationNER(nn.Module):
             domain_label_target=torch.zeros(preds_domain_token_target.shape[0], dtype=torch.int64)    
 
             domain_label_all=torch.cat((domain_label_source, domain_label_target),0).to(self.device)
-            pred_domain_token_all=torch.cat((preds_domain_token_source, domain_label_source),0)
+            pred_domain_token_all=torch.cat((preds_domain_token_source, preds_domain_token_target),0)
 
             domain_token_loss = self.criterion(pred_domain_token_all, domain_label_all)
             self.domain_token_loss.update(torch.mean(domain_token_loss) / (self.total_batch / self.batch_size), self.batch_size)
@@ -294,28 +335,31 @@ class DomainAdaptationNER(nn.Module):
             domain_label_target=torch.zeros(preds_domain_window_target.shape[0], dtype=torch.int64)    
 
             domain_label_all=torch.cat((domain_label_source, domain_label_target),0).to(self.device)
-            pred_domain_window_all=torch.cat((preds_domain_window_source, domain_label_source),0)
+            pred_domain_window_all=torch.cat((preds_domain_window_source, preds_domain_window_target),0)
 
             domain_window_loss = self.criterion(pred_domain_window_all, domain_label_all)
             self.domain_window_loss.update(torch.mean(domain_window_loss) / (self.total_batch / self.batch_size), self.batch_size)
         
         if 'game_module' in self.blocks:
-            wordle_source = predictions['wordle_source'] # Dimension: (windows_in_batch, context_length, num_classes)
+            wordle_source = predictions['wordle_source'] # Dimension: (windows_in_batch, window_size, num_classes)
             wordle_target = predictions['wordle_target']
 
-            window_class_labels_source = predictions['window_class_labels_source'] # Dimension: (windows_in_batch, context_length)
+            window_class_labels_source = predictions['window_class_labels_source'] # Dimension: (windows_in_batch, window_size)
             window_class_labels_target = predictions['window_class_labels_target']
 
-            # Now we need something like (windows_in_batch*context_length, num_classes)
+            # Now we need something like (windows_in_batch*window_size, num_classes)
             # We do this by one-hot encoding the labels
-            window_class_labels_source_one_hot = torch.nn.functional.one_hot(window_class_labels_source, num_classes=self.num_classes_source).view(-1, self.num_classes_source)
-            window_class_labels_target_one_hot = torch.nn.functional.one_hot(window_class_labels_target, num_classes=self.num_classes_target).view(-1, self.num_classes_target)
+            window_class_labels_source_one_hot = torch.nn.functional.one_hot(window_class_labels_source.long(), num_classes=self.num_classes_source).to(float)
+            window_class_labels_target_one_hot = torch.nn.functional.one_hot(window_class_labels_target.long(), num_classes=self.num_classes_target).to(float)
+
+            window_class_labels_source_one_hot_word = window_class_labels_source_one_hot.view(-1, self.num_classes_source)
+            window_class_labels_target_one_hot_word = window_class_labels_target_one_hot.view(-1, self.num_classes_target)
 
             wordle_source_position = wordle_source.view(-1, self.num_classes_source)
             wordle_target_position = wordle_target.view(-1, self.num_classes_target)
 
-            wordle_source_position_loss = self.criterion(wordle_source_position, window_class_labels_source_one_hot)
-            wordle_target_position_loss = self.criterion(wordle_target_position, window_class_labels_target_one_hot)
+            wordle_source_position_loss = self.criterion(wordle_source_position, window_class_labels_source_one_hot_word)
+            wordle_target_position_loss = self.criterion(wordle_target_position, window_class_labels_target_one_hot_word)
 
             wordle_source_position_loss = torch.mean(wordle_source_position_loss) / (self.total_batch / self.batch_size)
             wordle_target_position_loss = torch.mean(wordle_target_position_loss) / (self.total_batch / self.batch_size)
@@ -328,8 +372,14 @@ class DomainAdaptationNER(nn.Module):
             wordle_source_window = torch.ones((wordle_source.shape[0], wordle_source.shape[2]))-torch.prod(torch.ones_like(wordle_source)-wordle_source, dim=1) # Dimension: (windows_in_batch, num_classes)
             wordle_target_window = torch.ones((wordle_target.shape[0], wordle_target.shape[2]))-torch.prod(torch.ones_like(wordle_target)-wordle_target, dim=1)
 
-            wordle_source_window_loss = self.criterion(wordle_source_window, window_class_labels_source_one_hot)
-            wordle_target_window_loss = self.criterion(wordle_target_window, window_class_labels_target_one_hot)
+            window_class_labels_source_one_hot_window = window_class_labels_source_one_hot.sum(dim=1)
+            window_class_labels_target_one_hot_window = window_class_labels_target_one_hot.sum(dim=1)
+
+            try:
+                wordle_source_window_loss = self.criterion(wordle_source_window, window_class_labels_source_one_hot_window)
+                wordle_target_window_loss = self.criterion(wordle_target_window, window_class_labels_target_one_hot_window)
+            except:
+                raise Exception(f'Pred shape: {wordle_source_window.shape}', f'Label shape: {window_class_labels_source_one_hot.shape}')
 
             wordle_source_window_loss = torch.mean(wordle_source_window_loss) / (self.total_batch / self.batch_size)
             wordle_target_window_loss = torch.mean(wordle_target_window_loss) / (self.total_batch / self.batch_size)
@@ -355,11 +405,17 @@ class DomainAdaptationNER(nn.Module):
         
         if 'window_domain_classifier' in self.blocks:
             self.domain_window_loss.reset()
+        
+        if 'game_module' in self.blocks:
+            self.wordle_source_position_loss.reset()
+            self.wordle_target_position_loss.reset()
+            self.wordle_source_window_loss.reset()
+            self.wordle_target_window_loss.reset()
 
         self.classification_loss_source.reset()
         self.classification_loss_target.reset()
     
-    def compute_accuracy(self, output: Dict[str, torch.Tensor], label: torch.Tensor):
+    def compute_accuracy(self, class_labels_source: 'torch.Tensor', class_labels_target: 'torch.Tensor', output: Dict[str, 'torch.Tensor']):
         """Compute the classification accuracy for source and target.
 
         Parameters
@@ -370,13 +426,13 @@ class DomainAdaptationNER(nn.Module):
             ground truth
         """
 
-        self.accuracy_source.update(output['preds_class_source'], label)
-        self.accuracy_target.update(output['preds_class_target'], label)
+        self.accuracy_source.update(output['preds_class_source'], class_labels_source)
+        self.accuracy_target.update(output['preds_class_target'], class_labels_target)
 
     def reset_acc(self):
         """Reset the classification accuracy."""
         self.accuracy_source.reset()
-        self.accuracy_target.update()
+        self.accuracy_target.reset()
 
 
     def step(self):
@@ -385,7 +441,6 @@ class DomainAdaptationNER(nn.Module):
         This method performs an optimization step and resets both the loss
         and the accuracy.
         """
-        super().step()
         self.reset_loss()
         self.reset_acc()
 
@@ -424,6 +479,13 @@ class DomainAdaptationNER(nn.Module):
         """
 
         self.model = torch.nn.DataParallel(self.model).to(device)
+    
+    def check_grad(self):
+        """Check that the gradients of the model are not over a certain threshold."""
+        for name, param in self.model.named_parameters():
+            if param.requires_grad and param.grad is not None:
+                if param.grad.norm(2).item() > 25:
+                    logger.info(f"Param {name} has a gradient whose L2 norm is over 25")
 
     def __restore_checkpoint(self, m: str, path: str):
         """Restore a checkpoint from path.
@@ -560,7 +622,8 @@ class DomainAdaptationNER(nn.Module):
                     "best_iter": self.best_iter,
                     "best_iter_score": self.best_iter_score,
                     "acc_mean": last_iter_acc,
-                    "loss_mean": self.classification_loss.acc,
+                    "loss_cls_source_mean": self.classification_loss_source.acc,
+                    "loss_cls_target_mean": self.classification_loss_target.acc,
                     "model_state_dict": self.model.state_dict(),
                     "optimizer_state_dict": self.optimizer.state_dict(),
                     "last_model_count_saved": self.model_count,

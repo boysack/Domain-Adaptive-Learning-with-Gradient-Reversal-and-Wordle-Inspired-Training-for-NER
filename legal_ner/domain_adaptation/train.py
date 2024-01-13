@@ -7,12 +7,9 @@ from utils.args import args
 import logger
 from embeddingsDataLoader import EmbeddingDataset
 
-#import sys
-#sys.path.append("/content/NLP-NER-Project/legal_ner/utils/logger.py")
-
 
 def main(args):
-    global training_iterations, modalities
+    global training_iterations, modali
 
     # device where everything is run
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -35,13 +32,16 @@ def main(args):
         #TODO: datasets for source and target
         train_source = EmbeddingDataset(args.path_source_embeddings, args.path_source_labels)
         train_target = EmbeddingDataset(args.path_target_embeddings, args.path_target_labels)
+        val_source = EmbeddingDataset(args.path_source_val_embeddings, args.path_source_val_labels)
         val_target = EmbeddingDataset(args.path_target_val_embeddings, args.path_target_val_labels)
 
         #TODO: dataloaders for source and target
-        train_loader_source = DataLoader(train_source)
-        train_loader_target = DataLoader(train_target)
-        val_loader = DataLoader(val_target)
-        train(classifier, train_loader_source, train_loader_target, val_loader, device)
+        train_loader_source = DataLoader(train_source, batch_size=args.batch_size, shuffle=True)
+        train_loader_target = DataLoader(train_target, batch_size=args.batch_size, shuffle=True)
+        val_loader_source = DataLoader(val_source, batch_size=args.batch_size)
+        val_loader_target = DataLoader(val_target, batch_size=args.batch_size)
+
+        train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
 
 
     elif args.action == "validate":
@@ -49,10 +49,11 @@ def main(args):
             classifier.load_last_model(args.resume_from)
         #TODO: val dataloader for source and target
 
-        validate(classifier, val_loader, device, classifier.current_iter)
+        validate(classifier, val_loader_source, device, classifier.current_iter)
+        validate(classifier, val_loader_target, device, classifier.current_iter)
 
 
-def train(classifier, train_loader_source, train_loader_target, val_loader, device):
+def train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device):
     """
     function to train the model on the test set
     classifier: Task containing the model to be trained
@@ -115,9 +116,9 @@ def train(classifier, train_loader_source, train_loader_target, val_loader, devi
             raise UserWarning('train_classifier: Cannot be None type')
         output = classifier.forward(data_source, data_target, source_label, target_label)
 
-        classifier.compute_loss(logits, source_label, features)
+        classifier.compute_loss(source_label, target_label, output)
         classifier.backward(retain_graph=False)
-        classifier.compute_accuracy(logits, source_label)
+        classifier.compute_accuracy(source_label, target_label, output)
 
         # update weights and zero gradients if total_batch samples are passed
         if gradient_accumulation_step:
@@ -128,7 +129,7 @@ def train(classifier, train_loader_source, train_loader_target, val_loader, devi
         # every eval_freq "real iteration" (iterations on total_batch) the validation is done, notice we validate and
         # save the last 9 models
         if gradient_accumulation_step and real_iter % args.eval_freq == 0:
-            val_metrics = validate(classifier, val_loader, device, int(real_iter))
+            val_metrics = validate(classifier, val_loader_target, device, int(real_iter))
 
             if val_metrics['top1'] <= classifier.best_iter_score:
                 logger.info("New best accuracy {:.2f}%"
@@ -155,7 +156,6 @@ def validate(model, val_loader, device, it):
 
     model.reset_acc()
     model.train(False)
-    logits = {}
 
     # Iterate over the models
     with torch.no_grad():
@@ -167,7 +167,7 @@ def validate(model, val_loader, device, it):
 
             data = data.to(device)
 
-            output, _ = model(data, is_train=False)
+            output = model(data)
 
             model.compute_accuracy(output, label)
 

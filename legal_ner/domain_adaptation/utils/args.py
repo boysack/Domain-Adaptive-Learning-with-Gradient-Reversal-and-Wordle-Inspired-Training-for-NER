@@ -8,6 +8,7 @@ parser.add_argument("--in_features_dim", help="The dimension of the feature vect
 parser.add_argument("--num_classes_target", help="Number of classes of the target", type=int, default=20)
 parser.add_argument("--num_classes_source", help="Number of classes of the source", type=int, default=20)
 parser.add_argument("--num_fcl", help="Number of fcl in ", type=int, default=1)
+parser.add_argument("--eval_freq", help="Evaluation frequency", type=int, default=1)
 parser.add_argument("--action", help="Train or validate", type=str, default="train")
 parser.add_argument("--resume_from", help="Checkpoint path if needed", default=None, type=str)
 parser.add_argument("--num_iter", help="Number of iterations for training", default=10000, type=int)
@@ -21,6 +22,7 @@ parser.add_argument("--sgd_momentum", help="Momentum of the sgd optimiser", type
 parser.add_argument("--experiment_dir", help="Directory where to store model if needed", type=str, default=None)
 parser.add_argument("--remove_window_domain_classifier", help="Removes the window domain classifier", action='store_true', default=False)
 parser.add_argument("--remove_token_domain_classifier", help="Removes the token domain classifier", action='store_true', default=False)
+parser.add_argument("--remove_wordle_game_module", help="Removes the wordle game module", action='store_true', default=False)
 parser.add_argument("--dropout", help="Dropout of fully connected layers", type=float, default=0.5)
 parser.add_argument("--window_size", help="Length of the context window", type=str, default=5)
 parser.add_argument("--beta_window", help="GRL parameter for window", type=float, default=0.75)
@@ -30,7 +32,9 @@ parser.add_argument("--path_source_labels", default='./source/labels.pt', type=s
 parser.add_argument("--path_target_embeddings", default='./target/train/embeddings.pt', type=str)
 parser.add_argument("--path_target_labels", default='./target/train/labels.pt', type=str)
 parser.add_argument("--path_target_val_embeddings", default='./target/val/embeddings.pt', type=str)
+parser.add_argument("--path_source_val_embeddings", default='./source/val/embeddings.pt', type=str)
 parser.add_argument("--path_target_val_labels", default='./target/val/labels.pt', type=str)
+parser.add_argument("--path_source_val_labels", default='./target/val/labels.pt', type=str)
 
 # Parse the arguments
 args = parser.parse_args()
