@@ -31,77 +31,57 @@ class AdaptiveModule(nn.Module):
             self.window_domain_classifier = self.DomainClassifier(in_features_dim, model_config.beta_window)
 
         if 'game_module' in self.model_config.blocks:
-            self.game_module_source = self.GameModule(in_features_dim, model_config.window_size, num_classes_source)
-            self.game_module_target = self.GameModule(in_features_dim, model_config.window_size, num_classes_target)
+            self.game_module = torch.ModuleDict()
+            self.game_module['source'] = self.GameModule(in_features_dim, model_config.window_size, num_classes_source)
+            self.game_module['target'] = self.GameModule(in_features_dim, model_config.window_size, num_classes_target)
 
-        self.fc_classifier_source = nn.Linear(in_features_dim, num_classes_source)
-        self.fc_classifier_target = nn.Linear(in_features_dim, num_classes_target)
+        self.fc_classifier = torch.ModuleDict()
+        
+        self.fc_classifier['source'] = nn.Linear(in_features_dim, num_classes_source)
+        self.fc_classifier['target'] = nn.Linear(in_features_dim, num_classes_target)
         std = 0.001
         
         if num_classes_target is not None:
-            normal_(self.fc_classifier_target.weight, 0, std)
-            constant_(self.fc_classifier_target.bias, 0)
+            normal_(self.fc_classifier['target'].weight, 0, std)
+            constant_(self.fc_classifier['target'].bias, 0)
 
         if num_classes_source is not None:
-            normal_(self.fc_classifier_source.weight, 0, std)
-            constant_(self.fc_classifier_source.bias, 0)
-
-    def forward(self, source=None, target=None, class_labels_source=None, class_labels_target=None, is_train=True):
+            normal_(self.fc_classifier['source'].weight, 0, std)
+            constant_(self.fc_classifier['source'].bias, 0)
+    
+    def forward_single_domain(self, x, class_labels, domain, is_train=True):
         
-        feats_source = self.fc_task_specific_layer(source)
-        feats_target = self.fc_task_specific_layer(target)
+        output = defaultdict(lambda: None)
+
+        x = self.fc_task_specific_layer(x)
 
         if 'token_domain_classifier' in self.model_config.blocks and is_train:
-            preds_domain_token_source = self.token_domain_classifier(feats_source)
-            preds_domain_token_target = self.token_domain_classifier(feats_target)
+            output['preds_domain_token'] = self.token_domain_classifier(x)
         
         if 'window_domain_classifier' in self.model_config.blocks or 'game_module' in self.model_config.blocks and is_train:
-            
-            #TODO: check dimensions, probably does not work
-
-            try:
-                window_class_labels_source = torch.vstack(tuple(torch.hstack(tuple(class_labels_source[i+start] if i+start<len(class_labels_source) else torch.zeros((1,)) for i in range(self.model_config.window_size))) for start in range(len(class_labels_source))))
-            except:
-                raise Exception(f'Could not create window_class_labels_source, class_labels_source.shape: {class_labels_source.shape}, self.model_config.window_size: {self.model_config.window_size}')
-            window_class_labels_target = torch.vstack(tuple(torch.hstack(tuple(class_labels_target[i+start] if i+start<len(class_labels_target) else torch.zeros((1,)) for i in range(self.model_config.window_size))) for start in range(len(class_labels_target))))
-
-            feats_window_source = torch.vstack(tuple(torch.hstack(tuple(feats_source[i+start,:] if i+start<len(feats_source) else torch.zeros(feats_source.shape[1:]) for i in range(self.model_config.window_size))) for start in range(len(feats_source))))
-            feats_window_target = torch.vstack(tuple(torch.hstack(tuple(feats_target[i+start,:] if i+start<len(feats_target) else torch.zeros(feats_target.shape[1:]) for i in range(self.model_config.window_size))) for start in range(len(feats_target))))
-
-            feats_window_source = self.fc_window_features(feats_window_source)
-            feats_window_target = self.fc_window_features(feats_window_target)
+            output['window_class_labels'] = torch.vstack(tuple(torch.hstack(tuple(class_labels[i+start] if i+start<len(class_labels) else torch.zeros((1,)) for i in range(self.model_config.window_size))) for start in range(len(class_labels))))
+            output['feats_window'] = torch.vstack(tuple(torch.hstack(tuple(x[i+start,:] if i+start<len(x) else torch.zeros(x.shape[1:]) for i in range(self.model_config.window_size))) for start in range(len(x))))
 
             if 'window_domain_classifier' in self.model_config.blocks:
-                preds_domain_window_source = self.window_domain_classifier(feats_window_source)
-                preds_domain_window_target = self.window_domain_classifier(feats_window_target)
-            else:
-                preds_domain_window_source = None
-                preds_domain_window_target = None
+                output['preds_domain_window'] = self.window_domain_classifier(output['feats_window'])
             
             if 'game_module' in self.model_config.blocks:
-                last_attempt_source = self.game_module_source.play(feats_window_source, window_class_labels_source)
-                last_attempt_target = self.game_module_target.play(feats_window_target, window_class_labels_target)
-            else:
-                last_attempt_source = None
-                last_attempt_target = None
-        else:
-            preds_domain_token_source = None
-            preds_domain_token_target = None
-            preds_domain_window_source = None
-            preds_domain_window_target = None
-            last_attempt_source = None
-            last_attempt_target = None
-            window_class_labels_source = None
-            window_class_labels_target = None
+                output['last_attempt'] = self.game_module[domain].play(output['feats_window'], output['window_class_labels'])
+        
+        output['preds_class'] = self.fc_classifier[domain](x)
 
-        preds_class_source = self.fc_classifier_source(feats_source)
-        preds_class_target = self.fc_classifier_target(feats_target)
+        return output
 
-        return {'preds_class_source': preds_class_source, 'preds_class_target': preds_class_target,\
-                'preds_domain_token_source': preds_domain_token_source, 'preds_domain_token_target': preds_domain_token_target,\
-                'preds_domain_window_source': preds_domain_window_source, 'preds_domain_window_target': preds_domain_window_target,\
-                'wordle_source': last_attempt_source, 'wordle_target': last_attempt_target, \
-                'window_class_labels_source': window_class_labels_source, 'window_class_labels_target': window_class_labels_target}
+    def forward(self, source=None, target=None, class_labels_source=None, class_labels_target=None, is_train=True):
+            
+            output = defaultdict(lambda: None)
+
+            if source is not None:
+                output['source'] = self.forward_single_domain(source, class_labels_source, 'source', is_train=is_train)
+            if target is not None:
+                output['target'] = self.forward_single_domain(target, class_labels_target, 'target', is_train=is_train)
+    
+            return output
 
     class TaskModule(nn.Module):
         def __init__(self, n_fcl, in_features_dim, out_features_dim, dropout=0.5):
@@ -299,7 +279,7 @@ class DomainAdaptationNER(nn.Module):
         self.wordle_source_window_loss = metrics.AverageMeter()
         self.wordle_target_window_loss = metrics.AverageMeter()
     
-    def forward(self, source, target, class_labels_source: 'torch.Tensor', class_labels_target: 'torch.Tensor', is_train=True):
+    def forward(self, source=None, target=None, class_labels_source: 'torch.Tensor' = None, class_labels_target: 'torch.Tensor' = None, is_train=True):
         return self.model(source, target, class_labels_source, class_labels_target, is_train=is_train)
 
     def compute_loss(self, class_labels_source: 'torch.Tensor', class_labels_target: 'torch.Tensor', predictions: Dict[str, 'torch.Tensor']):
