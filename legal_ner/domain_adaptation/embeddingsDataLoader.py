@@ -16,4 +16,4 @@ class EmbeddingDataset(Dataset):
         return len(self.embeddings)
 
     def __getitem__(self, idx):
-        return self.embeddings[idx], self.labels[idx].squeeze().squeeze()
+        return self.embeddings[idx], self.labels[idx].reshape((-1,))
