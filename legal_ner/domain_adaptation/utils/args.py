@@ -8,7 +8,7 @@ parser.add_argument("--in_features_dim", help="The dimension of the feature vect
 parser.add_argument("--num_classes_target", help="Number of classes of the target", type=int, default=20)
 parser.add_argument("--num_classes_source", help="Number of classes of the source", type=int, default=20)
 parser.add_argument("--num_fcl", help="Number of fcl in ", type=int, default=1)
-parser.add_argument("--eval_freq", help="Evaluation frequency", type=int, default=1)
+parser.add_argument("--eval_freq", help="Evaluation frequency", type=int, default=300)
 parser.add_argument("--action", help="Train or validate", type=str, default="train")
 parser.add_argument("--resume_from", help="Checkpoint path if needed", default=None, type=str)
 parser.add_argument("--num_iter", help="Number of iterations for training", default=10000, type=int)

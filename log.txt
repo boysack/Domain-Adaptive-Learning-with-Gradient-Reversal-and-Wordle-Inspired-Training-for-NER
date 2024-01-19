@@ -2435,3 +2435,27 @@ Traceback (most recent call last):
   File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 596, in save_model
     raise Exception(f'{self.models_dir}, {self.args.experiment_dir}')
 Exception: ., .
+Uncaught exception
+Traceback (most recent call last):
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 200, in <module>
+    main(args)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 44, in main
+    train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\train.py", line 119, in train
+    classifier.compute_loss(source_label, target_label, output)
+  File "c:\Users\alber\Desktop\uni\NLP\NLP-NER-Project\legal_ner\domain_adaptation\domain_adaptation_ner.py", line 291, in compute_loss
+    classification_loss_source = self.criterion(predictions['preds_class_source'], class_labels_source) #cross entropy loss
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\loss.py", line 1179, in forward
+    return F.cross_entropy(input, target, weight=self.weight,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alber\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\functional.py", line 3086, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: 0D or 1D target tensor expected, multi-target not supported

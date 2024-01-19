@@ -1,6 +1,7 @@
 __pycache__
 .venv
-.txt
 models
 models/val_precision_source.txt
 models/val_precision_target.txt
+val_precision_target.txt
+val_precision_source.txt

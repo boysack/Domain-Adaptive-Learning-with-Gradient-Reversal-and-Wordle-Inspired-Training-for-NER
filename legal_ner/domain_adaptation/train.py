@@ -132,11 +132,9 @@ def train(classifier, train_loader_source, train_loader_target, val_loader_sourc
             val_metrics_source = validate(classifier, val_loader_source, device, int(real_iter), 'source')
             val_metrics_target = validate(classifier, val_loader_target, device, int(real_iter), 'target')
 
-            if val_metrics_source['top1'] + val_metrics_target['top1'] <= classifier.best_iter_score:
-                logger.info("New best accuracy {:.2f}%"
-                            .format(classifier.best_iter_score))
-            else:
+            if val_metrics_source['top1'] + val_metrics_target['top1'] > classifier.best_iter_score:
                 logger.info("New best average accuracy: source={:.2f}%, target={:.2f}%".format(val_metrics_source['top1'], val_metrics_target['top1']))
+                logger.info("Old best score: {:.2f}%".format(classifier.best_iter_score))
                 classifier.best_iter = real_iter
                 classifier.best_iter_score = val_metrics_source['top1'] + val_metrics_target['top1']
 

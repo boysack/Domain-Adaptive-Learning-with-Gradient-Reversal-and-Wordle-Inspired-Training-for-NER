@@ -7,7 +7,7 @@ class EmbeddingDataset(Dataset):
     def __init__(self, embeddings_path, labels_path):
         try:
             self.embeddings = torch.load(embeddings_path)
-            self.labels = torch.load(labels_path)
+            self.labels = torch.load(labels_path).reshape((-1,))
         except: # debug
             self.embeddings = torch.randn((100, 1024))
             self.labels = torch.tensor(np.random.randint(0,10, (100,)), dtype=torch.long)
@@ -16,4 +16,4 @@ class EmbeddingDataset(Dataset):
         return len(self.embeddings)
 
     def __getitem__(self, idx):
-        return self.embeddings[idx], self.labels[idx].reshape((-1,))
+        return self.embeddings[idx], self.labels[idx]

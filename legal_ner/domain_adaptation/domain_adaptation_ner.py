@@ -10,6 +10,7 @@ from utils import metrics
 import os
 from datetime import datetime
 from pathlib import Path
+from logger import logger
 
 
 class AdaptiveModule(nn.Module):
@@ -63,11 +64,11 @@ class AdaptiveModule(nn.Module):
 
             if ('window_domain_classifier' in self.model_config.blocks or 'game_module' in self.model_config.blocks) and is_train:
                 try:
-                    window_class_labels = torch.vstack(tuple(torch.hstack(tuple(class_labels[i+start] if i+start<len(class_labels) else torch.zeros((1,)) for i in range(self.model_config.window_size))) for start in range(len(class_labels))))
+                    window_class_labels = torch.vstack(tuple(torch.hstack(tuple(class_labels[i+start] if i+start<len(class_labels) else torch.zeros((1,)).to(self.device) for i in range(self.model_config.window_size))) for start in range(len(class_labels))))
                 except:
                     raise Exception(f'Could not create window_class_labels_{domain}, class_labels.shape: {class_labels.shape}, self.model_config.window_size: {self.model_config.window_size}')
                 
-                feats_window = torch.vstack(tuple(torch.hstack(tuple(feats[i+start,:] if i+start<len(feats) else torch.zeros(feats.shape[1:]) for i in range(self.model_config.window_size))) for start in range(len(feats))))
+                feats_window = torch.vstack(tuple(torch.hstack(tuple(feats[i+start,:] if i+start<len(feats) else torch.zeros(feats.shape[1:]).to(self.device) for i in range(self.model_config.window_size))) for start in range(len(feats))))
                 feats_window = self.fc_window_features(feats_window)
 
                 if 'window_domain_classifier' in self.model_config.blocks:
@@ -250,6 +251,8 @@ class DomainAdaptationNER(nn.Module):
             args.blocks.append('token_domain_classifier')
         if not args.remove_wordle_game_module:
             args.blocks.append('game_module')
+        
+        logger.info(f'Blocks: {args.blocks}')
 
         self.blocks = args.blocks
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -349,8 +352,8 @@ class DomainAdaptationNER(nn.Module):
 
             # Now we need to compute the loss which does not take into account the position of the entity
 
-            wordle_source_window = torch.ones((wordle_source.shape[0], wordle_source.shape[2]))-torch.prod(torch.ones_like(wordle_source)-wordle_source, dim=1) # Dimension: (windows_in_batch, num_classes)
-            wordle_target_window = torch.ones((wordle_target.shape[0], wordle_target.shape[2]))-torch.prod(torch.ones_like(wordle_target)-wordle_target, dim=1)
+            wordle_source_window = torch.ones((wordle_source.shape[0], wordle_source.shape[2]))-torch.prod(torch.ones_like(wordle_source)-wordle_source, dim=1).to(self.device) # Dimension: (windows_in_batch, num_classes)
+            wordle_target_window = torch.ones((wordle_target.shape[0], wordle_target.shape[2]))-torch.prod(torch.ones_like(wordle_target)-wordle_target, dim=1).to(self.device)
 
             window_class_labels_source_one_hot_window = window_class_labels_source_one_hot.sum(dim=1)
             window_class_labels_target_one_hot_window = window_class_labels_target_one_hot.sum(dim=1)
