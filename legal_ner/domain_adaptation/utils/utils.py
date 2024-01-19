@@ -46,21 +46,23 @@ def match_labels(tokenized_input, annotations):
                     
     return aligned_labels
 
-def extract_embeddings(model, dataloader, save_path, save_path_labels):
-    model.eval()
-    embeddings = []
-    labels = []
-    print("Saving embeddings...")
-    with torch.no_grad():
-        for batch in tqdm(dataloader):
-            ls = batch['labels']
-            input_ids = batch['input_ids'].to(model.device)
-            attention_mask = batch['attention_mask'].to(model.device)
-            outputs = model(input_ids, attention_mask=attention_mask, output_hidden_states=True)
-            embeddings.append(outputs.hidden_states[0])
-            labels.append(ls)
-    embeddings = torch.cat(embeddings, dim=1)
-    print(embeddings.shape)
-    torch.save(embeddings, save_path)
-    torch.save(labels, save_path_labels)
+def extract_embeddings(model, dataloader, save_path, save_path_labels): 
+    model.eval() 
+    embeddings = [] 
+    labels = [] 
+    print("Saving embeddings...") 
+    with torch.no_grad(): 
+        for batch in tqdm(dataloader): 
+            ls = batch['labels'] 
+            input_ids = batch['input_ids'].to(model.device) 
+            attention_mask = batch['attention_mask'].to(model.device) 
+            outputs = model(input_ids, attention_mask=attention_mask, output_hidden_states=True) 
+            embeddings.append(torch.sum(torch.cat(outputs.hidden_states[-4:], dim=0), dim=0)) 
+            labels.append(ls) 
+    embeddings = torch.cat(embeddings, dim=0) 
+    labels_t = torch.tensor(torch.cat(labels, dim=1)).flatten() 
+    print(embeddings.shape) 
+    print(labels_t.shape) 
+    torch.save(embeddings, save_path) 
+    torch.save(labels_t, save_path_labels) 
     return embeddings

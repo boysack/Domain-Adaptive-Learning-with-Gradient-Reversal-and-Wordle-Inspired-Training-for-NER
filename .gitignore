@@ -5,3 +5,8 @@ models/val_precision_source.txt
 models/val_precision_target.txt
 val_precision_target.txt
 val_precision_source.txt
+
+bin
+lib
+share
+pyvenv.cfg
