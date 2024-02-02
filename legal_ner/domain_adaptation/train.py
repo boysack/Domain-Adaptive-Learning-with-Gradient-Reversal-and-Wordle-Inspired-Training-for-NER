@@ -129,6 +129,7 @@ def train(classifier, train_loader_source, train_loader_target, val_loader_sourc
         # every eval_freq "real iteration" (iterations on total_batch) the validation is done, notice we validate and
         # save the last 9 models
         if gradient_accumulation_step and real_iter % args.eval_freq == 0:
+            logger.info("Iteration: {}".format(iteration))
             val_metrics_source = validate(classifier, val_loader_source, device, int(real_iter), 'source')
             val_metrics_target = validate(classifier, val_loader_target, device, int(real_iter), 'target')
 

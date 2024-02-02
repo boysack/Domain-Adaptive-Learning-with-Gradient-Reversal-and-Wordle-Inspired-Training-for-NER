@@ -6,11 +6,12 @@ class EmbeddingDataset(Dataset):
 
     def __init__(self, embeddings_path, labels_path):
         try:
-            self.embeddings = torch.load(embeddings_path)
-            self.labels = torch.load(labels_path).reshape((-1,))
+            self.embeddings = torch.load(embeddings_path, map_location=torch.device('cpu'))
+            self.labels = torch.load(labels_path, map_location=torch.device('cpu')).reshape((-1,))
         except: # debug
             self.embeddings = torch.randn((100, 1024))
             self.labels = torch.tensor(np.random.randint(0,10, (100,)), dtype=torch.long)
+            raise Exception("EmbeddingDataset: error loading embeddings or labels")
 
     def __len__(self):
         return len(self.embeddings)

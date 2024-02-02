@@ -5,8 +5,8 @@ parser = argparse.ArgumentParser(description="A simple command line argument par
 
 # Add the arguments
 parser.add_argument("--in_features_dim", help="The dimension of the feature vector/embedding in input", type=int, default=1024)
-parser.add_argument("--num_classes_target", help="Number of classes of the target", type=int, default=20)
-parser.add_argument("--num_classes_source", help="Number of classes of the source", type=int, default=20)
+parser.add_argument("--num_classes_target", help="Number of classes of the target", type=int, default=14)
+parser.add_argument("--num_classes_source", help="Number of classes of the source", type=int, default=14)
 parser.add_argument("--num_fcl", help="Number of fcl in ", type=int, default=1)
 parser.add_argument("--eval_freq", help="Evaluation frequency", type=int, default=300)
 parser.add_argument("--action", help="Train or validate", type=str, default="train")

@@ -1,10 +1,13 @@
 __pycache__
 .venv
-models
+models/*
 models/val_precision_source.txt
 models/val_precision_target.txt
 val_precision_target.txt
 val_precision_source.txt
+*/log.txt
+*.zip
+*.pt
 
 bin
 lib
