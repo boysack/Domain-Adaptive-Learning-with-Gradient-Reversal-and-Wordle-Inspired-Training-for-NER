@@ -3,9 +3,10 @@ from torch.utils.data import DataLoader
 import os
 import numpy as np
 from domain_adaptation_ner import DomainAdaptationNER
-from utils.args import args
+from utils.args import args, writer
 from logger import logger
 from embeddingsDataLoader import EmbeddingDataset
+from matplotlib import pyplot as plt
 
 
 def main(args):
@@ -18,6 +19,7 @@ def main(args):
     # the models are wrapped into the ActionRecognition task which manages all the training steps
     classifier = DomainAdaptationNER(args)
     classifier.load_on_gpu(device)
+
 
     if args.action == "train":
         # resume_from argument is adopted in case of restoring from a checkpoint
@@ -129,6 +131,7 @@ def train(classifier, train_loader_source, train_loader_target, val_loader_sourc
 
         # every eval_freq "real iteration" (iterations on total_batch) the validation is done, notice we validate and
         # save the last 9 models
+
         if gradient_accumulation_step and real_iter % args.eval_freq == 0:
             logger.info("Iteration: {}".format(i))
             val_metrics_source = validate(classifier, val_loader_source, device, int(real_iter), 'source')
@@ -141,6 +144,7 @@ def train(classifier, train_loader_source, train_loader_target, val_loader_sourc
                 classifier.best_iter_score = val_metrics_source['top1'] + val_metrics_target['top1']
 
             classifier.save_model(real_iter, val_metrics_source['top1'] + val_metrics_target['top1'], prefix=None)
+            writer.add_scalar('cls loss target', classifier.classification_loss_target.val, global_step=int(real_iter))
             classifier.train(True)
 
 

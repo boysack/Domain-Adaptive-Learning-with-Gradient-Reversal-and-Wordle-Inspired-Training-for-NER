@@ -13,3 +13,4 @@ bin
 lib
 share
 pyvenv.cfg
+*/runs/*

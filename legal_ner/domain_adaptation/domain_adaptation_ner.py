@@ -11,6 +11,7 @@ import os
 from datetime import datetime
 from pathlib import Path
 from logger import logger
+from utils.args import writer
 
 
 class AdaptiveModule(nn.Module):

@@ -1,4 +1,6 @@
 import argparse
+from torch.utils.tensorboard import SummaryWriter
+
 # Initialize the pars
 
 parser = argparse.ArgumentParser(description="A simple command line argument parser")
@@ -40,3 +42,4 @@ parser.add_argument("--models_dir", default='models', type=str)
 
 # Parse the arguments
 args = parser.parse_args()
+writer = SummaryWriter()
