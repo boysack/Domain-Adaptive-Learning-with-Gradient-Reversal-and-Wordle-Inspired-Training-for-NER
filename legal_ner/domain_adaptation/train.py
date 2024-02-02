@@ -66,13 +66,14 @@ def train(classifier, train_loader_source, train_loader_target, val_loader_sourc
     global training_iterations, modalities
 
     data_loader_source = iter(train_loader_source)
-    data_loader_target = iter(train_loader_source)
+    data_loader_target = iter(train_loader_target)
     classifier.train(True)
     classifier.zero_grad()
     iteration = classifier.current_iter * (args.total_batch // args.batch_size)
 
     # the batch size should be total_batch but batch accumulation is done with batch size = batch_size.
     # real_iter is the number of iterations if the batch size was really total_batch
+    
     for i in range(iteration, training_iterations):
         # iteration w.r.t. the paper (w.r.t the bs to simulate).... i is the iteration with the actual bs( < tot_bs)
         real_iter = (i + 1) / (args.total_batch // args.batch_size)
@@ -99,7 +100,7 @@ def train(classifier, train_loader_source, train_loader_target, val_loader_sourc
             target_data, target_label = next(data_loader_target)
             
         except StopIteration:
-            data_loader_target= iter(train_loader_target)
+            data_loader_target = iter(train_loader_target)
             target_data, target_label = next(data_loader_target)
 
         source_label = source_label.to(device)
@@ -129,7 +130,7 @@ def train(classifier, train_loader_source, train_loader_target, val_loader_sourc
         # every eval_freq "real iteration" (iterations on total_batch) the validation is done, notice we validate and
         # save the last 9 models
         if gradient_accumulation_step and real_iter % args.eval_freq == 0:
-            logger.info("Iteration: {}".format(iteration))
+            logger.info("Iteration: {}".format(i))
             val_metrics_source = validate(classifier, val_loader_source, device, int(real_iter), 'source')
             val_metrics_target = validate(classifier, val_loader_target, device, int(real_iter), 'target')
 
@@ -173,25 +174,29 @@ def validate(model, val_loader, device, it, domain):
 
             if (i_val + 1) % (len(val_loader) // 5) == 0:
                 logger.info(f"Domain {domain}")
-                logger.info("[{}/{}] {:.3f}%".format(domain, i_val + 1, len(val_loader),
+                logger.info("[{}/{}] {:.3f}%".format(i_val + 1, len(val_loader),
                                                                           model.accuracy[domain].avg[1]))
 
-        class_accuracies = [(x / y) * 100 for x, y in zip(model.accuracy[domain].correct, model.accuracy[domain].total) if y!=0]
+        class_accuracies = [(x / y) * 100 if y!=0 else None for x, y in zip(model.accuracy[domain].correct, model.accuracy[domain].total)]
+        # class_accuracies_text = [f'({x} / {y})' for x, y in zip(model.accuracy[domain].correct, model.accuracy[domain].total)]
         logger.info('Final accuracy: %.2f%%' % (model.accuracy[domain].avg[1],))
+        # logger.info(f'Accuracy by class: {class_accuracies_text}')
         for i_class, class_acc in enumerate(class_accuracies):
-            logger.info('Class %d = [%d/%d] = %.2f%%' % (i_class,
+            if class_acc is not None:
+                logger.info('Class %d = [%d/%d] = %.2f%%' % (i_class,
                                                          int(model.accuracy[domain].correct[i_class]),
                                                          int(model.accuracy[domain].total[i_class]),
                                                          class_acc))
-
     logger.info('Accuracy by averaging class accuracies (same weight for each class): {}%'
-                .format(np.array(class_accuracies).mean(axis=0)))
+                .format(np.array([a for a in class_accuracies if a is not None]).mean(axis=0)))
+    logger.info('Model weights: {}'.format(model.model.state_dict()['module.fc_classifier_source.weight'][0]))
     test_results = {'top1': model.accuracy[domain].avg[1],
                     'class_accuracies': np.array(class_accuracies)}
 
     with open(os.path.join(args.log_dir, f'val_precision_{domain}.txt'), 'a+') as f:
         f.write("[%d/%d]\tAcc@: %.2f%%\n" % (it, args.num_iter, test_results['top1']))
 
+    model.train(True)
     return test_results
 
 

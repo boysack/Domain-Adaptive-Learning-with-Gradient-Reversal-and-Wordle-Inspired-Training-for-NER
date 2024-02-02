@@ -291,8 +291,13 @@ class DomainAdaptationNER(nn.Module):
 
     def compute_loss(self, class_labels_source: 'torch.Tensor', class_labels_target: 'torch.Tensor', predictions: Dict[str, 'torch.Tensor']):
         
-        classification_loss_source = self.criterion(predictions['preds_class_source'], class_labels_source) #cross entropy loss
-        classification_loss_target = self.criterion(predictions['preds_class_target'], class_labels_target) #cross entropy loss
+        try:
+            classification_loss_source = self.criterion(predictions['preds_class_source'], class_labels_source) #cross entropy loss
+            classification_loss_target = self.criterion(predictions['preds_class_target'], class_labels_target) #cross entropy loss
+        except:
+            raise ValueError(f'Could not compute classification loss, predictions: {predictions["preds_class_source"].shape}', f'Class labels source: {class_labels_source.shape}',\
+                             f'Class labels target: {class_labels_target.shape}, predictions: {predictions["preds_class_target"].shape}', \
+                             f'Labels source: {class_labels_source.unique()}', f'Labels target: {class_labels_target.unique()}')
 
         self.classification_loss_source.update(torch.mean(classification_loss_source) / (self.total_batch / self.batch_size), self.batch_size)
         self.classification_loss_target.update(torch.mean(classification_loss_target) / (self.total_batch / self.batch_size), self.batch_size)
@@ -425,6 +430,7 @@ class DomainAdaptationNER(nn.Module):
         This method performs an optimization step and resets both the loss
         and the accuracy.
         """
+        self.optimizer.step()
         self.reset_loss()
         self.reset_acc()
 
@@ -450,7 +456,7 @@ class DomainAdaptationNER(nn.Module):
         
         if 'window_domain_classifier' in self.blocks:
             loss += self.domain_window_loss.val
-        
+
         loss.backward(retain_graph=retain_graph)
     
     def load_on_gpu(self, device: torch.device = torch.device("cuda")):
@@ -632,3 +638,5 @@ class DomainAdaptationNER(nn.Module):
             train mode, by default True
         """
         self.model.train(mode)
+        if self.model.module.fc_task_specific_layer.training != mode:
+            raise Exception(f'Error: model is in {self.model.training} mode, but fc_task_specific_layer is in {self.fc_task_specific_layer.training} mode')

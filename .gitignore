@@ -8,7 +8,7 @@ val_precision_source.txt
 */log.txt
 *.zip
 *.pt
-
+*.pth
 bin
 lib
 share
