@@ -125,6 +125,23 @@ def train(classifier, train_loader_source, train_loader_target, val_loader_sourc
 
         # update weights and zero gradients if total_batch samples are passed
         if gradient_accumulation_step:
+            logger.info("real iter {}".format(int(real_iter)))
+            writer.add_scalar('train/cls loss target', classifier.classification_loss_target.val, global_step=int(real_iter))
+            writer.add_scalar('train/cls loss source', classifier.classification_loss_source.val, global_step=int(real_iter))
+            writer.add_scalar('train/cls wordle source', classifier.wordle_source_window_loss.val, global_step=int(real_iter))
+            writer.add_scalar('train/token domain loss', classifier.domain_token_loss.val, global_step=int(real_iter))
+            writer.add_scalar('train/window domain loss', classifier.domain_window_loss.val, global_step=int(real_iter))
+            writer.add_scalar('train/accuracy source', classifier.accuracy['source'].val[1], global_step=int(real_iter))
+            writer.add_scalar('train/accuracy target', classifier.accuracy['target'].val[1], global_step=int(real_iter))
+            
+            class_accuracies = [(x / y) * 100 if y!=0 else None for x, y in zip(classifier.accuracy['source'].correct, classifier.accuracy['source'].total)]
+            avg_acc = np.array([a for a in class_accuracies if a is not None]).mean(axis=0)
+            writer.add_scalar('train/accuracy source by classes', avg_acc, global_step=int(real_iter))
+
+            class_accuracies = [(x / y) * 100 if y!=0 else None for x, y in zip(classifier.accuracy['target'].correct, classifier.accuracy['target'].total)]
+            avg_acc = np.array([a for a in class_accuracies if a is not None]).mean(axis=0)
+            writer.add_scalar('train/accuracy target by classes', avg_acc, global_step=int(real_iter))
+
             classifier.check_grad()
             classifier.step()
             classifier.zero_grad()
@@ -144,7 +161,6 @@ def train(classifier, train_loader_source, train_loader_target, val_loader_sourc
                 classifier.best_iter_score = val_metrics_source['top1'] + val_metrics_target['top1']
 
             classifier.save_model(real_iter, val_metrics_source['top1'] + val_metrics_target['top1'], prefix=None)
-            writer.add_scalar('cls loss target', classifier.classification_loss_target.val, global_step=int(real_iter))
             classifier.train(True)
 
 
@@ -191,9 +207,19 @@ def validate(model, val_loader, device, it, domain):
                                                          int(model.accuracy[domain].correct[i_class]),
                                                          int(model.accuracy[domain].total[i_class]),
                                                          class_acc))
+    writer.add_scalar('val/accuracy source', model.accuracy['source'].val[1], global_step=int(it))
+    writer.add_scalar('val/accuracy target', model.accuracy['target'].val[1], global_step=int(it))
+    
+    class_accuracies = [(x / y) * 100 if y!=0 else None for x, y in zip(model.accuracy['source'].correct, model.accuracy['source'].total)]
+    avg_acc = np.array([a for a in class_accuracies if a is not None]).mean(axis=0)
+    writer.add_scalar('val/accuracy source by classes', avg_acc, global_step=int(it))
+
+    class_accuracies = [(x / y) * 100 if y!=0 else None for x, y in zip(model.accuracy['target'].correct, model.accuracy['target'].total)]
+    avg_acc = np.array([a for a in class_accuracies if a is not None]).mean(axis=0)
+    writer.add_scalar('val/accuracy target by classes', avg_acc, global_step=int(it))
+
     logger.info('Accuracy by averaging class accuracies (same weight for each class): {}%'
                 .format(np.array([a for a in class_accuracies if a is not None]).mean(axis=0)))
-    logger.info('Model weights: {}'.format(model.model.state_dict()['module.fc_classifier_source.weight'][0]))
     test_results = {'top1': model.accuracy[domain].avg[1],
                     'class_accuracies': np.array(class_accuracies)}
 
