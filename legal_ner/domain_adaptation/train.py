@@ -4,7 +4,7 @@ import os
 import numpy as np
 from domain_adaptation_ner import DomainAdaptationNER
 from utils.args import args, writer
-from logger import logger
+from utils.logger import logger
 from embeddingsDataLoader import EmbeddingDataset
 from matplotlib import pyplot as plt
 
@@ -125,7 +125,6 @@ def train(classifier, train_loader_source, train_loader_target, val_loader_sourc
 
         # update weights and zero gradients if total_batch samples are passed
         if gradient_accumulation_step:
-            logger.info("real iter {}".format(int(real_iter)))
             writer.add_scalar('train/cls loss target', classifier.classification_loss_target.val, global_step=int(real_iter))
             writer.add_scalar('train/cls loss source', classifier.classification_loss_source.val, global_step=int(real_iter))
             writer.add_scalar('train/cls wordle source', classifier.wordle_source_window_loss.val, global_step=int(real_iter))
@@ -193,8 +192,7 @@ def validate(model, val_loader, device, it, domain):
                 model.compute_accuracy(output, class_labels_target=label)
 
             if (i_val + 1) % (len(val_loader) // 5) == 0:
-                logger.info(f"Domain {domain}")
-                logger.info("[{}/{}] {:.3f}%".format(i_val + 1, len(val_loader),
+                logger.info("Domain {} [{}/{}] {:.3f}%".format(domain, i_val + 1, len(val_loader),
                                                                           model.accuracy[domain].avg[1]))
 
         class_accuracies = [(x / y) * 100 if y!=0 else None for x, y in zip(model.accuracy[domain].correct, model.accuracy[domain].total)]
@@ -207,19 +205,14 @@ def validate(model, val_loader, device, it, domain):
                                                          int(model.accuracy[domain].correct[i_class]),
                                                          int(model.accuracy[domain].total[i_class]),
                                                          class_acc))
-    writer.add_scalar('val/accuracy source', model.accuracy['source'].val[1], global_step=int(it))
-    writer.add_scalar('val/accuracy target', model.accuracy['target'].val[1], global_step=int(it))
+    writer.add_scalar(f'val/accuracy {domain}', model.accuracy[domain].avg[1], global_step=int(it))
     
-    class_accuracies = [(x / y) * 100 if y!=0 else None for x, y in zip(model.accuracy['source'].correct, model.accuracy['source'].total)]
+    class_accuracies = [(x / y) * 100 if y!=0 else None for x, y in zip(model.accuracy[domain].correct, model.accuracy[domain].total)]
     avg_acc = np.array([a for a in class_accuracies if a is not None]).mean(axis=0)
-    writer.add_scalar('val/accuracy source by classes', avg_acc, global_step=int(it))
-
-    class_accuracies = [(x / y) * 100 if y!=0 else None for x, y in zip(model.accuracy['target'].correct, model.accuracy['target'].total)]
-    avg_acc = np.array([a for a in class_accuracies if a is not None]).mean(axis=0)
-    writer.add_scalar('val/accuracy target by classes', avg_acc, global_step=int(it))
+    writer.add_scalar(f'val/accuracy {domain} by classes', avg_acc, global_step=int(it))
 
     logger.info('Accuracy by averaging class accuracies (same weight for each class): {}%'
-                .format(np.array([a for a in class_accuracies if a is not None]).mean(axis=0)))
+                .format(avg_acc))
     test_results = {'top1': model.accuracy[domain].avg[1],
                     'class_accuracies': np.array(class_accuracies)}
 

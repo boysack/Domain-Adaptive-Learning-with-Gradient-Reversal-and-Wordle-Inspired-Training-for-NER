@@ -1,5 +1,7 @@
 from collections.abc import Mapping
 import torch
+from sklearn.metrics import f1_score
+import numpy as np
 
 
 def get_domains_and_labels(args):
@@ -79,6 +81,88 @@ class Accuracy(object):
     def accuracy_per_class(self, correct, target):
         """
         function to compute the accuracy per class
+        correct -> (batch, bool): vector which, for each element of the batch, contains True/False depending on if
+                                  the element in a specific poisition was correctly classified or not
+        target -> (batch, label): vector containing the ground truth for each element
+        """
+        class_correct = list(0. for _ in range(0, self.classes))
+        class_total = list(0. for _ in range(0, self.classes))
+        for i in range(0, target.size(0)):
+            class_label = target[i].item()
+            class_correct[class_label] += correct[i].item()
+            class_total[class_label] += 1
+        return class_correct, class_total
+
+class F1(object):
+    """Computes and stores the average and current value of F1 score from the outputs and labels"""
+
+    def __init__(self, topk=(1,), classes=2):
+        assert len(topk) > 0
+        self.topk = topk
+        self.classes = classes
+        self.avg, self.val, self.sum, self.count = None, None, None, None
+        self.reset()
+
+    def reset(self):
+        self.val = {tk: 0 for tk in self.topk}
+        self.avg = {tk: 0 for tk in self.topk}
+        self.sum = {tk: 0 for tk in self.topk}
+        self.count = {tk: 0 for tk in self.topk}
+
+    def update(self, outputs, labels):
+        batch = labels.size(0)
+        # compute separately all the top-k accuracies and the per-class accuracy
+        for i_tk, top_k in enumerate(self.topk):
+            if i_tk == 0:
+                res = self.f1_score(outputs, labels, perclass_acc=True, topk=[top_k])
+                class_correct = res[1]
+                class_total = res[2]
+                res = res[0]
+            else:
+                res = self.f1_score(outputs, labels, perclass_acc=False, topk=[top_k])[0]
+            self.val[top_k] = res
+            self.sum[top_k] += res * batch
+            self.count[top_k] += batch
+            self.avg[top_k] = self.sum[top_k] / self.count[top_k]
+
+    def f1_score(self, output, target, perclass_acc=False, topk=(1,)):
+        """
+        Computes the f1@k for the specified values of k
+        output: torch.Tensor -> the predictions
+        target: torch.Tensor -> ground truth labels
+        perclass_acc -> bool, True if you want to compute also the top-1 accuracy per class
+        """
+        maxk = max(topk)
+        batch_size = target.size(0)
+        
+        if len(output.shape)<2:
+            raise UserWarning(f'Wrong tensor shape {output.shape}')
+        _, pred = output.topk(maxk, 1, True, True)
+        pred = pred.t()
+        correct = pred.eq(target.view(1, -1).expand_as(pred))
+
+        tp = (pred * target.view(1, -1).expand_as(pred)).sum().to(torch.float32)
+        tn = ((1 - pred) * (1 - target.view(1, -1).expand_as(pred))).sum().to(torch.float32)
+        fp = (pred * (1 - target.view(1, -1).expand_as(pred))).sum().to(torch.float32)
+        fn = ((1 - pred) * target.view(1, -1).expand_as(pred)).sum().to(torch.float32)
+
+        precision = tp / (tp + fp + 1e-10)
+        recall = tp / (tp + fn + 1e-10)
+
+        res = []
+        for k in topk:
+            f1_k = (2 * precision * recall / (precision + recall + 1e-10)).mul_(100.0 / batch_size)
+            res.append(float(f1_k))
+        if perclass_acc:
+            # getting also top1 accuracy per class
+            class_correct, class_total = self.f1_score_per_class(correct[:1].view(-1), target)
+            res.append(class_correct)
+            res.append(class_total)
+        return res
+
+    def f1_score_per_class(self, correct, target):
+        """
+        function to compute the f1 score per class
         correct -> (batch, bool): vector which, for each element of the batch, contains True/False depending on if
                                   the element in a specific poisition was correctly classified or not
         target -> (batch, label): vector containing the ground truth for each element
