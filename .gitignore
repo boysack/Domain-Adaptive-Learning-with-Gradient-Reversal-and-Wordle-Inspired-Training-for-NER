@@ -14,3 +14,4 @@ lib
 share
 pyvenv.cfg
 */runs/*
+*view*

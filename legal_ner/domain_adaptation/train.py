@@ -7,6 +7,14 @@ from utils.args import args, writer
 from utils.logger import logger
 from embeddingsDataLoader import EmbeddingDataset
 from matplotlib import pyplot as plt
+from omegaconf import OmegaConf
+from copy import deepcopy
+import itertools
+
+def get_combinations(config):
+    keys, values = zip(*config.items())
+    combinations = [dict(zip(keys, v)) for v in itertools.product(*values)]
+    return combinations
 
 
 def main(args):
@@ -53,6 +61,35 @@ def main(args):
 
         validate(classifier, val_loader_source, device, classifier.current_iter, 'source')
         validate(classifier, val_loader_target, device, classifier.current_iter, 'target')
+    
+    elif args.action == "gridsearch":
+        combinations = get_combinations(args.config)
+        old_args = deepcopy(args)
+        for combination in combinations:
+            args = OmegaConf.merge(old_args, combination)
+            if args.resume_from is not None:
+                classifier.load_last_model(args.resume_from)
+            # define number of iterations I'll do with the actual batch: we do not reason with epochs but with iterations
+            # i.e. number of batches passed
+            # notice, here it is multiplied by tot_batch/batch_size since gradient accumulation technique is adopted
+            training_iterations = args.num_iter * (args.total_batch // args.batch_size)
+            # all dataloaders are generated here
+
+            #TODO: datasets for source and target
+            train_source = EmbeddingDataset(args.path_source_embeddings, args.path_source_labels)
+            train_target = EmbeddingDataset(args.path_target_embeddings, args.path_target_labels)
+            val_source = EmbeddingDataset(args.path_source_val_embeddings, args.path_source_val_labels)
+            val_target = EmbeddingDataset(args.path_target_val_embeddings, args.path_target_val_labels)
+
+            #TODO: dataloaders for source and target
+            train_loader_source = DataLoader(train_source, batch_size=args.batch_size, shuffle=True)
+            train_loader_target = DataLoader(train_target, batch_size=args.batch_size, shuffle=True)
+            val_loader_source = DataLoader(val_source, batch_size=1)
+            val_loader_target = DataLoader(val_target, batch_size=1)
+
+            train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
+        
+
 
 
 def train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device):
