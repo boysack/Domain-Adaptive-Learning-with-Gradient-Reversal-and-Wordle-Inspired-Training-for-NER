@@ -12,7 +12,7 @@ from datetime import datetime
 from pathlib import Path
 from utils.logger import logger
 from utils.args import writer
-
+from collections import defaultdict
 
 class AdaptiveModule(nn.Module):
 
@@ -22,7 +22,8 @@ class AdaptiveModule(nn.Module):
 
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
         self.model_config = model_config
-       
+
+        self.multi_head_attention = nn.MultiheadAttention(in_features_dim, num_heads=8, dropout=model_config.dropout)
         self.fc_task_specific_layer = self.TaskModule(model_config.num_fcl, in_features_dim=in_features_dim, out_features_dim=in_features_dim, dropout=model_config.dropout)
         
         if 'token_domain_classifier' in self.model_config.blocks:
@@ -48,15 +49,17 @@ class AdaptiveModule(nn.Module):
             normal_(self.fc_classifier_source.weight, 0, std)
             constant_(self.fc_classifier_source.bias, 0)
 
-    from collections import defaultdict
-
     def forward(self, source=None, target=None, class_labels_source=None, class_labels_target=None, is_train=True):
         output = defaultdict(lambda: None)
 
         for domain, feats, class_labels in [('source', source, class_labels_source), ('target', target, class_labels_target)]:
             if feats is not None:
+                # feats = self.multi_head_attention(feats, feats, feats)[0]
                 feats = self.fc_task_specific_layer(feats)
-                output[f'preds_class_{domain}'] = self.fc_classifier_source(feats)
+                if domain == 'source':
+                    output[f'preds_class_{domain}'] = self.fc_classifier_source(feats)
+                else:
+                    output[f'preds_class_{domain}'] = self.fc_classifier_target(feats)
             else:
                 continue
 
@@ -76,7 +79,10 @@ class AdaptiveModule(nn.Module):
                     output[f'preds_domain_window_{domain}'] = self.window_domain_classifier(feats_window)
 
                 if 'game_module' in self.model_config.blocks:
-                    output[f'wordle_{domain}'] = self.game_module_source.play(feats_window, window_class_labels)
+                    if domain == 'source':
+                        output[f'wordle_{domain}'] = self.game_module_source.play(feats_window, window_class_labels)
+                    else:
+                        output[f'wordle_{domain}'] = self.game_module_target.play(feats_window, window_class_labels)
 
                 output[f'window_class_labels_{domain}'] = window_class_labels
 
@@ -180,9 +186,11 @@ class AdaptiveModule(nn.Module):
 
             self.window_size = window_size
             self.n_classes = n_classes
+            
             self.fc_layer = AdaptiveModule.FullyConnectedLayer(in_features_dim+2*window_size, window_size*n_classes, dropout)
             self.softmax = torch.nn.Softmax(dim=2)
             self.n_attempts = n_attempts
+            
         
         def play(self, feats, gt):
 
@@ -457,6 +465,13 @@ class DomainAdaptationNER(nn.Module):
         
         if 'window_domain_classifier' in self.blocks:
             loss += self.domain_window_loss.val
+        
+        if 'game_module' in self.blocks:
+            wordle_loss = self.wordle_source_position_loss.val
+            wordle_loss += self.wordle_target_position_loss.val
+            wordle_loss += self.wordle_source_window_loss.val
+            wordle_loss += self.wordle_target_window_loss.val
+            loss += self.args.beta_wordle*wordle_loss
 
         loss.backward(retain_graph=retain_graph)
     

@@ -10,8 +10,11 @@ from matplotlib import pyplot as plt
 from omegaconf import OmegaConf
 from copy import deepcopy
 import itertools
+import yaml
 
-def get_combinations(config):
+def get_combinations(config_path):
+    with open(config_path, 'r') as file:
+        config = yaml.safe_load(file)
     keys, values = zip(*config.items())
     combinations = [dict(zip(keys, v)) for v in itertools.product(*values)]
     return combinations

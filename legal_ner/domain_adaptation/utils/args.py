@@ -29,6 +29,7 @@ parser.add_argument("--dropout", help="Dropout of fully connected layers", type=
 parser.add_argument("--window_size", help="Length of the context window", type=str, default=5)
 parser.add_argument("--beta_window", help="GRL parameter for window", type=float, default=0.75)
 parser.add_argument("--beta_token", help="GRL parameter for token", type=float, default=0.75)
+parser.add_argument("--beta_wordle", help="parameter for wordle loss", type=float, default=0.75)
 parser.add_argument("--path_source_embeddings", default='./source/embeddings.pt', type=str)
 parser.add_argument("--path_source_labels", default='./source/labels.pt', type=str)
 parser.add_argument("--path_target_embeddings", default='./target/train/embeddings.pt', type=str)
@@ -39,6 +40,7 @@ parser.add_argument("--path_target_val_labels", default='./target/val/labels.pt'
 parser.add_argument("--path_source_val_labels", default='./target/val/labels.pt', type=str)
 parser.add_argument("--name", default='domain_adaptation_NER', type=str)
 parser.add_argument("--models_dir", default='models', type=str)
+parser.add_argument("--config", default='domain_adaptation/config/gridsearch.yaml', type=str)
 
 # Parse the arguments
 args = parser.parse_args()
