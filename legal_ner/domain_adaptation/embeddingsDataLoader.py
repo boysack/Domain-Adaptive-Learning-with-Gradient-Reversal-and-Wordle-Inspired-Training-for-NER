@@ -5,9 +5,12 @@ import numpy as np
 class EmbeddingDataset(Dataset):
 
     def __init__(self, embeddings_path, labels_path):
+
+        device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
         try:
-            self.embeddings = torch.load(embeddings_path, map_location=torch.device('cpu'))
-            self.labels = torch.load(labels_path, map_location=torch.device('cpu')).reshape((-1,))
+            self.embeddings = torch.load(embeddings_path, map_location=device)
+            self.labels = torch.load(labels_path, map_location=device)
         except: # debug
             self.embeddings = torch.randn((100, 1024))
             self.labels = torch.tensor(np.random.randint(0,10, (100,)), dtype=torch.long)

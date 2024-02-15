@@ -29,8 +29,10 @@ class AdaptiveModule(nn.Module):
         if 'token_domain_classifier' in self.model_config.blocks:
             self.token_domain_classifier = self.DomainClassifier(in_features_dim, model_config.beta_token)
         
-        if 'window_domain_classifier' in self.model_config.blocks:
+        if 'window_domain_classifier' in self.model_config.blocks or 'game_module' in self.model_config.blocks:
             self.fc_window_features = self.FullyConnectedLayer(model_config.window_size * in_features_dim, in_features_dim)
+
+        if 'window_domain_classifier' in self.model_config.blocks:
             self.window_domain_classifier = self.DomainClassifier(in_features_dim, model_config.beta_window)
 
         if 'game_module' in self.model_config.blocks:
@@ -272,8 +274,18 @@ class DomainAdaptationNER(nn.Module):
         self.criterion = torch.nn.CrossEntropyLoss(weight=None, size_average=None, ignore_index=-100,
                                                     reduce=None, reduction='none')
         
-        self.optim_params = filter(lambda parameter: parameter.requires_grad, self.model.parameters())
-        self.optimizer = torch.optim.SGD(self.optim_params, args.lr,
+        
+        self.window_domain_classifier_params = list(p.data_ptr() for p in self.model.window_domain_classifier.parameters())
+        self.token_domain_classifier_params = list(p.data_ptr() for p in self.model.token_domain_classifier.parameters())
+        
+        self.optim_params = filter(lambda p: p.requires_grad and not (p.data_ptr() in self.window_domain_classifier_params or p.data_ptr() in self.token_domain_classifier_params), self.model.parameters())
+
+        self.window_domain_classifier_params_ = filter(lambda p: p.requires_grad, self.model.window_domain_classifier.parameters())
+        self.token_domain_classifier_params_ = filter(lambda p: p.requires_grad, self.model.token_domain_classifier.parameters())
+
+        self.optimizer = torch.optim.SGD([{'params': self.optim_params, 'lr': args.lr},
+                                            {'params': self.window_domain_classifier_params_, 'lr': args.lr_discriminator},
+                                            {'params': self.token_domain_classifier_params_, 'lr': args.lr_discriminator}],
                                             weight_decay=args.weight_decay,
                                             momentum=args.sgd_momentum)
         
@@ -386,8 +398,11 @@ class DomainAdaptationNER(nn.Module):
 
     def reduce_learning_rate(self):
         """Perform a learning rate step."""
-        new_lr = self.optimizer.param_groups[-1]["lr"] / 10
-        self.optimizer.param_groups[-1]["lr"] = new_lr
+        for param_group in self.optimizer.param_groups:
+            param_group["lr"] /= 10
+
+        """new_lr = self.optimizer.param_groups[-1]["lr"] / 10
+        self.optimizer.param_groups[-1]["lr"] = new_lr"""
 
     def reset_loss(self):
         """Reset the classification loss.
@@ -439,6 +454,8 @@ class DomainAdaptationNER(nn.Module):
         This method performs an optimization step and resets both the loss
         and the accuracy.
         """
+        for i, param_group in enumerate(self.optimizer.param_groups):
+            writer.add_scalar(f'learning_rates/lr_{i}', param_group["lr"], global_step=int(self.current_iter))
         self.optimizer.step()
         self.reset_loss()
         self.reset_acc()
