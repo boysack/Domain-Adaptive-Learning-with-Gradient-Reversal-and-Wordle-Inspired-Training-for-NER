@@ -85,6 +85,8 @@ def main(args):
                 raise Exception(f"Could not load args from {args.gridsearch_config}, type of combination: {type(combination)}, type of old args: {type(vars(old_args))}")
             if args.resume_from is not None:
                 classifier.load_last_model(args.resume_from)
+            classifier = DomainAdaptationNER(args)
+            classifier.load_on_gpu(device)
             # define number of iterations I'll do with the actual batch: we do not reason with epochs but with iterations
             # i.e. number of batches passed
             # notice, here it is multiplied by tot_batch/batch_size since gradient accumulation technique is adopted
