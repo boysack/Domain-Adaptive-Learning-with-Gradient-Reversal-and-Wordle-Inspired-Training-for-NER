@@ -9,9 +9,11 @@ val_precision_source.txt
 *.zip
 *.pt
 *.pth
+*.txt
 bin
 lib
 share
 pyvenv.cfg
 */runs/*
 *view*
+*out.tfevents*

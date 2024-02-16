@@ -58,6 +58,7 @@ class AdaptiveModule(nn.Module):
             if feats is not None:
                 # feats = self.multi_head_attention(feats, feats, feats)[0]
                 feats = self.fc_task_specific_layer(feats)
+                output[f'feats_fcl'] = feats
                 if domain == 'source':
                     output[f'preds_class_{domain}'] = self.fc_classifier_source(feats)
                 else:
@@ -293,6 +294,10 @@ class DomainAdaptationNER(nn.Module):
         self.accuracy['source'] = metrics.Accuracy(topk=(1,), classes=args.num_classes_source)
         self.accuracy['target'] = metrics.Accuracy(topk=(1,), classes=args.num_classes_target)
 
+        self.f1 = {}
+        self.f1['source'] = metrics.F1(topk=(1,), classes=args.num_classes_source)
+        self.f1['target'] = metrics.F1(topk=(1,), classes=args.num_classes_target)
+
         self.num_classes_source = args.num_classes_source
         self.num_classes_target = args.num_classes_target
 
@@ -442,10 +447,26 @@ class DomainAdaptationNER(nn.Module):
         if class_labels_target is not None:
             self.accuracy['target'].update(output['preds_class_target'], class_labels_target)
 
+    def compute_f1(self, output: 'torch.Tensor', class_labels: 'torch.Tensor', domain: 'str'):
+        """Compute the classification accuracy for source and target.
+
+        Parameters
+        ----------
+        output : Dict[str, torch.Tensor]
+            output of the model
+        label : torch.Tensor
+            ground truth
+        """
+        
+        self.f1[domain].update(output, class_labels)
+        
+
     def reset_acc(self):
         """Reset the classification accuracy."""
         self.accuracy['source'].reset()
         self.accuracy['target'].reset()
+        self.f1['source'].reset()
+        self.f1['target'].reset()
 
 
     def step(self):
@@ -455,7 +476,8 @@ class DomainAdaptationNER(nn.Module):
         and the accuracy.
         """
         for i, param_group in enumerate(self.optimizer.param_groups):
-            writer.add_scalar(f'learning_rates/lr_{i}', param_group["lr"], global_step=int(self.current_iter))
+            if self.args.action != "gridsearch":
+                writer.add_scalar(f'learning_rates/lr_{i}', param_group["lr"], global_step=int(self.current_iter))
         self.optimizer.step()
         self.reset_loss()
         self.reset_acc()

@@ -9,8 +9,15 @@ from embeddingsDataLoader import EmbeddingDataset
 from matplotlib import pyplot as plt
 from omegaconf import OmegaConf
 from copy import deepcopy
+import torch
+import matplotlib.pyplot as plt
+from sklearn.manifold import TSNE
+from PIL import Image
+from torch.utils.tensorboard import SummaryWriter
+import io
 import itertools
 import yaml
+from datetime import datetime
 
 def get_combinations(config_path):
     with open(config_path, 'r') as file:
@@ -21,7 +28,7 @@ def get_combinations(config_path):
 
 
 def main(args):
-    global training_iterations, modali
+    global training_iterations
 
     # device where everything is run
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -66,10 +73,16 @@ def main(args):
         validate(classifier, val_loader_target, device, classifier.current_iter, 'target')
     
     elif args.action == "gridsearch":
-        combinations = get_combinations(args.config)
+        run_time = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+        combinations = get_combinations(args.gridsearch_config)
         old_args = deepcopy(args)
+        global writer
         for combination in combinations:
-            args = OmegaConf.merge(old_args, combination)
+            try:
+                writer = SummaryWriter("runs/gridsearch_{}/{}".format(run_time, combination))
+                args = OmegaConf.merge(vars(old_args), combination)
+            except:
+                raise Exception(f"Could not load args from {args.gridsearch_config}, type of combination: {type(combination)}, type of old args: {type(vars(old_args))}")
             if args.resume_from is not None:
                 classifier.load_last_model(args.resume_from)
             # define number of iterations I'll do with the actual batch: we do not reason with epochs but with iterations
@@ -91,8 +104,70 @@ def main(args):
             val_loader_target = DataLoader(val_target, batch_size=1)
 
             train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device)
+            writer.close()
         
+def make_tsne(model, dataloader1, dataloader2, device, name=None):
+    model.train(False)
+    features_list = []
+    labels_list = []
 
+    # Extract features from the first dataloader
+    with torch.no_grad():
+        for inputs, labels in dataloader1:
+            inputs = inputs.to(device)
+            labels = labels.to(device)
+
+            mask = labels != 0
+            inputs = inputs[mask]
+            labels = labels[mask]
+
+            features = model(inputs, is_train=False)['feats_fcl']
+            features_list.append(features.cpu().numpy())
+            labels_list.append(np.zeros(features.shape[0]))  # Label these points with 0
+
+    # Extract features from the second dataloader
+    with torch.no_grad():
+        for inputs, labels in dataloader2:
+            inputs = inputs.to(device)
+            labels = labels.to(device)
+
+            mask = labels != 0
+            inputs = inputs[mask]
+            labels = labels[mask]
+
+            features = model(inputs, is_train=False)['feats_fcl']
+            features_list.append(features.cpu().numpy())
+            labels_list.append(np.ones(features.shape[0]))  # Label these points with 1
+
+    # Concatenate all the features and labels
+    features = np.concatenate(features_list)
+    labels = np.concatenate(labels_list)
+
+    # Apply t-SNE
+    tsne = TSNE(n_components=2, random_state=0)
+    features_2d = tsne.fit_transform(features)
+
+    # Plot t-SNE
+    fig = plt.figure(figsize=(6, 6))
+    scatter = plt.scatter(features_2d[:, 0], features_2d[:, 1], c=labels, cmap='bwr', s=2)
+    plt.legend(*scatter.legend_elements(), title="Domains")
+
+    # Convert the figure to a PIL Image
+    buf = io.BytesIO()
+    plt.savefig(buf, format='jpeg')
+    buf.seek(0)
+    img = Image.open(buf)
+
+    # Convert the PIL Image to a tensor
+    img_tensor = torch.tensor(np.array(img)).type(torch.uint8).permute(2, 0, 1)
+
+    # Add image to TensorBoard
+    if name is not None:
+        writer.add_image(name, img_tensor)
+    else:
+        writer.add_image(f't-SNE', img_tensor)
+    
+    model.train(True)
 
 
 def train(classifier, train_loader_source, train_loader_target, val_loader_source, val_loader_target, device):
@@ -109,6 +184,7 @@ def train(classifier, train_loader_source, train_loader_target, val_loader_sourc
 
     data_loader_source = iter(train_loader_source)
     data_loader_target = iter(train_loader_target)
+
     classifier.train(True)
     classifier.zero_grad()
     iteration = classifier.current_iter * (args.total_batch // args.batch_size)
@@ -116,6 +192,10 @@ def train(classifier, train_loader_source, train_loader_target, val_loader_sourc
     # the batch size should be total_batch but batch accumulation is done with batch size = batch_size.
     # real_iter is the number of iterations if the batch size was really total_batch
     
+    logger.info("Making t-SNE before training...")
+    make_tsne(classifier, val_loader_source, val_loader_target, device, name='t-SNE before training')
+    logger.info("t-SNE before training done")
+
     for i in range(iteration, training_iterations):
         # iteration w.r.t. the paper (w.r.t the bs to simulate).... i is the iteration with the actual bs( < tot_bs)
         real_iter = (i + 1) / (args.total_batch // args.batch_size)
@@ -173,6 +253,7 @@ def train(classifier, train_loader_source, train_loader_target, val_loader_sourc
             writer.add_scalar('train/accuracy source', classifier.accuracy['source'].val[1], global_step=int(real_iter))
             writer.add_scalar('train/accuracy target', classifier.accuracy['target'].val[1], global_step=int(real_iter))
             
+            
             class_accuracies = [(x / y) * 100 if y!=0 else None for x, y in zip(classifier.accuracy['source'].correct, classifier.accuracy['source'].total)]
             avg_acc = np.array([a for a in class_accuracies if a is not None]).mean(axis=0)
             writer.add_scalar('train/accuracy source by classes', avg_acc, global_step=int(real_iter))
@@ -201,6 +282,10 @@ def train(classifier, train_loader_source, train_loader_target, val_loader_sourc
 
             classifier.save_model(real_iter, val_metrics_source['top1'] + val_metrics_target['top1'], prefix=None)
             classifier.train(True)
+    
+    logger.info("Making t-SNE after training...")
+    make_tsne(classifier, val_loader_source, val_loader_target, device, name='t-SNE after training')
+    logger.info("t-SNE after training done")
 
 
 def validate(model, val_loader, device, it, domain):
@@ -217,11 +302,13 @@ def validate(model, val_loader, device, it, domain):
     model.reset_acc()
     model.train(False)
 
+    all_output = []
+    all_labels = []
+
     # Iterate over the models
     with torch.no_grad():
         for i_val, (data, label) in enumerate(val_loader):
             label = label.to(device)
-
             data = data.to(device)
 
             if domain == 'source':
@@ -230,10 +317,17 @@ def validate(model, val_loader, device, it, domain):
             elif domain == 'target':
                 output = model(target=data, is_train=False)
                 model.compute_accuracy(output, class_labels_target=label)
+            
+            all_output.append(output[f'preds_class_{domain}'])
+            all_labels.append(label)
 
             if (i_val + 1) % (len(val_loader) // 5) == 0:
                 logger.info("Domain {} [{}/{}] {:.3f}%".format(domain, i_val + 1, len(val_loader),
                                                                           model.accuracy[domain].avg[1]))
+        all_labels = torch.cat(all_labels, dim=0)
+        all_output = torch.cat(all_output, dim=0)
+
+        model.compute_f1(all_output, all_labels, domain)
 
         class_accuracies = [(x / y) * 100 if y!=0 else None for x, y in zip(model.accuracy[domain].correct, model.accuracy[domain].total)]
         # class_accuracies_text = [f'({x} / {y})' for x, y in zip(model.accuracy[domain].correct, model.accuracy[domain].total)]
@@ -246,6 +340,7 @@ def validate(model, val_loader, device, it, domain):
                                                          int(model.accuracy[domain].total[i_class]),
                                                          class_acc))
     writer.add_scalar(f'val/accuracy {domain}', model.accuracy[domain].avg[1], global_step=int(it))
+    writer.add_scalar(f'val/f1 {domain}', model.f1[domain].avg[1], global_step=int(it))
     
     class_accuracies = [(x / y) * 100 if y!=0 else None for x, y in zip(model.accuracy[domain].correct, model.accuracy[domain].total)]
     avg_acc = np.array([a for a in class_accuracies if a is not None]).mean(axis=0)
@@ -254,10 +349,16 @@ def validate(model, val_loader, device, it, domain):
     logger.info('Accuracy by averaging class accuracies (same weight for each class): {}%'
                 .format(avg_acc))
     test_results = {'top1': model.accuracy[domain].avg[1],
-                    'class_accuracies': np.array(class_accuracies)}
-
-    with open(os.path.join(args.log_dir, f'val_precision_{domain}.txt'), 'a+') as f:
-        f.write("[%d/%d]\tAcc@: %.2f%%\n" % (it, args.num_iter, test_results['top1']))
+                    'class_accuracies': np.array(class_accuracies),
+                    'f1':  model.f1[domain].avg[1],
+                    'domain': domain}
+    if args.run_name is None:
+        # Save the run with the date and time
+        run_name = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    else:
+        run_name = args.run_name
+    with open(os.path.join(args.log_dir, f'val_precision_{domain}_{run_name}.txt'), 'a+') as f:
+        f.write("[%d/%d]\tAcc@: %.2f%%\tAcc class %.2f%%\tF1 %.2f%%" % (it, args.num_iter, test_results['top1'], avg_acc, test_results['f1']))
 
     model.train(True)
     return test_results
