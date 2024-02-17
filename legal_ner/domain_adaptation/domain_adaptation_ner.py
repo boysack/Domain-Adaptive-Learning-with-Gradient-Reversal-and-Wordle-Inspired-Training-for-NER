@@ -275,14 +275,17 @@ class DomainAdaptationNER(nn.Module):
         self.criterion = torch.nn.CrossEntropyLoss(weight=None, size_average=None, ignore_index=-100,
                                                     reduce=None, reduction='none')
         
+        self.token_domain_classifier_params = self.window_domain_classifier_params = []
+        self.token_domain_classifier_params_ = self.window_domain_classifier_params_ = []
+        if 'token_domain_classifier' in self.blocks:
+            self.token_domain_classifier_params = list(p.data_ptr() for p in self.model.token_domain_classifier.parameters())
+            self.token_domain_classifier_params_ = filter(lambda p: p.requires_grad, self.model.token_domain_classifier.parameters())
         
-        self.window_domain_classifier_params = list(p.data_ptr() for p in self.model.window_domain_classifier.parameters())
-        self.token_domain_classifier_params = list(p.data_ptr() for p in self.model.token_domain_classifier.parameters())
-        
-        self.optim_params = filter(lambda p: p.requires_grad and not (p.data_ptr() in self.window_domain_classifier_params or p.data_ptr() in self.token_domain_classifier_params), self.model.parameters())
+        if 'window_domain_classifier' in self.blocks:
+            self.window_domain_classifier_params = list(p.data_ptr() for p in self.model.window_domain_classifier.parameters())
+            self.window_domain_classifier_params_ = filter(lambda p: p.requires_grad, self.model.window_domain_classifier.parameters())
 
-        self.window_domain_classifier_params_ = filter(lambda p: p.requires_grad, self.model.window_domain_classifier.parameters())
-        self.token_domain_classifier_params_ = filter(lambda p: p.requires_grad, self.model.token_domain_classifier.parameters())
+        self.optim_params = filter(lambda p: p.requires_grad and not (p.data_ptr() in self.window_domain_classifier_params or p.data_ptr() in self.token_domain_classifier_params), self.model.parameters())
 
         self.optimizer = torch.optim.SGD([{'params': self.optim_params, 'lr': args.lr},
                                             {'params': self.window_domain_classifier_params_, 'lr': args.lr_discriminator},
