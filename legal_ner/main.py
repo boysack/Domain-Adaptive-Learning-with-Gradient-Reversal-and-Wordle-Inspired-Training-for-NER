@@ -8,6 +8,7 @@ from transformers import AutoModelForTokenClassification
 from transformers import Trainer, DefaultDataCollator, TrainingArguments
 
 from utils.dataset import LegalNERTokenDataset
+from utils.utils import extract_embeddings
 
 import spacy
 nlp = spacy.load("en_core_web_sm")
@@ -21,6 +22,13 @@ nlp = spacy.load("en_core_web_sm")
 if __name__ == "__main__":
 
     parser = ArgumentParser(description="Training of LUKE model")
+    parser.add_argument(
+        "--extract_embedding",
+        help="if you want to perform embeddings extraction",
+        required=False,
+        type=str2bool,
+        default=False
+    )
     parser.add_argument(
         "--ds_train_path",
         help="Path of train dataset file",
@@ -91,10 +99,18 @@ if __name__ == "__main__":
         required=False,
         type=float,
     )
+    parser.add_argument(
+        "--model_checkpoint_path",
+        help="Path for the checkpoint to use",
+        default="/content/checkpoint-47175",
+        required=False,
+        type=str
+    )
 
     args = parser.parse_args()
 
     ## Parameters
+    extract_embedding = args.extract_embedding
     ds_train_path = args.ds_train_path  # e.g., 'data/NER_TRAIN/NER_TRAIN_ALL.json'
     ds_train_path_defense = args.ds_train_path_defense 
     ds_valid_path = args.ds_valid_path  # e.g., 'data/NER_DEV/NER_DEV_ALL.json'
@@ -105,7 +121,8 @@ if __name__ == "__main__":
     lr = args.lr                        # e.g., 1e-4 for luke-based, 1e-5 for bert-based
     weight_decay = args.weight_decay    # e.g., 0.01
     warmup_ratio = args.warmup_ratio    # e.g., 0.06
-
+    model_checkpoint_path = args.model_checkpoint_path 
+    
     ## Define the labels
     original_label_list = [
         "COURT",
@@ -128,21 +145,22 @@ if __name__ == "__main__":
     num_labels = len(labels_list) + 1
 
     original_label_list_defense = [
-        "COMMSIDENTIFIER",
-        "DOCUMENTREFERENCE",
-        "FREQUENCY",
-        "LOCATION",
-        "MILITARYPLATFORM",
-        "MONEY",
-        "NATIONALITY",
-        "ORGANISATION",
-        "PERSON",
-        "QUANTITY",
-        "TEMPORAL",
-        "URL",
-        "VEHICLE",
-        "WEAPON"
+        "CommsIdentifier",
+        "DocumentReference",
+        "Frequency",
+        "Location",
+        "MilitaryPlatform",
+        "Money",
+        "Nationality",
+        "Organisation",
+        "Person",
+        "Quantity",
+        "Temporal",
+        "Url",
+        "Vehicle",
+        "Weapon"
     ]
+    
     labels_list_defense = ["B-" + l for l in original_label_list_defense]
     labels_list_defense += ["I-" + l for l in original_label_list_defense]
     num_labels_defense = len(labels_list_defense) + 1
@@ -235,9 +253,18 @@ if __name__ == "__main__":
             use_roberta=use_roberta
         )
 
+        val_defense_ds = LegalNERTokenDataset(
+            ds_valid_path_defense, 
+            model_path, 
+            labels_list=labels_list_defense, 
+            split="val", 
+            use_roberta=use_roberta
+        )
+
+
         ## Define the model
         model = AutoModelForTokenClassification.from_pretrained(
-            model_path, 
+            model_checkpoint_path, # model_path
             num_labels=num_labels, 
             ignore_mismatched_sizes=True
         )
@@ -253,6 +280,7 @@ if __name__ == "__main__":
 
         ## Training Arguments
         training_args = TrainingArguments(
+            resume_from_checkpoint=model_checkpoint_path,
             output_dir=new_output_folder,
             num_train_epochs=num_epochs,
             learning_rate=lr,
@@ -286,10 +314,29 @@ if __name__ == "__main__":
             data_collator=data_collator,
         )
 
+        trainer2 = Trainer(
+            model=model,
+            args=training_args,
+            train_dataset=train_defense_ds,
+            eval_dataset=val_defense_ds,
+            compute_metrics=compute_metrics,
+            data_collator=data_collator
+        )
+
         ## Train the model and save it
-        trainer.train()
-        trainer.save_model(output_folder)
-        trainer.evaluate()
+        if extract_embedding:
+            dataloader = trainer.get_train_dataloader()
+            embeddings = extract_embeddings(model, dataloader, "embeddings_legal1.pt", "labels_legal1.pt")
+            dataloader = trainer2.get_train_dataloader()
+            embeddings2 = extract_embeddings(model, dataloader, "embeddings_def_train.pt", "labels_def_train.pt")
+            dataloader = trainer2.get_eval_dataloader()
+            embeddings3 = extract_embeddings(model, dataloader, "embeddings_def_val.pt", "labels_def_val.pt")
+        else:
+            trainer.train()
+            trainer.save_model(output_folder)
+            trainer.evaluate()
+        
+        
 
 
 

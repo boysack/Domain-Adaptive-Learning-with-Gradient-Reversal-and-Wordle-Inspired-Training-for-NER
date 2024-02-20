@@ -1,0 +1,3 @@
+remove_window_domain_classifier: [True, False]
+remove_token_domain_classifier: [True, False]
+remove_wordle_game_module: [True, False]
