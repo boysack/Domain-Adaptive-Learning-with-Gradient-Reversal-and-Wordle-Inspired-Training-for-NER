@@ -8,6 +8,12 @@ This work introduces the following findings:
 - We propose an approach on two datasets: the Indian Legal Document Corpus (ILDC) and the R3ad dataset, which are related to the legal and defence domains respectively.
 - We report that the proposed extensions did not achieve state-of-the-art results, but gained useful insights about the two domains and the BERT contextualised embeddings, which can be used for future work in this field.
 
+## Requirements installation
+- Run the following line to install the requirements:
+```bash
+pip install -r NLP-NER-Project/legal_ner/requirements.txt
+```
+
 ## Embeddings extraction
 - Change directory to legal_ner:
 ``` bash
@@ -17,9 +23,19 @@ cd legal_ner
 ```bash
 python main.py --extract_embedding=True
 ```
+Other parameters, such as the checkpoint folder and the datasets folder, can be set using the parser inside main.py.
 
-
-## How to launch the code
-```bash
-cd 
+## How to launch the model
+- Change directory to legal_ner:
+``` bash
+cd legal_ner
 ```
+- Launch the run.sh file:
+``` bash
+./run.sh
+```
+In the run.sh file it is possible to set the paths for the embeddings and the configuration for the run, which is a yaml file with the possible values to look at. It is also possible to specify the modality by setting the `action` parameter to:
+- train: train the model with the specified parameters
+- validate: perform inference on both source and target domain
+- gridsearch: perform the randomised grid search taking the combinations from the yaml file
+
