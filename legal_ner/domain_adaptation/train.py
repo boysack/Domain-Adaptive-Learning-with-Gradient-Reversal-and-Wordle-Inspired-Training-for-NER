@@ -195,7 +195,7 @@ def train(classifier, train_loader_source, train_loader_target, val_loader_sourc
     # real_iter is the number of iterations if the batch size was really total_batch
     
     logger.info("Making t-SNE before training...")
-    make_tsne(classifier, val_loader_source, val_loader_target, device, name='t-SNE before training')
+    # make_tsne(classifier, val_loader_source, val_loader_target, device, name='t-SNE before training')
     logger.info("t-SNE before training done")
 
     for i in range(iteration, training_iterations):

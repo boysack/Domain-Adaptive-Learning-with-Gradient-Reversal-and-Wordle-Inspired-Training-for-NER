@@ -336,7 +336,7 @@ class DomainAdaptationNER(nn.Module):
             domain_label_source=torch.zeros(preds_domain_token_source.shape[0], dtype=torch.int64)    
             
             preds_domain_token_target = predictions['preds_domain_token_target']
-            domain_label_target=torch.zeros(preds_domain_token_target.shape[0], dtype=torch.int64)    
+            domain_label_target=torch.ones(preds_domain_token_target.shape[0], dtype=torch.int64)    
 
             domain_label_all=torch.cat((domain_label_source, domain_label_target),0).to(self.device)
             pred_domain_token_all=torch.cat((preds_domain_token_source, preds_domain_token_target),0)
@@ -349,7 +349,7 @@ class DomainAdaptationNER(nn.Module):
             domain_label_source=torch.zeros(preds_domain_window_source.shape[0], dtype=torch.int64)    
             
             preds_domain_window_target = predictions['preds_domain_window_target']
-            domain_label_target=torch.zeros(preds_domain_window_target.shape[0], dtype=torch.int64)    
+            domain_label_target=torch.ones(preds_domain_window_target.shape[0], dtype=torch.int64)    
 
             domain_label_all=torch.cat((domain_label_source, domain_label_target),0).to(self.device)
             pred_domain_window_all=torch.cat((preds_domain_window_source, preds_domain_window_target),0)
