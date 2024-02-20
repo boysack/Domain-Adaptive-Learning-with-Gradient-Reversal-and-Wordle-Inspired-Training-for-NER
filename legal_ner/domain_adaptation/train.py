@@ -78,8 +78,9 @@ def main(args):
         combinations = get_combinations(args.gridsearch_config)
         random.shuffle(combinations)
         old_args = deepcopy(args)
+        num_combinations = min(args.grid_combinations, len(combinations))
         global writer
-        for combination in combinations[:args.grid_combinations]:
+        for combination in combinations[:num_combinations]:
             try:
                 writer = SummaryWriter("runs/gridsearch_{}/{}".format(run_time, combination))
                 args = OmegaConf.merge(vars(old_args), combination)
