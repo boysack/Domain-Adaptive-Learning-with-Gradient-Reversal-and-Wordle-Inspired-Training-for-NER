@@ -1,23 +1,9 @@
-# PoliToHFI-SemEval2023-Task6
-This repository contains the code for the paper **"PoliToHFI at SemEval-2023 Task 6: Leveraging Entity-Aware and Hierarchical Transformers For Legal Entity Recognition and Court Judgement Prediction"** submitted to the SemEval-2023, Task 6.
+# Domain-Adaptive Learning with Gradient Reversal and Wordle-Inspired Training for Named Entity Recognition
+Project crafted by Alessio Cappello, Giulia Di Fede, Alberto Foresti and Claudio Macaluso for the Deep Natural Language Processing course at Politecnico di Torino (2023/2024).
 
-The repository is organized as follows:
-
-- `legal_ner`: contains the code and the data for the **Legal Named Entity Recognition (L-NER)** task (Task 6.B)
-- `legal_cpje`: contains the code and the data for the **Court Judgment Prediction and Explanation (CJPE)** tasks (Tasks 6.C.1 and 6.C.2)
-
-Further details are available in the README files of the subfolders.
-
-<!-- ## Citation
-If you use this code, please cite the following paper:
-
-```
-``` -->
-
-## License
-This code is released under the Apache 2.0 license. See the [LICENSE](LICENSE) file for more details.
-
-## Contact Information
-For help or issues using the code, please submit a GitHub issue.
-
-For other communications related to this repository, please contact [Alkis Koudounas](mailto:alkis.koudounas@polito.it) or [Irene Benedetto](mailto:irene.benedetto@polito.it).
+This work introduces the following findings:
+- A domain-adaptive learning approach for legal named entity recognition (L-NER), which aims to identify and classify specific legal entities in unstructured texts.
+- A new training task inspired by the game 'Wordle', where the model is given hints based on the token position and the entity type to improve its learning.
+- The work also experiments with a gradient reversal layer to reduce the domain shift between the legal data and the defence data, and compares the performance of domain classifiers at both the token level and the window level.
+- We propose an approach on two datasets: the Indian Legal Document Corpus (ILDC) and the R3ad dataset, which are related to the legal and defence domains respectively.
+- We report that the proposed extensions did not achieve state-of-the-art results, but gained useful insights about the two domains and the BERT contextualised embeddings, which can be used for future work in this field.
