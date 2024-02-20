@@ -18,6 +18,7 @@ import io
 import itertools
 import yaml
 from datetime import datetime
+import random
 
 def get_combinations(config_path):
     with open(config_path, 'r') as file:
@@ -75,9 +76,10 @@ def main(args):
     elif args.action == "gridsearch":
         run_time = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
         combinations = get_combinations(args.gridsearch_config)
+        random.shuffle(combinations)
         old_args = deepcopy(args)
         global writer
-        for combination in combinations:
+        for combination in combinations[:args.grid_combinations]:
             try:
                 writer = SummaryWriter("runs/gridsearch_{}/{}".format(run_time, combination))
                 args = OmegaConf.merge(vars(old_args), combination)
