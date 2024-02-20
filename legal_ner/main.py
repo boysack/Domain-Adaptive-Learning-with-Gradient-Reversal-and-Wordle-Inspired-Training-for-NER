@@ -26,7 +26,8 @@ if __name__ == "__main__":
         "--extract_embedding",
         help="if you want to perform embeddings extraction",
         required=False,
-        type=str,
+        type=str2bool,
+        default=False
     )
     parser.add_argument(
         "--ds_train_path",
@@ -98,6 +99,13 @@ if __name__ == "__main__":
         required=False,
         type=float,
     )
+    parser.add_argument(
+        "--model_checkpoint_path",
+        help="Path for the checkpoint to use",
+        default="/content/checkpoint-47175",
+        required=False,
+        type=str
+    )
 
     args = parser.parse_args()
 
@@ -113,7 +121,8 @@ if __name__ == "__main__":
     lr = args.lr                        # e.g., 1e-4 for luke-based, 1e-5 for bert-based
     weight_decay = args.weight_decay    # e.g., 0.01
     warmup_ratio = args.warmup_ratio    # e.g., 0.06
-
+    model_checkpoint_path = args.model_checkpoint_path 
+    
     ## Define the labels
     original_label_list = [
         "COURT",
@@ -136,21 +145,22 @@ if __name__ == "__main__":
     num_labels = len(labels_list) + 1
 
     original_label_list_defense = [
-        "COMMSIDENTIFIER",
-        "DOCUMENTREFERENCE",
-        "FREQUENCY",
-        "LOCATION",
-        "MILITARYPLATFORM",
-        "MONEY",
-        "NATIONALITY",
-        "ORGANISATION",
-        "PERSON",
-        "QUANTITY",
-        "TEMPORAL",
-        "URL",
-        "VEHICLE",
-        "WEAPON"
+        "CommsIdentifier",
+        "DocumentReference",
+        "Frequency",
+        "Location",
+        "MilitaryPlatform",
+        "Money",
+        "Nationality",
+        "Organisation",
+        "Person",
+        "Quantity",
+        "Temporal",
+        "Url",
+        "Vehicle",
+        "Weapon"
     ]
+    
     labels_list_defense = ["B-" + l for l in original_label_list_defense]
     labels_list_defense += ["I-" + l for l in original_label_list_defense]
     num_labels_defense = len(labels_list_defense) + 1
@@ -254,7 +264,7 @@ if __name__ == "__main__":
 
         ## Define the model
         model = AutoModelForTokenClassification.from_pretrained(
-            "/content/checkpoint-47175", # model_path
+            model_checkpoint_path, # model_path
             num_labels=num_labels, 
             ignore_mismatched_sizes=True
         )
@@ -270,7 +280,7 @@ if __name__ == "__main__":
 
         ## Training Arguments
         training_args = TrainingArguments(
-            resume_from_checkpoint="/content/checkpoint-47175",
+            resume_from_checkpoint=model_checkpoint_path,
             output_dir=new_output_folder,
             num_train_epochs=num_epochs,
             learning_rate=lr,
