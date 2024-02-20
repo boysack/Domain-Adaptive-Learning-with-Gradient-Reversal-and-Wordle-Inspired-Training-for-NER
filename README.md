@@ -34,7 +34,10 @@ cd legal_ner
 ``` bash
 ./run.sh
 ```
-In the run.sh file it is possible to set the paths for the embeddings and the configuration for the run, which is a yaml file with the possible values to look at. It is also possible to specify the modality by setting the `action` parameter to:
+In the run.sh file it is possible to set the paths for the embeddings and the configuration for the run, which is a yaml file. It is possible to choose which experiment to run:
+- gridsearch.yaml: it contains the values to look at for the betas
+- ablation.yaml: it contains boolean values for the components to keep/remove 
+It is also possible to specify the modality by setting the `action` parameter to:
 - train: train the model with the specified parameters
 - validate: perform inference on both source and target domain
 - gridsearch: perform the randomised grid search taking the combinations from the yaml file
