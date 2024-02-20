@@ -7,3 +7,19 @@ This work introduces the following findings:
 - The work also experiments with a gradient reversal layer to reduce the domain shift between the legal data and the defence data, and compares the performance of domain classifiers at both the token level and the window level.
 - We propose an approach on two datasets: the Indian Legal Document Corpus (ILDC) and the R3ad dataset, which are related to the legal and defence domains respectively.
 - We report that the proposed extensions did not achieve state-of-the-art results, but gained useful insights about the two domains and the BERT contextualised embeddings, which can be used for future work in this field.
+
+## Embeddings extraction
+- Change directory to legal_ner:
+``` bash
+cd legal_ner
+```
+- Run main.py with the extract embeddings flag activated
+```bash
+python main.py --extract_embedding=True
+```
+
+
+## How to launch the code
+```bash
+cd 
+```
