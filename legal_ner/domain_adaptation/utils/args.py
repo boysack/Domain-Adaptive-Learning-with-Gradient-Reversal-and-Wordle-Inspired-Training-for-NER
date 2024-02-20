@@ -42,6 +42,7 @@ parser.add_argument("--path_source_val_labels", default='./target/val/labels.pt'
 parser.add_argument("--name", default='domain_adaptation_NER', type=str)
 parser.add_argument("--models_dir", default='models', type=str)
 parser.add_argument("--gridsearch_config", default='domain_adaptation/config/gridsearch.yaml', type=str)
+parser.add_argument("--grid_combinations", type=int, default=10)
 parser.add_argument("--run_name", default=None, type=str)
 
 # Parse the arguments
