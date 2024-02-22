@@ -43,3 +43,4 @@ It is also possible to specify the modality by setting the `action` parameter to
 - validate: perform inference on both source and target domain
 - gridsearch: perform the randomised grid search taking the combinations from the yaml file
 
+Other parameters, such as the learning rates, can be modified in the args.py file inside the utils folder.
