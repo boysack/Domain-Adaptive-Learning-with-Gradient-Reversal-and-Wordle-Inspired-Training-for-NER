@@ -123,9 +123,7 @@ class AdaptiveModule(nn.Module):
             self.in_features_dim = in_features_dim
             self.out_features_dim = out_features_dim
             
-            """Here I am doing what is done in the official code, 
-            in the first fc layer the output dimension is the minimum between the input feature dimension and 1024"""
-            self.relu = nn.ReLU() # Again using the architecture of the official code
+            self.relu = nn.ReLU()
             self.dropout = nn.Dropout(p=dropout)
             self.fc = nn.Linear(self.in_features_dim, self.out_features_dim)
             self.bias = self.fc.bias
