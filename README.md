@@ -26,9 +26,9 @@ python main.py --extract_embedding=True
 Other parameters, such as the checkpoint and datasets folders, can be set using the parser inside main.py. If no checkpoint is available, it is possible to obtain one setting the flag to False.
 
 ## How to launch the model
-- Change directory to legal_ner:
+- Change directory to domain_adaptation:
 ``` bash
-cd legal_ner
+cd legal_ner/domain_adaptation
 ```
 - Launch the run.sh file:
 ``` bash
