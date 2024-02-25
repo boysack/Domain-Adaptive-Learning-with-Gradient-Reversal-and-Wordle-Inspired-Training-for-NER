@@ -218,7 +218,7 @@ class AdaptiveModule(nn.Module):
             """
             How the game works:
             - feats: features of the window
-            - hint: 0 if the entity is not in the window, 1 if the entity is in the window but not in the right position, 2 if the entity is in the window and in the right position
+            - hint: 0 if the entity has not been classified correctly, 1 if the entity has been classified correctly
             - last_attempt: last attempt of the player
             A fully connected layer is used to predict the next attempt, that is the joint distribution of the entities and the position
             The dimension of feats is (number of windows in the batch, window_size, entity classes)
